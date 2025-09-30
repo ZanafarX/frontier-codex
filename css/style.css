@@ -846,3 +846,61 @@ body::before {
         box-shadow: none;
     }
 }
+
+/* Music Toggle Button */
+.music-toggle {
+    background: var(--ember-orange);
+    color: var(--parchment);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+    position: relative;
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-toggle:hover {
+    background: var(--blood-rust);
+    transform: scale(1.05);
+}
+
+.music-toggle.playing .music-icon {
+    animation: musicPulse 1s ease-in-out infinite;
+}
+
+.music-toggle.paused {
+    background: var(--ash-grey);
+    opacity: 0.7;
+}
+
+.music-toggle.paused .music-icon::after {
+    content: ' ✕';
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .music-toggle {
+        margin: 0.5rem 1rem;
+        width: calc(100% - 2rem);
+    }
+}

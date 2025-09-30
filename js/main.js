@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSearch();
     initializeBackToTop();
     initializeMobileMenu();
+	initializeBackgroundMusic();
 });
 
 // ===================================
@@ -315,4 +316,72 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+// ===================================
+// BACKGROUND MUSIC PLAYER
+// ===================================
+
+function initializeBackgroundMusic() {
+    const musicToggle = document.querySelector('.music-toggle');
+    const audio = document.getElementById('background-music');
+    
+    if (!musicToggle || !audio) return;
+    
+    // Set initial volume to 50%
+    audio.volume = 0.5;
+    
+    // Check localStorage for saved music state
+    const musicEnabled = localStorage.getItem('musicEnabled');
+    const musicTime = localStorage.getItem('musicTime');
+    
+    // Restore previous playback position
+    if (musicTime) {
+        audio.currentTime = parseFloat(musicTime);
+    }
+    
+    // Set initial state
+    if (musicEnabled === 'true') {
+        audio.play().catch(err => {
+            console.log('Autoplay prevented:', err);
+            // Update UI to show music is paused
+            musicToggle.classList.remove('playing');
+            musicToggle.classList.add('paused');
+        });
+        musicToggle.classList.add('playing');
+        musicToggle.classList.remove('paused');
+    } else {
+        musicToggle.classList.remove('playing');
+        musicToggle.classList.add('paused');
+    }
+    
+    // Toggle music on button click
+    musicToggle.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play().then(() => {
+                musicToggle.classList.add('playing');
+                musicToggle.classList.remove('paused');
+                localStorage.setItem('musicEnabled', 'true');
+            }).catch(err => {
+                console.log('Play failed:', err);
+            });
+        } else {
+            audio.pause();
+            musicToggle.classList.remove('playing');
+            musicToggle.classList.add('paused');
+            localStorage.setItem('musicEnabled', 'false');
+        }
+    });
+    
+    // Save playback position periodically
+    audio.addEventListener('timeupdate', () => {
+        if (!audio.paused) {
+            localStorage.setItem('musicTime', audio.currentTime.toString());
+        }
+    });
+    
+    // Reset time when music ends (though it loops)
+    audio.addEventListener('ended', () => {
+        localStorage.setItem('musicTime', '0');
+    });
 }

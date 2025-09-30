@@ -54,6 +54,17 @@
             </ul>
             
             <button class="search-button" aria-label="Open search">Search</button>
+			
+			<!-- In the nav-container, after the search-button -->
+			<button class="music-toggle" aria-label="Toggle background music" title="Toggle Music">
+				<span class="music-icon">♪</span>
+			</button>
+
+			<!-- Add audio element before closing </body> tag -->
+			<audio id="background-music" loop preload="auto">
+				<source src="../media/frontier-theme.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
         </div>
     </nav>
 
@@ -560,6 +571,10 @@
         </p>
     </footer>
 
+	<audio id="background-music" loop preload="auto">
+		<source src="../media/frontier-theme.mp3" type="audio/mpeg">
+	</audio>
+	
     <script src="../js/main.js"></script>
 </body>
 </html>
