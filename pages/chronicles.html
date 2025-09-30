@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles & Lore - The Veil & Lead</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-title">THE VEIL & LEAD</h1>
+        <p class="site-subtitle">Chronicles of the Psi-Slinger's Frontier</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="duncan.html" class="nav-link">Duncan Maddox</a></li>
+            <li><a href="geography.html" class="nav-link">The World</a></li>
+            <li><a href="veil.html" class="nav-link">Psionics</a></li>
+            <li><a href="factions.html" class="nav-link">Factions</a></li>
+            <li><a href="chronicles.html" class="nav-link active">Chronicles</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="content-header">
+                <h1 class="content-title">Chronicles & Lore</h1>
+                <p class="content-subtitle">The stories they tell when the sun goes down</p>
+            </div>
+
+            <div class="content-section">
+                <p class="content-text">
+                    Every corner of the frontier has its stories—some written in ink, others in blood, 
+                    most whispered around campfires when the dark gets too close. These chronicles are 
+                    the frontier's true history, more honest than any official record.
+                </p>
+
+                <!-- Tab Navigation for Different Chronicle Types -->
+                <div class="tab-container">
+                    <ul class="tab-list">
+                        <li><button class="tab-button active" data-tab="documents">Documents</button></li>
+                        <li><button class="tab-button" data-tab="legends">Legends</button></li>
+                        <li><button class="tab-button" data-tab="campfire">Campfire Tales</button></li>
+                        <li><button class="tab-button" data-tab="rumors">Rumors</button></li>
+                        <li><button class="tab-button" data-tab="songs">Songs & Ballads</button></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!-- DOCUMENTS TAB -->
+                        <div class="tab-panel active" id="documents">
+                            <h2 class="section-title">Found Documents & Testimonies</h2>
+
+                            <!-- Wanted Poster -->
+                            <div class="info-box" style="background: #F4E8D0; border: 3px solid #8B3A1A;">
+                                <h3 style="text-align: center; font-family: 'Oswald', sans-serif; font-size: 2rem; margin-bottom: 1rem;">WANTED — DEAD OR ALIVE</h3>
+                                <p style="text-align: center; font-size: 1.5rem; color: #8B3A1A; font-family: 'Oswald', sans-serif;">THE PSI-SLINGER</p>
+                                
+                                <div style="margin: 1rem 0; padding: 1rem; background: rgba(255,255,255,0.3);">
+                                    <p><strong>Alias:</strong> "The Psi-Slinger"</p>
+                                    <p><strong>Given Names:</strong> Unknown (multiple claims: "Jonah Kane," "Elias Ward," "Jack Callahan"—none verified)</p>
+                                    <p><strong>Sex:</strong> Male</p>
+                                    <p><strong>Age:</strong> Mid-thirties (approx.)</p>
+                                    <p><strong>Height:</strong> 6 feet (approx.)</p>
+                                    <p><strong>Build:</strong> Lean, wiry</p>
+                                    <p><strong>Eyes:</strong> Reported as one clear, one black (unconfirmed; wears hat brim low)</p>
+                                    <p><strong>Marks:</strong> Facial scar near right temple, reported to pulse when firing weapons</p>
+                                </div>
+
+                                <h4 style="margin-top: 1.5rem; font-family: 'Oswald', sans-serif;">Crimes Charged</h4>
+                                <ul class="frontier-list">
+                                    <li>Murder of multiple citizens and officials, number unconfirmed</li>
+                                    <li>Trespass and destruction of Covenant of Ash property, including rail line sabotage</li>
+                                    <li>Unlawful execution of clergy recognized under the Red Gospel</li>
+                                    <li>Harboring of Hollowborn fugitives</li>
+                                    <li>Disturbance of peace and sorcerous discharge of firearms in towns under U.S. charter</li>
+                                </ul>
+
+                                <h4 style="margin-top: 1.5rem; font-family: 'Oswald', sans-serif;">Known Abilities</h4>
+                                <ul class="frontier-list">
+                                    <li>Firearms expertise: Reported to hit targets at unnatural range and angle</li>
+                                    <li>Psionic discharge: Claims indicate firearms continue to fire when visibly empty, rounds glow and strike both flesh and spirit</li>
+                                    <li>Unnatural endurance: Has survived multiple bullet wounds, hanging attempts, and suspected ley-storm exposure</li>
+                                    <li>Infamy: Witnesses describe symptoms after encounters: memory lapses, auditory hallucinations, recurring dreams</li>
+                                </ul>
+
+                                <p style="text-align: center; font-size: 1.8rem; color: #8B3A1A; margin: 1.5rem 0; font-family: 'Oswald', sans-serif;">
+                                    REWARD: $3,000
+                                </p>
+                                
+                                <div style="background: rgba(139, 58, 26, 0.1); padding: 1rem; margin-top: 1rem; border: 1px solid #8B3A1A;">
+                                    <p style="font-style: italic; text-align: center;">
+                                        <strong>WARNING:</strong> This man is considered armed at all times and unnaturally dangerous. 
+                                        Approach with caution. Reports indicate he does not run out of ammunition. 
+                                        <strong>Repeat: he does not run out.</strong>
+                                    </p>
+                                </div>
+
+                                <p style="text-align: right; margin-top: 1rem; font-size: 0.9rem;">
+                                    Sheriff's Office, Drywater County<br>
+                                    Year of Our Dust, 18–?<br>
+                                    <em>(Poster stamped with county seal; ink blurred by weather and bloodstains in surviving copies)</em>
+                                </p>
+                            </div>
+
+                            <!-- The Miner's Last Letter -->
+                            <h3 class="section-title">The Miner's Last Letter</h3>
+                            <div class="quote-block" style="font-family: 'Crimson Text', serif; font-style: normal; background: #F0E6D2;">
+                                <em>(Found in a rust-stained satchel, dated two winters past)</em><br><br>
+                                
+                                Ma—<br><br>
+                                
+                                My hands shake writin' this, black dust in my lungs, blood coughed up like spit-wine. 
+                                They kept us swingin' pick and torch even after the cave groaned like a dyin' steer. 
+                                Said the Consortium's timetable don't bend for no man. The roof fell anyhow, crushin' 
+                                five, leavin' me pinned and breathless.<br><br>
+                                
+                                I ain't comin' home, Ma. Ain't no doctor'll brave the shafts. Wages owed me are 
+                                pocketed in some silk vest far east. Burn this letter when you read it, else the 
+                                Warden boys'll come askin' why I spoke ill of masters.<br><br>
+                                
+                                Tell Pa I never feared the dark 'til I found it starin' back.<br><br>
+                                
+                                — Eli Thorn, Iron Mesa Mine #3
+                            </div>
+
+                            <!-- Sheriff's Notice -->
+                            <h3 class="section-title">Sheriff's Notice to Drywater County</h3>
+                            <div class="info-box" style="background: #F0E6D2;">
+                                <p style="text-align: center; font-style: italic; margin-bottom: 1rem;">By order of Sheriff Calder:</p>
+                                
+                                <ol class="frontier-list" style="counter-reset: item;">
+                                    <li style="list-style-type: decimal; margin-left: 1.5rem;">
+                                        <strong>Those Who Wear the Chains</strong> are not to be given lodging or hire within county limits. 
+                                        Protection bought from them is void in the eyes of the law. Harboring them will be considered 
+                                        consorting with outlaws.
+                                    </li>
+                                    <li style="list-style-type: decimal; margin-left: 1.5rem;">
+                                        <strong>Any sign of the Red Hands</strong> is to be reported directly. Witnessing their rituals 
+                                        and failing to report is punishable by the same law as blasphemy.
+                                    </li>
+                                    <li style="list-style-type: decimal; margin-left: 1.5rem;">
+                                        <strong>The Covenant of Ash</strong> retains legal control of the western line. Any disputes over 
+                                        fares or contracts must be taken up with their agents. Note: The Sheriff's Office does not 
+                                        interfere in Covenant business. Do not petition otherwise.
+                                    </li>
+                                    <li style="list-style-type: decimal; margin-left: 1.5rem;">
+                                        <strong>Hollowborn caravans</strong> are barred from entry into town. Those found within limits 
+                                        after sundown will be removed by force.
+                                    </li>
+                                    <li style="list-style-type: decimal; margin-left: 1.5rem;">
+                                        <strong>Pale Riders</strong>—if sighted—are not to be engaged. Citizens are ordered to evacuate 
+                                        immediately and without protest.
+                                    </li>
+                                </ol>
+                                
+                                <p style="text-align: right; margin-top: 1.5rem;">
+                                    <em>Signed and sealed,</em><br>
+                                    Sheriff Calder<br>
+                                    Year of Our Dust, 18–? <em>(ink blurred)</em>
+                                </p>
+                            </div>
+
+                            <!-- The Rail Baron's Decree -->
+                            <h3 class="section-title">Consortium Decree</h3>
+                            <div class="quote-block" style="background: #F0E6D2; border: 2px solid #B8860B;">
+                                <p style="text-align: center; font-weight: 600; margin-bottom: 1rem;">BY ORDER OF THE CONSORTIUM OF RAIL & IRON</p>
+                                
+                                Henceforth, all cargoes passing westbound shall pay a levy of three silver per ton, 
+                                to be collected at Gallowspire.<br><br>
+                                
+                                Any soul attempting to bypass toll or bribe official shall be met with Company Justice, 
+                                swift and without appeal.<br><br>
+                                
+                                <p style="text-align: right; margin-top: 1rem;">
+                                    <em>Signed in iron and ink,</em><br>
+                                    Chancellor Varrow, Eastern Lines Authority
+                                </p>
+                            </div>
+
+                            <!-- The Smuggler's Boast -->
+                            <h3 class="section-title">The Smuggler's Boast</h3>
+                            <div class="quote-block">
+                                <em>(Recorded from a tavern brag in Brimstead, re-told half in jest)</em><br><br>
+                                
+                                "Ain't a Warden alive what can sniff me out. I run Fen-whiskey thick as pitch, 
+                                psion charms etched on matchsticks, even hauled a Seer bound in iron for them 
+                                Circle folk.<br><br>
+                                
+                                Once rode three days blindfolded through Dead Fen, wagon brimmin' with contraband, 
+                                just to prove I could. Came out leaner, meaner, drunker than I went in. The Current 
+                                loves me like a son, and the Veil don't dare tax me—<br><br>
+                                
+                                ... 'til next round, anyhow. Who's buyin'?"
+                            </div>
+
+                            <!-- The Pilgrim's Diary -->
+                            <h3 class="section-title">The Pilgrim's Diary</h3>
+                            <div class="quote-block" style="font-style: normal;">
+                                <em>(Fragment found in a water-damaged journal)</em><br><br>
+                                
+                                <strong>Day Twelve.</strong> Boots rotted clean through in the Fen-muck. Still we walk. 
+                                Sister Alaine swears she saw a white bridge span the sky, but I saw only lightning.<br><br>
+                                
+                                <strong>Day Sixteen.</strong> Brother Jory fell to fever. We burned him with psalm and salt. 
+                                His ashes clung to my skin; I swear they whispered comfort.<br><br>
+                                
+                                <strong>Day Twenty.</strong> Reached the Bluff. Wind near tore the veil from my eyes— 
+                                I swear the saints themselves walked the ridge. Or else the wraiths mocked us. 
+                                Hard to say which.
+                            </div>
+
+                            <!-- Warden's Testimony -->
+                            <h3 class="section-title">Fenwatch Warden's Testimony</h3>
+                            <div class="quote-block" style="background: #F0E6D2;">
+                                <em>(Excerpt from official Orvain court record, Fenwatch Division)</em><br><br>
+                                
+                                "On the twelfth night of patrol, we encountered lights movin' counter to wind in the Dead Fen. 
+                                Deputy Strath discharged his rifle; the bullet struck somethin' soft, though no form seen.<br><br>
+                                
+                                Lights scattered, then re-formed 'round us, whisperin' in voices not our own. Deputy fired 
+                                thrice more before vanishin'. Left no blood, no track, no body.<br><br>
+                                
+                                Recommend increased patrol or abandon sector entire. The Fen takes what it wills."
+                            </div>
+
+                            <!-- The Gambler's Ledger -->
+                            <h3 class="section-title">The Gambler's Ledger</h3>
+                            <div class="quote-block">
+                                <em>(Scribbled notes on the back of a debt slip, Brimstead tavern)</em><br><br>
+                                
+                                Odds o' survivin' a duel at ten paces: 3 to 1 if sober, 8 to 1 if drunk.<br>
+                                Odds o' makin' it through Fen by moonlight: 12 to 1, double if you hum a hymn.<br>
+                                Odds o' winnin' against Consortium cards: 0, unless you mark 'em.<br>
+                                Odds o' seein' tomorrow if you cross a Psi-Slinger: don't bother calculatin'.
+                            </div>
+                        </div>
+
+                        <!-- LEGENDS TAB -->
+                        <div class="tab-panel" id="legends">
+                            <h2 class="section-title">Legends of the Psi-Slinger</h2>
+
+                            <div class="character-card">
+                                <h3 class="character-name">The Night at Two-Mouth Spring</h3>
+                                <p class="character-description">
+                                    They say he came staggering into a camp of settlers, bleeding from the ears, 
+                                    whispering two voices at once. He'd drunk from both sides of the spring—water 
+                                    and black sludge—and lived to tell of it. Nobody else ever has.
+                                </p>
+                                <p class="character-description">
+                                    The settlers claimed he spent a week raving, carving shapes in the dirt with a knife. 
+                                    When he finally rose, he shot a vulture out of the sky with an empty gun—no rounds, 
+                                    just the scream of his will. They buried the bird, but it clawed its way out three 
+                                    nights running. On the fourth, the Psi-Slinger burned it to ash with a bullet of 
+                                    pure thought, and the townsfolk swore the smoke whispered prayers.
+                                </p>
+                                <p class="character-description">
+                                    To this day, folks say his left eye is the spring's water, clear and sharp, and his 
+                                    right is the sludge, black as pitch. He keeps his hat brim low so no one sees.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">Chains in Ironhook Canyon</h3>
+                                <p class="character-description">
+                                    The story goes he faced down three of Those Who Wear the Chains in the canyon, 
+                                    where the walls weep rust water that can heal if you pay the price. The Chainmen 
+                                    had taken a boy for ransom. Folks say the Slinger offered himself in the boy's place.
+                                </p>
+                                <p class="character-description">
+                                    They laughed, wrapped him in iron, dragged him 'cross the rocks till his skin peeled raw. 
+                                    But iron don't hold a man who can fire his own soul. They say he spat blood into his Colt, 
+                                    and when he pulled the trigger, the bullet rang like a bell against the canyon walls. 
+                                    Chains shattered, hooks cracked, and two of the Chainmen dropped dead, their shackles 
+                                    melted to their flesh.
+                                </p>
+                                <p class="character-description">
+                                    The last fled, dragging broken links behind him. To this day, they say you can hear 
+                                    those chains clatter if you ride the canyon at dusk, and the boy's family swears the 
+                                    Psi-Slinger refused their thanks. Just took his whiskey and rode on, bleeding into the dust.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">The Train of Ashes</h3>
+                                <p class="character-description">
+                                    No one boards a Covenant of Ash train without paying, not unless they've lost their mind. 
+                                    But the Psi-Slinger? He rode one, pistol drawn, through six cars of Ash agents. Folks say 
+                                    the train screamed louder with every shot, and the windows bled red where the bullets passed.
+                                </p>
+                                <p class="character-description">
+                                    He was hunting a Hollowborn girl stolen as tithe. They say he found her in the last car, 
+                                    locked in a cage made of glass and coal-fire. He broke it with one shot—his last brass 
+                                    round—and carried her off the moving train.
+                                </p>
+                                <p class="character-description">
+                                    They jumped in the Saltglass Flats. Witnesses swear the crystals there lit with visions 
+                                    of what he could've been: a farmer, a lawman, a father. He didn't look at any of 'em. 
+                                    Just kept his eyes on the girl. She lived, though she don't speak no more. Some say her 
+                                    shadow speaks for her, in whispers.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">The Ballad of Hollow Vale</h3>
+                                <p class="character-description">
+                                    Here's the one they sing quiet, 'cause it don't end right. Hollow Vale—where the trees are white 
+                                    as bone and hum with a heartbeat. The Slinger rode in chasing a preacher of the Red Hands, a 
+                                    man who'd carved scripture into thirty townsfolk and left 'em bleeding like livestock.
+                                </p>
+                                <p class="character-description">
+                                    They say the Slinger drew, fired, and every tree in the Vale screamed. His bullet tore through 
+                                    the preacher's skull, but the blood soaked the roots, and the trees drank deep. Now the Vale hums 
+                                    louder, and if you sleep there, you wake hollow-eyed, your reflection gone.
+                                </p>
+                                <p class="character-description">
+                                    Some say it was the preacher's curse. Others say it was the Slinger's shot that damned the 
+                                    place. Either way, folks don't sing that verse loud. Ain't no good luck in it.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">When the Pale Rode West</h3>
+                                <p class="character-description">
+                                    Last tale's the darkest. They say the Riders in Pale don't ride for men, but the Slinger 
+                                    made 'em pause. This was at Red Mother's Teeth, cliffs bleeding in a storm. The Riders 
+                                    came with their skeletal horses, heralds of a famine that would gut the valley.
+                                </p>
+                                <p class="character-description">
+                                    The Slinger stood on the cliff edge, guns in both hands, hat brim dripping red rain. 
+                                    He fired until his guns smoked black and his hands trembled. Bullets of thought, of soul, 
+                                    of memory—every piece of himself he could burn. He dropped three Riders before the rest 
+                                    turned and rode on.
+                                </p>
+                                <p class="character-description">
+                                    But they didn't ride back east. They turned south. Three towns withered overnight, crops 
+                                    blackened, children starving. Folks say the Slinger saved one place only by damning three 
+                                    others. They spit his name for it, even as they light candles to thank him.
+                                </p>
+                                <p class="character-description" style="font-style: italic;">
+                                    And some swear, if you look him in the eye now, you'll see lantern flames flicker. 
+                                    Maybe the Riders left a mark. Maybe he's half one of 'em already.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CAMPFIRE TALES TAB -->
+                        <div class="tab-panel" id="campfire">
+                            <h2 class="section-title">Tales Told by Firelight</h2>
+
+                            <div class="quote-block">
+                                <h3 style="margin-bottom: 1rem; color: var(--blood-rust);">Old Trailhand's Warning</h3>
+                                <em>(Told to greenhorns on a cold night)</em><br><br>
+                                
+                                "You hear the nails growin' at night? Sound like beetles scratchin' just under the dirt. 
+                                You sleep too close to that patch, you'll wake up with spikes pushin' out your skin. Ain't 
+                                just earth that grows iron out here. Sometimes it's men.<br><br>
+                                
+                                And that spring? Two-Mouth, they call it. One side'll quench your thirst clean, sweeter'n rain. 
+                                Other side runs black. I seen a man drink from both, claimin' he wanted to know the truth. Truth 
+                                was, he screamed himself blind before dawn. Maybe that's all truth is out here: poison in a 
+                                pretty cup.<br><br>
+                                
+                                Don't even get me started on the Stairs. Folks call 'em sunk, but I call 'em hungry. You walk 'em 
+                                in your dreams, you don't walk back. Simple as that. I once had a bunkmate—snorin' one night, 
+                                gone the next. Boots sittin' there, warm to the touch, no man in 'em. Ain't nobody snores near 
+                                me anymore."
+                            </div>
+
+                            <div class="quote-block">
+                                <h3 style="margin-bottom: 1rem; color: var(--blood-rust);">The Barkeep's Tale</h3>
+                                <em>(As told by Old Pete Carver to a wary stranger)</em><br><br>
+                                
+                                You wanna know this land, stranger? Then lean in close, 'cause it ain't the kind of thing you'll 
+                                read in books. Ink don't hold truth here. Ink dries, fades, curls up in the sun. Out here, the 
+                                only truth's in blood and dust—and I reckon you'll taste both 'fore long.<br><br>
+                                
+                                This world, it ain't right. Ain't been right for longer than any of us can say. Folks'll argue 
+                                about when it cracked—some say when the rails first carved through sacred stone, others when the 
+                                Red Hands slit their first throat in the name of their gospel, and some swear it was always bent, 
+                                always cursed, just waitin' on men dumb enough to walk it.<br><br>
+                                
+                                Me, I don't argue. All I know is the world ain't solid like it oughta be. It groans. Shifts. Breathes.<br><br>
+                                
+                                You ride too far, and you'll see things no man oughta. The sky'll hang wrong, the dirt'll whisper 
+                                your name, rivers'll crawl uphill just to spite the rules of nature. So if you're plannin' to last 
+                                longer'n a week, best you learn the landmarks. They ain't just places—they're teeth and bones 
+                                in the body of a land that don't want you.
+                            </div>
+
+                            <div class="quote-block">
+                                <h3 style="margin-bottom: 1rem; color: var(--blood-rust);">The Night the Guns Never Quit</h3>
+                                <em>(Told around a campfire in hushed tones)</em><br><br>
+                                
+                                You boys listen close, 'cause this ain't somethin' I repeat often. Not 'cause I'm scared of 
+                                it—though I am—but 'cause every time I tell it, it feels like I'm feedin' it. Like the story 
+                                gets fatter, heavier, and one day it's gonna crawl out my mouth and sit right here with us.<br><br>
+                                
+                                It was down in Ironhook Canyon, spring floods just gone, rust water still tricklin' down the walls. 
+                                I was ridin' escort for a merchant, haulin' spices west. Don't ask me why a fool'd drag saffron 
+                                through Chainman country, but silver's silver, and I had a hungry belly.<br><br>
+                                
+                                We weren't two miles into the canyon when we heard it: chains draggin' stone, iron links singin' 
+                                like funeral bells. Three of 'em stepped out. Chainsmen. Big bastards, half their skin scarred 
+                                black from rust burns. They had a boy tied up, maybe twelve, wrists raw.<br><br>
+                                
+                                Merchant pissed himself. Dropped the reins. Me? I froze. Ain't ashamed to say it. Chains'll do 
+                                that to a man. They don't just bind bodies—they bind courage.<br><br>
+                                
+                                Then I heard spurs. Slow, measured, like someone tappin' death's shoulder to see if it'd turn 
+                                around. He walked out of the canyon's shadow: lean fella, long duster, hat brim low. Guns on his 
+                                hips—old Colts, nicked and scarred. I knew him before he even raised his head. Every man in 
+                                these lands knows him.<br><br>
+                                
+                                The Psi-Slinger.<br><br>
+                                
+                                He didn't say a word. Just tipped his hat like he was signin' a contract with silence. Chainsmen 
+                                laughed. One wrapped him in iron, loopin' him up like a calf ready for slaughter. He went down 
+                                to his knees, blood spittin' between his teeth.<br><br>
+                                
+                                That's when it happened. He leaned over, spat red into his revolver like it was holy oil, and 
+                                pulled the trigger.<br><br>
+                                
+                                Lord help me, the canyon rang. Not a gunshot, not an echo. A bell. Pure and loud, like church 
+                                on a mountain. The chains snapped. Iron links flew like shrapnel, searin' flesh as they melted. 
+                                Two Chainsmen dropped stone-dead, eyes wide like they'd seen the gallows swing. The third ran, 
+                                chain screamin' behind him like a widow's wail.<br><br>
+                                
+                                The boy staggered free. Merchant ran. Me, I just stood there starin'. The Slinger holstered up, 
+                                shoulders saggin', eyes dark as midnight storms. Didn't wait for thanks. Didn't ask a name. Just 
+                                walked out the way he came, boots splashin' in rust water.<br><br>
+                                
+                                I followed his trail the next day. Blood in the dust, fresh and wet. But no body. No bones.<br><br>
+                                
+                                So maybe he's still out there. Maybe he ain't a man at all—just a bullet waitin' to fire itself.
+                            </div>
+                        </div>
+
+                        <!-- RUMORS TAB -->
+                        <div class="tab-panel" id="rumors">
+                            <h2 class="section-title">Whispers & Rumors</h2>
+
+                            <div class="info-box">
+                                <h3 class="info-box-title">On His Guns</h3>
+                                <ul class="frontier-list">
+                                    <li>"Never seen him reload. Gunsmoke keeps pourin' but the chambers stay full."</li>
+                                    <li>"Bullets glow when they leave the barrel, like comets fallin'. One hit a fella, split his shadow clean off him. Shadow ran screamin' down the road."</li>
+                                    <li>"They ain't revolvers, not anymore. They're coffins he carries on his hips, filled with all the men he's killed."</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box">
+                                <h3 class="info-box-title">On His Eyes</h3>
+                                <ul class="frontier-list">
+                                    <li>"Left one's clear as glass, right one's black as tar. If you meet the black one, you'll see your own death—could be ten years, could be ten minutes."</li>
+                                    <li>"I saw both eyes shine in the dark, like lanterns. Pale Rider light. Maybe he already rides with 'em, just don't know it yet."</li>
+                                    <li>"No, no—he ain't got two eyes at all. He's blind, and the guns see for him."</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box">
+                                <h3 class="info-box-title">On His Voice</h3>
+                                <ul class="frontier-list">
+                                    <li>"Sometimes it's his voice. Sometimes it's another ridin' shotgun in his throat. Heard him speak in two tongues at once. One begged mercy, the other promised none."</li>
+                                    <li>"Preacher swore his whisper cured fever. Boy died next day. You tell me that's a cure?"</li>
+                                    <li>"He don't talk to folks, he talks to bullets. Murmurs to 'em before he fires, like he's namin' each one."</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box">
+                                <h3 class="info-box-title">On His Blood</h3>
+                                <ul class="frontier-list">
+                                    <li>"Shot him once. He bled light. Hurt my eyes to see it. Don't know what it did to my soul."</li>
+                                    <li>"Bleeds like any man, but the dirt won't drink it. Just sits there smokin' till it turns to ash."</li>
+                                    <li>"Every time he fires too many rounds, he coughs red. Ain't blood though—it's pieces of him. Thoughts, memories, sins, I dunno."</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box">
+                                <h3 class="info-box-title">On His Past</h3>
+                                <ul class="frontier-list">
+                                    <li>"Name was Jonah Kane once. Farmer's boy. Whole family got took by Riders in Pale. He's been shootin' at death ever since."</li>
+                                    <li>"He was law, before. A marshal who couldn't save his town. He pulled the trigger on himself in shame, but the bullet never landed. That's when the Devil found him."</li>
+                                    <li>"No past. He was born from a ley-storm, full-grown, gun in hand. World didn't make him, storm did."</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box">
+                                <h3 class="info-box-title">On His Fate</h3>
+                                <ul class="frontier-list">
+                                    <li>"Every shot's a piece of his soul. He ain't got many pieces left."</li>
+                                    <li>"When he dies, guns'll keep firin' without him. They'll walk the land lookin' for another hand."</li>
+                                    <li>"Already dead. Just don't know it. Every town he passes through is another stop on his funeral march."</li>
+                                    <li>"You can't kill a story. And that's all he is now: a story wearin' skin."</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SONGS & BALLADS TAB -->
+                        <div class="tab-panel" id="songs">
+                            <h2 class="section-title">Songs of the Frontier</h2>
+
+                            <div class="character-card">
+                                <h3 class="character-name">The Ballad of the Psi-Slinger</h3>
+                                <p class="character-title">Whispered by firelight, half-prayer, half-curse</p>
+                                <div class="quote-block" style="text-align: center; font-style: italic;">
+                                    He never runs dry, that gunslinger with the shadowed eyes.<br>
+                                    Each bullet's a memory, each shot a piece of his soul.<br>
+                                    He'll walk till nothing's left of him, just guns and smoke and a trail of graves.<br>
+                                    So pray you never hear the crack of his Colts in the dark,<br>
+                                    for if he draws, it's already too late.
+                                </div>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">The Gambler's Song</h3>
+                                <p class="character-title">Popular tavern tune, sung with fiddle and cracked voices</p>
+                                <div class="quote-block" style="text-align: center; font-style: italic;">
+                                    Roll me bones and deal me fate,<br>
+                                    A coin to pay the Reaper's gate.<br>
+                                    Cards run cold and dice fall mean,<br>
+                                    But death don't care if your pockets clean.<br><br>
+                                    
+                                    Whiskey's cheap, and luck is thinner,<br>
+                                    Winner bleeds the same as sinner.<br>
+                                    So lay your bet, and take your stand,<br>
+                                    The house collects on every hand.
+                                </div>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">The Outlaw Ballad</h3>
+                                <p class="character-title">Snatches sung low in saloons, never finished the same way twice</p>
+                                <div class="quote-block" style="text-align: center; font-style: italic;">
+                                    Chains rattle, sinner's comin',<br>
+                                    Hear the thunder down the road.<br>
+                                    Pay your tithe or feel the iron,<br>
+                                    Dragged to Hell to haul the load.<br><br>
+                                    
+                                    Hands all red, and the preacher's smilin',<br>
+                                    Bible written in his skin.<br>
+                                    Drink the blood, keep the crops growin',<br>
+                                    Lose your child, your closest kin.<br><br>
+                                    
+                                    Ash trains scream with a thousand voices,<br>
+                                    Whistles burnin' like a brand.<br>
+                                    Ride 'em long, and you'll find your choices—<br>
+                                    Pay in soul, or pay in land.<br><br>
+                                    
+                                    Hollow folk with their eyes like milk,<br>
+                                    Shadows rattlin' when they sing.<br>
+                                    Drive 'em out, but they won't die easy,<br>
+                                    They'll be back come the storm's first ring.<br><br>
+                                    
+                                    Pale Riders ridin', bones all showin',<br>
+                                    Horses grinnin', lantern eyes.<br>
+                                    Follow the plague, the fire, the famine,<br>
+                                    Dig your grave 'fore the sunrise.
+                                </div>
+                                <p style="font-style: italic; margin-top: 1rem;">
+                                    Note: Ballad never ends the same. Some verses get cut, others added. No one writes it down—bad luck to. 
+                                    It's a living thing, like the land itself.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">Three Bullets for the Moon</h3>
+                                <p class="character-title">A ballad about a slinger who tried to shoot the night sky down</p>
+                                <div class="quote-block" style="text-align: center; font-style: italic;">
+                                    He aimed his iron at the stars above,<br>
+                                    Three bullets forged from rage and love.<br>
+                                    First shot cracked the moon's pale face,<br>
+                                    Second burned a hole through space.<br>
+                                    Third never landed—some folks say<br>
+                                    It's still flyin', huntin' judgment day.
+                                </div>
+                                <p style="font-style: italic; margin-top: 1rem;">
+                                    Usually sung with laughter and whiskey, but everyone goes quiet at the last line.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">Children's Rhyme</h3>
+                                <p class="character-title">Skipping chant meant to keep spirits from noticing children at play</p>
+                                <div class="quote-block" style="text-align: center; font-style: italic;">
+                                    Veil, Veil, stay away,<br>
+                                    Come again another day.<br>
+                                    Veil, Veil, don't you peek,<br>
+                                    Through the cracks or down the creek.<br>
+                                    Veil, Veil, let us be,<br>
+                                    Or we'll throw salt times three.
+                                </div>
+                            </div>
+
+                            <div class="character-card">
+                                <h3 class="character-name">The Preacher's Sermon Song</h3>
+                                <p class="character-title">Sung by the Redeemers during their cleansings</p>
+                                <div class="quote-block" style="text-align: center; font-style: italic;">
+                                    Cleanse the corrupt, burn the unclean,<br>
+                                    Let righteous fire make the frontier clean.<br>
+                                    By iron and faith, by scar and by flame,<br>
+                                    We cast out the Devil and hallowed His name.<br><br>
+                                    
+                                    The psion's gift is the serpent's tongue,<br>
+                                    Each word a lie, each thought unsung.<br>
+                                    We'll break their bones and still their breath,<br>
+                                    Till only faith stands against death.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Witch's Whispers</h2>
+                <p class="content-text">Found scratched into bone at a bone market stall:</p>
+                
+                <div class="quote-block" style="font-style: italic;">
+                    "When the bell tolls in the black, do not answer. Each chime is a name, each name
+                    a chain. Chains do not break—they sing."<br><br>
+                    
+                    "Drink not from the spring's second mouth, unless you wish to carry two souls and
+                    speak with one tongue."<br><br>
+                    
+                    "Crows crown the dying, not the dead. If one lands, do not fight it. Dig your hole.
+                    You will not dig it fast enough."<br><br>
+                    
+                    "The Pale do not ride toward death. They ride away from it. Which means what
+                    follows them is worse."<br><br>
+                    
+                    "The Psi-Slinger fires himself with every shot. One day, there will be nothing left but
+                    his guns, still warm, still whispering."
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; The Veil & Lead - A Chronicle of the Frontier</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            "Every coin's got a shadow. Every bullet's got a name. Every story's got blood in the telling."
+        </p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factions of the Frontier - The Veil & Lead</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-title">THE VEIL & LEAD</h1>
+        <p class="site-subtitle">Chronicles of the Psi-Slinger's Frontier</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="duncan.html" class="nav-link">Duncan Maddox</a></li>
+            <li><a href="geography.html" class="nav-link">The World</a></li>
+            <li><a href="veil.html" class="nav-link">Psionics</a></li>
+            <li><a href="factions.html" class="nav-link active">Factions</a></li>
+            <li><a href="chronicles.html" class="nav-link">Chronicles</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="content-header">
+                <h1 class="content-title">Factions of the Frontier</h1>
+                <p class="content-subtitle">Five powers bleeding the land dry</p>
+            </div>
+
+            <div class="content-section">
+                <p class="content-text">
+                    The frontier ain't empty. Ain't lawless neither, though the laws change depending on who's 
+                    holding the biggest stick at any given moment. Five major powers vie for control—some through 
+                    coin, some through steel, some through faith, and some through knowledge. They all want different 
+                    things, but they all want them desperately enough to kill for them.
+                </p>
+
+                <p class="content-text">
+                    Understanding the frontier means understanding these factions—who they are, what they want, and 
+                    why they can't coexist peacefully. Every settlement, every trade route, every resource becomes 
+                    a battlefield where these powers clash. And caught between them all walks Duncan Maddox, beholden 
+                    to none, hunted or hired by all.
+                </p>
+
+                <div class="quote-block">
+                    "The frontier's got five fingers choking it. Gold, steel, fire, ash, and law. They all squeeze 
+                    different, but they're all trying to break the same neck. And that neck is ours."
+                    <div style="text-align: right; margin-top: 1rem; font-style: normal;">
+                        — Old Pete Carver, Rustwater barkeep
+                    </div>
+                </div>
+
+                <h2 class="section-title">The Five Powers</h2>
+
+                <!-- Consortium Card -->
+                <a href="consortium.html" class="nav-card" style="display: block; text-decoration: none; margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--dust-brown); padding: 0.5rem; background: rgba(255, 255, 255, 0.5); flex-shrink: 0;">
+                            <svg viewBox="0 0 120 120" style="width: 100%; height: 100%;">
+                                <line x1="60" y1="30" x2="60" y2="50" stroke="#B8860B" stroke-width="3"/>
+                                <line x1="30" y1="50" x2="90" y2="50" stroke="#B8860B" stroke-width="3"/>
+                                <line x1="30" y1="50" x2="30" y2="60" stroke="#B8860B" stroke-width="2"/>
+                                <line x1="90" y1="50" x2="90" y2="70" stroke="#B8860B" stroke-width="2"/>
+                                <rect x="25" y="60" width="10" height="8" fill="#B8860B"/>
+                                <rect x="85" y="70" width="10" height="8" fill="#B8860B"/>
+                                <circle cx="87" cy="74" r="3" fill="#2C2416"/>
+                                <circle cx="91" cy="74" r="3" fill="#2C2416"/>
+                                <circle cx="60" cy="80" r="25" fill="none" stroke="#2C2416" stroke-width="2" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--blood-rust); margin-bottom: 0.5rem;">
+                                The Orvain Consortium
+                            </h3>
+                            <p style="font-style: italic; color: var(--ash-grey); margin-bottom: 0.5rem;">
+                                "Gold tempers all fire"
+                            </p>
+                            <p style="line-height: 1.5;">
+                                Merchant-princes and rail barons who control the frontier's economic lifelines. They own 
+                                the rails, issue the currency, hire the armies. Where others see chaos, they see profit 
+                                margins. They don't conquer through force—they conquer through dependency. Make a town 
+                                rely on Consortium goods, and you own that town.
+                            </p>
+                            <p style="margin-top: 0.5rem; color: var(--ember-orange); font-weight: 600;">
+                                → Click to learn more about the Consortium
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Dust Vultures Card -->
+                <a href="dust-vultures.html" class="nav-card" style="display: block; text-decoration: none; margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--blood-rust); padding: 0.5rem; background: rgba(255, 255, 255, 0.5); flex-shrink: 0;">
+                            <svg viewBox="0 0 120 120" style="width: 100%; height: 100%;">
+                                <ellipse cx="60" cy="50" rx="25" ry="20" fill="none" stroke="#8B3A1A" stroke-width="2"/>
+                                <circle cx="50" cy="45" r="4" fill="#2C2416"/>
+                                <circle cx="70" cy="45" r="4" fill="#2C2416"/>
+                                <path d="M 60 55 L 55 65 L 60 70 L 65 65 Z" fill="#8B3A1A" stroke="#2C2416" stroke-width="1"/>
+                                <path d="M 60 20 Q 85 20 90 40 Q 95 60 80 75 Q 60 90 40 75 Q 25 60 30 40 Q 35 20 60 20" 
+                                      fill="none" stroke="#CC5500" stroke-width="2" stroke-dasharray="5,5"/>
+                                <circle cx="30" cy="30" r="2" fill="#CC5500" opacity="0.6"/>
+                                <circle cx="90" cy="35" r="2" fill="#CC5500" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--blood-rust); margin-bottom: 0.5rem;">
+                                The Dust Vultures
+                            </h3>
+                            <p style="font-style: italic; color: var(--ash-grey); margin-bottom: 0.5rem;">
+                                "What's yours ain't yours long"
+                            </p>
+                            <p style="line-height: 1.5;">
+                                Raider confederacy led by Maeve Callahan, operating as a mobile city on horseback. They 
+                                strike like sandstorms and vanish like mirages, using illusionist psionics to confuse 
+                                and terrify. Romanticized as folk heroes by some, condemned as brutal bandits by others. 
+                                The truth shifts depending on whether you're paying protection or being robbed.
+                            </p>
+                            <p style="margin-top: 0.5rem; color: var(--ember-orange); font-weight: 600;">
+                                → Click to learn more about the Dust Vultures
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Redeemers Card -->
+                <a href="redeemers.html" class="nav-card" style="display: block; text-decoration: none; margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--ash-grey); padding: 0.5rem; background: rgba(255, 255, 255, 0.5); flex-shrink: 0;">
+                            <svg viewBox="0 0 120 120" style="width: 100%; height: 100%;">
+                                <rect x="55" y="30" width="10" height="60" fill="#2C2416"/>
+                                <rect x="35" y="55" width="50" height="10" fill="#2C2416"/>
+                                <rect x="57" y="25" width="6" height="15" fill="#6B6B6B"/>
+                                <polygon points="60,25 57,20 63,20" fill="#6B6B6B"/>
+                                <path d="M 45 45 Q 50 40 55 45 Q 60 50 65 45 Q 70 40 75 45" 
+                                      fill="none" stroke="#8B3A1A" stroke-width="2"/>
+                                <path d="M 60 30 Q 55 20 60 15 Q 65 20 60 30" fill="#CC5500" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--blood-rust); margin-bottom: 0.5rem;">
+                                The Redeemers
+                            </h3>
+                            <p style="font-style: italic; color: var(--ash-grey); margin-bottom: 0.5rem;">
+                                "Cleanse the land in righteous fire"
+                            </p>
+                            <p style="line-height: 1.5;">
+                                Fanatical crusaders led by Ezekiel Stroud, hunting psionics with hymnals and gallows. 
+                                They believe the Current is Hell bleeding through and those who use it are damned. Where 
+                                they go, pyres burn and blood sanctifies the ground. Genuinely believe they're saving 
+                                souls—even as they destroy lives. Their faith is real. So is their brutality.
+                            </p>
+                            <p style="margin-top: 0.5rem; color: var(--ember-orange); font-weight: 600;">
+                                → Click to learn more about the Redeemers
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Circle of Ash Card -->
+                <a href="circle-of-ash.html" class="nav-card" style="display: block; text-decoration: none; margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--ash-grey); padding: 0.5rem; background: rgba(255, 255, 255, 0.5); flex-shrink: 0;">
+                            <svg viewBox="0 0 120 120" style="width: 100%; height: 100%;">
+                                <circle cx="60" cy="60" r="35" fill="none" stroke="#2C2416" stroke-width="8" opacity="0.7"/>
+                                <circle cx="40" cy="45" r="3" fill="#2C2416" opacity="0.5"/>
+                                <circle cx="75" cy="40" r="3" fill="#2C2416" opacity="0.5"/>
+                                <ellipse cx="60" cy="60" rx="8" ry="12" fill="#CC5500" opacity="0.8"/>
+                                <ellipse cx="60" cy="58" rx="5" ry="8" fill="#FF6600" opacity="0.9"/>
+                                <ellipse cx="60" cy="56" rx="3" ry="5" fill="#FFB366" opacity="1"/>
+                            </svg>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--blood-rust); margin-bottom: 0.5rem;">
+                                The Circle of Ash
+                            </h3>
+                            <p style="font-style: italic; color: var(--ash-grey); margin-bottom: 0.5rem;">
+                                "What burns may yet illuminate"
+                            </p>
+                            <p style="line-height: 1.5;">
+                                Scattered covenant of psionics, witches, and mystics who protect their own through hidden 
+                                networks. They see psionics as humanity's evolution, not damnation. Where Redeemers burn, 
+                                the Circle teaches control. Deeply fractured between those who want peace and those who 
+                                want war. Their unity is their strength—and their greatest weakness.
+                            </p>
+                            <p style="margin-top: 0.5rem; color: var(--ember-orange); font-weight: 600;">
+                                → Click to learn more about the Circle of Ash
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Ironbrands Card -->
+                <a href="ironbrands.html" class="nav-card" style="display: block; text-decoration: none; margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--ash-grey); padding: 0.5rem; background: rgba(255, 255, 255, 0.5); flex-shrink: 0;">
+                            <svg viewBox="0 0 120 120" style="width: 100%; height: 100%;">
+                                <rect x="40" y="50" width="40" height="35" fill="#6B6B6B" stroke="#2C2416" stroke-width="2"/>
+                                <rect x="42" y="45" width="7" height="10" fill="#6B6B6B" stroke="#2C2416" stroke-width="1"/>
+                                <rect x="52" y="43" width="7" height="12" fill="#6B6B6B" stroke="#2C2416" stroke-width="1"/>
+                                <rect x="35" y="60" width="8" height="12" fill="#6B6B6B" stroke="#2C2416" stroke-width="1"/>
+                                <path d="M 60 85 L 60 95" stroke="#8B3A1A" stroke-width="4"/>
+                                <ellipse cx="60" cy="97" rx="6" ry="4" fill="none" stroke="#8B3A1A" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--blood-rust); margin-bottom: 0.5rem;">
+                                The Ironbrand Militias
+                            </h3>
+                            <p style="font-style: italic; color: var(--ash-grey); margin-bottom: 0.5rem;">
+                                "Strength makes order"
+                            </p>
+                            <p style="line-height: 1.5;">
+                                Professional mercenary companies providing military force to the highest bidder—usually 
+                                the Consortium. They're not thugs or bandits but trained soldiers with discipline and 
+                                standards. Fight for pay, not ideology. The question is whether that makes them honest 
+                                or just well-organized tools of oppression. Depends on who's paying their wages this week.
+                            </p>
+                            <p style="margin-top: 0.5rem; color: var(--ember-orange); font-weight: 600;">
+                                → Click to learn more about the Ironbrands
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <h2 class="section-title">Factional Relationships</h2>
+
+                <p class="content-text">
+                    These five powers don't exist in isolation. They clash, cooperate, betray, and manipulate each 
+                    other in an endless dance of frontier politics. Understanding who hates whom—and why—is essential 
+                    to surviving the frontier.
+                </p>
+
+                <div class="tab-container">
+                    <ul class="tab-list">
+                        <li><button class="tab-button active" data-tab="tensions">Major Tensions</button></li>
+                        <li><button class="tab-button" data-tab="alliances">Unlikely Alliances</button></li>
+                        <li><button class="tab-button" data-tab="duncan">Duncan's Position</button></li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="tensions">
+                            <h3>The Blood Feuds</h3>
+                            
+                            <div class="character-card">
+                                <h4 class="character-name">Consortium vs. Dust Vultures</h4>
+                                <p class="character-description">
+                                    <strong>Surface:</strong> Trade empire vs. raiders who disrupt shipments<br>
+                                    <strong>Reality:</strong> Consortium secretly pays some Vulture lieutenants to raid 
+                                    competitors while leaving their own caravans alone. Maeve suspects but can't prove it. 
+                                    When she finds proof, the purge will be bloody.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Redeemers vs. Circle of Ash</h4>
+                                <p class="character-description">
+                                    <strong>The Existential War:</strong> Stroud hunts psionics. Circle protects them. 
+                                    This isn't political—it's theological. No compromise possible. Every Redeemer purge 
+                                    pushes more Circle members toward Elder Kael's war faction. Every Circle attack on 
+                                    Redeemers proves Stroud's propaganda. Escalation is inevitable.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Dust Vultures vs. Ironbrands</h4>
+                                <p class="character-description">
+                                    <strong>Professional Rivalry:</strong> Raiders vs. guards, constant blood feuds. 
+                                    Ironbrands guard what Vultures want to steal. Both sides respect the other's skills 
+                                    while trying to kill each other. Backroom bribes blur the lines—some Ironbrand 
+                                    captains "accidentally" leave routes unguarded for a cut of the take.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Consortium vs. Circle of Ash</h4>
+                                <p class="character-description">
+                                    <strong>Hypocritical Pragmatism:</strong> Consortium publicly condemns psionics to 
+                                    appease Redeemer-influenced towns. Privately, they hire Circle members for 
+                                    supernatural problems and consult with them on ley-line manipulation. The Circle 
+                                    takes their money while despising their cowardice. Both sides know the relationship 
+                                    is corrupt. Neither can afford to end it.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="alliances">
+                            <h3>Strange Bedfellows</h3>
+                            
+                            <div class="character-card">
+                                <h4 class="character-name">Consortium & Ironbrands</h4>
+                                <p class="character-description">
+                                    <strong>The Obvious Alliance:</strong> Consortium pays, Ironbrands protect. But it's 
+                                    more complex—Ironbrands maintain independence, can refuse contracts, sometimes work 
+                                    for Consortium competitors. The relationship is employer-contractor, not master-servant. 
+                                    Consortium wishes it owned them outright. Ironbrands ensure that never happens.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Dust Vultures & Circle of Ash</h4>
+                                <p class="character-description">
+                                    <strong>Mutual Protection:</strong> Vultures shelter Hollowborn and psionic refugees 
+                                    fleeing persecution. Circle provides information, healing, and occasional supernatural 
+                                    support. Not formal allies but share common enemies (Redeemers, Consortium) and help 
+                                    each other when convenient. Maeve personally protects several Circle covens.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Consortium & Covenant of Ash (Shadow Alliance)</h4>
+                                <p class="character-description">
+                                    <strong>The Secret Deal:</strong> While not one of the five major factions, the 
+                                    Covenant of Ash (rail-sorcerers) have quiet arrangements with the Consortium. 
+                                    Consortium needs their supernatural expertise for ley-engines and rail maintenance. 
+                                    Covenant needs Consortium protection and resources. Both deny the relationship publicly. 
+                                    Both depend on it privately.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Temporary Truces</h4>
+                                <p class="character-description">
+                                    When something worse than factional politics emerges—supernatural threats, plague, 
+                                    natural disasters—enemies become allies. Briefly. Ironbrands and Dust Vultures have 
+                                    fought side-by-side against Hollow Men hordes. Circle and Redeemers once cooperated 
+                                    to stop a reality storm (didn't last). Consortium coordinates relief during disasters 
+                                    (while calculating profit margins). These truces never last, but they prove cooperation 
+                                    is possible—just not profitable enough.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel" id="duncan">
+                            <h3>Where Duncan Stands</h3>
+                            
+                            <p class="content-text">
+                                Duncan Maddox occupies a unique position—beholden to none, useful to all, trusted by 
+                                few, feared by many. Every faction wants to recruit, kill, or control him. He refuses 
+                                all three.
+                            </p>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Consortium Perspective</h4>
+                                <p class="character-description">
+                                    <strong>The Offer:</strong> Lord Marshal Haldane has made three recruitment attempts, 
+                                    each with escalating compensation. Duncan refuses every time.<br>
+                                    <strong>The Bounty:</strong> Simultaneously, there's a $3,000 bounty on him. Not high 
+                                    enough to draw serious hunters, not low enough to be insult. "Insurance," Haldane 
+                                    calls it.<br>
+                                    <strong>Current Status:</strong> Useful wildcard. More valuable loose than dead or 
+                                    employed. Door remains open.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Dust Vultures Perspective</h4>
+                                <p class="character-description">
+                                    <strong>Maeve's Temptation:</strong> "Ride with us. Be free." She offers power, 
+                                    passion, and life without chains. Sometimes lovers, sometimes enemies, always complicated.<br>
+                                    <strong>Duncan's Response:</strong> Refuses because he sees what freedom paid for with 
+                                    others' blood costs. But he can't quit her either.<br>
+                                    <strong>Current Status:</strong> Orbiting each other like twin storms, inevitable 
+                                    collision postponed but not prevented.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Redeemers Perspective</h4>
+                                <p class="character-description">
+                                    <strong>Stroud's Obsession:</strong> Duncan represents ultimate blasphemy—power 
+                                    without repentance, strength without faith. They've faced each other three times. 
+                                    Each knows the fourth will be final.<br>
+                                    <strong>The Offer:</strong> "Surrender your guns, accept salvation." Duncan declined 
+                                    with bullets.<br>
+                                    <strong>Current Status:</strong> Enemies until one dies. No middle ground.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Circle of Ash Perspective</h4>
+                                <p class="character-description">
+                                    <strong>Elder Rhun's Recruitment:</strong> Three attempts to bring Duncan into the 
+                                    fold. Offers knowledge, control, extended life. Duncan refuses—doesn't trust 
+                                    organizations.<br>
+                                    <strong>The Debate:</strong> Rhun sees torchbearer burning too bright. Kael sees 
+                                    potential army commander. Miriam sees dangerous example of untrained power.<br>
+                                    <strong>Current Status:</strong> Door open, pressure mounting, Duncan increasingly 
+                                    isolated as Veil Bleed worsens.
+                                </p>
+                            </div>
+
+                            <div class="character-card">
+                                <h4 class="character-name">Ironbrands Perspective</h4>
+                                <p class="character-description">
+                                    <strong>Professional Respect:</strong> Captain Holt recognizes fellow professional, 
+                                    has offered employment twice. Duncan refuses—doesn't want orders or authority.<br>
+                                    <strong>Rules of Engagement:</strong> Unofficial understanding: if contracted to hunt 
+                                    Duncan, they try. No hard feelings. Professional courtesy means clean kills if it 
+                                    comes to that.<br>
+                                    <strong>Current Status:</strong> Respectful enemies who might fight or cooperate 
+                                    depending on who's paying whom.
+                                </p>
+                            </div>
+
+                            <div class="quote-block">
+                                "Every faction wants me for what I can do, not who I am. Consortium wants a weapon they 
+                                didn't forge. Vultures want a killer without conscience. Redeemers want a trophy to burn. 
+                                Circle wants a torch to carry their cause. Ironbrands want a soldier who follows orders.<br><br>
+                                
+                                I'm none of those things. Just a man trying to keep one more sunrise between him and the 
+                                grave. They can't accept that. So they keep pushing, keep offering, keep hunting.<br><br>
+                                
+                                One day, one of them will push too hard. And I'll have to burn everything to stay free."
+                                <div style="text-align: right; margin-top: 1rem; font-style: normal;">
+                                    — Duncan Maddox
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title">The Balance of Power</h2>
+
+                <p class="content-text">
+                    No single faction dominates the frontier. Each holds power in different domains, creating uneasy 
+                    equilibrium. Understanding this balance is key to survival.
+                </p>
+
+                <div class="info-box">
+                    <h4 class="info-box-title">Spheres of Influence</h4>
+                    <ul class="frontier-list">
+                        <li><strong>Economic Power:</strong> Consortium dominates through rails, currency, and trade monopolies</li>
+                        <li><strong>Military Force:</strong> Ironbrands provide professional violence to highest bidder</li>
+                        <li><strong>Guerrilla Warfare:</strong> Dust Vultures control through fear and mobility</li>
+                        <li><strong>Ideological Influence:</strong> Redeemers sway hearts and minds through faith</li>
+                        <li><strong>Hidden Networks:</strong> Circle operates in shadows, protecting psionics and gathering knowledge</li>
+                    </ul>
+                </div>
+
+                <div class="character-card">
+                    <h3 class="character-name">What Happens If Balance Breaks?</h3>
+                    <p class="character-description">
+                        The current stalemate is unstable but functional. Each faction checks the others. But several 
+                        scenarios could shatter the balance:
+                    </p>
+                    <ul class="frontier-list">
+                        <li><strong>Consortium Monopoly:</strong> If they own all rails, all currency, all security—frontier 
+                            becomes company town. Resistance becomes economically impossible.</li>
+                        <li><strong>Redeemer Victory:</strong> If Stroud eliminates all psionics, he doesn't stop. Next 
+                            targets: witches, healers, anyone "different." Frontier becomes theocracy built on fear.</li>
+                        <li><strong>Circle Civil War:</strong> If Healers and Warriors split, half join settlements while 
+                            half wage war. Psionic weapons on both sides. Reality itself becomes battlefield.</li>
+                        <li><strong>Vulture Confederation:</strong> If Maeve unites all raider bands under one banner, 
+                            creates psionic-backed army. Could overthrow Consortium control or burn frontier trying.</li>
+                        <li><strong>Ironbrand Coup:</strong> They have guns, training, numbers. Only loyalty to contracts 
+                            prevents them from taking over. If that loyalty breaks, nothing stops them.</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title">Choose Your Path</h2>
+
+                <p class="content-text">
+                    Each faction page contains detailed information about their structure, methods, notable figures, 
+                    and current operations. Understanding these powers means understanding the frontier—and your odds 
+                    of surviving it.
+                </p>
+
+                <div class="nav-cards">
+                    <a href="consortium.html" class="nav-card">
+                        <h3>The Consortium</h3>
+                        <p>Economics, politics, rail control</p>
+                    </a>
+                    
+                    <a href="dust-vultures.html" class="nav-card">
+                        <h3>Dust Vultures</h3>
+                        <p>Raiding tactics, Maeve's confederation</p>
+                    </a>
+                    
+                    <a href="redeemers.html" class="nav-card">
+                        <h3>The Redeemers</h3>
+                        <p>Theology, persecution methods, Stroud's crusade</p>
+                    </a>
+                    
+                    <a href="circle-of-ash.html" class="nav-card">
+                        <h3>Circle of Ash</h3>
+                        <p>Psionic protection, hidden networks, internal conflicts</p>
+                    </a>
+                    
+                    <a href="ironbrands.html" class="nav-card">
+                        <h3>Ironbrands</h3>
+                        <p>Military structure, contracts, professional code</p>
+                    </a>
+                </div>
+
+                <div class="quote-block" style="margin-top: 3rem;">
+                    "Five fingers choking the frontier. Some days they fight each other, give us room to breathe. 
+                    Other days they cooperate, and we all suffocate together. The smart folk figure out which 
+                    finger to kiss and when. The brave folk fight them all. The dead folk couldn't tell the 
+                    difference in time."
+                    <div style="text-align: right; margin-top: 1rem; font-style: normal;">
+                        — Sheriff Elias Crowe
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; The Veil & Lead - A Chronicle of the Frontier</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
