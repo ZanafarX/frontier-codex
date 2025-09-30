@@ -3,25 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duncan Maddox - The Veil & Lead</title>
+    <meta name="description" content="The Veil & Lead - Chronicles of the Psi-Slinger's Frontier. A dark fantasy western codex featuring Duncan Maddox and the supernatural frontier.">
+    <title>The Veil & Lead - Chronicles of the Psi-Slinger's Frontier</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="header">
         <h1 class="site-title">THE VEIL & LEAD</h1>
         <p class="site-subtitle">Chronicles of the Psi-Slinger's Frontier</p>
     </header>
 
-    <nav class="main-nav">
-        <ul class="nav-list">
-            <li><a href="../index.html" class="nav-link">Home</a></li>
-            <li><a href="duncan.html" class="nav-link active">Duncan Maddox</a></li>
-            <li><a href="geography.html" class="nav-link">The World</a></li>
-            <li><a href="veil.html" class="nav-link">Psionics</a></li>
-            <li><a href="factions.html" class="nav-link">Factions</a></li>
-            <li><a href="chronicles.html" class="nav-link">Chronicles</a></li>
-        </ul>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+            
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="duncan.html" class="nav-link">Duncan Maddox</a></li>
+                
+                <li class="nav-item has-dropdown">
+                    <a href="geography.html" class="nav-link">The World</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="geography.html" class="nav-link">Geography</a></li>
+                        <li><a href="daily-life.html" class="nav-link">Daily Life</a></li>
+                        <li><a href="economy.html" class="nav-link">Economy & Politics</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item"><a href="veil.html" class="nav-link">Psionics</a></li>
+                
+                <li class="nav-item has-dropdown">
+                    <a href="factions.html" class="nav-link">Factions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="factions.html" class="nav-link">Overview</a></li>
+                        <li><a href="consortium.html" class="nav-link">Consortium</a></li>
+                        <li><a href="dust-vultures.html" class="nav-link">Dust Vultures</a></li>
+                        <li><a href="redeemers.html" class="nav-link">Redeemers</a></li>
+                        <li><a href="circle-of-ash.html" class="nav-link">Circle of Ash</a></li>
+                        <li><a href="ironbrands.html" class="nav-link">Ironbrands</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item"><a href="supporting.html" class="nav-link">Supporting Cast</a></li>
+                <li class="nav-item"><a href="chronicles.html" class="nav-link">Chronicles</a></li>
+            </ul>
+            
+            <button class="search-button" aria-label="Open search">Search</button>
+        </div>
     </nav>
+
+    <!-- Search Modal -->
+    <div class="search-modal" role="dialog" aria-labelledby="search-title" aria-modal="true">
+        <div class="search-content">
+            <button class="search-close" aria-label="Close search">×</button>
+            <h2 id="search-title" style="font-family: 'Oswald', sans-serif; margin-bottom: 1rem;">Search the Codex</h2>
+            <input type="search" class="search-input" placeholder="Search for characters, locations, factions..." aria-label="Search">
+            <div class="search-results"></div>
+        </div>
+    </div>
 
     <div class="container">
         <main class="main-content">
@@ -460,6 +504,9 @@
 
     <footer class="footer">
         <p>&copy; The Veil & Lead - A Chronicle of the Frontier</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            "Every coin's got a shadow. Every bullet's got a name. Every story's got blood in the telling."
+        </p>
     </footer>
 
     <script src="../js/main.js"></script>
