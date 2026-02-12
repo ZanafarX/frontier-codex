@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 8: Managing the Nightmare &mdash; The Veil &amp; Lead</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <h1 class="site-title">The Frontier Codex</h1>
+        <p class="site-subtitle">A Digital Companion for The Veil &amp; Lead Role-Playing Game</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Frontier</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages/introduction.html" class="nav-link">The World That Was</a></li>
+                        <li><a href="../pages/five-powers.html" class="nav-link">The Five Powers</a></li>
+                        <li><a href="../pages/life-in-the-wastes.html" class="nav-link">Life in the Wastes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Drifter</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch1-overview.html" class="nav-link">Ch 1: The Long Road</a></li>
+                        <li><a href="ch2-overview.html" class="nav-link">Ch 2: The Soul</a></li>
+                        <li><a href="ch3-overview.html" class="nav-link">Ch 3: The Armory &amp; Economy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Law of Lead</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch4-overview.html" class="nav-link">Ch 4: The Duelist&rsquo;s Sum</a></li>
+                        <li><a href="ch5-overview.html" class="nav-link">Ch 5: The Count</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Current</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch6-overview.html" class="nav-link">Ch 6: Tearing the Veil</a></li>
+                        <li><a href="ch7-overview.html" class="nav-link">Ch 7: The Disciplines</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link active">Marshal&rsquo;s Almanac</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch8-overview.html" class="nav-link active">Ch 8: Managing the Nightmare</a></li>
+                        <li><a href="ch9-overview.html" class="nav-link">Ch 9: The Atlas</a></li>
+                        <li><a href="ch10-overview.html" class="nav-link">Ch 10: The Bestiary</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item"><a href="ch8-overview.html">Book IV: The Marshal&rsquo;s Almanac</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item">Ch 8: Managing the Nightmare</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="container">
+            <div class="main-content">
+
+                <!-- Content Header -->
+                <div class="content-header">
+                    <p class="content-kicker">Book IV: The Marshal&rsquo;s Almanac &mdash; Chapter 8</p>
+                    <h1 class="content-title">Managing the Nightmare</h1>
+                    <p class="content-subtitle">The Tension Pool, Pacing, XP, and GM Tools</p>
+                </div>
+
+                <!-- Epigraph -->
+                <div class="epigraph">
+                    &ldquo;You aren&rsquo;t God. God left a long time ago. You&rsquo;re just the poor bastard sweeping up the glass. Your job isn&rsquo;t to save them. It&rsquo;s to make sure that when they die, it means something.&rdquo;
+                    <br><em>&mdash; Advice found in a dead Marshal&rsquo;s journal</em>
+                </div>
+
+                <!-- Chapter Intro -->
+                <div class="content-section">
+                    <p class="content-text">Welcome to the other side of the screen.</p>
+                    <p class="content-text">In <em>The Veil &amp; Lead</em>, you are the <strong>Game Marshal</strong>. You are the storyteller, the referee, and the voice of the Ruin. Your role is not to defeat the players, but to preside over their struggle. You manage the pacing of the horror, the scarcity of resources, and the inevitable thinning of the Veil.</p>
+                </div>
+
+<!-- ============================================================ -->
+<!-- TAB GROUP 1: THE MARSHAL'S TOOLKIT                           -->
+<!-- ============================================================ -->
+
+                <div class="tab-container">
+                    <div class="tab-list" role="tablist">
+                        <button class="tab-button active" data-tab="tab-tension" role="tab">The Tension Pool</button>
+                        <button class="tab-button" data-tab="tab-pacing" role="tab">Pacing the Horror</button>
+                        <button class="tab-button" data-tab="tab-failure" role="tab">Failure &amp; Difficulty</button>
+                        <button class="tab-button" data-tab="tab-xp" role="tab">XP &amp; Legend</button>
+                    </div>
+                    <div class="tab-content">
+
+<!-- ==================== TAB: THE TENSION POOL ==================== -->
+<div class="tab-panel active" id="tab-tension" role="tabpanel">
+    <h2 class="section-title">Section I: The Tension Pool</h2>
+    <p class="content-text">The most critical tool in your arsenal is <strong>The Tension Pool</strong>. It is a visual representation of the world&rsquo;s patience running out. It sits in the center of the table&mdash;a bowl, a tray, or a marked zone&mdash;holding a growing number of d6s.</p>
+
+    <h3 class="subsection-title">The Concept</h3>
+    <p class="content-text">The Veil is not a static wall; it is a rotting fabric. Every gunshot vibrates the threads. Every spell burns a hole. The Tension Pool tracks this cumulative stress.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Pool State</th><th>Narrative Feel</th></tr></thead>
+            <tbody>
+                <tr><td>Empty (0 dice)</td><td>Stable. The sun is dim, but physics works.</td></tr>
+                <tr><td>Low (1&ndash;3 dice)</td><td>Uneasy. Shadows seem longer.</td></tr>
+                <tr><td>Medium (4&ndash;5 dice)</td><td>Oppressive. The air tastes wrong.</td></tr>
+                <tr><td>Full (6 dice)</td><td>Critical. Reality is about to break.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Capacity</h3>
+    <div class="rules-box">
+        <h4>The Limit: 6 Dice</h4>
+        <p>The Tension Pool holds a maximum of <strong>6 dice</strong>. When the sixth die enters the pool, you must roll immediately.</p>
+    </div>
+
+    <h3 class="subsection-title">Feeding the Pool</h3>
+    <p class="content-text">Add dice to the pool visibly. Let the players hear the clatter. Let them count.</p>
+
+    <h4>Automatic Triggers (+1 Die)</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Trigger</th><th>Rationale</th></tr></thead>
+            <tbody>
+                <tr><td>Combat begins</td><td>Violence echoes through the Veil</td></tr>
+                <tr><td>Rank 2+ Psionic cast</td><td>Drawing significant Current</td></tr>
+                <tr><td>Bleed Die shows 1</td><td>Direct tear in the fabric</td></tr>
+                <tr><td>Player Fumbles</td><td>Failure invites misfortune</td></tr>
+                <tr><td>Every 10 Ticks of combat</td><td>Sustained violence attracts attention</td></tr>
+                <tr><td>1 hour in dangerous territory</td><td>Entropy is constant</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Situational Triggers (+1 Die)</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Trigger</th><th>When to Use</th></tr></thead>
+            <tbody>
+                <tr><td>Loud explosion or gunfire</td><td>Dynamite, Gatling guns, building collapse</td></tr>
+                <tr><td>Entering a Thin Place</td><td>Ojo del Diablo, the Fen, cursed landmarks</td></tr>
+                <tr><td>Disturbing the dead</td><td>Grave robbing, desecrating remains</td></tr>
+                <tr><td>Breaking a ward</td><td>Crossing salt lines, destroying protective symbols</td></tr>
+                <tr><td>Extreme emotional trauma</td><td>Witnessing ally death, Memory burn</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Heavy Triggers (+2 Dice)</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Trigger</th><th>When to Use</th></tr></thead>
+            <tbody>
+                <tr><td>Rank 4&ndash;5 Psionic cast</td><td>Major reality distortion</td></tr>
+                <tr><td>Mass violence</td><td>Massacre, major battle</td></tr>
+                <tr><td>Deliberate Veil contact</td><td>Using artifacts, summoning</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Rolling the Pool</h3>
+    <p class="content-text">You do not roll every time a die is added. You roll when pressure becomes untenable.</p>
+
+    <h4>Roll Triggers</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Trigger</th><th>Type</th></tr></thead>
+            <tbody>
+                <tr><td>Pool hits 6 dice</td><td>Automatic</td></tr>
+                <tr><td>Significant noise in dangerous area</td><td>GM discretion</td></tr>
+                <tr><td>Narrative trigger</td><td>Midnight, blood moon, entering Thin Place</td></tr>
+                <tr><td>Player pushes their luck</td><td>Opening sealed doors, reading forbidden texts</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>The Mechanic</h4>
+    <div class="rules-box">
+        <h4>Tension Roll</h4>
+        <p>Roll all dice in the pool. Count the <strong>1s</strong>.</p>
+        <p><strong>Zero 1s:</strong> Tension holds. Remove two dice from the pool. Describe mounting dread.</p>
+        <p><strong>One or more 1s:</strong> <strong>Rupture.</strong> Resolve effect based on number of 1s, then clear pool to 0.</p>
+    </div>
+
+    <h3 class="subsection-title">The Rupture Table</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>1s Rolled</th><th>Severity</th><th>Effect</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>The Shiver</td>
+                    <td>Atmospheric shift. Temperature drops 20&deg;. Shadows detach from objects. Animals flee. <em>Mechanic:</em> All ECHO and SAVVY checks suffer &minus;1 die for the scene.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>The Warp</td>
+                    <td>Reality glitch. Gravity shifts momentarily. A door leads to the wrong room. A dead NPC twitches. <em>Mechanic:</em> Firearms jam on rolls of 1&ndash;2 until cleaned. Technology malfunctions.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>The Breach</td>
+                    <td>Manifestation. A creature crawls through the nearest reflection, shadow, or wound in reality. <em>Mechanic:</em> Combat begins immediately. Roll or choose: Hollow Men (1&ndash;3), Ashborn Swarm (4&ndash;5), Fen-Wraith (6).</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>The Storm</td>
+                    <td>Catastrophe. Environmental disaster (mine collapse, flash flood, fire) OR major entity arrives (Stormcaller, Skin-Changer). <em>Mechanic:</em> Run or die. This is not a fair fight.</td>
+                </tr>
+                <tr>
+                    <td>5+</td>
+                    <td>The Reckoning</td>
+                    <td>All of the above, plus the location becomes a <strong>permanent Thin Place</strong>. Reality is scarred. The Veil will never fully heal here.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Warding the Pool</h3>
+    <p class="content-text">Players can actively lower the threat level, but it costs resources and time.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Method</th><th>Requirements</th><th>Effect</th></tr></thead>
+            <tbody>
+                <tr><td>Salt Circle</td><td>1 Salt Pouch, 5 minutes</td><td>Prevents time-based additions for 1 hour</td></tr>
+                <tr><td>Ritual Cleansing</td><td>10 minutes, ECHO + Lore (TN 11 + current dice)</td><td>Success: Remove 2 dice. Failure: Add 1 die.</td></tr>
+                <tr><td>Offering</td><td>Cost 3+ item thrown into Thin Place</td><td>Remove 1d3 dice</td></tr>
+                <tr><td>Resolving the Scene</td><td>Leave dangerous area, reach safety</td><td>Pool clears when danger passes</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Urban Ruptures</h3>
+    <p class="content-text">In settled areas (Rustwater, Brimstead, Orvain), Ruptures cause <strong>Social Decay</strong> instead of monster manifestations.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>1s</th><th>Urban Effect</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td><strong>Paranoia:</strong> Prices increase by 50%. NPCs become suspicious and hostile.</td></tr>
+                <tr><td>2</td><td><strong>Riot:</strong> Property damage, NPC deaths, Sheriff declares martial law.</td></tr>
+                <tr><td>3</td><td><strong>Outbreak:</strong> Current-Sickness spreads. Quarantine. Redeemers arrive.</td></tr>
+                <tr><td>4</td><td><strong>Collapse:</strong> A building falls. Fire spreads. 2d6 civilian casualties.</td></tr>
+                <tr><td>5</td><td><strong>Breach:</strong> The settlement becomes a Thin Place. Monsters within the walls.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ==================== TAB: PACING THE HORROR ==================== -->
+<div class="tab-panel" id="tab-pacing" role="tabpanel">
+    <h2 class="section-title">Section II: Pacing the Horror</h2>
+
+    <h3 class="subsection-title">The Cylinder Metaphor</h3>
+    <p class="content-text">Because the pool caps at 6 dice, use the imagery of a revolver being loaded.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Dice</th><th>Feel</th><th>GM Approach</th></tr></thead>
+            <tbody>
+                <tr><td>1&ndash;3</td><td>The Click</td><td>Let players explore and talk. Threat is distant. Describe small wrongness.</td></tr>
+                <tr><td>4</td><td>The Hammer Cocks</td><td>Shorten descriptions. Call for more checks. Shadows move.</td></tr>
+                <tr><td>5</td><td>Finger on Trigger</td><td>Players should feel panic. The next action could trigger the roll.</td></tr>
+                <tr><td>Rupture</td><td>The Shot</td><td>Describe chaos. Roll initiative or run.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">False Safety vs. The Cylinder</h3>
+    <p class="content-text">Alternate between <strong>False Safety</strong> (downtime in towns, quiet travel, character moments) and <strong>The Cylinder</strong> (tension building, resources depleting, danger approaching).</p>
+    <p class="content-text">A good session has 2&ndash;3 peaks of tension with valleys between them.</p>
+
+    <h3 class="subsection-title">Pacing by Session Length</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Session Length</th><th>Recommended Ruptures</th><th>Combat Encounters</th></tr></thead>
+            <tbody>
+                <tr><td>2&ndash;3 hours</td><td>0&ndash;1</td><td>0&ndash;1</td></tr>
+                <tr><td>3&ndash;4 hours</td><td>1&ndash;2</td><td>1</td></tr>
+                <tr><td>4&ndash;6 hours</td><td>2&ndash;3</td><td>1&ndash;2</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Combat Pacing</h3>
+    <p class="content-text">The Veil responds to violence. Combat itself feeds the darkness.</p>
+    <div class="rules-box">
+        <h4>Tension Pool in Combat</h4>
+        <p><strong>Automatic Tension Die:</strong> +1 die to the Tension Pool when combat begins (Tick 0).</p>
+        <p><strong>Sustained Violence:</strong> +1 die every 10 Ticks of combat.</p>
+        <p>Long fights attract attention. The screaming of the rails, the blood in the sand&mdash;the Current feels it.</p>
+    </div>
+
+    <h4>Ideal Combat Duration</h4>
+    <p class="content-text">Most combats should last 10&ndash;20 Ticks (3&ndash;5 actions per PC), with at least one side taking serious damage, 2&ndash;3 meaningful tactical decisions, and a clear resolution (victory, retreat, negotiation, or death).</p>
+
+    <h4>Signs Combat Is Dragging</h4>
+    <div class="warning-box">
+        <p class="warning-title">Watch For These Red Flags</p>
+        <p>Tick count exceeds 30. Players are calculating optimal Tempo instead of roleplaying. No one has taken a Wound. The same attacks are being repeated without change.</p>
+    </div>
+
+    <h4>Solutions for Stalled Combat</h4>
+    <p class="content-text">When combat drags, introduce change:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Solution</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td>Environmental Hazard</td><td>The building starts to collapse. Fire spreads. The cliff edge crumbles.</td></tr>
+                <tr><td>Reinforcements or Retreat</td><td>More enemies arrive&mdash;or enemies fall back to a better position.</td></tr>
+                <tr><td>Tension Pool Rupture</td><td>The Veil tears. Something manifests. Suddenly, everyone has a common enemy.</td></tr>
+                <tr><td>Narrative Cut</td><td>&ldquo;You win, but you&rsquo;re exhausted. Mark off double ammo and take 1 Strain each.&rdquo;</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Post-Combat Beat</h4>
+    <p class="content-text">Every combat should end with a moment to breathe. Describe the aftermath: the silence, the smoke, the bodies. Account for resources: ammunition spent, equipment damaged. Offer a scavenging opportunity. Check the Tension Pool. Give characters a moment to react&mdash;fear, relief, regret. Combat should have weight. Make the players feel it.</p>
+</div>
+
+<!-- ==================== TAB: FAILURE & DIFFICULTY ==================== -->
+<div class="tab-panel" id="tab-failure" role="tabpanel">
+    <h2 class="section-title">Section III: Managing Failure</h2>
+    <p class="content-text">Players will fail often. TNs are challenging, resources are scarce. Use failure as story fuel, not story stop.</p>
+
+    <h3 class="subsection-title">The Principle: Failing Forward</h3>
+    <p class="content-text">Instead of &ldquo;You fail. Nothing happens,&rdquo; use failure to change the situation.</p>
+
+    <h3 class="subsection-title">Success at a Cost</h3>
+    <p class="content-text">When Margin is &minus;1 to &minus;2, offer a devil&rsquo;s bargain:</p>
+    <div class="quote-block">
+        &ldquo;You can open the lock, but your pick snaps loudly. The guard will definitely hear. Do you still want to open it?&rdquo;
+    </div>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Cost Type</th><th>Examples</th></tr></thead>
+            <tbody>
+                <tr><td>Resource</td><td>Spend ammo, break tool, use consumable</td></tr>
+                <tr><td>Time</td><td>Takes longer; enemies advance, window closes</td></tr>
+                <tr><td>Position</td><td>End up exposed, lose cover, reveal location</td></tr>
+                <tr><td>Complication</td><td>Partial success, unintended consequence</td></tr>
+                <tr><td>Harm</td><td>1 Strain, minor wound, Tension Die</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">The Complication</h3>
+    <p class="content-text">Success at primary goal, but the situation worsens.</p>
+    <div class="quote-block">
+        &ldquo;You jump the gap between train cars. You land safely&mdash;but your revolver falls from its holster and dangles off the edge.&rdquo;
+    </div>
+
+    <h3 class="subsection-title">Resource Drain</h3>
+    <p class="content-text">Failure costs supplies, not just dignity.</p>
+    <div class="quote-block">
+        &ldquo;You fail to find the trail. You eventually pick it up, but it takes two extra days. Mark off 2 Water rations, or take 1 Strain from dehydration.&rdquo;
+    </div>
+
+    <h2 class="section-title">Section IV: Difficulty Calibration</h2>
+
+    <h3 class="subsection-title">Setting TNs</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>TN</th><th>When to Use</th></tr></thead>
+            <tbody>
+                <tr><td>7</td><td>Easy; failure would be embarrassing</td></tr>
+                <tr><td>9</td><td>Routine task under mild pressure; someone with a modicum of skill will generally succeed</td></tr>
+                <tr><td>11</td><td>Moderate challenge; trained professional should succeed</td></tr>
+                <tr><td>13</td><td>Standard. The default for dramatic, contested, or dangerous tasks</td></tr>
+                <tr><td>15</td><td>Hard. Expert difficulty; even skilled characters may fail</td></tr>
+                <tr><td>17+</td><td>Legendary. Requires perfection and luck</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">When NOT to Roll</h3>
+    <p class="content-text">Don&rsquo;t call for rolls when success is trivial and failure is boring, the character has ample time and no pressure, or the outcome doesn&rsquo;t matter to the story.</p>
+
+    <h3 class="subsection-title">Stacking the Odds</h3>
+    <p class="content-text">Modifiers affect the roll significantly. Use Hard TNs sparingly&mdash;they should feel significant.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Situation</th><th>Approx. Success Rate (6-dice pool)</th></tr></thead>
+            <tbody>
+                <tr><td>TN 11, no modifiers</td><td>91%</td></tr>
+                <tr><td>TN 11, &minus;2 dice (Wounded)</td><td>75%</td></tr>
+                <tr><td>TN 13 (Standard)</td><td>65%</td></tr>
+                <tr><td>TN 13, &minus;2 dice</td><td>43%</td></tr>
+                <tr><td>TN 15 (Hard)</td><td>36%</td></tr>
+                <tr><td>TN 15, &minus;2 dice</td><td>18%</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ==================== TAB: XP & LEGEND ==================== -->
+<div class="tab-panel" id="tab-xp" role="tabpanel">
+    <h2 class="section-title">Section V: Rewarding Players</h2>
+
+    <h3 class="subsection-title">XP Awards (End of Session)</h3>
+    <p class="content-text">Go through this checklist with the group:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Award</th><th>XP</th><th>Trigger</th></tr></thead>
+            <tbody>
+                <tr><td>Survival</td><td>1</td><td>The character is alive</td></tr>
+                <tr><td>The Struggle</td><td>1</td><td>Overcame a significant threat (combat, social, environmental)</td></tr>
+                <tr><td>The Discovery</td><td>1</td><td>Learned a secret about the Veil, Factions, or History</td></tr>
+                <tr><td>The Flaw</td><td>1</td><td>A player voluntarily complicated the scene due to their Tragedy, Secret, or bond</td></tr>
+                <tr><td>The Lesson</td><td>1</td><td>A player suffered a critical failure or major setback</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="content-text"><strong>Typical Session:</strong> 3&ndash;4 XP</p>
+
+    <h3 class="subsection-title">Milestone Awards</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Milestone</th><th>XP</th><th>Trigger</th></tr></thead>
+            <tbody>
+                <tr><td>Arc Completion</td><td>5</td><td>Resolved a major storyline</td></tr>
+                <tr><td>Nemesis Defeated</td><td>3</td><td>Killed or neutralized a recurring enemy</td></tr>
+                <tr><td>Faction Shift</td><td>2</td><td>Significantly changed standing with a Power</td></tr>
+                <tr><td>Memory Forged</td><td>2</td><td>Created a Scar Memory through play</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">The Burden Award (Psionic Only)</h3>
+    <p class="content-text">Award +1 XP to Psionic characters who used Rank 3+ abilities during the session <strong>and</strong> suffered meaningful consequences (visions, stigma, Erosion, Memory burn). This helps offset the Psionic XP tax.</p>
+
+    <h3 class="subsection-title">The Flaw Award (Nomination)</h3>
+    <p class="content-text">Encourage players to nominate each other:</p>
+    <div class="quote-block">
+        &ldquo;I think Caleb deserves the Flaw XP&mdash;he refused to shoot that kid even though it almost got him killed.&rdquo;
+    </div>
+    <p class="content-text">This rewards dramatic choices over optimal play.</p>
+
+    <h3 class="subsection-title">Spending Experience</h3>
+    <p class="content-text">XP is spent during Downtime between sessions or adventures.</p>
+
+    <h4>Raising Attributes</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Increase</th><th>Cost</th><th>Cumulative</th></tr></thead>
+            <tbody>
+                <tr><td>Rank 1 &rarr; 2</td><td>10 XP</td><td>10 XP</td></tr>
+                <tr><td>Rank 2 &rarr; 3</td><td>15 XP</td><td>25 XP</td></tr>
+                <tr><td>Rank 3 &rarr; 4</td><td>20 XP</td><td>45 XP</td></tr>
+                <tr><td>Rank 4 &rarr; 5</td><td>30 XP</td><td>75 XP</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Improving Skills</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Increase</th><th>Cost</th><th>Cumulative</th></tr></thead>
+            <tbody>
+                <tr><td>Rank 0 &rarr; 1</td><td>4 XP</td><td>4 XP</td></tr>
+                <tr><td>Rank 1 &rarr; 2</td><td>6 XP</td><td>10 XP</td></tr>
+                <tr><td>Rank 2 &rarr; 3</td><td>9 XP</td><td>19 XP</td></tr>
+                <tr><td>Rank 3 &rarr; 4</td><td>15 XP</td><td>34 XP</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Learning Talents</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Type</th><th>Cost</th><th>Requirements</th></tr></thead>
+            <tbody>
+                <tr><td>Mundane Talent</td><td>4 XP</td><td>Appropriate Skill at Rank 1+</td></tr>
+                <tr><td>Psionic Talent (Rank 1&ndash;2)</td><td>4 XP</td><td>ECHO &ge; Talent Rank, Channel 1+</td></tr>
+                <tr><td>Psionic Talent (Rank 3&ndash;4)</td><td>6 XP</td><td>ECHO &ge; Talent Rank, Mentor or Grimoire</td></tr>
+                <tr><td>Psionic Talent (Rank 5)</td><td>6 XP</td><td>ECHO 5, Mentor or Grimoire, GM approval</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Other Purchases</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Action</th><th>Cost</th><th>Notes</th></tr></thead>
+            <tbody>
+                <tr><td>Specialization</td><td>5 XP</td><td>Requires Skill Rank 3+; one per skill</td></tr>
+                <tr><td>Clear 1 Erosion</td><td>2 XP</td><td>&mdash;</td></tr>
+                <tr><td>Increase Mettle Cap</td><td>8 XP</td><td>Maximum +2 total</td></tr>
+                <tr><td>Harden a Memory</td><td>8 XP</td><td>&mdash;</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="section-title">Section VI: The Legend Track</h2>
+    <p class="content-text">Your reputation is tracked from 0 to 10. Legend is not bought with XP&mdash;it is awarded by the GM for deeds that spread through word of mouth.</p>
+
+    <h3 class="subsection-title">Gaining Legend</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Deed</th><th>Legend Gained</th></tr></thead>
+            <tbody>
+                <tr><td>Killing a named Boss NPC</td><td>+1</td></tr>
+                <tr><td>Surviving a full Rupture (5-die pool) without fleeing</td><td>+1</td></tr>
+                <tr><td>Completing a major contract that changes local politics</td><td>+1</td></tr>
+                <tr><td>Spending &sect;100+ in a single night (public spectacle)</td><td>+1</td></tr>
+                <tr><td>Winning a public duel</td><td>+1</td></tr>
+                <tr><td>Any deed that would spread through stories</td><td>+1</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Effects of Legend</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Legend</th><th>Benefit</th><th>Consequence</th></tr></thead>
+            <tbody>
+                <tr><td>0&ndash;2</td><td>Anonymous</td><td>No special treatment</td></tr>
+                <tr><td>3&ndash;4</td><td>Known locally</td><td>+1 die to Intimidation in your region</td></tr>
+                <tr><td>5&ndash;6</td><td>Regional reputation</td><td>+1 die to Command; &minus;1 die to Stealth/Disguise</td></tr>
+                <tr><td>7&ndash;8</td><td>Frontier-wide fame</td><td>+2 dice to Intimidation/Command; &minus;2 dice to blend in</td></tr>
+                <tr><td>9&ndash;10</td><td>Living legend</td><td>Automatic recognition; bounty hunters and nemeses seek you</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">The Bounty Board</h3>
+    <p class="content-text">At the start of each session, roll 1d10 for characters with Legend 5+. If the roll is less than their Legend score, their fame catches up:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Margin (Legend &minus; Roll)</th><th>Consequence</th></tr></thead>
+            <tbody>
+                <tr><td>1&ndash;2</td><td>A local tough wants to prove themselves in a fight or contest</td></tr>
+                <tr><td>3&ndash;4</td><td>A faction agent (Consortium, Redeemer, Vulture) is actively looking for them</td></tr>
+                <tr><td>5+</td><td>A supernatural predator (Skin-Changer, bounty hunter with Psionic backing) is hunting them</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Progression Pacing</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Arc</th><th>Sessions</th><th>Benchmarks</th><th>Power Level</th></tr></thead>
+            <tbody>
+                <tr><td>The First Arc</td><td>1&ndash;8</td><td>Primary skill to Rank 3, 1&ndash;2 new Talents, signature equipment</td><td>Professional &rarr; Expert</td></tr>
+                <tr><td>The Middle Game</td><td>9&ndash;20</td><td>Primary pools reach 7&ndash;8 dice, Specializations, Legend 3&ndash;5</td><td>Expert &rarr; Master</td></tr>
+                <tr><td>The Long Road</td><td>21+</td><td>Attribute soft-caps (Rank 4&ndash;5), full Talent trees, Memory management critical</td><td>Master (but the world scales with you)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                    </div><!-- end tab-content -->
+                </div><!-- end tab-container (Group 1) -->
+
+<!-- ============================================================ -->
+<!-- TAB GROUP 2: RUNNING THE GAME                                -->
+<!-- ============================================================ -->
+
+                <div class="tab-container">
+                    <div class="tab-list" role="tablist">
+                        <button class="tab-button active" data-tab="tab-downtime" role="tab">Downtime</button>
+                        <button class="tab-button" data-tab="tab-safety" role="tab">Safety &amp; Tone</button>
+                        <button class="tab-button" data-tab="tab-morale" role="tab">Morale</button>
+                        <button class="tab-button" data-tab="tab-encounters" role="tab">Encounters</button>
+                    </div>
+                    <div class="tab-content">
+
+<!-- ==================== TAB: DOWNTIME ==================== -->
+<div class="tab-panel active" id="tab-downtime" role="tabpanel">
+    <h2 class="section-title">Section VII: Downtime</h2>
+
+    <h3 class="subsection-title">Downtime Actions</h3>
+    <p class="content-text">Each player gets <strong>one Action per day</strong> of Downtime:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Action</th><th>Effect</th></tr></thead>
+            <tbody>
+                <tr><td>Recover</td><td>Long Rest: Heal IRON HP, clear all Strain, attempt to clear 1 Grievous Wound (Medicine check)</td></tr>
+                <tr><td>Therapy</td><td>Clear 1 Erosion via Vice, or 2 Erosion via Anchoring (requires scene with Anchor-related NPC)</td></tr>
+                <tr><td>Acquire</td><td>Shop for items (Scrip) or Scrounge for rare items (SAVVY + Scrounge vs TN 13)</td></tr>
+                <tr><td>Train</td><td>Spend XP to raise Attributes, Skills, or learn Talents (Talents require source)</td></tr>
+                <tr><td>Work</td><td>Earn 1d10 Scrip through labor, gambling, or odd jobs</td></tr>
+                <tr><td>Forge Scar</td><td>Fill an empty Memory slot (8 XP, requires roleplay scene)</td></tr>
+                <tr><td>Research</td><td>SAVVY + Lore to learn about a location, enemy, artifact, or mystery</td></tr>
+                <tr><td>Craft</td><td>Create ammunition, simple tools, or modify equipment (requires materials)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Downtime Length</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Situation</th><th>Typical Downtime</th></tr></thead>
+            <tbody>
+                <tr><td>Between sessions (in town)</td><td>1&ndash;3 days</td></tr>
+                <tr><td>Major story break</td><td>1 week</td></tr>
+                <tr><td>Significant time skip</td><td>1 month+ (montage)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ==================== TAB: SAFETY & TONE ==================== -->
+<div class="tab-panel" id="tab-safety" role="tabpanel">
+    <h2 class="section-title">Section VIII: Safety &amp; Tone</h2>
+
+    <h3 class="subsection-title">Lines and Veils</h3>
+    <p class="content-text">Before the campaign, establish:</p>
+    <p class="content-text"><strong>Lines:</strong> Hard limits that don&rsquo;t exist in your game (e.g., &ldquo;No harm to children,&rdquo; &ldquo;No sexual violence&rdquo;).</p>
+    <p class="content-text"><strong>Veils:</strong> Topics that can exist but are handled off-screen or with minimal detail.</p>
+
+    <h3 class="subsection-title">The X-Card</h3>
+    <p class="content-text">Place a card on the table. If any scene becomes too intense, a player can tap the card. Immediately: fade to black, skip the detailed description, or reframe the scene. No explanation required. No questions asked.</p>
+
+    <h3 class="subsection-title">The Check-In</h3>
+    <p class="content-text">After intense sessions (Memory burns, character death, PvP tension), take 5 minutes:</p>
+    <div class="quote-block">
+        &ldquo;How is everyone feeling? Was that too dark? Anything we should handle differently?&rdquo;
+    </div>
+    <div class="rules-box">
+        <h4>The Cardinal Rule</h4>
+        <p>The horror should be <strong>in the game</strong>, not <strong>at the table</strong>.</p>
+    </div>
+
+    <h2 class="section-title">Section IX: Tone &amp; Atmosphere</h2>
+
+    <h3 class="subsection-title">Scarcity Is Fear</h3>
+    <p class="content-text">Avoid letting players have full ammo <strong>and</strong> full health <strong>and</strong> full Mettle at the same time. If they&rsquo;re rich in Scrip, make them poor in Water. The fear comes from the question:</p>
+    <div class="quote-block">
+        &ldquo;Can I afford to win this fight?&rdquo;
+    </div>
+
+    <h3 class="subsection-title">The Weird, Not High Fantasy</h3>
+    <p class="content-text">Psionic is not sparkly. It&rsquo;s visceral.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Don&rsquo;t Say</th><th>Do Say</th></tr></thead>
+            <tbody>
+                <tr><td>&ldquo;The spell heals you for 3 HP.&rdquo;</td><td>&ldquo;Your ribs grind together. Hot wire stitches your skin shut from the inside. You taste copper. Take 3 HP back.&rdquo;</td></tr>
+                <tr><td>&ldquo;You cast Ghost Bullet.&rdquo;</td><td>&ldquo;The bullet glows with the color of your mother&rsquo;s eyes&mdash;eyes you can barely remember anymore.&rdquo;</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">The Environment Is an Enemy</h3>
+    <p class="content-text">Use hazards liberally: Ash Fog limits vision. Acid Rain destroys equipment. The silence is sometimes worse than the noise.</p>
+
+    <h3 class="subsection-title">Make NPCs Human</h3>
+    <p class="content-text">In a world of monsters, humanity is the contrast. The shopkeeper is tired. The Sheriff is afraid. The villain has a point. If players stop caring about the people, they stop caring about saving them.</p>
+</div>
+
+<!-- ==================== TAB: MORALE ==================== -->
+<div class="tab-panel" id="tab-morale" role="tabpanel">
+    <h2 class="section-title">Morale (Optional Rule)</h2>
+    <p class="content-text">Not everyone fights to the death. Most people&mdash;even hardened killers&mdash;have a breaking point. These rules help the GM determine when NPCs flee, surrender, or lose their nerve.</p>
+    <div class="rules-box">
+        <h4>Optional Rule</h4>
+        <p>Use morale when you want fights to end through something other than total annihilation, or when you want enemies to feel more human.</p>
+    </div>
+
+    <h3 class="subsection-title">Morale Triggers</h3>
+    <p class="content-text">NPCs check morale when certain conditions occur:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Trigger</th><th>When It Happens</th></tr></thead>
+            <tbody>
+                <tr><td>Bloodied</td><td>NPC drops to 25% HP or below</td></tr>
+                <tr><td>Leader Falls</td><td>The group&rsquo;s leader is killed or incapacitated</td></tr>
+                <tr><td>Outnumbered</td><td>50% or more of the NPC group is down</td></tr>
+                <tr><td>Overwhelming Display</td><td>Witness something terrifying (Psionic Devastation, monster, ally exploding)</td></tr>
+                <tr><td>Cornered</td><td>Escape route cut off while losing</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">The Morale Check</h3>
+    <p class="content-text"><strong>Roll:</strong> ECHO + Resilience vs. TN based on situation.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Situation</th><th>TN</th></tr></thead>
+            <tbody>
+                <tr><td>Losing but not desperate</td><td>9</td></tr>
+                <tr><td>Clearly outmatched</td><td>11</td></tr>
+                <tr><td>Hopeless (overwhelming force, supernatural terror)</td><td>13</td></tr>
+                <tr><td>Certain death</td><td>15</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>TN Modifiers</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Factor</th><th>TN Modifier</th></tr></thead>
+            <tbody>
+                <tr><td>Defending home/family</td><td>&minus;2</td></tr>
+                <tr><td>Fanatic (Redeemers, cultists)</td><td>&minus;4</td></tr>
+                <tr><td>Leader still standing and inspiring</td><td>&minus;2</td></tr>
+                <tr><td>Promised significant reward</td><td>&minus;1</td></tr>
+                <tr><td>Already witnessed ally flee</td><td>+2</td></tr>
+                <tr><td>Facing supernatural horror</td><td>+2</td></tr>
+                <tr><td>Escape route available</td><td>+1</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Morale Check Results</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Result</th><th>Behavior</th></tr></thead>
+            <tbody>
+                <tr><td>Success</td><td>Stands firm. Continues fighting.</td></tr>
+                <tr><td>Failure by 1&ndash;3</td><td><strong>Shaken:</strong> &minus;2 dice to all actions until rallied or threat removed</td></tr>
+                <tr><td>Failure by 4&ndash;6</td><td><strong>Breaks:</strong> Attempts to flee. Will surrender if cornered.</td></tr>
+                <tr><td>Failure by 7+</td><td><strong>Routs:</strong> Panicked flight. Drops weapons, screams, tramples allies.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Rallying</h3>
+    <p class="content-text">A Shaken or Broken NPC can be rallied by a leader:</p>
+    <p class="content-text"><strong>Action:</strong> Rally (Tempo 4). <strong>Roll:</strong> SWAY + Force or Persuasion vs. TN 11.</p>
+    <p class="content-text"><strong>Success:</strong> Target returns to normal morale. <strong>Failure:</strong> Target remains Shaken/Broken. <strong>Critical:</strong> Target gains +1 die to all actions for rest of scene (inspired).</p>
+    <p class="content-text">Routed NPCs cannot be rallied in combat. They&rsquo;re gone.</p>
+
+    <h3 class="subsection-title">Morale by Enemy Type</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Enemy Type</th><th>Morale Trait</th><th>Notes</th></tr></thead>
+            <tbody>
+                <tr><td>Bandits/Raiders</td><td>Normal</td><td>Fight for profit; flee when cost exceeds reward</td></tr>
+                <tr><td>Consortium Enforcers</td><td>Disciplined (+2)</td><td>Trained soldiers; hold longer</td></tr>
+                <tr><td>Dust Vultures</td><td>Aggressive (&minus;1)</td><td>Attack-focused; may flee if overwhelmed</td></tr>
+                <tr><td>Redeemer Inquisitors</td><td>Fanatic (&minus;4)</td><td>Fight to the death against &ldquo;witches&rdquo;</td></tr>
+                <tr><td>Ironbrands</td><td>Professional (+2)</td><td>Contract-bound; won&rsquo;t break unless released</td></tr>
+                <tr><td>Veil-Born</td><td>Fearless</td><td>No morale checks; fight until destroyed</td></tr>
+                <tr><td>Hollow Men</td><td>Mindless</td><td>No morale checks</td></tr>
+                <tr><td>Townspeople</td><td>Fragile (&minus;2)</td><td>Break easily; not fighters</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">When to Use Morale</h3>
+    <p class="content-text"><strong>Use morale when:</strong> You want combat to end without total party kills, enemies are intelligent humans with self-preservation instincts, the situation has changed dramatically, or you want to reward intimidation and terror tactics.</p>
+    <p class="content-text"><strong>Skip morale when:</strong> Fighting mindless enemies (undead, constructs), enemies are cornered with nothing to lose, it&rsquo;s a boss fight, or the narrative demands a fight to the death.</p>
+
+    <h3 class="subsection-title">Player Intimidation</h3>
+    <div class="rules-box">
+        <h4>Intimidate Action</h4>
+        <p><strong>Tempo:</strong> 4</p>
+        <p><strong>Roll:</strong> IRON + Force (physical threat) or SWAY + Force (presence)</p>
+        <p><strong>TN:</strong> Target&rsquo;s ECHO + 8</p>
+        <p><strong>Success:</strong> Target must make an immediate Morale check at +2 TN.</p>
+        <p><strong>Critical:</strong> Target automatically fails the Morale check.</p>
+    </div>
+</div>
+
+<!-- ==================== TAB: ENCOUNTERS ==================== -->
+<div class="tab-panel" id="tab-encounters" role="tabpanel">
+    <h2 class="section-title">Section X: Quick Encounter Generator</h2>
+
+    <h3 class="subsection-title">Random Road Encounters (d10)</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Roll</th><th>Encounter</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td><strong>Mirage:</strong> Illusion of safety; approaching causes 1 Strain</td></tr>
+                <tr><td>2</td><td><strong>Vulture Ambush:</strong> 2d6 raiders; want water, will negotiate</td></tr>
+                <tr><td>3</td><td><strong>Hanging Tree:</strong> 1d3 Hollow Men waiting in ambush</td></tr>
+                <tr><td>4</td><td><strong>Wrecked Convoy:</strong> 50% loot (Cost 3 items) / 50% Fen-Wraith trap</td></tr>
+                <tr><td>5</td><td><strong>Pilgrim:</strong> Blind Redeemer; offers prophecy or curse</td></tr>
+                <tr><td>6</td><td><strong>Storm Front:</strong> Survival check (GRIT TN 13) or lose 1 AR to acid/hail</td></tr>
+                <tr><td>7</td><td><strong>Ghost Train:</strong> Spectral echo; touching causes 1d6 Strain</td></tr>
+                <tr><td>8</td><td><strong>Oasis:</strong> Real water&mdash;guarded (Stone-Bear) or tainted (50/50)</td></tr>
+                <tr><td>9</td><td><strong>Peddler:</strong> Sells &ldquo;cures&rdquo; (Snake Oil, Laudanum); might be a devil</td></tr>
+                <tr><td>10</td><td><strong>Quiet:</strong> Nothing happens. Remove 1 Tension Die.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Quick Reference: Initiative Results</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Margin</th><th>Start Tick</th><th>State</th></tr></thead>
+            <tbody>
+                <tr><td>Failure</td><td>6</td><td>Surprised</td></tr>
+                <tr><td>0&ndash;3</td><td>4</td><td>Slow</td></tr>
+                <tr><td>4&ndash;6</td><td>3</td><td>Ready</td></tr>
+                <tr><td>7&ndash;9</td><td>2</td><td>Fast</td></tr>
+                <tr><td>10+</td><td>0</td><td>Instant</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Quick Reference: Common Action Tempos</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Action</th><th>Tempo</th></tr></thead>
+            <tbody>
+                <tr><td>Draw Weapon</td><td>2</td></tr>
+                <tr><td>Aim</td><td>2</td></tr>
+                <tr><td>Scramble</td><td>3</td></tr>
+                <tr><td>Take Cover</td><td>3</td></tr>
+                <tr><td>Steady Shot (Pistol)</td><td>4</td></tr>
+                <tr><td>Strike (Medium Melee)</td><td>4</td></tr>
+                <tr><td>Reload (Speed)</td><td>4</td></tr>
+                <tr><td>Grapple</td><td>5</td></tr>
+                <tr><td>Steady Shot (Rifle)</td><td>5</td></tr>
+                <tr><td>Recover / Manual Reload</td><td>6</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Quick Reference: Range Band TN Modifiers</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Range</th><th>Pistol</th><th>Rifle</th><th>Shotgun</th></tr></thead>
+            <tbody>
+                <tr><td>Point-Blank</td><td>&minus;2</td><td>+2</td><td>&minus;2</td></tr>
+                <tr><td>Close/Near</td><td>&mdash;</td><td>&mdash;</td><td>&mdash; / +2</td></tr>
+                <tr><td>Far</td><td>+2</td><td>&mdash;</td><td>+4</td></tr>
+                <tr><td>Extreme</td><td>+4</td><td>+2</td><td>N/A</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Quick Reference: Cover &amp; Damage</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Cover</th><th>TN Mod</th></tr></thead>
+            <tbody>
+                <tr><td>Exposed</td><td>&minus;1</td></tr>
+                <tr><td>Light</td><td>+2</td></tr>
+                <tr><td>Hard</td><td>+4</td></tr>
+                <tr><td>Fortified</td><td>+6</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="rules-box">
+        <h4>Damage Formula</h4>
+        <p style="text-align:center; font-size:1.2rem; margin:0.5rem 0;"><strong>Damage = WR + Steps &minus; AR</strong></p>
+    </div>
+
+    <h3 class="subsection-title">Quick Reference: Health States</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>State</th><th>Threshold</th><th>Effect</th></tr></thead>
+            <tbody>
+                <tr><td>Healthy</td><td>&gt; &frac12; Vitality</td><td>None</td></tr>
+                <tr><td>Wounded</td><td>&le; &frac12; Vitality</td><td>&minus;1 die physical</td></tr>
+                <tr><td>Downed</td><td>0 Vitality</td><td>Bleeding Out</td></tr>
+                <tr><td>Dead</td><td>&minus;IRON Vitality</td><td>Gone</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Continue -->
+    <div class="next-step-box">
+        <h4>The Nightmare Is Managed. Now Map the Frontier.</h4>
+        <p>You have the tools. Now explore the Five Killing Grounds, the cursed landmarks, and the settlements clinging to survival.</p>
+        <a href="ch9-overview.html" class="btn btn-primary">Chapter 9: The Atlas &rarr;</a>
+    </div>
+</div>
+
+                    </div><!-- end tab-content -->
+                </div><!-- end tab-container (Group 2) -->
+
+                <!-- Page Navigation -->
+                <div class="page-nav">
+                    <a href="ch7-overview.html" class="page-nav-link prev">
+                        <span class="nav-direction">&larr; Previous</span>
+                        <span class="nav-label">Ch 7: The Disciplines</span>
+                    </a>
+                    <a href="ch9-overview.html" class="page-nav-link next">
+                        <span class="nav-direction">Next &rarr;</span>
+                        <span class="nav-label">Ch 9: The Atlas</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-flavor">Load your iron. Check your salt pouch. And keep your memories close.</p>
+        <p class="footer-flavor">The sun is setting, and the rails are starting to scream.</p>
+        <p class="footer-copy">&copy; The Veil &amp; Lead Role-Playing Game. All rights reserved.</p>
+    </footer>
+
+    <script src="../main.js"></script>
+
+</body>
+</html>

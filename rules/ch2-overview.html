@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: The Soul &mdash; The Frontier Codex</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <h1 class="site-title">The Frontier Codex</h1>
+        <p class="site-subtitle">A Digital Companion for The Veil &amp; Lead Role-Playing Game</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Frontier</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages/introduction.html" class="nav-link">The World That Was</a></li>
+                        <li><a href="../pages/five-powers.html" class="nav-link">The Five Powers</a></li>
+                        <li><a href="../pages/life-in-the-wastes.html" class="nav-link">Life in the Wastes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link active">The Drifter</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch1-overview.html" class="nav-link">Ch 1: The Long Road</a></li>
+                        <li><a href="ch2-overview.html" class="nav-link active">Ch 2: The Soul</a></li>
+                        <li><a href="ch3-overview.html" class="nav-link">Ch 3: The Armory &amp; Economy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Law of Lead</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch4-overview.html" class="nav-link">Ch 4: The Duelist&rsquo;s Sum</a></li>
+                        <li><a href="ch5-overview.html" class="nav-link">Ch 5: The Count</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Current</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch6-overview.html" class="nav-link">Ch 6: Tearing the Veil</a></li>
+                        <li><a href="ch7-overview.html" class="nav-link">Ch 7: The Disciplines</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Marshal&rsquo;s Almanac</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch8-overview.html" class="nav-link">Ch 8: Managing the Nightmare</a></li>
+                        <li><a href="ch9-overview.html" class="nav-link">Ch 9: The Atlas</a></li>
+                        <li><a href="ch10-overview.html" class="nav-link">Ch 10: The Bestiary</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item"><a href="../index.html">Book I: The Drifter</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item">Chapter 2: The Soul</li>
+        </ol>
+    </nav>
+
+    <main id="main-content">
+        <div class="container">
+            <div class="main-content">
+
+                <div class="content-header">
+                    <p class="content-kicker">Book I: The Drifter &mdash; Chapter 2</p>
+                    <h1 class="content-title">The Soul</h1>
+                    <p class="content-subtitle">Memory &amp; Progression</p>
+                </div>
+
+                <div class="epigraph">
+                    &ldquo;You think the bullets are what kill you? No, son. The bullets just stop the heart. It&rsquo;s the forgetting that kills the man.&rdquo;
+                    <br><em>&mdash; Father Jebediah, Redeemer Priest</em>
+                </div>
+
+                <div class="content-section">
+                    <p class="content-text">In <em>The Veil &amp; Lead</em>, your character is defined by their Soul. It is a resource. It is the fuel for your power, the armor against the madness of the Veil, and the only thing distinguishing you from the monsters you hunt.</p>
+                    <p class="content-text">This chapter details the mechanics of <strong>Memory</strong>, <strong>Erosion</strong>, and <strong>Progression</strong>.</p>
+                </div>
+
+                <!-- ==================== TABBED SECTIONS ==================== -->
+                <div class="tab-container">
+                    <div class="tab-list" role="tablist">
+                        <button class="tab-button active" data-tab="tab-palace" role="tab">Memory Palace</button>
+                        <button class="tab-button" data-tab="tab-pillars" role="tab">Five Pillars</button>
+                        <button class="tab-button" data-tab="tab-using" role="tab">Using Memories</button>
+                        <button class="tab-button" data-tab="tab-losing" role="tab">Losing &amp; Forging</button>
+                        <button class="tab-button" data-tab="tab-xp" role="tab">XP &amp; Advancement</button>
+                        <button class="tab-button" data-tab="tab-legend" role="tab">Legend Track</button>
+                    </div>
+                    <div class="tab-content">
+
+<!-- ==================== TAB: MEMORY PALACE ==================== -->
+<div class="tab-panel active" id="tab-palace" role="tabpanel">
+    <h2 class="section-title">The Memory Palace</h2>
+
+    <p class="content-text">Your mind is a fortress. The walls are built from who you are&mdash;the experiences that shaped you, the people you love, the secrets you keep, the wounds you carry. In <em>The Veil &amp; Lead</em>, this fortress is called the <strong>Memory Palace</strong>, and it consists of five distinct slots called <strong>Pillars</strong>.</p>
+
+    <p class="content-text">When the Veil tries to tear your mind apart&mdash;or when you draw upon the chaotic energy of the Current&mdash;these Memories are the sandbags holding back the flood. They are your anchors to humanity, your fuel for desperate moments, and ultimately, the currency you spend to change the world.</p>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Pillar</th><th>Source</th><th>Description</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td><strong>The Scar</strong></td><td>Tragedy</td><td>The wound that defines you</td><td><em>&ldquo;The surprise on my brother&rsquo;s face.&rdquo;</em></td></tr>
+                <tr><td><strong>The Root</strong></td><td>Origin</td><td>A sensory detail of home</td><td><em>&ldquo;The smell of coal smoke and machine oil.&rdquo;</em></td></tr>
+                <tr><td><strong>The Drive</strong></td><td>Calling</td><td>Why you keep fighting</td><td><em>&ldquo;The weight of the badge in my pocket.&rdquo;</em></td></tr>
+                <tr><td><strong>The Anchor</strong></td><td>Bond</td><td>Who you love</td><td><em>&ldquo;Maeve&rsquo;s laugh on a summer evening.&rdquo;</em></td></tr>
+                <tr><td><strong>The Secret</strong></td><td>Hidden</td><td>What you hide from others</td><td><em>&ldquo;I know who really started the fire.&rdquo;</em></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="content-text">You create your first Memory (The Scar) during character creation when you choose your Tragedy. The remaining four Pillars are completed during the Finishing Touches step of <a href="ch1-overview.html">Chapter 1</a>.</p>
+
+    <div class="rules-box">
+        <h4>Creating Meaningful Memories</h4>
+        <p>The best Memories share certain qualities:</p>
+        <ul>
+            <li><strong>Sensory and specific.</strong> A Memory should evoke sight, sound, smell, taste, or touch. &ldquo;The smell of coal smoke and my mother&rsquo;s cough&rdquo; is stronger than &ldquo;I grew up poor.&rdquo;</li>
+            <li><strong>Emotionally resonant.</strong> The Memory should carry weight. When you invoke it, you should feel something.</li>
+            <li><strong>Brief.</strong> A single sentence or short phrase. Memories are impressions, not essays.</li>
+            <li><strong>Actionable.</strong> You should be able to imagine situations where this Memory could motivate or guide your character.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ==================== TAB: FIVE PILLARS ==================== -->
+<div class="tab-panel" id="tab-pillars" role="tabpanel">
+    <h2 class="section-title">The Five Pillars</h2>
+
+    <!-- THE SCAR -->
+    <div class="option-card">
+        <div class="option-card-header"><h3>The Scar</h3><span class="option-type">Tragedy &mdash; The Wound That Defined You</span></div>
+        <div class="option-card-body">
+            <p>Your Scar is the Memory that broke you&mdash;and in breaking, shaped who you became. It emerges from your Tragedy, the event during character creation that changed everything. A good Scar captures the moment of impact: the sensory details burned into your mind during trauma. This is the Memory that wakes you at night. It hurts to recall, and that pain has power.</p>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead><tr><th>Tragedy</th><th>Example Scars</th></tr></thead>
+                    <tbody>
+                        <tr><td>The Raid</td><td><em>&ldquo;The smell of burning pine and my sister&rsquo;s scream.&rdquo;</em> / <em>&ldquo;Boot prints in the blood on the kitchen floor.&rdquo;</em></td></tr>
+                        <tr><td>The Debt</td><td><em>&ldquo;The Baron&rsquo;s gold ring as he signed the papers.&rdquo;</em> / <em>&ldquo;My father&rsquo;s hands shaking as he handed over the deed.&rdquo;</em></td></tr>
+                        <tr><td>The Miracle</td><td><em>&ldquo;The blue light in the darkness that shouldn&rsquo;t have been there.&rdquo;</em> / <em>&ldquo;The warmth in my chest when everything else was cold.&rdquo;</em></td></tr>
+                        <tr><td>The Duel</td><td><em>&ldquo;The surprise on my brother&rsquo;s face when he fell.&rdquo;</em> / <em>&ldquo;The weight of the pistol and how easy it was.&rdquo;</em></td></tr>
+                        <tr><td>The Illness</td><td><em>&ldquo;The taste of bitter medicine and my mother&rsquo;s tears.&rdquo;</em> / <em>&ldquo;The fever dreams where I spoke to something in the dark.&rdquo;</em></td></tr>
+                        <tr><td>The Betrayal</td><td><em>&ldquo;The dust from his boots as he walked away with everything.&rdquo;</em> / <em>&ldquo;Her smile the moment before I understood.&rdquo;</em></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="option-gains">
+                <h4>Sparking The Scar</h4>
+                <ul><li>Drawing strength from old pain, channeling rage or grief, or refusing to let history repeat itself.</li></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE ROOT -->
+    <div class="option-card">
+        <div class="option-card-header"><h3>The Root</h3><span class="option-type">Origin &mdash; A Sensory Detail of Home</span></div>
+        <div class="option-card-body">
+            <p>Your Root is where you came from&mdash;a single vivid impression that captures the place that made you. It ties to your Origin and represents the environment that shaped your earliest self. The Root grounds you. When everything else is chaos, this Memory reminds you that you existed before the Frontier tried to kill you.</p>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead><tr><th>Origin</th><th>Example Roots</th></tr></thead>
+                    <tbody>
+                        <tr><td>Consortium City-Born</td><td><em>&ldquo;The hiss of steam pipes in the walls.&rdquo;</em> / <em>&ldquo;Gaslight on wet cobblestones at midnight.&rdquo;</em></td></tr>
+                        <tr><td>Dust-Born</td><td><em>&ldquo;The silence before a sandstorm.&rdquo;</em> / <em>&ldquo;Stars undimmed by smoke or gas-light.&rdquo;</em></td></tr>
+                        <tr><td>Veil-Touched</td><td><em>&ldquo;The hum that only I could hear.&rdquo;</em> / <em>&ldquo;My reflection blinking when I didn&rsquo;t.&rdquo;</em></td></tr>
+                        <tr><td>Rail-Rider</td><td><em>&ldquo;The rhythm of wheels on endless track.&rdquo;</em> / <em>&ldquo;The horizon always moving, never arriving.&rdquo;</em></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="option-gains">
+                <h4>Sparking The Root</h4>
+                <ul><li>Navigating your home terrain, understanding people from your background, drawing on skills learned in childhood, or finding comfort in familiar things.</li></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE DRIVE -->
+    <div class="option-card">
+        <div class="option-card-header"><h3>The Drive</h3><span class="option-type">Calling &mdash; Why You Keep Fighting</span></div>
+        <div class="option-card-body">
+            <p>Your Drive is the reason you haven&rsquo;t laid down and let the ash bury you. It connects to your Calling and represents your purpose&mdash;the thing that pushes you forward when your body wants to stop. The Drive is forward-looking. Where The Scar is about what happened to you, The Drive is about what you&rsquo;re going to do about it.</p>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead><tr><th>Calling</th><th>Example Drives</th></tr></thead>
+                    <tbody>
+                        <tr><td>Gunhand</td><td><em>&ldquo;Someone has to hold the line.&rdquo;</em> / <em>&ldquo;The badge still means something to me.&rdquo;</em></td></tr>
+                        <tr><td>Muck-Raker</td><td><em>&ldquo;There&rsquo;s wealth enough to escape this life.&rdquo;</em> / <em>&ldquo;My family eats because of what I find.&rdquo;</em></td></tr>
+                        <tr><td>High-Roller</td><td><em>&ldquo;The next hand could change everything.&rdquo;</em> / <em>&ldquo;Everyone has a price, including fate.&rdquo;</em></td></tr>
+                        <tr><td>Shepherd</td><td><em>&ldquo;Faith is all we have left.&rdquo;</em> / <em>&ldquo;Someone has to tend the wounded.&rdquo;</em></td></tr>
+                        <tr><td>Psy-Slinger</td><td><em>&ldquo;This curse might as well be useful.&rdquo;</em> / <em>&ldquo;Power is the only freedom that matters.&rdquo;</em></td></tr>
+                        <tr><td>Mindweaver</td><td><em>&ldquo;If I don&rsquo;t control this, it controls me.&rdquo;</em> / <em>&ldquo;The truth is worth the price I pay for it.&rdquo;</em></td></tr>
+                        <tr><td>Seer</td><td><em>&ldquo;I&rsquo;ve seen how this ends. I&rsquo;m trying to change it.&rdquo;</em> / <em>&ldquo;Someone has to watch the road ahead.&rdquo;</em></td></tr>
+                        <tr><td>Flesh Shaper</td><td><em>&ldquo;Bodies break. I fix them. It&rsquo;s simple.&rdquo;</em> / <em>&ldquo;Pain is just information.&rdquo;</em></td></tr>
+                        <tr><td>Bastion Soul</td><td><em>&ldquo;The Current took everything from me. Now I&rsquo;m the wall it breaks against.&rdquo;</em> / <em>&ldquo;I refuse to bend.&rdquo;</em></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="option-gains">
+                <h4>Sparking The Drive</h4>
+                <ul><li>Pushing through exhaustion, refusing to abandon your purpose, acting in accordance with your core motivation, or inspiring others with your conviction.</li></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE ANCHOR -->
+    <div class="option-card">
+        <div class="option-card-header"><h3>The Anchor</h3><span class="option-type">Bond &mdash; Who You Love</span></div>
+        <div class="option-card-body">
+            <p>Your Anchor is a person&mdash;someone whose existence reminds you that you&rsquo;re still human. They might be living or dead, present or distant, known to the party or kept private. What matters is that they matter to you more than survival itself.</p>
+            <div class="warning-box">
+                <p class="warning-title">Special Mechanical Significance</p>
+                <p>The <strong>Anchoring</strong> recovery method (which clears 2 Erosion during Downtime) requires a meaningful scene with someone connected to your Anchor Memory. If your Anchor is burned and the slot remains empty, you cannot use Anchoring until you Harden a new Memory in that Pillar.</p>
+            </div>
+            <p class="content-text"><strong>Anchor Prompts:</strong></p>
+            <ul class="lore-list">
+                <li>A spouse, lover, or former flame whose face you still see when you close your eyes</li>
+                <li>A child&mdash;yours by blood or by choice&mdash;whose future you&rsquo;re fighting for</li>
+                <li>A mentor who believed in you when no one else did</li>
+                <li>A sibling who still writes letters you can&rsquo;t bring yourself to answer</li>
+                <li>A dead friend whose voice you still hear giving advice</li>
+                <li>A rival whose respect matters more than you&rsquo;ll admit</li>
+                <li>A stranger you failed to save, whose memory drives you to save others</li>
+            </ul>
+            <div class="option-gains">
+                <h4>Sparking The Anchor</h4>
+                <ul><li>Protecting someone who reminds you of your Anchor, acting as your Anchor would want you to act, fighting to return to someone who waits for you, or drawing strength from the knowledge that someone believes in you.</li></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE SECRET -->
+    <div class="option-card">
+        <div class="option-card-header"><h3>The Secret</h3><span class="option-type">Hidden &mdash; What You Hide From Others</span></div>
+        <div class="option-card-body">
+            <p>Your Secret is something true about you that you don&rsquo;t want known. It might be shameful, dangerous, illegal, or simply private&mdash;but it&rsquo;s yours alone, and its exposure would change how others see you.</p>
+            <p class="content-text">The Secret is narrative fuel for the GM. At some point during the campaign, your Secret will threaten to surface. Strangers will appear who know what you&rsquo;ve done. Evidence will emerge. Someone will ask the wrong question. How you handle that moment defines your character.</p>
+            <p class="note-text">When you create your Secret, consider sharing it privately with the GM while keeping it hidden from other players. The reveal becomes more powerful when the other characters learn it alongside their players.</p>
+            <p class="content-text"><strong>Secret Prompts:</strong></p>
+            <ul class="lore-list">
+                <li>A crime you committed that someone else was blamed for</li>
+                <li>A betrayal you&rsquo;re ashamed of, buried so deep you almost believe your own lies</li>
+                <li>The truth about your origins&mdash;who your parents really were, or what you really are</li>
+                <li>Something you witnessed that powerful people want kept quiet</li>
+                <li>A deal you made with someone (or something) you shouldn&rsquo;t have trusted</li>
+                <li>A desire you can&rsquo;t admit to yourself, let alone anyone else</li>
+                <li>A connection to a faction you&rsquo;ve publicly rejected</li>
+                <li>A death you caused that wasn&rsquo;t as justified as you&rsquo;ve told yourself</li>
+            </ul>
+            <div class="option-gains">
+                <h4>Sparking The Secret</h4>
+                <ul><li>Using knowledge from your hidden past, lying to protect your history, acting to keep your secret buried, or drawing on skills or connections tied to the person you&rsquo;re pretending not to be.</li></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB: USING MEMORIES ==================== -->
+<div class="tab-panel" id="tab-using" role="tabpanel">
+    <h2 class="section-title">Using Memories</h2>
+    <p class="content-text">Memories are more than backstory. They are mechanical resources that interact with the game in three ways.</p>
+
+    <!-- THE SPARK -->
+    <h3 class="subsection-title">1. The Spark (Active Benefit)</h3>
+    <p class="content-text">Once per session per Memory, you may <strong>Spark</strong> that Memory&mdash;invoking it for immediate benefit. When you Spark, choose one of the following:</p>
+
+    <div class="rules-box">
+        <h4>The Blaze (+2 Dice)</h4>
+        <p>Narrate how the Memory motivates, guides, or empowers you in this moment. Gain <strong>+2 dice (Pool Bonus)</strong> to the relevant roll.</p>
+        <p class="note-text"><em>Example: Caleb is trying to intimidate a Consortium enforcer. He Sparks his Scar&mdash;&ldquo;The dust from his boots as he walked away with everything&rdquo;&mdash;describing how the cold fury of that betrayal surfaces in his eyes. He gains +2 dice to his Force check.</em></p>
+    </div>
+
+    <div class="rules-box">
+        <h4>The Ember (+1 Mettle)</h4>
+        <p>Narrate how the Memory steadies your resolve without directly aiding your action. <strong>Recover 1 Mettle</strong> instead of gaining dice.</p>
+        <p class="note-text"><em>Example: Maeve is low on Mettle after a brutal fight. During a quiet moment, she Sparks her Anchor&mdash;&ldquo;Eliza&rsquo;s laugh on a summer evening&rdquo;&mdash;describing how the memory centers her. She recovers 1 Mettle.</em></p>
+    </div>
+
+    <div class="warning-box">
+        <p class="warning-title">Spark Limitations</p>
+        <ul>
+            <li>Each Memory can only be Sparked <strong>once per session</strong>, regardless of which benefit you choose</li>
+            <li>The narrative connection must be plausible (GM adjudicates edge cases)</li>
+            <li>You cannot Spark during Downtime&mdash;only during active play</li>
+        </ul>
+    </div>
+
+    <!-- THE BULWARK -->
+    <h3 class="subsection-title">2. The Bulwark (Passive Defense)</h3>
+    <p class="content-text">Your intact Memories form a barrier against mental intrusion and supernatural fear. The more of yourself that remains, the harder you are to break.</p>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Intact Memories</th><th>Mental Defense Bonus</th></tr></thead>
+            <tbody>
+                <tr><td>5 Memories</td><td><strong>+2</strong></td></tr>
+                <tr><td>3&ndash;4 Memories</td><td><strong>+1</strong></td></tr>
+                <tr><td>0&ndash;2 Memories</td><td><strong>+0</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="content-text">This bonus applies to ECHO + Resilience checks to resist Fear, ECHO + Focus checks to resist Psionic intrusion, and any roll to resist effects targeting your sanity or sense of self.</p>
+    <p class="content-text">As your Memories burn away, your defenses crumble. A character with only one or two Memories intact is fragile&mdash;vulnerable to Mindweavers, to the whispers of the Veil, and to their own unraveling mind.</p>
+
+    <!-- THE FUEL -->
+    <h3 class="subsection-title">3. The Fuel (Psionic Cost)</h3>
+    <p class="content-text">For Psionics, Memories are the ultimate currency. When you cast a <strong>Rank 5 Talent</strong> (a Miracle), the cost is one Memory&mdash;burned permanently. This is detailed in <a href="ch6-overview.html">Book III: The Current</a>.</p>
+    <p class="content-text">Even mundane characters can lose Memories through Backlash, extreme Erosion, or encounters with certain Veil-Born entities. The Memory Palace is never truly safe.</p>
+</div>
+
+<!-- ==================== TAB: LOSING & FORGING ==================== -->
+<div class="tab-panel" id="tab-losing" role="tabpanel">
+    <h2 class="section-title">Losing Memories: The Break</h2>
+    <p class="content-text">When your Erosion track fills completely, you experience a <strong>Break</strong>. One of your Memories is torn away&mdash;consumed by the Current, dissolved into the static between worlds.</p>
+
+    <div class="rules-box">
+        <h4>The Burn</h4>
+        <ol>
+            <li><strong>Choose a Memory.</strong> You decide which Pillar to sacrifice. This choice should reflect the narrative&mdash;if you&rsquo;ve been pushing yourself in combat, perhaps The Drive goes. If you&rsquo;ve been ignoring your relationships, perhaps The Anchor.</li>
+            <li><strong>Strike it from your sheet.</strong> The Memory is gone. You forget it immediately and completely. You cannot remember what it was, only that something is missing.</li>
+            <li><strong>Reset your Erosion.</strong> Your Erosion track returns to 0. The wound has closed&mdash;but part of you closed with it.</li>
+        </ol>
+    </div>
+
+    <div class="quote-box">
+        <blockquote>Losing a Memory is disorienting. One moment you&rsquo;re reaching for something that defined you; the next, there&rsquo;s only absence. You might not even realize what you&rsquo;ve lost until someone mentions a name that should mean something, and it doesn&rsquo;t. Other characters might notice the change before you do.</blockquote>
+    </div>
+
+    <h3 class="subsection-title">The Empty Slot</h3>
+    <p class="content-text">An empty Memory slot affects you in several ways:</p>
+    <ul class="lore-list">
+        <li><strong>Reduced Bulwark.</strong> Fewer Memories means lower Mental Defense bonus.</li>
+        <li><strong>No Spark.</strong> You cannot Spark a Memory that doesn&rsquo;t exist.</li>
+        <li><strong>Anchoring blocked.</strong> If your Anchor slot is empty, you cannot use the Anchoring recovery method until you Harden a new Memory there.</li>
+        <li><strong>Narrative weight.</strong> The GM may describe moments where you reach for something that isn&rsquo;t there&mdash;a name you can&rsquo;t remember, a face that should be familiar.</li>
+    </ul>
+
+    <!-- HARDENING -->
+    <h2 class="section-title">Hardening Memories</h2>
+    <p class="content-text">When you have an empty Memory slot, you can eventually fill it. This process is called <strong>Hardening</strong>, and the result is a <strong>Hardened Memory</strong>.</p>
+    <p class="content-text">Hardened Memories are built from recent pain. They function like original Memories, but they are fundamentally different in character. Where original Memories might be warm, hopeful, or joyful, Hardened Memories are forged in the aftermath of loss.</p>
+
+    <div class="rules-box">
+        <h4>Requirements for Hardening</h4>
+        <ul>
+            <li><strong>Cost:</strong> 8 XP</li>
+            <li><strong>Timing:</strong> Downtime only. You cannot Harden a Memory during active play.</li>
+            <li><strong>The Absence:</strong> You cannot Harden a Memory during the same Downtime in which it was burned. You must live with the empty slot for at least one session.</li>
+            <li><strong>Narrative Source:</strong> The new Memory must stem from events that occurred <em>after</em> the original was lost.</li>
+            <li><strong>Scene Requirement:</strong> Roleplay a brief scene that establishes the moment this new Memory crystallized.</li>
+        </ul>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Original Memory</th><th>Possible Hardened Replacement</th></tr></thead>
+            <tbody>
+                <tr><td><em>&ldquo;Maeve&rsquo;s laugh on a summer evening.&rdquo;</em></td><td><em>&ldquo;The grave I dug for her with my bare hands.&rdquo;</em></td></tr>
+                <tr><td><em>&ldquo;I fight for love.&rdquo;</em></td><td><em>&ldquo;I fight because there&rsquo;s nothing left to lose.&rdquo;</em></td></tr>
+                <tr><td><em>&ldquo;The warmth of my childhood home.&rdquo;</em></td><td><em>&ldquo;The ash where home used to be.&rdquo;</em></td></tr>
+                <tr><td><em>&ldquo;My father&rsquo;s hand on my shoulder.&rdquo;</em></td><td><em>&ldquo;The weight of his pistol in my hand.&rdquo;</em></td></tr>
+                <tr><td><em>&ldquo;The hope that tomorrow will be better.&rdquo;</em></td><td><em>&ldquo;The certainty that I will make someone pay.&rdquo;</em></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <p class="warning-title">Hardened Spark Restrictions</p>
+        <p>Hardened Memories <strong>CAN</strong> be Sparked for: survival and endurance, violence and aggression, fear/grief/cold determination, protecting what remains, vengeance or justice.</p>
+        <p>Hardened Memories <strong>CANNOT</strong> be Sparked for: charm/seduction/gentle persuasion, joyful creativity, hopeful inspiration, tender emotional connection, appeals to innocence or mercy.</p>
+        <p class="note-text">This restriction reflects the nature of what you&rsquo;ve become. A Hardened Memory can fuel your survival. It cannot fuel your joy.</p>
+    </div>
+
+    <!-- THE HOLLOW -->
+    <h2 class="section-title">The Hollow</h2>
+    <p class="content-text">When your final Memory burns away&mdash;when all five Pillars stand empty&mdash;you become <strong>Hollow</strong>.</p>
+
+    <div class="goal-box">
+        <p>The body remains. The identity is gone.</p>
+        <p>You remember nothing&mdash;no name, no history, no connections. The person who lived in this body has been erased.</p>
+    </div>
+
+    <ul class="lore-list">
+        <li>Your character is <strong>no longer playable.</strong> They become an NPC under the GM&rsquo;s control.</li>
+        <li>Something else may remain. The Current fills empty vessels.</li>
+        <li>Some Hollows become violent, some passive, some actively malevolent.</li>
+        <li>The Circle of Ash has sanctuaries for Hollows; the Redeemers burn them.</li>
+    </ul>
+</div>
+
+<!-- ==================== TAB: XP & ADVANCEMENT ==================== -->
+<div class="tab-panel" id="tab-xp" role="tabpanel">
+    <h2 class="section-title">Earning Experience</h2>
+
+    <h3 class="subsection-title">Session Awards</h3>
+    <p class="content-text">At the end of each session, go through this checklist with the group:</p>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Award</th><th>XP</th><th>Trigger</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Survival</strong></td><td>1</td><td>The character is alive</td></tr>
+                <tr><td><strong>The Struggle</strong></td><td>1</td><td>Overcame a significant threat (combat, social, environmental)</td></tr>
+                <tr><td><strong>The Discovery</strong></td><td>1</td><td>Learned a secret about the Veil, Factions, or History</td></tr>
+                <tr><td><strong>The Flaw</strong></td><td>1</td><td>Voluntarily complicated the scene due to Tragedy, Secret, or bond</td></tr>
+                <tr><td><strong>The Lesson</strong></td><td>1</td><td>Suffered a critical failure or major setback</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note-text">Typical Session: 3&ndash;4 XP. Players should nominate each other for the Flaw award.</p>
+
+    <h3 class="subsection-title">Milestone Awards</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Milestone</th><th>XP</th><th>Trigger</th></tr></thead>
+            <tbody>
+                <tr><td>Arc Completion</td><td>5</td><td>Resolved a major storyline</td></tr>
+                <tr><td>Nemesis Defeated</td><td>3</td><td>Killed or neutralized a recurring enemy</td></tr>
+                <tr><td>Faction Shift</td><td>2</td><td>Significantly changed standing with a Power</td></tr>
+                <tr><td>Memory Forged</td><td>2</td><td>Created a Scar Memory through play</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rules-box">
+        <h4>The Burden Award (Psionic Only)</h4>
+        <p>Psionic characters may earn <strong>+1 XP</strong> at session end if they used Rank 3+ abilities during the session <strong>AND</strong> suffered meaningful narrative consequences (visions, Veil Bleed symptoms, social stigma, Memory burn). This helps offset the Psionic XP tax.</p>
+    </div>
+
+    <!-- SPENDING XP -->
+    <h2 class="section-title">Spending Experience</h2>
+    <p class="content-text">XP is spent during Downtime between sessions or adventures.</p>
+
+    <h3 class="subsection-title">Raising Attributes</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Increase</th><th>Cost</th><th>Cumulative</th></tr></thead>
+            <tbody>
+                <tr><td>Rank 1 &rarr; 2</td><td>10 XP</td><td>10 XP</td></tr>
+                <tr><td>Rank 2 &rarr; 3</td><td>15 XP</td><td>25 XP</td></tr>
+                <tr><td>Rank 3 &rarr; 4</td><td>20 XP</td><td>45 XP</td></tr>
+                <tr><td>Rank 4 &rarr; 5</td><td>30 XP</td><td>75 XP</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Improving Skills</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Increase</th><th>Cost</th><th>Cumulative</th></tr></thead>
+            <tbody>
+                <tr><td>Rank 0 &rarr; 1</td><td>4 XP</td><td>4 XP</td></tr>
+                <tr><td>Rank 1 &rarr; 2</td><td>6 XP</td><td>10 XP</td></tr>
+                <tr><td>Rank 2 &rarr; 3</td><td>9 XP</td><td>19 XP</td></tr>
+                <tr><td>Rank 3 &rarr; 4</td><td>15 XP</td><td>34 XP</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Learning Talents</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Type</th><th>Cost</th><th>Requirements</th></tr></thead>
+            <tbody>
+                <tr><td>Mundane Talent</td><td>4 XP</td><td>Appropriate Skill at Rank 1+</td></tr>
+                <tr><td>Psionic (Rank 1&ndash;2)</td><td>4 XP</td><td>ECHO &ge; Talent Rank, Channel 1+</td></tr>
+                <tr><td>Psionic (Rank 3&ndash;4)</td><td>6 XP</td><td>ECHO &ge; Talent Rank, Mentor or Grimoire</td></tr>
+                <tr><td>Psionic (Rank 5)</td><td>6 XP</td><td>ECHO 5, Mentor or Grimoire, GM approval</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Other Purchases</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Action</th><th>Cost</th></tr></thead>
+            <tbody>
+                <tr><td>Specialization</td><td>5 XP (requires Skill Rank 3+)</td></tr>
+                <tr><td>Clear 1 Erosion</td><td>2 XP</td></tr>
+                <tr><td>Increase Mettle Cap</td><td>8 XP (maximum +2 total)</td></tr>
+                <tr><td>Harden a Memory</td><td>8 XP (requires roleplay scene)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ==================== TAB: LEGEND TRACK ==================== -->
+<div class="tab-panel" id="tab-legend" role="tabpanel">
+    <h2 class="section-title">The Legend Track</h2>
+    <p class="content-text">Your reputation is tracked from 0 to 10. Legend is not bought with XP&mdash;it is awarded by the GM for deeds that spread through word of mouth.</p>
+
+    <h3 class="subsection-title">Effects of Legend</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Legend</th><th>Benefit</th><th>Consequence</th></tr></thead>
+            <tbody>
+                <tr><td>0&ndash;2</td><td>Anonymous</td><td>No special treatment</td></tr>
+                <tr><td>3&ndash;4</td><td>Known locally</td><td>+1 die to Intimidation in your region</td></tr>
+                <tr><td>5&ndash;6</td><td>Regional reputation</td><td>+1 die to Command; &minus;1 die to Stealth/Disguise</td></tr>
+                <tr><td>7&ndash;8</td><td>Frontier-wide fame</td><td>+2 dice to Intimidation/Command; &minus;2 dice to blend in</td></tr>
+                <tr><td>9&ndash;10</td><td>Living legend</td><td>Automatic recognition; bounty hunters and nemeses seek you</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Gaining Legend</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Deed</th><th>Legend Gained</th></tr></thead>
+            <tbody>
+                <tr><td>Killing a named Boss NPC</td><td>+1</td></tr>
+                <tr><td>Surviving a full Rupture (5-die pool) without fleeing</td><td>+1</td></tr>
+                <tr><td>Completing a major contract that changes local politics</td><td>+1</td></tr>
+                <tr><td>Spending &sect;100+ in a single night (public spectacle)</td><td>+1</td></tr>
+                <tr><td>Winning a public duel</td><td>+1</td></tr>
+                <tr><td>Any deed that would spread through stories</td><td>+1</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">The Bounty Board</h3>
+    <p class="content-text">At the start of each session, roll <strong>1d10</strong> for characters with Legend 5+. If the roll is <strong>less than</strong> their Legend score, their fame catches up:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Margin (Legend &minus; Roll)</th><th>Consequence</th></tr></thead>
+            <tbody>
+                <tr><td>1&ndash;2</td><td>A local tough wants to prove themselves in a fight or contest</td></tr>
+                <tr><td>3&ndash;4</td><td>A faction agent (Consortium, Redeemer, Vulture) is actively looking for them</td></tr>
+                <tr><td>5+</td><td>A supernatural predator (Skin-Changer, bounty hunter with Psionic backing) is hunting them</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- DOWNTIME -->
+    <h2 class="section-title">Downtime</h2>
+    <p class="content-text">Each player gets <strong>one Action per day</strong> of Downtime:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Action</th><th>Effect</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Recover</strong></td><td>Long Rest: Heal IRON HP, clear all Strain, attempt to clear 1 Grievous Wound (Medicine check)</td></tr>
+                <tr><td><strong>Therapy</strong></td><td>Clear 1 Erosion via Vice, or 2 Erosion via Anchoring (requires scene with Anchor-related NPC)</td></tr>
+                <tr><td><strong>Acquire</strong></td><td>Shop for items (Scrip) or Scrounge for rare items (SAVVY + Scrounge vs TN 13)</td></tr>
+                <tr><td><strong>Train</strong></td><td>Spend XP to raise Attributes, Skills, or learn Talents (Talents require source)</td></tr>
+                <tr><td><strong>Work</strong></td><td>Earn 1d10 Scrip through labor, gambling, or odd jobs</td></tr>
+                <tr><td><strong>Forge Scar</strong></td><td>Fill an empty Memory slot (8 XP, requires roleplay scene)</td></tr>
+                <tr><td><strong>Research</strong></td><td>SAVVY + Lore to learn about a location, enemy, artifact, or mystery</td></tr>
+                <tr><td><strong>Craft</strong></td><td>Create ammunition, simple tools, or modify equipment (requires materials)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Downtime Length</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Situation</th><th>Typical Downtime</th></tr></thead>
+            <tbody>
+                <tr><td>Between sessions (in town)</td><td>1&ndash;3 days</td></tr>
+                <tr><td>Major story break</td><td>1 week</td></tr>
+                <tr><td>Significant time skip</td><td>1 month+ (montage)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- NEXT -->
+    <div class="next-section-box">
+        <h3>Continue to Chapter 3</h3>
+        <p>Your soul is defined. Now arm it. Firearms, armor, special ammunition, and the salt economy of the Frontier.</p>
+        <a href="ch3-overview.html" class="btn btn-primary">Chapter 3: The Armory &amp; Economy &rarr;</a>
+    </div>
+</div>
+
+                    </div><!-- end tab-content -->
+                </div><!-- end tab-container -->
+
+                <!-- Page Navigation -->
+                <div class="page-nav">
+                    <a href="ch1-overview.html" class="page-nav-link prev">
+                        <span class="nav-direction">&larr; Previous</span>
+                        <span class="nav-label">Ch 1: The Long Road</span>
+                    </a>
+                    <a href="ch3-overview.html" class="page-nav-link next">
+                        <span class="nav-direction">Next &rarr;</span>
+                        <span class="nav-label">Ch 3: The Armory &amp; Economy</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-flavor">Load your iron. Check your salt pouch. And keep your memories close.</p>
+        <p class="footer-flavor">The sun is setting, and the rails are starting to scream.</p>
+        <p class="footer-copy">&copy; The Veil &amp; Lead Role-Playing Game. All rights reserved.</p>
+    </footer>
+
+    <script src="../main.js"></script>
+
+</body>
+</html>

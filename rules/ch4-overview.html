@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: The Duelist&rsquo;s Sum &mdash; The Frontier Codex</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <h1 class="site-title">The Frontier Codex</h1>
+        <p class="site-subtitle">A Digital Companion for The Veil &amp; Lead Role-Playing Game</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Frontier</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages/introduction.html" class="nav-link">The World That Was</a></li>
+                        <li><a href="../pages/five-powers.html" class="nav-link">The Five Powers</a></li>
+                        <li><a href="../pages/life-in-the-wastes.html" class="nav-link">Life in the Wastes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Drifter</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch1-overview.html" class="nav-link">Ch 1: The Long Road</a></li>
+                        <li><a href="ch2-overview.html" class="nav-link">Ch 2: The Soul</a></li>
+                        <li><a href="ch3-overview.html" class="nav-link">Ch 3: The Armory &amp; Economy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link active">The Law of Lead</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch4-overview.html" class="nav-link active">Ch 4: The Duelist&rsquo;s Sum</a></li>
+                        <li><a href="ch5-overview.html" class="nav-link">Ch 5: The Count</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">The Current</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch6-overview.html" class="nav-link">Ch 6: Tearing the Veil</a></li>
+                        <li><a href="ch7-overview.html" class="nav-link">Ch 7: The Disciplines</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Marshal&rsquo;s Almanac</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ch8-overview.html" class="nav-link">Ch 8: Managing the Nightmare</a></li>
+                        <li><a href="ch9-overview.html" class="nav-link">Ch 9: The Atlas</a></li>
+                        <li><a href="ch10-overview.html" class="nav-link">Ch 10: The Bestiary</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item"><a href="ch4-overview.html">Book II: The Law of Lead</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item">Ch 4: The Duelist&rsquo;s Sum</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="container">
+            <div class="main-content">
+
+                <!-- Content Header -->
+                <div class="content-header">
+                    <p class="content-kicker">Book II: The Law of Lead &mdash; Chapter 4</p>
+                    <h1 class="content-title">The Duelist&rsquo;s Sum</h1>
+                    <p class="content-subtitle">The Core Resolution Mechanic</p>
+                </div>
+
+                <!-- Epigraph -->
+                <div class="epigraph">
+                    &ldquo;Life isn&rsquo;t a game of chance, kid. It&rsquo;s a game of choices. The dice tell you what fate handed you. Everything else&mdash;the aim you took, the iron you carry, the ground you&rsquo;re standing on&mdash;that&rsquo;s what you bring to the table.&rdquo;
+                    <br><em>&mdash; Sheriff Crowe of Rustwater</em>
+                </div>
+
+                <!-- Chapter Intro -->
+                <div class="content-section">
+                    <p class="content-text">This chapter details the Core Resolution Mechanic of <em>The Veil &amp; Lead</em>.</p>
+                    <p class="content-text">Every meaningful action&mdash;pulling a trigger, picking a lock, convincing a stranger, channeling the Current&mdash;is resolved through the same fundamental process. Master this chapter, and you understand the skeleton upon which the entire game hangs.</p>
+
+                    <div class="rules-box">
+                        <h4>The Five Steps of Resolution</h4>
+                        <ol>
+                            <li><strong>Build the Pool</strong> &mdash; Determine how many dice you roll</li>
+                            <li><strong>Determine Target Number</strong> &mdash; Establish what you need to achieve</li>
+                            <li><strong>Roll and Sum</strong> &mdash; Roll your dice and add the two highest</li>
+                            <li><strong>Apply Roll Modifiers</strong> &mdash; Add your bonuses, subtract your penalties</li>
+                            <li><strong>Compare to TN</strong> &mdash; Determine success or failure</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- ==================== TABBED SECTIONS ==================== -->
+                <div class="tab-container">
+                    <div class="tab-list" role="tablist">
+                        <button class="tab-button active" data-tab="tab-core" role="tab">Core Roll</button>
+                        <button class="tab-button" data-tab="tab-margin" role="tab">Margin &amp; Steps</button>
+                        <button class="tab-button" data-tab="tab-crits" role="tab">Criticals</button>
+                        <button class="tab-button" data-tab="tab-failure" role="tab">Failure</button>
+                        <button class="tab-button" data-tab="tab-bleed" role="tab">Bleed Dice</button>
+                        <button class="tab-button" data-tab="tab-mettle" role="tab">Mettle</button>
+                        <button class="tab-button" data-tab="tab-opposed" role="tab">Opposed</button>
+                        <button class="tab-button" data-tab="tab-extended" role="tab">Extended</button>
+                        <button class="tab-button" data-tab="tab-modifiers" role="tab">Modifiers</button>
+                    </div>
+                    <div class="tab-content">
+
+<!-- ==================== TAB: CORE ROLL ==================== -->
+<div class="tab-panel active" id="tab-core" role="tabpanel">
+    <h2 class="section-title">The Core Mechanic</h2>
+
+    <!-- Step 1: Build the Pool -->
+    <h3 class="subsection-title">Step 1: Build the Pool</h3>
+    <p class="content-text">Your dice pool represents your raw capability&mdash;the combination of natural talent and trained skill you bring to the moment.</p>
+    <div class="rules-box">
+        <p style="text-align:center; font-size:1.2rem; margin:0.5rem 0;"><strong>Base Pool = Attribute Rank + Skill Rank</strong></p>
+        <p style="text-align:center;">The pool is measured in <strong>d8s</strong> (eight-sided dice).</p>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Pool Size</th><th>Character Level</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td>2&ndash;3 dice</td><td>Novice</td><td>Attribute 1&ndash;2, Skill 0&ndash;1</td></tr>
+                <tr><td>4&ndash;5 dice</td><td>Competent</td><td>Attribute 2&ndash;3, Skill 2</td></tr>
+                <tr><td>6&ndash;7 dice</td><td>Professional</td><td>Attribute 3&ndash;4, Skill 3</td></tr>
+                <tr><td>8&ndash;9 dice</td><td>Expert</td><td>Attribute 4&ndash;5, Skill 4</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="content-text"><em>Example: Caleb has QUICK 3 and Ballistics 3. When he fires his revolver, his Base Pool is 6 dice.</em></p>
+
+    <!-- Unskilled -->
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Unskilled Checks (Rank 0)</h4>
+    <p class="content-text">If your Skill Rank is 0, you roll with <strong>Disadvantage</strong>:</p>
+    <div class="rules-box">
+        <ol>
+            <li>Roll your Attribute in dice, <strong>plus one extra die</strong></li>
+            <li>Discard the single highest die</li>
+            <li>Sum the two highest of the remaining dice (minimum 2 dice kept)</li>
+        </ol>
+        <p>This represents the fumbling uncertainty of attempting something without proper training. Some tasks may be impossible without at least basic training (GM discretion).</p>
+    </div>
+    <p class="content-text"><em>Example: Caleb has SAVVY 2 but no Medicine skill (Rank 0). He rolls 3 dice (SAVVY 2 + 1 extra), discards the highest, then sums the best two remaining. Rolling [3, 5, 7], he discards the 7 and sums 3 + 5 = 8.</em></p>
+
+    <!-- Pool Modifiers -->
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Pool Penalties (Reduce Dice)</h4>
+    <p class="content-text">Pool penalties represent fundamental impairments&mdash;something is wrong with you or the situation that compromises your basic ability to perform.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Penalty Source</th><th>Dice</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>Wounded</td><td>&minus;1</td><td>Per wound threshold crossed</td></tr>
+                <tr><td>Suppressed</td><td>&minus;2</td><td>Fear or psychological pressure</td></tr>
+                <tr><td>Blinded</td><td>&minus;4</td><td>Cannot see your target or surroundings</td></tr>
+                <tr><td>Called Shot</td><td>&minus;2</td><td>Targeting a specific body location</td></tr>
+                <tr><td>Quick Shot</td><td>&minus;2</td><td>Sacrificing accuracy for speed</td></tr>
+                <tr><td>Off-hand</td><td>&minus;2</td><td>Using your non-dominant hand</td></tr>
+                <tr><td>Engaged (ranged)</td><td>&minus;2</td><td>Shooting at targets other than the enemy in your face</td></tr>
+                <tr><td>Firing into Melee</td><td>&minus;2</td><td>Allies are in your line of fire</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note-text">Pool Penalty Cap: &minus;4 maximum (excess ignored). Minimum pool: 1 die (you always roll at least one).</p>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Pool Bonuses (Add Dice)</h4>
+    <p class="content-text">For mundane characters, adding dice to your pool is deliberately rare. When you need to exceed your natural limits, you must take risks.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Bonus Source</th><th>Dice</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>Assistance</td><td>+1 each</td><td>Another character actively helps you (maximum +2 from helpers)</td></tr>
+                <tr><td>Bleed Dice</td><td>+1 to +3</td><td>Drawing on desperation and the Current (risk of Backlash)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Step 2: TN -->
+    <h3 class="subsection-title">Step 2: Determine Target Number</h3>
+    <p class="content-text">The Target Number (TN) represents the difficulty of what you&rsquo;re attempting. It combines the inherent challenge of the task with the circumstances affecting it.</p>
+    <div class="rules-box">
+        <p style="text-align:center; font-size:1.1rem; margin:0.5rem 0;"><strong>Base TN = Difficulty Rating <em>or</em> Defense Value</strong></p>
+    </div>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">The Difficulty Ladder</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>TN</th><th>Difficulty</th><th>Description</th><th>When to Use</th></tr></thead>
+            <tbody>
+                <tr><td><strong>5</strong></td><td>Trivial</td><td>Almost automatic; rolling is a formality</td><td>Tasks where failure is boring and success is assumed. Consider not rolling.</td></tr>
+                <tr><td><strong>7</strong></td><td>Easy</td><td>A trained professional under mild pressure</td><td>Routine work with ample time. The locksmith picking a simple lock in her workshop.</td></tr>
+                <tr><td><strong>9</strong></td><td>Routine</td><td>Competent work under mild stress</td><td>Some pressure exists, but the task isn&rsquo;t demanding. Tracking a trail on dry ground.</td></tr>
+                <tr><td><strong>11</strong></td><td>Moderate</td><td>A real challenge requiring focus</td><td>Trained characters succeed more often than not, but failure is plausible. Treating a wound in a moving wagon.</td></tr>
+                <tr><td><strong>13</strong></td><td>Standard</td><td>The baseline for dramatic action</td><td>The default TN for acting under active conflict or time pressure. Combat, tense negotiations, dangerous exploration.</td></tr>
+                <tr><td><strong>15</strong></td><td>Hard</td><td>Expert-level difficulty</td><td>Even skilled characters may fail. Requires preparation, good equipment, or luck. Surgery in a firefight.</td></tr>
+                <tr><td><strong>17+</strong></td><td>Legendary</td><td>Beyond normal human limits</td><td>Impossible without significant Roll Bonuses. Shooting a coin from a man&rsquo;s fingers at a hundred paces.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <p>When the TN reaches 17 or higher, success becomes <strong>impossible through raw dice alone</strong>&mdash;the maximum sum of two d8s is 16. You must bring Roll Modifiers to bear, change the tactical situation, or find another approach entirely. This is intentional: some challenges cannot be brute-forced.</p>
+    </div>
+
+    <!-- TN Modifiers -->
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">TN Decreases (Make the Task Easier)</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Source</th><th>TN Mod</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>Flanking</td><td>&minus;2</td><td>Attacking from opposite sides of a target</td></tr>
+                <tr><td>Target Prone (melee)</td><td>&minus;2</td><td>The target is on the ground</td></tr>
+                <tr><td>Higher Ground</td><td>&minus;1</td><td>You have an elevated position</td></tr>
+                <tr><td>Point-Blank (pistol)</td><td>&minus;2</td><td>0&ndash;2m; impossible to miss center mass</td></tr>
+                <tr><td>Large Target</td><td>&minus;2</td><td>Horse-sized creature or larger</td></tr>
+                <tr><td>Massive Target</td><td>&minus;4</td><td>Wagon-sized or larger</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">TN Increases (Make the Task Harder)</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Source</th><th>TN Mod</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>Light Cover</td><td>+2</td><td>Furniture, foliage, thin wood, smoke</td></tr>
+                <tr><td>Hard Cover</td><td>+4</td><td>Stone wall, iron plate, overturned wagon</td></tr>
+                <tr><td>Fortified</td><td>+6</td><td>Bunker slit, murder-hole, arrow loop</td></tr>
+                <tr><td>Far Range (pistol)</td><td>+2</td><td>21&ndash;50m; pushing a handgun&rsquo;s effective range</td></tr>
+                <tr><td>Extreme Range (pistol)</td><td>+4</td><td>51m+; nearly hopeless</td></tr>
+                <tr><td>Point-Blank (rifle)</td><td>+2</td><td>0&ndash;2m; long guns are unwieldy up close</td></tr>
+                <tr><td>Extreme Range (rifle)</td><td>+2</td><td>51m+; even rifles lose accuracy</td></tr>
+                <tr><td>Target Prone (ranged)</td><td>+2</td><td>Smaller profile at distance</td></tr>
+                <tr><td>Target Scrambling</td><td>+1</td><td>Moving erratically</td></tr>
+                <tr><td>Fast-Moving Target</td><td>+2</td><td>Galloping horse, sprinting runner</td></tr>
+                <tr><td>Small Target</td><td>+2</td><td>Child-sized or smaller</td></tr>
+                <tr><td>Tiny Target</td><td>+4</td><td>Cat-sized or smaller</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note-text">TN Caps: Minimum TN 5 (no task is easier than Trivial). Maximum TN: Uncapped.</p>
+
+    <!-- Step 3: Roll and Sum -->
+    <h3 class="subsection-title">Step 3: Roll and Sum</h3>
+    <div class="rules-box">
+        <ol>
+            <li>Roll your dice pool (all dice simultaneously)</li>
+            <li>Select the <strong>two highest</strong> results</li>
+            <li>Add them together</li>
+            <li>This is your <strong>Base Sum</strong></li>
+        </ol>
+        <p>The two-highest system creates a bell curve that rewards larger pools while maintaining meaningful variance. With d8s, the possible Base Sum range is 2 (snake eyes) to 16 (double eights).</p>
+    </div>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Probability Reference</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Pool Size</th><th>Average Sum</th><th>P(Sum &ge; 11)</th><th>P(Sum &ge; 13)</th></tr></thead>
+            <tbody>
+                <tr><td>3 dice</td><td>~11.0</td><td>58%</td><td>34%</td></tr>
+                <tr><td>4 dice</td><td>~12.2</td><td>75%</td><td>50%</td></tr>
+                <tr><td>5 dice</td><td>~12.8</td><td>85%</td><td>63%</td></tr>
+                <tr><td>6 dice</td><td>~13.2</td><td>91%</td><td>73%</td></tr>
+                <tr><td>8 dice</td><td>~13.8</td><td>97%</td><td>86%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Step 4: Roll Modifiers -->
+    <h3 class="subsection-title">Step 4: Apply Roll Modifiers</h3>
+    <p class="content-text">After rolling, you apply Roll Modifiers to your Base Sum. These represent factors you actively brought to the moment&mdash;your preparation, your equipment quality, your expertise.</p>
+    <div class="rules-box">
+        <p style="text-align:center; font-size:1.1rem; margin:0.5rem 0;"><strong>Final Sum = Base Sum + Roll Bonuses &minus; Roll Penalties</strong></p>
+    </div>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Roll Bonuses (Add to Your Sum)</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Source</th><th>Bonus</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>Aim (1 action)</td><td>+2</td><td>Spent a previous action lining up your shot</td></tr>
+                <tr><td>Aim (2 actions)</td><td>+3</td><td>Extended aim; must remain stationary</td></tr>
+                <tr><td>Aim (3+ actions)</td><td>+4</td><td>Maximum benefit; further aiming provides no additional bonus</td></tr>
+                <tr><td>Braced / Bipod</td><td>+1</td><td>Weapon braced against a stable surface</td></tr>
+                <tr><td>Set Defense</td><td>+2</td><td>Prepared to receive a charge; applies to first melee attack against you</td></tr>
+                <tr><td>Superior Quality</td><td>+1</td><td>Well-made gear from a skilled craftsman</td></tr>
+                <tr><td>Masterwork Quality</td><td>+2</td><td>Exceptional equipment (replaces Superior, does not stack)</td></tr>
+                <tr><td>Specialized Ammo</td><td>+1</td><td>Ammunition matched to target type</td></tr>
+                <tr><td>Scope (Far range)</td><td>+2</td><td>Magnifying scope at optimal sighting distance</td></tr>
+                <tr><td>Specialization</td><td>+1</td><td>When your declared Specialization applies</td></tr>
+                <tr><td>Signature Weapon</td><td>+1</td><td>A weapon you have bonded with through the talent</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Roll Penalties (Subtract from Your Sum)</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Source</th><th>Penalty</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>Darkness (partial)</td><td>&minus;2</td><td>Dim light, heavy shadow</td></tr>
+                <tr><td>Darkness (total)</td><td>&minus;4</td><td>Cannot see; relying on sound or instinct</td></tr>
+                <tr><td>Poor Quality</td><td>&minus;1</td><td>Damaged, improvised, or badly maintained equipment</td></tr>
+                <tr><td>Difficult Terrain (melee)</td><td>&minus;1</td><td>Unstable footing&mdash;mud, ice, rubble</td></tr>
+                <tr><td>Mounted Combat (untrained)</td><td>&minus;2</td><td>Fighting from horseback without Ride skill</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note-text">Roll Modifier Caps: Maximum total Roll Bonus: +10. Maximum total Roll Penalty: &minus;10.</p>
+
+    <div class="rules-box">
+        <h4>The Importance of Roll Modifiers</h4>
+        <p>Roll Modifiers transform impossible tasks into achievable ones. Consider: TN 17 (Hard Cover + Far Range on Defense 11 target). Base Sum maximum: 16 (impossible to hit without bonuses). With +4 from Aim (3 actions) and +2 from Masterwork weapon: You now need only Sum 11 to hit.</p>
+        <p>This is the design intent: against the hardest targets, you cannot rely on luck. You must prepare, equip yourself properly, and create advantages.</p>
+    </div>
+
+    <!-- Step 5 -->
+    <h3 class="subsection-title">Step 5: Compare to TN</h3>
+    <p class="content-text"><strong>Final Sum &ge; TN:</strong> Success. You accomplish what you set out to do.</p>
+    <p class="content-text"><strong>Final Sum &lt; TN:</strong> Failure. The task is not accomplished, though the degree of failure matters (see Failure tab).</p>
+</div>
+
+<!-- ==================== TAB: MARGIN & STEPS ==================== -->
+<div class="tab-panel" id="tab-margin" role="tabpanel">
+    <h2 class="section-title">Margin &amp; Steps</h2>
+    <p class="content-text">Success in <em>The Veil &amp; Lead</em> is not binary. <em>How well</em> you succeed&mdash;or how badly you fail&mdash;shapes the narrative and mechanical consequences.</p>
+
+    <h3 class="subsection-title">Calculating Margin</h3>
+    <div class="rules-box">
+        <p style="text-align:center; font-size:1.1rem; margin:0.5rem 0;"><strong>Margin = Final Sum &minus; Target Number</strong></p>
+        <p style="text-align:center;">A positive Margin means you exceeded the minimum required. A negative Margin means you fell short.</p>
+    </div>
+
+    <h3 class="subsection-title">The Step System</h3>
+    <p class="content-text">For every full 3 points of positive Margin, you gain +1 Step. Steps represent exceptional performance beyond mere success.</p>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Margin</th><th>Steps</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>0&ndash;2</td><td>+0</td><td>Bare success. You just made it. The bullet grazes the target; the lock clicks open on your last pick.</td></tr>
+                <tr><td>3&ndash;5</td><td>+1</td><td>Solid success. Clear competence. The shot lands true; the lock yields quickly.</td></tr>
+                <tr><td>6&ndash;8</td><td>+2</td><td>Strong success. Impressive result. The shot hits a vital area; you pick the lock and notice it was trapped.</td></tr>
+                <tr><td>9&ndash;11</td><td>+3</td><td>Exceptional success. Remarkable achievement. The shot drops the target instantly; you pick the lock, disarm the trap, and notice the hidden compartment.</td></tr>
+                <tr><td>12+</td><td>+4</td><td>Legendary success. The stuff of stories. This is how reputations are made.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Applying Steps</h3>
+    <p class="content-text">Steps scale the effect of your success. The specific application depends on context:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Context</th><th>Step Effect</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Combat</strong></td><td>+1 damage per Step</td></tr>
+                <tr><td><strong>Social</strong></td><td>+1 to leverage, duration of effect, or depth of information</td></tr>
+                <tr><td><strong>Exploration</strong></td><td>+1 to quality of result, bonus information, or time saved</td></tr>
+                <tr><td><strong>Psionics</strong></td><td>+1 to duration, area, or intensity of secondary effects (as defined by the Talent)</td></tr>
+                <tr><td><strong>Crafting</strong></td><td>+1 to quality tier or reduced resource cost</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="content-text"><em>Example: Caleb shoots a Consortium Enforcer. His Final Sum is 15 against TN 11. His Margin is 4, granting +1 Step. His Peacemaker deals WR 3 + 1 Step = 4 damage before armor.</em></p>
+</div>
+
+<!-- ==================== TAB: CRITICALS ==================== -->
+<div class="tab-panel" id="tab-crits" role="tabpanel">
+    <h2 class="section-title">Critical Success</h2>
+    <p class="content-text">A Critical Success represents a moment of extraordinary fortune&mdash;the shot that threads the needle, the words that cut to the heart, the gamble that pays off perfectly.</p>
+
+    <h3 class="subsection-title">Critical Conditions</h3>
+    <div class="rules-box">
+        <p>A Critical Success occurs when <strong>BOTH</strong> conditions are met:</p>
+        <ol>
+            <li>The two highest kept dice are both naturally <strong>8s</strong></li>
+            <li>Your roll <strong>succeeds</strong> (Final Sum &ge; TN)</li>
+        </ol>
+        <p class="note-text">If using Desperation, these 8s explode for more Steps, but the initial pair of 8s triggers the Critical Effect.</p>
+    </div>
+
+    <h3 class="subsection-title">Critical Benefits</h3>
+    <p class="content-text">When you score a Critical, choose <strong>ONE</strong> of the following:</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Benefit</th><th>Effect</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Vital Strike</strong></td><td>The attack ignores the target&rsquo;s Armor Rating (AR)</td></tr>
+                <tr><td><strong>Adrenaline Surge</strong></td><td>You immediately regain 1 Mettle</td></tr>
+                <tr><td><strong>Trigger Weapon Quality</strong></td><td>Activate a Stun, Bleed, or other weapon quality effect</td></tr>
+                <tr><td><strong>Narrative Advantage</strong></td><td>GM discretion&mdash;information revealed, tactical opportunity created, enemy morale broken</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ==================== TAB: FAILURE ==================== -->
+<div class="tab-panel" id="tab-failure" role="tabpanel">
+    <h2 class="section-title">Failure &amp; Fumbles</h2>
+    <p class="content-text">Not every bullet finds its mark. How you handle failure defines character&mdash;both the fictional character and the player&rsquo;s experience.</p>
+
+    <h3 class="subsection-title">Degrees of Failure</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Margin</th><th>Result</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>&minus;1 to &minus;2</td><td><strong>Near Miss</strong></td><td>Almost. The GM may offer success-at-cost.</td></tr>
+                <tr><td>&minus;3 to &minus;5</td><td><strong>Clear Failure</strong></td><td>The task is simply not accomplished.</td></tr>
+                <tr><td>&minus;6 or worse</td><td><strong>Severe Failure</strong></td><td>Something went wrong. Check for Fumble.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Success-at-Cost</h3>
+    <p class="content-text">When your Margin is &minus;1 or &minus;2, the GM may offer you success with a complication. You achieve your goal, but something goes wrong in the process.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Cost Type</th><th>Examples</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Resource</strong></td><td>Spend extra ammo, break a tool, use a consumable you didn&rsquo;t intend to</td></tr>
+                <tr><td><strong>Time</strong></td><td>Takes longer than expected; enemies advance, windows close</td></tr>
+                <tr><td><strong>Position</strong></td><td>End up exposed, lose your cover, fall from your perch</td></tr>
+                <tr><td><strong>Complication</strong></td><td>Partial success creates a new problem; the lock opens but the alarm triggers</td></tr>
+                <tr><td><strong>Harm</strong></td><td>Take 1 Strain from the exertion, or suffer a minor injury</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="content-text">You may accept the cost and succeed, or refuse and take the failure cleanly. The choice is always yours.</p>
+
+    <h3 class="subsection-title">Fumble</h3>
+    <p class="content-text">A Fumble represents catastrophic failure&mdash;the gun jamming at the worst moment, the lie that makes everything worse, the spell that tears back.</p>
+
+    <div class="rules-box">
+        <h4>Fumble Conditions</h4>
+        <p>A Fumble occurs when <strong>ALL THREE</strong> conditions are met:</p>
+        <ol>
+            <li>Your roll fails (Final Sum &lt; TN)</li>
+            <li>Your Margin is <strong>&minus;6 or worse</strong></li>
+            <li>More than half your dice show <strong>1s or 2s</strong></li>
+        </ol>
+        <p>The third condition ensures that Fumbles are rare even on bad failures. You must roll poorly <em>and</em> roll low numbers.</p>
+    </div>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Fumble Effects</h4>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Context</th><th>Possible Fumble Effects</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Combat (Ranged)</strong></td><td>Weapon jams (Tempo 4 to clear); weapon breaks; hit an ally; drop the weapon</td></tr>
+                <tr><td><strong>Combat (Melee)</strong></td><td>Lose grip on weapon; stumble (Prone); leave yourself open (Exposed)</td></tr>
+                <tr><td><strong>Social</strong></td><td>Insult the wrong person; reveal something you shouldn&rsquo;t; make an enemy</td></tr>
+                <tr><td><strong>Stealth</strong></td><td>Knock something over; step on the cat; walk into the one guard who was paying attention</td></tr>
+                <tr><td><strong>Psionics</strong></td><td>Backlash effect; Tension Pool gains dice; unwanted manifestation</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="content-text">Additionally, the GM gains <strong>+1 die to the Tension Pool</strong> whenever a Fumble occurs. The Frontier notices your mistakes.</p>
+</div>
+
+<!-- ==================== TAB: BLEED DICE ==================== -->
+<div class="tab-panel" id="tab-bleed" role="tabpanel">
+    <h2 class="section-title">The Chamber (Bleed Dice)</h2>
+    <p class="content-text">When your skills aren&rsquo;t enough&mdash;when the shot is too hard, the enemy too fast, the stakes too high&mdash;you can reach deeper. You can <strong>Load the Chamber</strong>.</p>
+    <p class="content-text">Bleed Dice represent drawing on reserves you shouldn&rsquo;t touch: your desperation, your rage, your connection to the Current that bleeds through the Veil. They give you power. They cost you pieces of yourself.</p>
+
+    <h3 class="subsection-title">Adding Bleed Dice</h3>
+    <div class="rules-box">
+        <p>Before rolling, declare you are adding <strong>1 to 3 Bleed Dice</strong> to your pool. Use a distinct color (red is traditional). These dice are rolled with your pool and can be selected as your two highest.</p>
+        <p>You cannot add more than 3 Bleed Dice to any single roll.</p>
+    </div>
+
+    <h3 class="subsection-title">Backlash</h3>
+    <p class="content-text">After rolling, examine the Bleed Dice specifically. Count how many show a <strong>1</strong>.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Bleed 1s</th><th>Effect</th><th>Severity</th></tr></thead>
+            <tbody>
+                <tr><td><strong>One 1</strong></td><td><strong>The Flicker:</strong> Take 1 Strain. The GM gains +1 die to the Tension Pool. Reality shudders&mdash;lights flicker, temperatures shift, the air tastes wrong.</td><td>Minor</td></tr>
+                <tr><td><strong>Two 1s</strong></td><td><strong>The Tear:</strong> Take 1 Erosion. The Current has reached deeper than you intended. You feel something tear inside&mdash;not physical, but real.</td><td>Moderate</td></tr>
+                <tr><td><strong>Three 1s</strong></td><td><strong>The Breach:</strong> Burn 1 Memory immediately. However, the Talent succeeds with maximum effect&mdash;treat your Margin as 12+ regardless of what you actually rolled. The power works perfectly; you&rsquo;ll just never remember why you used it.</td><td>Severe</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note-text">Important: Only 1s on the Bleed Dice cause Backlash. 1s on your regular dice are simply low rolls.</p>
+
+    <h3 class="subsection-title">Backlash Probability</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Bleed Dice</th><th>P(No 1s)</th><th>P(Exactly One 1)</th><th>P(Two+ 1s)</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>87.5%</td><td>12.5%</td><td>0%</td></tr>
+                <tr><td>2</td><td>76.6%</td><td>21.9%</td><td>1.6%</td></tr>
+                <tr><td>3</td><td>67.0%</td><td>28.6%</td><td>4.4%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">When to Use Bleed Dice</h3>
+    <div class="rules-box">
+        <h4>Most Valuable When:</h4>
+        <ul>
+            <li>Pool penalties have reduced your dice (Wounded + Suppressed = &minus;3 dice)</li>
+            <li>The TN is achievable but unlikely&mdash;adding dice improves your high sum</li>
+            <li>You need Steps, not just success&mdash;a higher sum means more damage</li>
+            <li>Failure would be catastrophic&mdash;sometimes you cannot afford to miss</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Less Valuable When:</h4>
+        <ul>
+            <li>You already have a large pool (diminishing returns)</li>
+            <li>Your Strain or Erosion tracks are nearly full</li>
+            <li>The TN is so high no roll could achieve it (you need Roll Modifiers instead)</li>
+            <li>The stakes are low&mdash;why risk your soul for something that doesn&rsquo;t matter?</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ==================== TAB: METTLE ==================== -->
+<div class="tab-panel" id="tab-mettle" role="tabpanel">
+    <h2 class="section-title">Mettle &amp; Desperation</h2>
+    <p class="content-text">Mettle represents your character&rsquo;s reserves of grit, willpower, and sheer stubborn refusal to die. GRIT contributes your stubborn endurance&mdash;the refusal to go down, the will to act when your body screams to stop.</p>
+
+    <h3 class="subsection-title">Mettle Refresh</h3>
+    <div class="rules-box">
+        <ul>
+            <li><strong>Start of Session:</strong> Full refresh your Mettle Pool</li>
+            <li><strong>+1 Mettle</strong> when you invoke a Memory thematically but choose not to use the Spark bonus</li>
+            <li><strong>Camp (Full Rest):</strong> Regain 1 Mettle if you eat and sleep</li>
+            <li><strong>No refresh</strong> if you are Fatigued or Depleted (Strain at half Cap or higher)</li>
+        </ul>
+    </div>
+
+    <h3 class="subsection-title">Spending Mettle</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Action</th><th>Cost</th><th>Effect</th><th>Timing</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Dive</strong></td><td>1</td><td>Use Take Cover outside of your turn</td><td>Against one ranged attack, before rolling</td></tr>
+                <tr><td><strong>Dodge</strong></td><td>1</td><td>Add your QUICK rank to your Defense</td><td>Against one melee attack, before rolling</td></tr>
+                <tr><td><strong>Parry</strong></td><td>1</td><td>Add your Melee Skill rank to your Defense</td><td>Against one melee attack, before rolling</td></tr>
+                <tr><td><strong>Steel</strong></td><td>1</td><td>Reroll a failed Willpower or Fear check</td><td>Immediately after failing</td></tr>
+                <tr><td><strong>Intercept</strong></td><td>1</td><td>Take a hit meant for an adjacent ally</td><td>When the ally is hit, before damage</td></tr>
+                <tr><td><strong>Push</strong></td><td>1</td><td>Reroll one die in your pool</td><td>After rolling; must keep the second result</td></tr>
+                <tr><td><strong>Desperation</strong></td><td>2</td><td>Enable Exploding Dice for this roll</td><td>Before rolling</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rules-box">
+        <h4>Reaction Limit</h4>
+        <p>You may only spend Mettle on <strong>Reactions</strong> (Dive, Dodge, Parry, Intercept) <strong>once between your turns</strong>. This prevents high-Mettle characters from becoming invulnerable by blocking every attack.</p>
+        <p>Desperation, Push, and Steel are <em>not</em> Reactions&mdash;they modify your own rolls, not enemy actions&mdash;and can be used freely within your Mettle budget.</p>
+    </div>
+
+    <h3 class="subsection-title">The Desperation Die</h3>
+    <p class="content-text">When you activate Desperation, you unlock the potential for explosive success&mdash;and explosive failure.</p>
+
+    <div class="rules-box">
+        <h4>Effect</h4>
+        <p>Any die that rolls its maximum value (<strong>8</strong>) &ldquo;explodes&rdquo;:</p>
+        <ol>
+            <li>Roll that die again</li>
+            <li>Add the new result to the original 8</li>
+            <li>If the reroll is also an 8, it explodes again (chain explosions are possible)</li>
+        </ol>
+        <p>A single die could theoretically produce 8 + 8 + 8 + 5 = 29, though this is extraordinarily rare.</p>
+        <p><strong>Cost:</strong> 2 Mettle</p>
+    </div>
+
+    <h4 style="font-family:'Oswald',sans-serif; text-transform:uppercase; margin-top:1.5rem;">Risk: The Cursed Die</h4>
+    <p class="content-text">If an exploding die&rsquo;s reroll shows a <strong>1</strong>, it becomes a Cursed Die&mdash;treated as a Bleed Die for Backlash purposes.</p>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Cursed Dice Showing 1</th><th>Backlash Effect</th></tr></thead>
+            <tbody>
+                <tr><td>One</td><td><strong>The Flicker:</strong> Take 1 Strain, GM gains +1 Tension Die</td></tr>
+                <tr><td>Two</td><td><strong>The Tear:</strong> Take 1 Erosion</td></tr>
+                <tr><td>Three</td><td><strong>The Breach:</strong> Burn 1 Memory immediately; roll succeeds with maximum effect</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rules-box">
+        <h4>Desperation + Bleed Dice Interaction</h4>
+        <p>If you use both Desperation <em>and</em> Bleed Dice on the same roll, count all 1s together: 1s on Bleed Dice + 1s on Cursed Dice. Add them together to determine total Backlash severity.</p>
+    </div>
+
+    <p class="note-text">Probability Note: The chance of an explosion producing a Cursed Die is 12.5% (1-in-8) per explosion. With a 6-dice pool: ~53% chance at least one die explodes; ~6.6% chance of at least one Cursed Die per roll with Desperation active.</p>
+</div>
+
+<!-- ==================== TAB: OPPOSED ==================== -->
+<div class="tab-panel" id="tab-opposed" role="tabpanel">
+    <h2 class="section-title">Opposed Rolls</h2>
+    <p class="content-text">When two characters directly contest each other&mdash;grappling, racing, debating, staring down&mdash;neither is acting against a static difficulty. They&rsquo;re testing their capability against another living will.</p>
+
+    <h3 class="subsection-title">The Process</h3>
+    <div class="rules-box">
+        <ol>
+            <li>Both characters roll their relevant pools</li>
+            <li>Both determine their TN (typically 11 for opposed rolls, but circumstances may modify this)</li>
+            <li>Both apply their Roll Modifiers</li>
+            <li>Compare Final Sums: <strong>Highest wins</strong></li>
+            <li>Calculate Margin of Victory: Winner&rsquo;s Sum &minus; Loser&rsquo;s Sum</li>
+        </ol>
+    </div>
+
+    <h3 class="subsection-title">Ties</h3>
+    <p class="content-text">In the event of a tie (both Final Sums are equal):</p>
+    <ul>
+        <li>The <strong>defender wins</strong> if there&rsquo;s a clear defender (resisting a grapple, seeing through a lie)</li>
+        <li><strong>Stalemate</strong> if neither has advantage (arm wrestling, a race)&mdash;the situation remains unresolved, and both may try again</li>
+    </ul>
+
+    <h3 class="subsection-title">Common Opposed Rolls</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Contest</th><th>Attacker</th><th>Defender</th></tr></thead>
+            <tbody>
+                <tr><td>Grapple</td><td>IRON + Brawl</td><td>IRON + Brawl <em>or</em> QUICK + Athletics</td></tr>
+                <tr><td>Psionic Duel</td><td>ECHO + Channel</td><td>ECHO + Focus</td></tr>
+                <tr><td>Chase</td><td>QUICK + Athletics</td><td>QUICK + Athletics</td></tr>
+                <tr><td>Deception</td><td>SWAY + Deceit</td><td>SAVVY + Insight</td></tr>
+                <tr><td>Intimidation</td><td>IRON or SWAY + Force</td><td>ECHO + Resilience</td></tr>
+                <tr><td>Stealth vs. Perception</td><td>QUICK + Stealth</td><td>SAVVY + Awareness</td></tr>
+                <tr><td>Bargaining</td><td>SWAY + Persuasion or Gamble</td><td>SAVVY + Insight</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ==================== TAB: EXTENDED ==================== -->
+<div class="tab-panel" id="tab-extended" role="tabpanel">
+    <h2 class="section-title">Extended Checks</h2>
+    <p class="content-text">Some tasks cannot be resolved in a single roll. Picking a complex lock while guards approach, researching an ancient ritual, tracking prey across the wilderness&mdash;these require sustained effort.</p>
+
+    <h3 class="subsection-title">Setting Up an Extended Check</h3>
+    <div class="rules-box">
+        <p>The GM establishes:</p>
+        <ol>
+            <li><strong>Success Threshold:</strong> How many successes are needed (typically 3&ndash;5)</li>
+            <li><strong>Time Limit:</strong> How many rolls are allowed before failure or interruption</li>
+            <li><strong>Interval:</strong> How much time each roll represents (rounds, minutes, hours, days)</li>
+            <li><strong>Base TN:</strong> The difficulty of each individual roll</li>
+        </ol>
+    </div>
+
+    <h3 class="subsection-title">The Process</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Roll Result</th><th>Effect</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Success</strong></td><td>Add 1 to your progress. Steps may add bonus progress (+1 per Step at GM discretion).</td></tr>
+                <tr><td><strong>Failure</strong></td><td>Add nothing. May add complications or time pressure.</td></tr>
+                <tr><td><strong>Fumble</strong></td><td>Lose 1 progress. Cause a complication (alert guards, damage the object, lose the trail).</td></tr>
+                <tr><td><strong>Critical</strong></td><td>Add 2 progress instead of 1.</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="content-text">Reach the threshold before the limit to succeed overall.</p>
+
+    <h3 class="subsection-title">Example: Picking a Complex Lock</h3>
+    <div class="rules-box">
+        <ul>
+            <li><strong>TN:</strong> 13 (Hard)</li>
+            <li><strong>Threshold:</strong> 3 successes</li>
+            <li><strong>Time Limit:</strong> 5 rolls (guards return on roll 6)</li>
+        </ul>
+        <p><em>Roll 1: Sum 14 (Success, 1 progress)</em></p>
+        <p><em>Roll 2: Sum 11 (Failure, still 1 progress)</em></p>
+        <p><em>Roll 3: Sum 17 (Critical, +2 progress, now 3 total)</em></p>
+        <p><em>Success! The lock opens on the third attempt.</em></p>
+    </div>
+
+    <h3 class="subsection-title">Assistance in Extended Checks</h3>
+    <p class="content-text">If multiple characters work together on an Extended Check, each character may contribute one roll per interval. All successes count toward the same threshold. Fumbles by any character affect the group&rsquo;s progress.</p>
+</div>
+
+<!-- ==================== TAB: MODIFIERS ==================== -->
+<div class="tab-panel" id="tab-modifiers" role="tabpanel">
+    <h2 class="section-title">Modifier Summary</h2>
+
+    <h3 class="subsection-title">The Three Tracks</h3>
+    <p class="content-text"><em>The Veil &amp; Lead</em> uses three distinct types of modifiers. Understanding which track a modifier belongs to helps resolve edge cases and stack effects correctly.</p>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Track</th><th>What It Modifies</th><th>Who Controls It</th><th>Examples</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Pool Modifiers</strong></td><td>Number of dice rolled</td><td>Mostly GM (conditions)</td><td>Wounded, Suppressed, Blinded</td></tr>
+                <tr><td><strong>Roll Modifiers</strong></td><td>Final Sum (after rolling)</td><td>Mostly Player (preparation)</td><td>Aim, Equipment Quality, Specialization</td></tr>
+                <tr><td><strong>TN Modifiers</strong></td><td>Target difficulty</td><td>GM (circumstances)</td><td>Cover, Range, Flanking</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="subsection-title">Stacking Rules</h3>
+    <div class="rules-box">
+        <h4>Like Modifiers Don&rsquo;t Stack</h4>
+        <p>&ldquo;Like&rdquo; means bonuses from the <em>same source applied twice</em>:</p>
+        <ul>
+            <li>Two Superior weapons wielded together: Still +1 (same source: equipment quality)</li>
+            <li>Aimed three times: +4, not +6 (Aim bonus increases with investment, doesn&rsquo;t multiply)</li>
+            <li>Two allies both providing flanking: Still &minus;2 TN (same source: flanking)</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Unlike Modifiers Stack</h4>
+        <p>Bonuses from <em>different sources</em> combine normally, up to the relevant cap:</p>
+        <ul>
+            <li>Aim (+2) + Masterwork weapon (+2) + Specialization (+1) = +5 total Roll Bonus &#10003;</li>
+            <li>Flanking (&minus;2 TN) + Target Prone (&minus;2 TN) + Higher Ground (&minus;1 TN) = &minus;5 total TN &#10003;</li>
+            <li>Superior Focus (+1) + Bonded Focus talent (+1) = +2 Roll Bonus &#10003;</li>
+        </ul>
+        <h4 style="margin-top:1rem;">The Three Tracks Are Independent</h4>
+        <p>Pool Modifiers, Roll Modifiers, and TN Modifiers all apply fully&mdash;they don&rsquo;t interact with each other&rsquo;s stacking rules. You might simultaneously have &minus;2 dice (Suppressed), +4 Roll Bonus (Aim + Masterwork), against TN 15 (Base 11 + Hard Cover). Resolve each track separately.</p>
+    </div>
+
+    <!-- Pool Penalties Summary -->
+    <h3 class="subsection-title">Pool Penalties</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Source</th><th>Dice</th></tr></thead>
+            <tbody>
+                <tr><td>Wounded (per threshold)</td><td>&minus;1</td></tr>
+                <tr><td>Suppressed</td><td>&minus;2</td></tr>
+                <tr><td>Blinded</td><td>&minus;4</td></tr>
+                <tr><td>Called Shot</td><td>&minus;2</td></tr>
+                <tr><td>Quick Shot</td><td>&minus;2</td></tr>
+                <tr><td>Off-hand</td><td>&minus;2</td></tr>
+                <tr><td>Engaged (ranged attacks)</td><td>&minus;2</td></tr>
+                <tr><td>Firing into Melee</td><td>&minus;2</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note-text">Cap: &minus;4 max, 1 die minimum.</p>
+
+    <!-- Pool Bonuses Summary -->
+    <h3 class="subsection-title">Pool Bonuses</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Source</th><th>Dice</th></tr></thead>
+            <tbody>
+                <tr><td>Assistance (per helper)</td><td>+1 (max +2)</td></tr>
+                <tr><td>Bleed Dice</td><td>+1 to +3</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Roll Bonuses Summary -->
+    <h3 class="subsection-title">Roll Bonuses</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Source</th><th>Bonus</th></tr></thead>
+            <tbody>
+                <tr><td>Aim (1 action)</td><td>+2</td></tr>
+                <tr><td>Aim (2 actions)</td><td>+3</td></tr>
+                <tr><td>Aim (3+ actions)</td><td>+4</td></tr>
+                <tr><td>Braced / Bipod</td><td>+1</td></tr>
+                <tr><td>Set Defense</td><td>+2</td></tr>
+                <tr><td>Superior Quality</td><td>+1</td></tr>
+                <tr><td>Masterwork Quality</td><td>+2</td></tr>
+                <tr><td>Specialized Ammo</td><td>+1</td></tr>
+                <tr><td>Scope (Far range)</td><td>+2</td></tr>
+                <tr><td>Specialization</td><td>+1</td></tr>
+                <tr><td>Signature Weapon</td><td>+1</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note-text">Cap: +10 maximum Roll Bonus.</p>
+
+    <!-- Difficulty Calibration -->
+    <h3 class="subsection-title">Difficulty Calibration</h3>
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead><tr><th>Situation</th><th>Approx. Success Rate (6-dice pool)</th></tr></thead>
+            <tbody>
+                <tr><td>TN 11, no modifiers</td><td>91%</td></tr>
+                <tr><td>TN 11, &minus;2 dice (Wounded)</td><td>75%</td></tr>
+                <tr><td>TN 13 (Standard)</td><td>65%</td></tr>
+                <tr><td>TN 13, &minus;2 dice</td><td>43%</td></tr>
+                <tr><td>TN 15 (Hard)</td><td>36%</td></tr>
+                <tr><td>TN 15, &minus;2 dice</td><td>18%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rules-box">
+        <h4>When NOT to Roll</h4>
+        <p>Don&rsquo;t call for rolls when:</p>
+        <ul>
+            <li>Success is trivial and failure is boring</li>
+            <li>The character has ample time and no pressure</li>
+            <li>The outcome doesn&rsquo;t matter to the story</li>
+        </ul>
+    </div>
+
+    <!-- Continue -->
+    <div class="next-step-box">
+        <h4>Now Use It</h4>
+        <p>You understand the dice. Now learn the dance of death.</p>
+        <a href="ch5-overview.html" class="btn btn-primary">Chapter 5: The Count &rarr;</a>
+    </div>
+</div>
+
+                    </div><!-- end tab-content -->
+                </div><!-- end tab-container -->
+
+                <!-- Page Navigation -->
+                <div class="page-nav">
+                    <a href="ch3-overview.html" class="page-nav-link prev">
+                        <span class="nav-direction">&larr; Previous</span>
+                        <span class="nav-label">Ch 3: The Armory &amp; Economy</span>
+                    </a>
+                    <a href="ch5-overview.html" class="page-nav-link next">
+                        <span class="nav-direction">Next &rarr;</span>
+                        <span class="nav-label">Ch 5: The Count</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-flavor">Load your iron. Check your salt pouch. And keep your memories close.</p>
+        <p class="footer-flavor">The sun is setting, and the rails are starting to scream.</p>
+        <p class="footer-copy">&copy; The Veil &amp; Lead Role-Playing Game. All rights reserved.</p>
+    </footer>
+
+    <script src="../main.js"></script>
+
+</body>
+</html>
