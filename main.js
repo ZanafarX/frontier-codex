@@ -290,7 +290,8 @@ async function buildSearchIndex() {
                 '.npc-card, .talent-card, .stat-card, .example-box, ' +
                 '.rules-callout, .quickstart-box, ' +
                 '.faction-section, .zone-card, .currency-card, ' +
-                '.superstition-item, .rule-block'
+                '.superstition-item, .rule-block, ' +
+                '.tab-panel'
             );
             
             if (sections.length > 0) {
@@ -298,7 +299,8 @@ async function buildSearchIndex() {
                     const heading = section.querySelector(
                         '.character-name, .section-title, .callout-title, ' +
                         '.faction-title, .zone-title, .currency-name, ' +
-                        '.superstition-name, .rule-title, h2, h3, h4, h5'
+                        '.superstition-name, .rule-title, .tab-title, ' +
+                        'h2, h3, h4, h5'
                     );
                     const text = section.textContent.trim().replace(/\s+/g, ' ');
                     if (text.length > 30) {
@@ -621,50 +623,6 @@ function escapeHTML(str) {
 
 function escapeRegex(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-// ===================================
-// BACK TO TOP BUTTON
-// ===================================
-
-function initializeBackToTop() {
-    let button = document.querySelector('.back-to-top');
-    
-    if (!button) {
-        button = document.createElement('button');
-        button.className = 'back-to-top';
-        button.innerHTML = '↑';
-        button.setAttribute('aria-label', 'Back to top');
-        document.body.appendChild(button);
-    }
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            button.classList.add('visible');
-        } else {
-            button.classList.remove('visible');
-        }
-    });
-    
-    button.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-
-// ===================================
-// UTILITY FUNCTIONS
-// ===================================
-
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
 }
 
 // ===================================
