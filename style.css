@@ -2027,6 +2027,32 @@ body::before {
 	margin-top: 1rem;
 }
 
+/* Killing Grounds Sub-Items (Geography of Madness) */
+.killing-grounds-list {
+    display: grid;
+    gap: 1rem;
+    margin: 0.5rem 0 1.25rem 0;
+}
+
+.killing-ground-item {
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--ember-orange);
+}
+
+.killing-ground-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: var(--dark-leather);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.killing-ground-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Currency Grid */
 .currency-grid {
 	display: grid;
