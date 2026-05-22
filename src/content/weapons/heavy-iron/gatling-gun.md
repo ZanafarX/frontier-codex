@@ -22,7 +22,3 @@ limitations.
 
 **Ammunition:** Belt-fed; capacity is effectively limited only by belts on
 hand.
-
-# =============================================================================
-# WEAPONS — MELEE
-# =============================================================================

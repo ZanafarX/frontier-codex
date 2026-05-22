@@ -47,8 +47,3 @@ is the region's defining horror — landmarks within it tend to be
 locally named patches of swamp rather than recognizable monuments
 (Two-Mouth Spring, Thousand-Lantern Fen, the Cypress Cathedral). If
 specific Fen landmarks are added later, they'd go here.
-
-# =============================================================================
-# END OF REGIONS BATCH
-# 5 files
-# =============================================================================

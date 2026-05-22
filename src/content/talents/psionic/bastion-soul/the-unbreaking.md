@@ -42,8 +42,3 @@ The restored thing is exactly as it was — not improved, not altered, just
 the handle it had before it shattered. A restored room has the same scuff
 marks on the floor. The Current doesn't create — the Bastion Soul reminds
 reality of what used to be, and reality grudgingly agrees.
-
-# =============================================================================
-# END OF BASTION SOUL BATCH
-# 49 files: 1 discipline overview + 48 talents (12 R1 + 11 R2 + 10 R3 + 9 R4 + 6 R5)
-# =============================================================================

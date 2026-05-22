@@ -55,7 +55,3 @@ the other way" in pursuers.
 
 Normal. A Mirage-Weaver will not fight to the death for a raiding
 party. They are too valuable and they know it.
-
-# =============================================================================
-# REDEEMER ORDER (3)
-# =============================================================================

@@ -33,7 +33,3 @@ notes:
 Downtime is where Psionics survive. Without a Vice or an Anchor, the
 Erosion track only fills. The party that doesn't take downtime is the
 party that goes Hollow.
-
-# =============================================================================
-# SOCIAL (4)
-# =============================================================================

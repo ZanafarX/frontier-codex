@@ -32,8 +32,3 @@ there's a wire), which is the point — it's a deterrent.
 When you hold a Dead Man's Switch in a social encounter, any NPC who
 recognizes what it is suffers **−2 dice** to resist your Force
 (Intimidation) checks. This is the Rail-Jack's **"nuclear option."**
-
-# =============================================================================
-# END OF MUNDANE CALLING BATCH
-# 60 files: 12 Gunhand + 12 Muck-Raker + 12 High-Roller + 12 Shepherd + 12 Rail-Jack
-# =============================================================================

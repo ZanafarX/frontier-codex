@@ -26,7 +26,3 @@ for others to detect it with Insight increases by **+2 (TN modifier)**.
 
 Only blocks **Rank 1–2** Psionic effects. Rank 3+ Psionic intrusions
 (Phantom Pain, Puppet Strings, etc.) bypass this talent entirely.
-
-# =============================================================================
-# KNOWLEDGE & THE VEIL
-# =============================================================================

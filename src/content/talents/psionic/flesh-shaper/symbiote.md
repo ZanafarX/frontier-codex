@@ -49,8 +49,3 @@ The Symbiote is visible as a **fist-sized mass beneath the skin of your
 torso**. It pulses with your heartbeat. You can feel it thinking — not
 human thoughts, but biological responses. Warmth. Hunger. Contentment.
 You name it, eventually. Everyone does.
-
-# =============================================================================
-# END OF FLESH SHAPER BATCH
-# 51 files: 1 discipline overview + 50 talents (12 R1 + 12 R2 + 10 R3 + 10 R4 + 6 R5)
-# =============================================================================

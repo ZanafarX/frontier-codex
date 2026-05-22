@@ -17,7 +17,3 @@ advantages at distance.
 **Point-Blank penalty:** At Point-Blank range, the wielder suffers an
 additional −2 dice Pool Penalty (in addition to the standard TN penalty
 for scoped weapons at close range). The scope obstructs the target.
-
-# =============================================================================
-# WEAPONS — SHOTGUNS
-# =============================================================================

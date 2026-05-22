@@ -54,8 +54,3 @@ The Stormrise's electrical mechanics make actually reaching the
 Teeth dangerous in their own right — wearing heavy armor (AR 2+)
 during a storm risks a 4d6 lightning strike per hour. Most visitors
 strip down before approaching, which has its own narrative weight.
-
-# =============================================================================
-# END OF LANDMARKS BATCH
-# 3 files
-# =============================================================================

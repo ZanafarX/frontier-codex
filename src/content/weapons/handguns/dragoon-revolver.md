@@ -16,7 +16,3 @@ mule and requires significant strength to control.
 
 **Strength requirement:** Wielders with IRON below 2 suffer a −2 dice
 Pool Penalty when firing the Dragoon, due to recoil.
-
-# =============================================================================
-# WEAPONS — LONG GUNS
-# =============================================================================

@@ -40,5 +40,3 @@ burned and blackened — −1 die to Finesse checks for 24 hours.
 You forget one sense permanently from the burned Memory. Not the Memory
 itself (that's already gone) — but if the Memory was *"the smell of rain
 on the day I fell in love,"* you will never fully smell rain again.
-
-# END OF PSY-SLINGER BATCH

@@ -43,8 +43,3 @@ are the shield against the supernatural.
   Cantrip)** automatically. Choose **one general Mundane Talent**
   (Combat or Non-Combat list — player's choice).
 - **Starting Erosion:** 1 (the cost of the gift).
-
-# =============================================================================
-# END OF CALLINGS BATCH
-# 10 files: 5 mundane + 5 psionic
-# =============================================================================

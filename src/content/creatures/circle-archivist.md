@@ -61,15 +61,3 @@ favor.*
 Normal. Archivists value survival because their knowledge dies with
 them. They will retreat, negotiate, or surrender before they will die
 fighting.
-
-# =============================================================================
-# VEIL-BORN — MINIONS (4)
-# =============================================================================
-# Universal Veil-Born traits (unless noted otherwise per entry):
-# - Salt Vulnerability: Salt Rounds, rock salt, and salt barriers deal
-#   ×2 damage or impose additional effects.
-# - Iron Sensitivity: Iron weapons deal +1 WR (applied automatically).
-# - No Morale: Veil-Born do not make Morale checks.
-# These universal traits are referenced in body prose where relevant
-# but not repeated in every `traits[]` array unless the entry has a
-# specific qualifier (e.g. enhanced or modified vulnerability).

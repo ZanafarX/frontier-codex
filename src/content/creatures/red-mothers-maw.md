@@ -92,7 +92,3 @@ The Maw is a set-piece, not a monster. The party needs to get
 something near it (a lost artifact, a trapped NPC), survive its
 influence, and get out — or perform a sealing ritual that requires
 multiple Extended Checks while the Maw tries to eat the ritualist.
-
-# =============================================================================
-# VEIL-BORN — SPECIAL CASE (1)
-# =============================================================================

@@ -24,7 +24,3 @@ notes:
 
 The Frontier's first lesson: where you stop is where you live or die.
 Salt is cheap. Veterans never run out of salt.
-
-# =============================================================================
-# PROGRESSION (10)
-# =============================================================================

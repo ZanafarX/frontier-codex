@@ -38,7 +38,3 @@ a firearm:
 A weapon can only have one active modification at a time. Customize
 replaces the need for the Signature Weapon talent for that weapon —
 the bonuses do not stack (still +1 total).
-
-# =============================================================================
-# SOCIAL
-# =============================================================================

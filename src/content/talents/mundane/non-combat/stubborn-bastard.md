@@ -28,8 +28,3 @@ physical exertion.
 
 Once per session. Cannot be used on combat rolls (attack, defense,
 initiative).
-
-# =============================================================================
-# END OF MUNDANE NON-COMBAT BATCH
-# 20 files
-# =============================================================================

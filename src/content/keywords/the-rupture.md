@@ -45,20 +45,3 @@ on bones.**
 
 (See the **Veil** for the barrier itself, and the **Current** for
 what bleeds through.)
-# =============================================================================
-# END OF CONDITIONS + KEYWORDS BATCH
-# 26 files: 12 conditions + 14 keywords
-#
-# Conditions: stunned, suppressed, exposed, bleeding-out, wounded,
-# frightened, open-state, encumbered, prone, grappled, disrupted, hollow
-#
-# Keywords: tension-pool, erosion, veil-bleed, backlash, strain, tempo,
-# tick, memory-burn, open-state, mettle, scrip, the-current, the-veil,
-# the-rupture
-#
-# Note: Encumbered is flagged as synthesized (no formal source definition)
-# and should be revisited when carry-weight rules are formalized in the
-# Rules chapters batch. Source has additional Combat Conditions (Blinded,
-# Engaged) not on the spec'd list — deliver as a follow-up small batch
-# if you want them in the system.
-# =============================================================================

@@ -33,7 +33,3 @@ members **recover 1 Strain**. The ritual provides closure.
 ## Limit
 
 Must be performed within 24 hours of death.
-
-# =============================================================================
-# RAIL-JACK CALLING TALENTS (12)
-# =============================================================================

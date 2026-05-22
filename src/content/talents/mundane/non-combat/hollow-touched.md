@@ -22,7 +22,3 @@ Veil-Born creatures. Against Elite and Boss Fear effects, you gain
 Additionally, you can sense when a Veil Breach is imminent — the GM
 warns you **1 round (approximately 10 Ticks)** before a Tension Pool
 Rupture occurs.
-
-# =============================================================================
-# SELF & RESILIENCE
-# =============================================================================

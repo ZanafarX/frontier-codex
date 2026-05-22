@@ -49,8 +49,3 @@ reattached. They call it *"the scar on the loom."*
 
 Per the Miracle Reaction Rule, the Memory cost is the entire cost — no
 Mettle is required despite this being a Reaction.
-
-# =============================================================================
-# END OF SEER BATCH
-# 51 files: 1 discipline overview + 50 talents (12 R1 + 12 R2 + 10 R3 + 10 R4 + 6 R5)
-# =============================================================================

@@ -65,7 +65,3 @@ them. The encounter becomes a frantic process of identifying and
 destroying every reflective surface while the Haunt strikes from
 unexpected angles. It's a haunted-house encounter with a clear win
 condition: **break everything shiny.**
-
-# =============================================================================
-# VEIL-BORN — ELITES (6)
-# =============================================================================

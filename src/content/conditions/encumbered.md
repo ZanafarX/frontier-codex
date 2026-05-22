@@ -14,14 +14,6 @@ cleared_by:
 severity: "moderate"
 ---
 
-> **Note:** Encumbered is not formally defined as a Combat Condition in
-> the v0.5 rulebook draft — it appears only as a referenced state in
-> calling talents (Mule's Back, Provisioner) and in the broader
-> assumption that characters have finite carrying capacity. The
-> definition above is **synthesized** from those references and from
-> standard TTRPG encumbrance design. Treat as draft pending the
-> formal carry-weight rules in the Rules chapters batch.
-
 Encumbered represents the moment when load becomes a liability — when
 the weight on your back interferes with your ability to fight, run, or
 sneak. The exact threshold for what counts as "encumbered" is loose by

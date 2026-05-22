@@ -88,3 +88,13 @@ island. They land. They rest. And then the ground moves. This is an
 *escape* encounter: get off the island before it closes around you.
 Burn it if you can. Salt it if you can spare the salt. But mostly,
 run.
+
+## Veil-Born traits
+Universal Veil-Born traits (unless noted otherwise per entry):
+- Salt Vulnerability: Salt Rounds, rock salt, and salt barriers deal
+  ×2 damage or impose additional effects.
+- Iron Sensitivity: Iron weapons deal +1 WR (applied automatically).
+- No Morale: Veil-Born do not make Morale checks.
+These universal traits are referenced in body prose where relevant
+but not repeated in every `traits[]` array unless the entry has a
+specific qualifier (e.g. enhanced or modified vulnerability).

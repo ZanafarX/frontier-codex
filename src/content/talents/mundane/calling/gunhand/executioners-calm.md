@@ -26,7 +26,3 @@ in the aftermath of violence.
 Maximum **2 Mettle** recovered per scene. Does not trigger from Coup
 de Grace against helpless targets — there's no clarity in an
 execution, only weight.
-
-# =============================================================================
-# MUCK-RAKER CALLING TALENTS (12)
-# =============================================================================

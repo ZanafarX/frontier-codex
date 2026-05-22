@@ -28,7 +28,3 @@ on the area's danger).
 Your maps are immune to the "shifting terrain" effect that some
 Veil-touched areas exhibit. The act of documenting reality helps
 anchor it.
-
-# =============================================================================
-# SCAVENGING & CRAFTING
-# =============================================================================

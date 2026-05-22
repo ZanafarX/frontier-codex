@@ -10,5 +10,3 @@ scar_memory_examples:
 Someone you trusted absolutely turned on you. A partner, a mentor, a family
 member. They left you with nothing, or worse, they tried to bury you. Now
 you know: trust is a luxury the Frontier can't afford.
-
-# END OF FOUNDATIONS BATCH

@@ -25,7 +25,3 @@ of the participating attackers.
 ## Limit
 
 Once per scene. The bonus only applies during a single Tick Cycle.
-
-# =============================================================================
-# HIGH-ROLLER CALLING TALENTS (12)
-# =============================================================================

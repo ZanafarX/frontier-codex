@@ -29,7 +29,3 @@ notes:
 
 The Rupture is the moment the slow clock chimes. Most sessions never see
 one. The sessions that do are remembered.
-
-# =============================================================================
-# TRAVEL (3)
-# =============================================================================

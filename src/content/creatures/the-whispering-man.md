@@ -66,7 +66,3 @@ can only be endured, avoided, or outsmarted — and the party must
 leave the Plain to escape it. Use it to erode resources (Erosion,
 sleep deprivation, paranoia) and to ask players uncomfortable
 questions about their characters' pasts.
-
-# =============================================================================
-# VEIL-BORN — BOSSES (4)
-# =============================================================================

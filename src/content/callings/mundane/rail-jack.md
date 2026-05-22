@@ -54,10 +54,3 @@ way in, you crawl through the vents.
 - **Starting Talents:** Choose **one Rail-Jack Talent** from the
   Calling-specific list above, plus **one general Mundane Talent**
   (Combat or Non-Combat list — player's choice).
-
-# =============================================================================
-# PSIONIC CALLINGS (5)
-# =============================================================================
-# Each psionic Calling has a fixed Rank 1 Cantrip granted automatically,
-# starts with 1 Erosion (the price of the gift), and links to its
-# corresponding Discipline overview via the `discipline` field.

@@ -75,7 +75,3 @@ notes:
 The Frontier's geography of supply. Orvain is rich in licensed goods and
 poor in tolerance; Palomera reverses the equation. Bellhaven is a
 waystation, not a marketplace.
-
-# =============================================================================
-# COMBAT (17)
-# =============================================================================

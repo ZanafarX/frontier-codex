@@ -67,7 +67,3 @@ Clockwork Hounds are *pursuit* encounters. The party has done
 something the Consortium disapproves of, and the Hounds are on their
 trail. The clicking grows louder. The whistle sounds. Now run — or
 find a river.
-
-# =============================================================================
-# DUST VULTURE CLANS (3)
-# =============================================================================

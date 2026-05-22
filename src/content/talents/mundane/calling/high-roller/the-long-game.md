@@ -26,7 +26,3 @@ reading the pattern, steering the conversation, controlling the pace.
 ## Special
 
 If you fail a check in the sequence, the cumulative bonus resets to 0.
-
-# =============================================================================
-# SHEPHERD CALLING TALENTS (12)
-# =============================================================================

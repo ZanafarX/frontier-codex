@@ -57,7 +57,3 @@ in their wake.
 
 Professional (+2). Shock-Troopers do not panic. They may execute a
 fighting retreat if ordered, but never on their own initiative.
-
-# =============================================================================
-# CIRCLE OF ASH (3)
-# =============================================================================

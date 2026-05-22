@@ -14,7 +14,3 @@ horse's momentum drives the point home.
 
 **Charge bonus:** +1 WR (effective WR 5) on the first attack of a mounted
 charge against a target the lance reaches at full speed.
-
-# =============================================================================
-# ARMOR
-# =============================================================================

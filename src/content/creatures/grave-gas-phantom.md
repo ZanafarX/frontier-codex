@@ -54,10 +54,3 @@ you hurt your friend to save yourself? Can you find smelling salts in
 time? The Grave Gas Phantom is your party member at their most
 dangerous and most vulnerable, and the encounter works best when the
 affected character's player is in on the horror.
-
-# =============================================================================
-# BEASTS — FRONTIER ECOLOGY (4)
-# =============================================================================
-# Section III "The Frontier's Ecology" entries: Veil-warped fauna that
-# fill ecological niches, distinct from Section II "Veil-Born Entities."
-# These are classified as `beast` per the schema.

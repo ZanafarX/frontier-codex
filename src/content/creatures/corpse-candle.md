@@ -65,7 +65,3 @@ Do they blindfold themselves and navigate by touch? Do they waste
 salt to clear a lane? Do they go around and lose a day of travel? The
 Corpse-Candle encounter is about resource management and
 decision-making, not combat.
-
-# =============================================================================
-# VEIL-BORN — SOLDIERS (1)
-# =============================================================================

@@ -31,8 +31,3 @@ weapon. While wielding your Signature Weapon:
 ## Limit
 
 You may only have one Signature Weapon at a time.
-
-# =============================================================================
-# END OF MUNDANE COMBAT BATCH
-# 30 files
-# =============================================================================

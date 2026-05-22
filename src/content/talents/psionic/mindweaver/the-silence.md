@@ -43,8 +43,3 @@ exile you. **Even other Mindweavers would be horrified.** Use of this
 Talent should carry **massive narrative consequences** — at the GM's
 discretion, this may permanently change how factions treat the
 character, and may attract attention from forces beyond the Veil itself.
-
-# =============================================================================
-# END OF MINDWEAVER BATCH
-# 51 files: 1 discipline overview + 50 talents (12 R1 + 12 R2 + 10 R3 + 10 R4 + 6 R5)
-# =============================================================================

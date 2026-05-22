@@ -58,7 +58,3 @@ disturbingly competent.
 
 Fanatic (−4). Inquisitors do not retreat. They have seen worse than
 you.
-
-# =============================================================================
-# IRONBRAND MERCENARIES (2)
-# =============================================================================

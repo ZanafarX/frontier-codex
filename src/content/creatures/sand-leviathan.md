@@ -75,14 +75,3 @@ movement, silence, and sacrifice — do you freeze and hope it passes?
 Do you throw your pack mule toward the disturbance to buy time? Do
 you run and risk the vibrations drawing it after you? **There is no
 winning. There is only escaping.**
-
-# =============================================================================
-# NPC ADDENDUM (1)
-# =============================================================================
-# Rail Baron Thaddeus Craine is a named Boss-tier stat block from the
-# Consortium section of the bestiary chapter. Missed in the prior NPCs
-# batch (settlements batch references Kessick's Consortium presence but
-# does not name Craine). Delivered here as an `npcs/` collection file
-# under the named-figures convention established for Vane, Beulah,
-# Draven, and Rhun. The 14-file count in the npcs batch header should
-# be updated to 15 when this file is committed.

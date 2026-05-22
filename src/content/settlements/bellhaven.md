@@ -45,8 +45,3 @@ firearms quickly). Special ammunition is unavailable. Psionic gear is
 rare. Grimoires are rare. Clean water is §4/gallon (the swamp water
 is undrinkable without filtration). Medical care requires service in
 return — Mother Elaine doesn't take coin.
-
-# =============================================================================
-# END OF SETTLEMENTS BATCH
-# 6 files
-# =============================================================================

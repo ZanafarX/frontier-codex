@@ -44,7 +44,3 @@ are not who they were. They may never be.
 
 (See also: the **Hollow Man** creature entry for the Veil-Born minion
 that shares the name and origin, and the **Memory Burn** keyword.)
-
-# =============================================================================
-# KEYWORDS (14)
-# =============================================================================
