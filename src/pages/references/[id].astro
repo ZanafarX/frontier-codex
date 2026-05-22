@@ -1,0 +1,290 @@
+---
+// =============================================================================
+// /references/<id>/ — detail page
+// =============================================================================
+// One page per reference table. 42 pages total, static-generated at build
+// time. Tables vary widely in shape (2-7 columns, 3-20+ rows), hence the
+// flexible-renderer approach: per-column type/align hints drive font and
+// alignment; per-cell rendering handles null/number/string transparently.
+//
+// LAYOUT
+//   1. Back link → /references/
+//   2. Category eyebrow (e.g., "Combat")
+//   3. H1 table name
+//   4. Description (italic lede, when present)
+//   5. The rendered table (.listing-table chrome from listings.css)
+//   6. Notes panel (when notes[] non-empty)
+//   7. Body content (wayfinding prose)
+//
+// COLUMN RENDERING
+//   - type 'number'/'currency'/'modifier' → mono + nowrap via .num class.
+//   - explicit column.align is applied as an inline text-align style,
+//     which beats the .num class's default center without needing
+//     !important.
+//
+// CELL VALUE FORMATTING
+//   - null/undefined/empty → "—"
+//   - 'currency' + number → formatScrip → "§120"
+//   - otherwise → String(value) — data is usually pre-formatted
+//
+// CROSS-REFERENCE AUTO-LINKING
+//   Deferred to Phase 3c, same as everywhere else. Notes and body prose
+//   reference other tables and keywords as plain text; the future
+//   enrichment pass will turn those into anchors.
+//
+// STYLES
+//   .detail-header__eyebrow is shared via detail.css (consolidated in
+//   Batch 14). .reference-header__description (the italic lede below
+//   the title) stays page-scoped — it's a separate, page-specific
+//   pattern, not the eyebrow.
+// =============================================================================
+
+import {
+  getCollection,
+  render,
+  type CollectionEntry,
+} from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatScrip } from '../../lib/formatters';
+import '../../styles/detail.css';
+import '../../styles/listings.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const allRefs = await getCollection('references');
+  return allRefs.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+// --- Props ------------------------------------------------------------------
+
+interface Props {
+  entry: CollectionEntry<'references'>;
+}
+
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+
+// --- Type helpers derived from the schema ----------------------------------
+// Pulled off the entry type so they track schema changes automatically.
+
+type Column = CollectionEntry<'references'>['data']['columns'][number];
+type RowValue = string | number | null | undefined;
+
+const columns: Column[] = entry.data.columns;
+const rows = entry.data.rows;
+const notes = entry.data.notes;
+
+// --- Rendering helpers ------------------------------------------------------
+
+function isNumericType(col: Column): boolean {
+  return (
+    col.type === 'number' ||
+    col.type === 'currency' ||
+    col.type === 'modifier'
+  );
+}
+
+/**
+ * Resolve the text-align value for a column. Explicit column.align wins;
+ * otherwise default to center for numeric-typed columns, left for strings.
+ */
+function alignFor(col: Column): 'left' | 'center' | 'right' {
+  if (col.align) return col.align;
+  return isNumericType(col) ? 'center' : 'left';
+}
+
+/**
+ * Format a cell value for display. null/empty → em-dash; currency-typed
+ * numbers get the § prefix; everything else stringifies as-is (data is
+ * typically pre-formatted, e.g., "TN −2", "×0.5", "§1 – §10").
+ */
+function renderValue(col: Column, value: RowValue): string {
+  if (value === null || value === undefined || value === '') return '—';
+  if (col.type === 'currency' && typeof value === 'number') {
+    return formatScrip(value);
+  }
+  return String(value);
+}
+
+// --- Page header data -------------------------------------------------------
+
+const CATEGORY_LABELS: Record<string, string> = {
+  economy:     'Economy',
+  equipment:   'Equipment',
+  combat:      'Combat',
+  travel:      'Travel',
+  environment: 'Environment',
+  progression: 'Progression',
+  social:      'Social',
+};
+
+const categoryLabel =
+  CATEGORY_LABELS[entry.data.category] ?? entry.data.category;
+
+const pageTitle = entry.data.name;
+const pageDescription =
+  entry.data.description ??
+  `${entry.data.name} — ${categoryLabel.toLowerCase()} reference table.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="reference-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/references/" class="detail-back__link">← All References</a>
+      </nav>
+
+      <header class="detail-header">
+        <p class="detail-header__eyebrow">{categoryLabel}</p>
+
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.description && (
+          <p class="reference-header__description">
+            {entry.data.description}
+          </p>
+        )}
+      </header>
+
+      {rows.length > 0 && (
+        <div class="listing-table-wrap">
+          <table class="listing-table">
+            <thead>
+              <tr>
+                {columns.map((col) => {
+                  const numeric = isNumericType(col);
+                  const align = alignFor(col);
+                  return (
+                    <th
+                      class={numeric ? 'num' : ''}
+                      style={`text-align: ${align}`}
+                    >
+                      {col.label}
+                    </th>
+                  );
+                })}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr>
+                  {columns.map((col) => {
+                    const numeric = isNumericType(col);
+                    const align = alignFor(col);
+                    const value = row[col.key] as RowValue;
+                    return (
+                      <td
+                        class={numeric ? 'num' : ''}
+                        style={`text-align: ${align}`}
+                      >
+                        {renderValue(col, value)}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {notes.length > 0 && (
+        <aside class="reference-notes" aria-label="Notes">
+          <h2 class="reference-notes__title">Notes</h2>
+          <ul class="reference-notes__list">
+            {notes.map((note) => <li>{note}</li>)}
+          </ul>
+        </aside>
+      )}
+
+      <section class="reference-body">
+        <Content />
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Header description (italic lede below the title) --------------- */
+
+  .reference-header__description {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-style: italic;
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    margin: var(--space-4) 0 0 0;
+  }
+
+  /* --- Notes panel ----------------------------------------------------
+     Footnote-style callout for notes[]. Subtle background with a rust
+     left-border to mark it as supplementary to the table above. */
+
+  .reference-notes {
+    margin-top: var(--space-6);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-bg-elevated);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+  }
+
+  .reference-notes__title {
+    /* Override the global h2. This is a section label, not a heading. */
+    margin: 0 0 var(--space-3) 0;
+    padding: 0;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    font-style: normal;
+  }
+
+  .reference-notes__list {
+    margin: 0;
+    padding-left: var(--space-5);
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+  }
+
+  .reference-notes__list li {
+    margin-bottom: var(--space-2);
+  }
+
+  .reference-notes__list li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* --- Body content ---------------------------------------------------
+     The body is short wayfinding prose pointing at related rules or
+     tables. Styled as muted italic so it reads as "see also" guidance
+     rather than primary content (which is the table). */
+
+  .reference-body {
+    margin-top: var(--space-5);
+  }
+
+  .reference-body :global(p) {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+  }
+
+  .reference-body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

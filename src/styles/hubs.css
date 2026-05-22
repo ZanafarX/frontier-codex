@@ -1,0 +1,255 @@
+/* ============================================================================
+   HUB PAGE STYLES
+   ============================================================================
+   Shared chrome for any hub-style index page — /character/, /equipment/,
+   /world/, /bestiary/. Each hub gathers multiple related collections into
+   one curated overview with per-section browse links to the full listings.
+
+   Holds: section header (title + count + browse), sub-section header,
+          section grid layouts, mini-card base, pill list.
+   Does NOT hold: per-hub card variants or domain-specific extras (those
+                  live in each hub's page-scoped <style> block — e.g.
+                  /character/ keeps the attribute card centering and the
+                  skill-row layout; /world/ keeps the chip-row wrapper
+                  for landmark danger Badges).
+
+   Imported via:  import '../../styles/hubs.css';
+   ========================================================================= */
+
+/* --- Section chrome ------------------------------------------------------ */
+
+.hub-section {
+  margin-block: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.hub-section__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+
+.hub-section__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-accent);
+  margin: 0;
+  /* Override the global h2 — we want a clean section title without the
+     bottom border that the global h2 applies. */
+  border: none;
+  padding: 0;
+  font-style: normal;
+  line-height: var(--line-tight);
+}
+
+.hub-section__count {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hub-section__browse {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hub-section__browse:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.hub-section__intro {
+  font-family: var(--font-serif);
+  color: var(--color-text-muted);
+  line-height: var(--line-snug);
+  margin: 0 0 var(--space-4) 0;
+  max-width: var(--prose-max);
+}
+
+/* --- Sub-section chrome ---------------------------------------------------
+   Sub-section title — used inside a section when content subdivides.
+   Standalone form (no count/browse): use the bare h3.
+   Header-row form (with count and/or browse): wrap in
+   .hub-subsection__header.
+   ----------------------------------------------------------------------- */
+
+.hub-subsection__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  margin: var(--space-5) 0 var(--space-3) 0;
+  font-style: normal;
+}
+
+.hub-subsection__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin: var(--space-5) 0 var(--space-3) 0;
+}
+
+.hub-subsection__header .hub-subsection__title {
+  /* When inside a header, the title's own top/bottom margins are
+     already provided by the header's margin. Strip them. */
+  margin: 0;
+}
+
+.hub-subsection__count {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hub-subsection__browse {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hub-subsection__browse:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* --- Hub grids ----------------------------------------------------------- */
+
+.hub-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.hub-grid--standard {
+  /* General-purpose card grid — used by origins/tragedies/callings on
+     /character/, factions/regions/settlements/landmarks/npcs on
+     /world/. ~3 columns at common desktop widths. */
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.hub-grid--compact {
+  /* Tighter cards — used by equipment items (weapons/armor/etc.) on
+     /equipment/ and creatures on /bestiary/ where name+type-chip is
+     enough. ~4-5 columns at common desktop widths. */
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.hub-grid--attributes {
+  /* Tightest — used by attributes on /character/ where 6 cards fit
+     comfortably on a wide viewport at 3 columns. */
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+/* --- Hub card base ------------------------------------------------------- */
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.hub-card:hover {
+  border-color: var(--color-accent);
+  background: rgba(176, 74, 47, 0.04);
+}
+
+.hub-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.hub-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+  margin: 0;
+  font-style: normal;
+  line-height: var(--line-snug);
+}
+
+.hub-card:hover .hub-card__title {
+  color: var(--color-accent-hover);
+}
+
+.hub-card__chip {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-highlight);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.hub-card__flavor {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-snug);
+  margin: var(--space-1) 0 0 0;
+}
+
+/* --- Pill list (for glossary-style flat name links) ---------------------
+   Used by /equipment/ Glossaries section for weapon-qualities and
+   armor-properties. Each entry is a clickable pill with the entry name.
+   ----------------------------------------------------------------------- */
+
+.hub-pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hub-pill-list li {
+  margin: 0;
+}
+
+.hub-pill {
+  display: inline-block;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: border-color 120ms ease, color 120ms ease, background-color 120ms ease;
+}
+
+.hub-pill:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(176, 74, 47, 0.04);
+}

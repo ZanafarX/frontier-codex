@@ -1,0 +1,90 @@
+---
+// =============================================================================
+// /ammunition/ — listing page (sortable table, no filters)
+// =============================================================================
+// 8 ammunition entries. Sorted by ammo_type (standard first, then special)
+// then by name. Columns: Name, Type, Per Pack, Price, Tags.
+//
+// FORMATTERS
+//   formatAmmoType now lives in lib/formatters.ts (consolidated in
+//   Batch 13b). Replaces the previous inlined ternary.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatAmmoType, formatScrip, lastIdSegment } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+// Standard first, then special; alphabetical within each.
+const ammunition = (await getCollection('ammunition')).sort((a, b) => {
+  if (a.data.ammo_type !== b.data.ammo_type) {
+    return a.data.ammo_type === 'standard' ? -1 : 1;
+  }
+  return a.data.name.localeCompare(b.data.name);
+});
+---
+
+<BaseLayout
+  title="Ammunition"
+  description="Bullets, shells, and special rounds. From cheap lead to ghost-rock to the salt that drives spirits screaming back to the Veil."
+  pageClass="ammunition-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Ammunition</h1>
+      <p class="listing-header__count">{ammunition.length} ammunition types</p>
+      <p class="listing-header__lede">
+        High-quality or specialized ammunition commands premium prices and
+        is often more valuable than the guns that fire it.
+      </p>
+    </header>
+
+    <div class="listing-table-wrap">
+      <table class="listing-table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col" class="num">Per Pack</th>
+            <th scope="col" class="num">Price</th>
+            <th scope="col">Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ammunition.map((a) => {
+            const slug = lastIdSegment(a.id);
+            const typeLabel = formatAmmoType(a.data.ammo_type);
+            return (
+              <tr>
+                <td class="name"><a href={`/ammunition/${slug}/`}>{a.data.name}</a></td>
+                <td>{typeLabel}</td>
+                <td class="num">{a.data.units_per_pack}</td>
+                <td class="num">{formatScrip(a.data.price_scrip)}</td>
+                <td>
+                  {a.data.tags.length === 0 ? '—' : (
+                    <div class="prop-badges">
+                      {a.data.tags.map((t) => (
+                        <Badge variant="muted" label={t} size="sm" />
+                      ))}
+                    </div>
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .prop-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+</style>

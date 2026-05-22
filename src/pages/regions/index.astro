@@ -1,0 +1,182 @@
+---
+// =============================================================================
+// /regions/ — listing page (hero card grid)
+// =============================================================================
+// 5 regions ("the Five Killing Grounds"). Hero card per region with name,
+// tagline, terrain (first sentence), controlling faction badge, and counts
+// for settlements / landmarks / hazards. Cards link to /regions/<id>/
+// which 404s until detail pages are built.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import '../../styles/listings.css';
+
+const regions = (await getCollection('regions')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+
+// Look up faction display names from the factions collection.
+const factions = await getCollection('factions');
+const factionNameById = new Map(factions.map((f) => [f.id, f.data.name]));
+
+// First sentence of the terrain string — the rich, sensory anchor.
+function firstSentence(s: string): string {
+  const match = s.match(/^[^.!?]+[.!?]/);
+  return match ? match[0] : s;
+}
+---
+
+<BaseLayout
+  title="Regions"
+  description="The Five Killing Grounds — the regions of the Frontier, each with its own terrain, hazards, and reason it kills people."
+  pageClass="regions-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">The Five Killing Grounds</h1>
+      <p class="listing-header__count">{regions.length} regions</p>
+      <p class="listing-header__lede">
+        Each region of the Frontier has its own way of killing you. Learn
+        them before they teach you.
+      </p>
+    </header>
+
+    <div class="card-grid">
+      {regions.map((r) => (
+        <article class="region-card">
+          <a href={`/regions/${r.id}/`} class="region-card__link">
+            <h3 class="region-card__name">{r.data.name}</h3>
+
+            <blockquote class="region-card__tagline">
+              "{r.data.tagline}"
+            </blockquote>
+
+            <div class="region-card__meta">
+              {r.data.controlling_faction && (
+                <Badge
+                  variant="type"
+                  label={
+                    factionNameById.get(r.data.controlling_faction) ??
+                    r.data.controlling_faction
+                  }
+                />
+              )}
+            </div>
+
+            <p class="region-card__terrain">{firstSentence(r.data.terrain)}</p>
+
+            <dl class="region-card__counts">
+              <div>
+                <dt>Hazards</dt>
+                <dd>{r.data.hazards.length}</dd>
+              </div>
+              <div>
+                <dt>Settlements</dt>
+                <dd>{r.data.settlements.length}</dd>
+              </div>
+              <div>
+                <dt>Landmarks</dt>
+                <dd>{r.data.landmarks.length}</dd>
+              </div>
+            </dl>
+          </a>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .region-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, transform 0.15s;
+    overflow: hidden;
+  }
+
+  .region-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .region-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .region-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-2);
+  }
+
+  .region-card__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-lg);
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    line-height: var(--line-snug);
+  }
+
+  .region-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    min-height: 1.5em;
+  }
+
+  .region-card__terrain {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-base);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .region-card__counts {
+    display: flex;
+    gap: var(--space-5);
+    margin: 0;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .region-card__counts > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .region-card__counts dt {
+    color: var(--color-text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  .region-card__counts dd {
+    color: var(--color-text);
+    margin: 0;
+  }
+</style>

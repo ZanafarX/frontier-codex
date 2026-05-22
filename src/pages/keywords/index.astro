@@ -1,0 +1,105 @@
+---
+// =============================================================================
+// /keywords/ — listing page (compact reference list, optionally grouped)
+// =============================================================================
+// ~14 keywords sorted alphabetically. Each entry shows name (linked),
+// category badge, aliases (if any, italic muted), tags, and short_definition.
+//
+// FORMATTERS
+//   formatKeywordCategory now lives in lib/formatters.ts (consolidated
+//   in Batch 13b). Replaces the previous inline formatCategory. The
+//   shared helper's name is qualified ("Keyword") to disambiguate from
+//   other "category" enums (skills also use a category field).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatKeywordCategory } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const keywords = (await getCollection('keywords')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+---
+
+<BaseLayout
+  title="Keywords"
+  description="The vocabulary of The Veil & Lead — Strain, Erosion, Memory, Mettle, and the other terms that appear throughout the rules."
+  pageClass="keywords-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Keywords</h1>
+      <p class="listing-header__count">{keywords.length} keywords</p>
+      <p class="listing-header__lede">
+        Core vocabulary of the game. Strain, Erosion, Memory, Mettle, and
+        the other terms that appear again and again across the rules.
+      </p>
+    </header>
+
+    <div class="reference-list">
+      {keywords.map((k) => (
+        <article class="reference-list__entry" id={k.id}>
+          <header>
+            <h3><a href={`/keywords/${k.id}/`}>{k.data.name}</a></h3>
+            <div class="keyword-entry__meta">
+              <Badge variant="type" label={formatKeywordCategory(k.data.category)} size="sm" />
+              {k.data.tags.map((t) => (
+                <Badge variant="muted" label={t} size="sm" />
+              ))}
+            </div>
+          </header>
+
+          {k.data.aliases.length > 0 && (
+            <p class="keyword-entry__aliases">
+              Also called: <em>{k.data.aliases.join(', ')}</em>
+            </p>
+          )}
+
+          <p class="keyword-entry__definition">{k.data.short_definition}</p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .reference-list__entry header h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .reference-list__entry header h3 a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .keyword-entry__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .keyword-entry__aliases {
+    font-family: var(--font-serif);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin: var(--space-2) 0 0;
+    line-height: var(--line-snug);
+  }
+
+  .keyword-entry__aliases em {
+    color: var(--color-highlight);
+    font-style: italic;
+  }
+
+  .keyword-entry__definition {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    margin: var(--space-2) 0 0;
+  }
+</style>

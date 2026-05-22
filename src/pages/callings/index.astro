@@ -1,0 +1,202 @@
+---
+// =============================================================================
+// /callings/ — listing page
+// =============================================================================
+// Ten hero cards in two sections — Mundane (5) and Psionic (5) — sorted by
+// the calling's `number` field (the source's canonical ordering). Click →
+// /callings/<id>/ detail page.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import {
+  extractLede,
+  formatDiscipline,
+  truncate,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const allCallings = (await getCollection('callings')).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+
+const mundaneCallings = allCallings.filter((c) => c.data.type === 'mundane');
+const psionicCallings = allCallings.filter((c) => c.data.type === 'psionic');
+
+const sections = [
+  {
+    key: 'mundane',
+    title: 'Mundane Callings',
+    blurb:
+      'Forged by experience, not the Current. Lawmen, prospectors, gamblers, preachers, saboteurs.',
+    callings: mundaneCallings,
+  },
+  {
+    key: 'psionic',
+    title: 'Psionic Callings',
+    blurb:
+      'Touched by the Veil. Each pairs with a psionic Discipline and pays a price for it.',
+    callings: psionicCallings,
+  },
+];
+---
+
+<BaseLayout
+  title="Callings"
+  description="The ten Callings of The Veil & Lead — five mundane, five psionic. Who you were before the Current touched you, or who you became when it did."
+  pageClass="callings-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">The Ten Callings</h1>
+      <p class="listing-header__count">
+        {allCallings.length} callings · 5 mundane · 5 psionic
+      </p>
+      <p class="listing-header__lede">
+        Who you were before the Current touched you — or who you became
+        when it did.
+      </p>
+    </header>
+
+    {sections.map((section) => (
+      <section class="talent-section">
+        <header class="talent-section__header">
+          <h2 class="talent-section__title">{section.title}</h2>
+          <span class="talent-section__count">{section.callings.length}</span>
+        </header>
+
+        <p class="callings-section-blurb">{section.blurb}</p>
+
+        <div class="card-grid">
+          {section.callings.map((c) => {
+            const lede = truncate(extractLede(c.body), 220);
+            const typeLabel = c.data.type === 'psionic' ? 'Psionic' : 'Mundane';
+            return (
+              <article class="calling-card">
+                <a href={`/callings/${c.id}/`} class="calling-card__link">
+                  <header class="calling-card__header">
+                    <h3 class="calling-card__name">{c.data.name}</h3>
+                    <p class="calling-card__archetype">{c.data.archetype}</p>
+                  </header>
+
+                  <blockquote class="calling-card__tagline">
+                    "{c.data.tagline}"
+                  </blockquote>
+
+                  <div class="calling-card__meta">
+                    <Badge variant="type" label={typeLabel} />
+                    {c.data.prime_attributes.map((a) => (
+                      <Badge variant="highlight" label={a} />
+                    ))}
+                    {c.data.discipline && (
+                      <Badge
+                        variant="discipline"
+                        label={formatDiscipline(c.data.discipline)}
+                      />
+                    )}
+                  </div>
+
+                  {lede && <p class="calling-card__lede">{lede}</p>}
+                </a>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    ))}
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Section blurb ----------------------------------------------------
+     Short sentence under each section header, before the card grid. */
+
+  .callings-section-blurb {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    margin: 0 0 var(--space-4);
+    max-width: var(--prose-max);
+  }
+
+  /* --- Calling card ----------------------------------------------------
+     Hero card visually similar to .discipline-card on the disciplines
+     listing — a future shared .listing-card utility could absorb both,
+     but the styles are inlined here for now to keep batches focused. */
+
+  .calling-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, transform 0.15s;
+    overflow: hidden;
+  }
+
+  .calling-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .calling-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .calling-card__header {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-3);
+  }
+
+  .calling-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .calling-card__archetype {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin: var(--space-1) 0 0;
+  }
+
+  .calling-card__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-lg);
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    line-height: var(--line-snug);
+  }
+
+  .calling-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .calling-card__lede {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-base);
+    margin: 0;
+    flex-grow: 1;
+  }
+</style>

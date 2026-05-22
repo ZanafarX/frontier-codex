@@ -1,0 +1,155 @@
+---
+// =============================================================================
+// /factions/ — listing page
+// =============================================================================
+// Five hero cards, one per faction. Card surfaces motto, type, territory,
+// and an extracted lede. Click → /factions/<id>/ detail page (Phase 3b).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import {
+  extractLede,
+  formatFactionType,
+  formatRegion,
+  truncate,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const factions = (await getCollection('factions')).sort(
+  (a, b) => a.data.short_name.localeCompare(b.data.short_name),
+);
+---
+
+<BaseLayout
+  title="Factions"
+  description="The five powers of the Frontier — Consortium, Dust Vultures, Redeemers, Circle of Ash, Ironbrands."
+  pageClass="factions-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">The Powers of the Frontier</h1>
+      <p class="listing-header__count">{factions.length} factions</p>
+      <p class="listing-header__lede">
+        Five powers carve up the Frontier between them. Each claims dominion;
+        none of them have the whole map.
+      </p>
+    </header>
+
+    <div class="card-grid">
+      {factions.map((f) => {
+        const lede = truncate(extractLede(f.body), 260);
+        return (
+          <article class="faction-card">
+            <a href={`/factions/${f.id}/`} class="faction-card__link">
+              <header class="faction-card__header">
+                <h2 class="faction-card__name">{f.data.name}</h2>
+                {f.data.motto && (
+                  <p class="faction-card__motto">"{f.data.motto}"</p>
+                )}
+              </header>
+
+              <div class="faction-card__meta">
+                <Badge variant="type" label={formatFactionType(f.data.type)} />
+                {f.data.territory.length > 0 ? (
+                  f.data.territory.map((r) => (
+                    <Badge variant="region" label={formatRegion(r)} size="sm" />
+                  ))
+                ) : (
+                  <Badge variant="muted" label="Trans-regional" size="sm" />
+                )}
+              </div>
+
+              {lede && <p class="faction-card__lede">{lede}</p>}
+
+              <footer class="faction-card__footer">
+                <span class="faction-card__members">
+                  {f.data.notable_members.length} notable members
+                </span>
+              </footer>
+            </a>
+          </article>
+        );
+      })}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .faction-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, transform 0.15s;
+    overflow: hidden;
+  }
+
+  .faction-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .faction-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .faction-card__header {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-3);
+  }
+
+  .faction-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .faction-card__motto {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-base);
+    margin: var(--space-2) 0 0;
+    line-height: var(--line-snug);
+  }
+
+  .faction-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .faction-card__lede {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-base);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .faction-card__footer {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-3);
+    margin-top: auto;
+  }
+
+  .faction-card__members {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

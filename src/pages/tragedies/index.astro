@@ -1,0 +1,106 @@
+---
+// =============================================================================
+// /tragedies/ — listing page (card grid)
+// =============================================================================
+// 6 tragedies. Hero-style card grid, alphabetically sorted by name.
+// Each card shows the tragedy name, the attribute bonus chip, and the
+// short summary.
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { lastIdSegment } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const allTragedies = await getCollection('tragedies');
+type Tragedy = CollectionEntry<'tragedies'>;
+
+const sorted: Tragedy[] = [...allTragedies].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+
+const total = sorted.length;
+---
+
+<BaseLayout
+  title="Tragedies"
+  description="The six tragedies of The Veil & Lead — the wound your character carries before the campaign begins."
+  pageClass="tragedies-listing-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Tragedies</h1>
+      <p class="listing-header__count">{total} tragedies</p>
+      <p class="listing-header__lede">
+        Every player character is broken before the campaign starts. The
+        break is your Tragedy, and the wound is your Scar — the first
+        Pillar of your Memory Palace. Choose a Tragedy you want to play
+        <em>through</em>, not around.
+      </p>
+    </header>
+
+    <div class="card-grid">
+      {sorted.map((entry) => (
+        <a
+          href={`/tragedies/${lastIdSegment(entry.id)}/`}
+          class="tragedy-card"
+        >
+          <h2 class="tragedy-card__name">{entry.data.name}</h2>
+          <p class="tragedy-card__attr">+1 {entry.data.attribute_bonus}</p>
+          <p class="tragedy-card__summary">{entry.data.summary}</p>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .tragedy-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 120ms ease, background-color 120ms ease;
+  }
+
+  .tragedy-card:hover {
+    border-color: var(--color-accent);
+    background: rgba(176, 74, 47, 0.04);
+  }
+
+  .tragedy-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0;
+    font-style: normal;
+    line-height: var(--line-snug);
+  }
+
+  .tragedy-card:hover .tragedy-card__name {
+    color: var(--color-accent-hover);
+  }
+
+  .tragedy-card__attr {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-highlight);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+
+  .tragedy-card__summary {
+    font-family: var(--font-serif);
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    margin: var(--space-1) 0 0 0;
+  }
+</style>

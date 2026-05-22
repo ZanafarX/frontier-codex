@@ -1,0 +1,192 @@
+---
+// =============================================================================
+// /rules/<id>/ — detail page
+// =============================================================================
+// One page per rules chapter. 11 pages total, static-generated at build time.
+//
+// LAYOUT
+//   1. Back link → /rules/
+//   2. Book eyebrow (e.g., "Book II — The Law of Lead")
+//   3. H1 chapter title
+//   4. Tag badges
+//   5. In-chapter TOC card (only when h2 headings exist)
+//   6. The rendered chapter body
+//   7. Prev/Next chapter nav strip (linear by `order`)
+//
+// IN-CHAPTER TOC
+//   Astro's render() returns a `headings` array containing every heading
+//   in the rendered body, each as { depth, slug, text }. The slugs match
+//   the `id` attribute Astro auto-generates on the rendered <h2>/<h3>
+//   elements (default markdown behavior — no rehype-slug plugin needed).
+//   We filter to depth===2 so the TOC stays at a single level. Subsection
+//   linking can be added later if individual chapters justify it.
+//
+// PREV/NEXT NAVIGATION
+//   The 11 chapters have a unique linear `order` (1..11). In getStaticPaths
+//   we sort once and pass the neighboring entries as props. Introduction
+//   (order 1) has no prev; Chapter 10 / The Bestiary (order 11) has no next.
+//   When one side is missing, an aria-hidden placeholder keeps the grid
+//   balanced on desktop and collapses to display:none on mobile.
+//
+// CROSS-REFERENCE AUTO-LINKING
+//   Deferred to Phase 3c. The chapter body renders verbatim via <Content />.
+//   Bolded canonical references in the prose read correctly without links;
+//   the future remark/rehype enrichment will turn those mentions into
+//   anchors uniformly across all body content (talents, disciplines, rules).
+//
+// STYLES
+//   .detail-header__eyebrow is shared via detail.css (consolidated in
+//   Batch 14). The page's local style block now only holds .rule-body
+//   (which intentionally doesn't use .talent-body — chapters want the
+//   global big h2s, not the mono caption hierarchy) plus the heading
+//   scroll-margin override for TOC anchor jumps.
+// =============================================================================
+
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatBook } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const allRules = await getCollection('rules');
+  const sorted = [...allRules].sort(
+    (a, b) => a.data.order - b.data.order,
+  );
+
+  return sorted.map((entry, idx) => ({
+    params: { id: entry.id },
+    props: {
+      entry,
+      prev: idx > 0 ? sorted[idx - 1] : null,
+      next: idx < sorted.length - 1 ? sorted[idx + 1] : null,
+    },
+  }));
+}
+
+// --- Props ------------------------------------------------------------------
+
+interface Props {
+  entry: CollectionEntry<'rules'>;
+  prev: CollectionEntry<'rules'> | null;
+  next: CollectionEntry<'rules'> | null;
+}
+
+const { entry, prev, next } = Astro.props as Props;
+
+// --- Render body + extract TOC ----------------------------------------------
+
+const { Content, headings } = await render(entry);
+
+// Single-level TOC: only H2s. The Introduction and most chapters have 4–12
+// H2 sections each, which is the right granularity for a chapter-internal
+// table of contents.
+const tocItems = headings.filter((h) => h.depth === 2);
+
+// --- Header data ------------------------------------------------------------
+
+const bookLabel = formatBook(entry.data.book);
+
+const pageTitle = entry.data.title;
+const pageDescription =
+  entry.data.summary ?? `${entry.data.title} — from ${bookLabel}.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="rule-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/rules/" class="detail-back__link">← All Rules</a>
+      </nav>
+
+      <header class="detail-header">
+        <p class="detail-header__eyebrow">{bookLabel}</p>
+
+        <h1 class="detail-header__title">{entry.data.title}</h1>
+
+        {entry.data.tags.length > 0 && (
+          <div class="detail-header__badges">
+            {entry.data.tags.map((tag) => (
+              <Badge label={tag} variant="muted" size="sm" />
+            ))}
+          </div>
+        )}
+      </header>
+
+      {tocItems.length > 0 && (
+        <aside class="chapter-toc" aria-label="In this chapter">
+          <h2 class="chapter-toc__title">In this chapter</h2>
+          <ol class="chapter-toc__list">
+            {tocItems.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
+
+      <section class="rule-body">
+        <Content />
+      </section>
+
+      <nav class="chapter-nav" aria-label="Chapter navigation">
+        {prev ? (
+          <a
+            href={`/rules/${prev.id}/`}
+            class="chapter-nav__cell chapter-nav__cell--prev"
+          >
+            <span class="chapter-nav__direction">← Previous</span>
+            <span class="chapter-nav__book">{formatBook(prev.data.book)}</span>
+            <span class="chapter-nav__title">{prev.data.title}</span>
+          </a>
+        ) : (
+          <div
+            class="chapter-nav__cell chapter-nav__cell--empty"
+            aria-hidden="true"
+          ></div>
+        )}
+
+        {next ? (
+          <a
+            href={`/rules/${next.id}/`}
+            class="chapter-nav__cell chapter-nav__cell--next"
+          >
+            <span class="chapter-nav__direction">Next →</span>
+            <span class="chapter-nav__book">{formatBook(next.data.book)}</span>
+            <span class="chapter-nav__title">{next.data.title}</span>
+          </a>
+        ) : (
+          <div
+            class="chapter-nav__cell chapter-nav__cell--empty"
+            aria-hidden="true"
+          ></div>
+        )}
+      </nav>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Body wrapper -------------------------------------------------------
+     Rules chapters want the global heading hierarchy — big rust H2s, italic
+     H3s. We deliberately do NOT use .talent-body here (which would shrink
+     H2 to a mono caption). The wrapper exists only to attach a top margin
+     so the body has breathing room from the TOC card above. */
+  .rule-body {
+    margin-top: var(--space-2);
+  }
+
+  /* Headings inside chapter bodies need a scroll-margin so anchor links
+     (from the TOC) don't park them under the sticky site header. */
+  .rule-body :global(h2),
+  .rule-body :global(h3) {
+    scroll-margin-top: 5rem;
+  }
+</style>

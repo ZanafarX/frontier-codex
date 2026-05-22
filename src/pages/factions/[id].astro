@@ -1,0 +1,127 @@
+---
+// =============================================================================
+// /factions/<id>/ — detail page
+// =============================================================================
+// One page per faction. 5 pages total. Body-driven (faction bodies are
+// rich); structured data surfaces as type badge + linked territory.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatRegion } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const factions = await getCollection('factions');
+  return factions.map((f) => ({
+    params: { id: f.id },
+    props: { entry: f },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'factions'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+function formatFactionType(t: string): string {
+  const map: Record<string, string> = {
+    corporate: 'Corporate',
+    tribal: 'Tribal',
+    religious: 'Religious',
+    arcane: 'Arcane',
+    mercenary: 'Mercenary',
+  };
+  return map[t] ?? t;
+}
+
+const typeLabel = formatFactionType(entry.data.type);
+const hasTerritory = entry.data.territory.length > 0;
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.motto
+  ? `${entry.data.motto} — ${typeLabel} faction of The Veil & Lead.`
+  : `${entry.data.name} — ${typeLabel} faction of The Veil & Lead.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="faction-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/factions/" class="detail-back__link">← All Factions</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.motto && (
+          <blockquote class="detail-header__motto">
+            "{entry.data.motto}"
+          </blockquote>
+        )}
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={typeLabel} />
+          {entry.data.territory.map((r) => (
+            <Badge
+              variant="region"
+              label={formatRegion(r)}
+              href={`/regions/${r}/`}
+              size="sm"
+            />
+          ))}
+        </div>
+      </header>
+
+      <section class="faction-body">
+        <Content />
+      </section>
+
+      {hasTerritory && (
+        <footer class="detail-refs">
+          <div class="detail-refs__group">
+            <h2 class="detail-refs__label">Territory</h2>
+            <div class="detail-refs__items">
+              {entry.data.territory.map((r) => (
+                <Badge
+                  variant="region"
+                  label={formatRegion(r)}
+                  href={`/regions/${r}/`}
+                  size="sm"
+                />
+              ))}
+            </div>
+          </div>
+        </footer>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .detail-header__motto {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-xl);
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    border: none;
+    background: none;
+    line-height: var(--line-snug);
+  }
+
+  .faction-body {
+    margin-top: var(--space-4);
+  }
+</style>

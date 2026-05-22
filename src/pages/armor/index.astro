@@ -1,0 +1,96 @@
+---
+// =============================================================================
+// /armor/ — listing page (sortable table, no filters)
+// =============================================================================
+// 5 armor entries — too few to warrant filtering. Sorted alphabetically.
+// Columns: Name, Type, Protection (AR or Defense Bonus), Price, Properties.
+//
+// FORMATTERS
+//   formatArmorType now lives in lib/formatters.ts (consolidated in
+//   Batch 13b). Listing uses the short form ("Light"/"Medium"/"Heavy"/
+//   "Shield"). The detail page renders the long form ("Light Armor"
+//   etc.) with its own inline helper, kept by design.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatArmorType, formatScrip, lastIdSegment } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const armor = (await getCollection('armor')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+
+// Protection column shows AR for armor, defense bonus for shields —
+// whichever value is meaningful for that armor type.
+function formatProtection(a: typeof armor[number]): string {
+  if (a.data.armor_type === 'shield' && typeof a.data.defense_bonus === 'number') {
+    return `Def +${a.data.defense_bonus}`;
+  }
+  return `AR ${a.data.armor_rating}`;
+}
+---
+
+<BaseLayout
+  title="Armor"
+  description="Every piece of protection worn on the Frontier — from a duster's worn leather to an Ironbrand hardsuit's articulated plate."
+  pageClass="armor-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Armor</h1>
+      <p class="listing-header__count">{armor.length} pieces</p>
+      <p class="listing-header__lede">
+        Heavy protection slows you down and marks you as someone expecting
+        trouble. Light protection keeps you mobile but won't stop a rifle round.
+      </p>
+    </header>
+
+    <div class="listing-table-wrap">
+      <table class="listing-table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Protection</th>
+            <th scope="col" class="num">Price</th>
+            <th scope="col">Properties</th>
+          </tr>
+        </thead>
+        <tbody>
+          {armor.map((a) => {
+            const slug = lastIdSegment(a.id);
+            return (
+              <tr>
+                <td class="name"><a href={`/armor/${slug}/`}>{a.data.name}</a></td>
+                <td>{formatArmorType(a.data.armor_type)}</td>
+                <td>{formatProtection(a)}</td>
+                <td class="num">{formatScrip(a.data.price_scrip)}</td>
+                <td>
+                  {a.data.properties.length === 0 ? '—' : (
+                    <div class="prop-badges">
+                      {a.data.properties.map((p) => (
+                        <Badge variant="quality" label={p} size="sm" />
+                      ))}
+                    </div>
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .prop-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+</style>

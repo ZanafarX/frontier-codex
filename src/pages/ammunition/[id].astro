@@ -1,0 +1,93 @@
+---
+// =============================================================================
+// /ammunition/<id>/ — detail page
+// =============================================================================
+// Simple: header, stat block (type, per-pack count, price), body content.
+// No expansion section; ammunition has no glossary-style references.
+// Body often includes a bold-prefixed **Effect:** callout — global strong
+// styles render those inline.
+//
+// FORMATTERS
+//   formatAmmoType now lives in lib/formatters.ts (consolidated in
+//   Batch 13b). Replaces the previous inlined ternary.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import { formatAmmoType, formatScrip, lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const ammos = await getCollection('ammunition');
+  return ammos.map((a) => ({
+    params: { id: lastIdSegment(a.id) },
+    props: { entry: a },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'ammunition'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const typeLabel = formatAmmoType(entry.data.ammo_type);
+
+const statRows: StatRow[] = [
+  { label: 'Type', value: typeLabel, mono: false },
+  { label: 'Per Pack', value: entry.data.units_per_pack },
+  { label: 'Price', value: formatScrip(entry.data.price_scrip) },
+];
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.flavor
+  ? `${entry.data.flavor} — ${typeLabel} ammunition.`
+  : `${entry.data.name} — ${typeLabel} ammunition.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="ammunition-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/ammunition/" class="detail-back__link">← All Ammunition</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.flavor && (
+          <p class="detail-header__flavor">"{entry.data.flavor}"</p>
+        )}
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={typeLabel} />
+          {entry.data.tags.map((t) => (
+            <Badge variant="muted" label={t} size="sm" />
+          ))}
+        </div>
+      </header>
+
+      <StatBlock rows={statRows} />
+
+      <section class="ammo-body">
+        <Content />
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .ammo-body {
+    margin-top: var(--space-4);
+  }
+</style>

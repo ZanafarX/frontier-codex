@@ -1,0 +1,161 @@
+---
+// =============================================================================
+// /disciplines/ — listing page
+// =============================================================================
+// Five hero cards, one per psionic discipline. Each card is a gateway: name,
+// sub-name, tagline, role, key attribute, talent count, and an extracted
+// lede paragraph. Click → /disciplines/<id>/ detail page (Phase 3b).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { extractLede, formatRankName, truncate } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const disciplines = (await getCollection('disciplines')).sort(
+  (a, b) => a.data.short_name.localeCompare(b.data.short_name),
+);
+---
+
+<BaseLayout
+  title="Disciplines"
+  description="The five psionic disciplines of The Veil & Lead — Psy-Slinger, Bastion Soul, Seer, Flesh Shaper, Mindweaver."
+  pageClass="disciplines-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">The Five Disciplines</h1>
+      <p class="listing-header__count">{disciplines.length} disciplines</p>
+      <p class="listing-header__lede">
+        Five paths the Current carves through a mortal soul. Choose your discipline
+        before your discipline chooses you.
+      </p>
+    </header>
+
+    <div class="card-grid">
+      {disciplines.map((d) => {
+        const lede = truncate(extractLede(d.body), 240);
+        const totalTalents = d.data.talent_count_by_rank.reduce((a, b) => a + b, 0);
+        return (
+          <article class="discipline-card">
+            <a href={`/disciplines/${d.id}/`} class="discipline-card__link">
+              <header class="discipline-card__header">
+                <h2 class="discipline-card__name">{d.data.name}</h2>
+                <p class="discipline-card__sub">{d.data.sub_name}</p>
+              </header>
+
+              <blockquote class="discipline-card__tagline">
+                "{d.data.tagline}"
+              </blockquote>
+
+              <div class="discipline-card__meta">
+                <Badge variant="discipline" label={d.data.role} />
+                {d.data.secondary_role && (
+                  <Badge variant="muted" label={d.data.secondary_role} />
+                )}
+                <Badge variant="highlight" label={d.data.key_attribute} />
+              </div>
+
+              {lede && <p class="discipline-card__lede">{lede}</p>}
+
+              <footer class="discipline-card__footer">
+                <span class="discipline-card__count">
+                  {totalTalents} talents · ranks {formatRankName(1)} → {formatRankName(5)}
+                </span>
+              </footer>
+            </a>
+          </article>
+        );
+      })}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .discipline-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, transform 0.15s;
+    overflow: hidden;
+  }
+
+  .discipline-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .discipline-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .discipline-card__header {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-3);
+  }
+
+  .discipline-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .discipline-card__sub {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin: var(--space-1) 0 0;
+  }
+
+  .discipline-card__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-lg);
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: var(--line-snug);
+  }
+
+  .discipline-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .discipline-card__lede {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-base);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .discipline-card__footer {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-3);
+    margin-top: auto;
+  }
+
+  .discipline-card__count {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

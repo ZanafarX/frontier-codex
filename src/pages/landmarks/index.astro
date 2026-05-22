@@ -1,0 +1,118 @@
+---
+// =============================================================================
+// /landmarks/ — listing page (card grid)
+// =============================================================================
+// 3+ landmarks. Each card shows name, region, landmark_type, danger_level
+// (color-coded via severity-* badge variants), and flavor.
+//
+// FORMATTERS
+//   formatLandmarkType, formatDangerLevel, and dangerVariant now live in
+//   lib/formatters.ts (consolidated in Batch 13b). Previous inline
+//   definitions removed.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import {
+  formatRegion,
+  formatLandmarkType,
+  formatDangerLevel,
+  dangerVariant,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const landmarks = (await getCollection('landmarks')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+---
+
+<BaseLayout
+  title="Landmarks"
+  description="The places on the Frontier that aren't towns — breaches, scars, ruins, natural wonders, and cursed sites best avoided."
+  pageClass="landmarks-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Landmarks</h1>
+      <p class="listing-header__count">{landmarks.length} landmarks</p>
+      <p class="listing-header__lede">
+        Not every place worth knowing is a town. Some of these will kill you;
+        others have already killed everyone who knew them.
+      </p>
+    </header>
+
+    <div class="card-grid">
+      {landmarks.map((l) => (
+        <article class="landmark-card">
+          <a href={`/landmarks/${l.id}/`} class="landmark-card__link">
+            <h3 class="landmark-card__name">{l.data.name}</h3>
+
+            <div class="landmark-card__meta">
+              <Badge variant="region" label={formatRegion(l.data.region)} size="sm" />
+              <Badge variant="type" label={formatLandmarkType(l.data.landmark_type)} size="sm" />
+              <Badge
+                variant={dangerVariant(l.data.danger_level)}
+                label={`Danger: ${formatDangerLevel(l.data.danger_level)}`}
+                size="sm"
+              />
+            </div>
+
+            {l.data.flavor && (
+              <p class="landmark-card__flavor">"{l.data.flavor}"</p>
+            )}
+          </a>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .landmark-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+
+  .landmark-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .landmark-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .landmark-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .landmark-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .landmark-card__flavor {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    margin: 0;
+  }
+</style>

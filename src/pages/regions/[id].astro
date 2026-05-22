@@ -1,0 +1,220 @@
+---
+// =============================================================================
+// /regions/<id>/ — detail page
+// =============================================================================
+// One page per region. 5 pages total.
+//
+// LAYOUT
+//   1. Back-link "← All Regions"
+//   2. Header: name (h1), tagline (blockquote), controlling faction badge
+//   3. <StatBlock>: Faction · Hazards · Settlements · Landmarks (counts)
+//   4. <Content />: body (terrain prose, threats table, settlement
+//      narrative, landmark narrative — authored content carries it all)
+//   5. Settlements section (when any): linked badges resolved from
+//      settlement IDs in frontmatter
+//   6. Landmarks section (when any): linked badges resolved from
+//      landmark IDs in frontmatter
+//   7. Cross-refs footer: controlling faction (when present)
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import '../../styles/detail.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const regions = await getCollection('regions');
+  const settlements = await getCollection('settlements');
+  const landmarks = await getCollection('landmarks');
+  const factions = await getCollection('factions');
+
+  // ID → display-name lookups, built once and shared across all 5 pages.
+  const settlementNameById = new Map<string, string>(
+    settlements.map((s) => [s.id, s.data.name]),
+  );
+  const landmarkNameById = new Map<string, string>(
+    landmarks.map((l) => [l.id, l.data.name]),
+  );
+  const factionNameById = new Map<string, string>(
+    factions.map((f) => [f.id, f.data.name]),
+  );
+
+  return regions.map((r) => {
+    const resolvedSettlements = r.data.settlements.map((id) => ({
+      id,
+      name: settlementNameById.get(id) ?? id,
+    }));
+    const resolvedLandmarks = r.data.landmarks.map((id) => ({
+      id,
+      name: landmarkNameById.get(id) ?? id,
+    }));
+    const linkedFaction = r.data.controlling_faction
+      ? {
+          id: r.data.controlling_faction,
+          name:
+            factionNameById.get(r.data.controlling_faction) ??
+            r.data.controlling_faction,
+        }
+      : null;
+
+    return {
+      params: { id: r.id },
+      props: { entry: r, resolvedSettlements, resolvedLandmarks, linkedFaction },
+    };
+  });
+}
+
+// --- Page rendering ---------------------------------------------------------
+
+interface Props {
+  entry: CollectionEntry<'regions'>;
+  resolvedSettlements: Array<{ id: string; name: string }>;
+  resolvedLandmarks: Array<{ id: string; name: string }>;
+  linkedFaction: { id: string; name: string } | null;
+}
+
+const { entry, resolvedSettlements, resolvedLandmarks, linkedFaction } =
+  Astro.props;
+const { Content } = await render(entry);
+
+const statRows: StatRow[] = [];
+if (linkedFaction) {
+  statRows.push({ label: 'Controlling Faction', value: linkedFaction.name, mono: false });
+}
+statRows.push({ label: 'Hazards', value: entry.data.hazards.length });
+statRows.push({ label: 'Settlements', value: resolvedSettlements.length });
+statRows.push({ label: 'Landmarks', value: resolvedLandmarks.length });
+
+const hasSettlements = resolvedSettlements.length > 0;
+const hasLandmarks = resolvedLandmarks.length > 0;
+
+const pageTitle = entry.data.name;
+const pageDescription = `${entry.data.tagline} — one of the Five Killing Grounds of The Veil & Lead.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="region-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/regions/" class="detail-back__link">← All Regions</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <blockquote class="detail-header__tagline">
+          "{entry.data.tagline}"
+        </blockquote>
+
+        {linkedFaction && (
+          <div class="detail-header__badges">
+            <Badge
+              variant="type"
+              label={linkedFaction.name}
+              href={`/factions/${linkedFaction.id}/`}
+            />
+          </div>
+        )}
+      </header>
+
+      <StatBlock rows={statRows} />
+
+      <section class="region-body">
+        <Content />
+      </section>
+
+      {hasSettlements && (
+        <section class="region-refs">
+          <h2 class="region-refs__title">Settlements in this Region</h2>
+          <div class="region-refs__items">
+            {resolvedSettlements.map((s) => (
+              <Badge
+                variant="default"
+                label={s.name}
+                href={`/settlements/${s.id}/`}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {hasLandmarks && (
+        <section class="region-refs">
+          <h2 class="region-refs__title">Landmarks in this Region</h2>
+          <div class="region-refs__items">
+            {resolvedLandmarks.map((l) => (
+              <Badge
+                variant="default"
+                label={l.name}
+                href={`/landmarks/${l.id}/`}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {linkedFaction && (
+        <footer class="detail-refs">
+          <div class="detail-refs__group">
+            <h2 class="detail-refs__label">Controlling Faction</h2>
+            <div class="detail-refs__items">
+              <Badge
+                variant="type"
+                label={linkedFaction.name}
+                href={`/factions/${linkedFaction.id}/`}
+                size="sm"
+              />
+            </div>
+          </div>
+        </footer>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .detail-header__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-xl);
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    border: none;
+    background: none;
+    line-height: var(--line-snug);
+  }
+
+  .region-body {
+    margin-top: var(--space-4);
+  }
+
+  .region-refs {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px dashed var(--color-border);
+  }
+
+  .region-refs__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-3);
+  }
+
+  .region-refs__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+</style>

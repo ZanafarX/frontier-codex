@@ -1,0 +1,215 @@
+---
+// =============================================================================
+// 404 — page not found
+// =============================================================================
+// Astro renders this to 404.html at build time. Static hosts (Netlify,
+// Vercel, Cloudflare Pages, GitHub Pages) serve it automatically for
+// unmatched routes. In `astro dev`, hitting an unknown URL shows it too.
+//
+// Includes the same Pagefind <Search> component as /search/ so a lost
+// visitor can search without an extra click. Same dev caveat as the
+// search page: the index only exists after `npm run build`, so search
+// returns nothing in dev — hence the dev-only hint line.
+//
+// Layout: centered shell. SiteNav + SiteFooter come from BaseLayout.
+// =============================================================================
+
+import Search from 'astro-pagefind/components/Search';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const isDev = import.meta.env.DEV;
+
+// Escape-hatch links back into the site. Labels match the top nav for
+// predictability.
+const escapeLinks = [
+  { href: '/', label: 'Homepage' },
+  { href: '/rules/', label: 'Rules' },
+  { href: '/character/', label: 'Character' },
+  { href: '/world/', label: 'World' },
+  { href: '/bestiary/', label: 'Bestiary' },
+  { href: '/search/', label: 'Search' },
+];
+---
+
+<BaseLayout
+  title="Page Not Found"
+  description="The page you're looking for isn't on any map we keep."
+  pageClass="error-page"
+>
+  <div class="container error-shell">
+
+    <p class="error-eyebrow">404 — Page Not Found</p>
+
+    <h1 class="error-title">This Trail's Gone Cold</h1>
+
+    <p class="error-message">
+      The page you're after isn't on any map we keep. It may have
+      drifted, been renamed, or never existed out here at all. The
+      Frontier loses things.
+    </p>
+
+    <div class="error-search">
+      <p class="error-search__label">Try searching for what you needed</p>
+      <Search className="pagefind-ui" />
+      {isDev && (
+        <p class="error-search__devhint">
+          Search populates after <code>npm run build</code> — see the
+          note on the <a href="/search/">search page</a>.
+        </p>
+      )}
+    </div>
+
+    <nav class="error-links" aria-label="Get back on the trail">
+      <p class="error-links__label">Or pick up the trail again</p>
+      <ul class="error-links__list">
+        {escapeLinks.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .error-shell {
+    padding-block: var(--space-8) var(--space-7);
+    max-width: 48rem;
+    text-align: center;
+  }
+
+  .error-eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-3);
+  }
+
+  .error-title {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-3xl), 6vw, var(--text-4xl));
+    color: var(--color-accent);
+    margin: 0 0 var(--space-4);
+    line-height: var(--line-tight);
+    /* No divider underline — this isn't a detail-header title. */
+    border: none;
+    padding: 0;
+  }
+
+  .error-message {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-style: italic;
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    max-width: 36rem;
+    margin: 0 auto var(--space-6);
+  }
+
+  /* --- Search ----------------------------------------------------------
+     Mirrors the Pagefind theming on /search/. (Acknowledged duplication;
+     promote to a shared class only if a third search surface appears.) */
+
+  .error-search {
+    margin: var(--space-6) 0;
+
+    --pagefind-ui-primary: var(--color-accent);
+    --pagefind-ui-text: var(--color-text);
+    --pagefind-ui-background: var(--color-bg-elevated);
+    --pagefind-ui-border: var(--color-border-strong);
+    --pagefind-ui-tag: var(--color-bg-sunken);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: var(--radius-md);
+    --pagefind-ui-image-border-radius: var(--radius-sm);
+    --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-font: var(--font-serif);
+    --pagefind-ui-scale: 1;
+  }
+
+  .error-search__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-3);
+  }
+
+  .error-search__devhint {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--text-sm);
+    color: var(--color-text-faint);
+    margin: var(--space-3) 0 0;
+  }
+
+  .error-search__devhint code {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    background: var(--color-bg-sunken);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+  }
+
+  .error-search__devhint a {
+    color: var(--color-text-muted);
+  }
+
+  .error-search__devhint a:hover {
+    color: var(--color-accent);
+  }
+
+  /* --- Escape links ---------------------------------------------------- */
+
+  .error-links {
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border-strong);
+  }
+
+  .error-links__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-4);
+  }
+
+  .error-links__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+  }
+
+  .error-links__list li {
+    margin: 0;
+  }
+
+  .error-links__list a {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    transition: border-color 120ms ease, color 120ms ease;
+  }
+
+  .error-links__list a:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+</style>

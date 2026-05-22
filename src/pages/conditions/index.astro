@@ -1,0 +1,134 @@
+---
+// =============================================================================
+// /conditions/ — listing page (glossary-style)
+// =============================================================================
+// 12 conditions rendered as a compact reference list. Each entry shows
+// severity badge, short effect, duration, inflicted-by list, cleared-by
+// list. Sorted alphabetically. Anchored headings allow direct linking
+// (e.g. /conditions/#bleeding-out).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatSeverity } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const conditions = (await getCollection('conditions')).sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+---
+
+<BaseLayout
+  title="Conditions"
+  description="Status effects that change what a character can do, from the merely inconvenient to the permanently catastrophic."
+  pageClass="conditions-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Conditions</h1>
+      <p class="listing-header__count">{conditions.length} conditions</p>
+      <p class="listing-header__lede">
+        Status effects that change what a character can do. From the merely
+        inconvenient to the permanently catastrophic.
+      </p>
+    </header>
+
+    <div class="reference-list">
+      {conditions.map((c) => (
+        <article class="reference-list__entry condition-entry" id={c.id}>
+          <header>
+            <h3>
+              <a href={`/conditions/${c.id}/`}>{c.data.name}</a>
+            </h3>
+            {c.data.severity && (
+              <Badge
+                variant={`severity-${c.data.severity}`}
+                label={formatSeverity(c.data.severity)}
+              />
+            )}
+          </header>
+
+          <p class="condition-entry__effect">{c.data.short_effect}</p>
+
+          {c.data.duration && (
+            <p class="condition-entry__field">
+              <span class="condition-entry__label">Duration:</span>
+              <span>{c.data.duration}</span>
+            </p>
+          )}
+
+          {c.data.inflicted_by.length > 0 && (
+            <div class="condition-entry__field condition-entry__field--list">
+              <span class="condition-entry__label">Inflicted by:</span>
+              <ul>
+                {c.data.inflicted_by.map((s) => <li>{s}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {c.data.cleared_by.length > 0 && (
+            <div class="condition-entry__field condition-entry__field--list">
+              <span class="condition-entry__label">Cleared by:</span>
+              <ul>
+                {c.data.cleared_by.map((s) => <li>{s}</li>)}
+              </ul>
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .condition-entry {
+    scroll-margin-top: 5rem;  /* so anchor jumps don't hide behind sticky nav */
+  }
+
+  .condition-entry header h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .condition-entry header h3 a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .condition-entry__effect {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text);
+    font-size: var(--text-lg);
+    line-height: var(--line-snug);
+    margin: var(--space-2) 0 var(--space-3);
+  }
+
+  .condition-entry__field {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin: var(--space-2) 0;
+    line-height: var(--line-base);
+  }
+
+  .condition-entry__field--list ul {
+    margin: var(--space-1) 0 0 var(--space-5);
+    padding: 0;
+  }
+
+  .condition-entry__field--list li {
+    margin: 0;
+    padding-left: var(--space-1);
+  }
+
+  .condition-entry__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-right: var(--space-2);
+  }
+</style>

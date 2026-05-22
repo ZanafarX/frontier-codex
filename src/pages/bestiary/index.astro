@@ -1,0 +1,143 @@
+---
+// =============================================================================
+// /bestiary/ — Bestiary hub
+// =============================================================================
+// One collection (creatures), but presented as a typed-breakdown view
+// rather than a filterable grid. The filterable view lives at /creatures/.
+//
+// LAYOUT
+//   1. Listing header with total count + browse-all link inline in the
+//      lede paragraph (the /creatures/ listing is where filtering lives).
+//   2. Four sections, one per creature_type (Human, Veil-Born, Beasts,
+//      Constructs), each with a .hub-grid--compact of mini-cards.
+//
+// CARD CONTENT
+//   Name + chip line showing tier (and faction for humans).
+//
+// FACTION NAME RESOLUTION
+//   creature.faction is a Faction-enum slug. We resolve it through a Map
+//   built from the factions collection to display the full faction name.
+//
+// CREATURE TYPE LABELS
+//   Hardcoded in this page rather than going through formatCreatureType
+//   from formatters.ts because we ALSO need the section headers' subtle
+//   pluralization ("Beasts" vs the singular "Beast" used in card chips).
+//   formatCreatureType from formatters.ts returns singular forms.
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { titleCaseSlug, lastIdSegment } from '../../lib/formatters';
+import '../../styles/listings.css';
+import '../../styles/hubs.css';
+
+// Display labels for the creature_type enum on this hub. Section headers
+// pluralize ("Beasts", "Constructs"); chips on individual cards use the
+// singular form via formatCreatureType, but on this hub we don't show a
+// creature_type chip — just the tier chip — so only the section labels
+// matter here.
+const CREATURE_TYPE_ORDER = ['human', 'veil-born', 'beast', 'construct'] as const;
+type CreatureType = (typeof CREATURE_TYPE_ORDER)[number];
+
+const CREATURE_TYPE_LABELS: Record<CreatureType, string> = {
+  'human':     'Human',
+  'veil-born': 'Veil-Born',
+  'beast':     'Beasts',
+  'construct': 'Constructs',
+};
+
+const CREATURE_TYPE_INTROS: Record<CreatureType, string> = {
+  'human':     'The most common adversaries — Consortium enforcers, raiders, cultists, mercenaries. They die like men.',
+  'veil-born': 'Manifestations of the bleed between the world and what lies beyond. They die like nothing should.',
+  'beast':     'Natural fauna warped by the Current — predators that learned new tricks the wrong way.',
+  'construct': 'Mechanical or unnatural things built to outlast their makers. They die like clockwork.',
+};
+
+// --- Data fetching ----------------------------------------------------------
+
+const [creatures, factions] = await Promise.all([
+  getCollection('creatures'),
+  getCollection('factions'),
+]);
+
+// Faction display-name lookup for human creature cards.
+const factionNameByShortName = new Map<string, string>(
+  factions.map((f) => [f.data.short_name, f.data.name]),
+);
+
+// --- Sorting and grouping --------------------------------------------------
+
+const sorted = [...creatures].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+
+const byType = new Map<CreatureType, CollectionEntry<'creatures'>[]>();
+for (const t of CREATURE_TYPE_ORDER) byType.set(t, []);
+for (const c of sorted) {
+  byType.get(c.data.creature_type as CreatureType)!.push(c);
+}
+
+const total = creatures.length;
+const activeTypes = CREATURE_TYPE_ORDER.filter(
+  (t) => (byType.get(t)?.length ?? 0) > 0,
+);
+---
+
+<BaseLayout
+  title="Bestiary"
+  description="The Bestiary of The Veil & Lead — every adversary the Frontier produces, organized by what kind of thing they are."
+  pageClass="bestiary-hub-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Bestiary</h1>
+      <p class="listing-header__count">
+        {total} creatures · {activeTypes.length} types
+      </p>
+      <p class="listing-header__lede">
+        Every adversary the Frontier produces — humans bent on harm,
+        Veil-Born manifestations bleeding through, beasts warped by the
+        Current, and constructs built to outlast their makers. For the
+        filterable index with tier filtering, see
+        <a href="/creatures/">all creatures</a>.
+      </p>
+    </header>
+
+    {CREATURE_TYPE_ORDER.map((type) => {
+      const list = byType.get(type) ?? [];
+      if (list.length === 0) return null;
+
+      return (
+        <section id={type} class="hub-section">
+          <header class="hub-section__header">
+            <h2 class="hub-section__title">{CREATURE_TYPE_LABELS[type]}</h2>
+            <span class="hub-section__count">{list.length}</span>
+            <a href="/creatures/" class="hub-section__browse">Browse all →</a>
+          </header>
+          <p class="hub-section__intro">{CREATURE_TYPE_INTROS[type]}</p>
+          <div class="hub-grid hub-grid--compact">
+            {list.map((c) => (
+              <a
+                href={`/creatures/${lastIdSegment(c.id)}/`}
+                class="hub-card"
+              >
+                <h3 class="hub-card__title">{c.data.name}</h3>
+                <p class="hub-card__chip">
+                  {titleCaseSlug(c.data.tier)}
+                  {c.data.faction && (
+                    <span>
+                      {' · '}
+                      {factionNameByShortName.get(c.data.faction) ?? c.data.faction}
+                    </span>
+                  )}
+                </p>
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+
+  </div>
+</BaseLayout>

@@ -1,0 +1,226 @@
+---
+// =============================================================================
+// SITE NAVIGATION
+// =============================================================================
+// The top bar that appears on every page. Edit the `navLinks` array below to
+// add, remove, or reorder navigation items. The first link (home) renders as
+// the site title; everything after that becomes regular nav items.
+//
+// The `currentPath` prop is used to highlight the active section, so a reader
+// browsing /talents/ sees "Talents" emphasized in the nav.
+// =============================================================================
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+
+const navLinks = [
+  { href: '/rules/',        label: 'Rules' },
+  { href: '/character/',    label: 'Character' },
+  { href: '/disciplines/',  label: 'Disciplines' },
+  { href: '/talents/',      label: 'Talents' },
+  { href: '/equipment/',    label: 'Equipment' },
+  { href: '/world/',        label: 'World' },
+  { href: '/bestiary/',     label: 'Bestiary' },
+  { href: '/references/',   label: 'References' },
+  { href: '/search/',       label: 'Search' },
+];
+
+// A link is "active" if the current path starts with its href.
+// Special case: only highlight home when path is exactly "/".
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a href="/" class="site-title" aria-label="The Veil & Lead — home">
+      <span class="site-title__main">The Veil &amp; Lead</span>
+      <span class="site-title__sub">a weird-west psionic horror RPG</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <button
+        class="site-nav__toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        type="button"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="site-nav__bar"></span>
+        <span class="site-nav__bar"></span>
+        <span class="site-nav__bar"></span>
+      </button>
+
+      <ul id="primary-nav" class="site-nav__list">
+        {navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={['site-nav__link', { 'is-active': isActive(link.href) }]}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-bg-sunken);
+    border-bottom: 1px solid var(--color-border-strong);
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+  }
+
+  .site-title {
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    flex-shrink: 0;
+  }
+
+  .site-title__main {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-accent);
+    letter-spacing: 0.02em;
+  }
+
+  .site-title__sub {
+    font-family: var(--font-serif);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-style: italic;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+
+  .site-title:hover .site-title__main {
+    color: var(--color-accent-hover);
+  }
+
+  /* --- NAV LIST (desktop) --- */
+
+  .site-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .site-nav__link {
+    display: inline-block;
+    padding: var(--space-2) var(--space-3);
+    font-family: var(--font-serif);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: color 120ms ease, background-color 120ms ease;
+  }
+
+  .site-nav__link:hover {
+    color: var(--color-text);
+    background-color: rgba(176, 74, 47, 0.08);
+  }
+
+  .site-nav__link.is-active {
+    color: var(--color-accent);
+    background-color: rgba(176, 74, 47, 0.12);
+  }
+
+  /* --- MOBILE TOGGLE --- */
+
+  .site-nav__toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2);
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .site-nav__bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-text);
+  }
+
+  /* --- RESPONSIVE: collapse to hamburger under 820px --- */
+
+  @media (max-width: 820px) {
+    .site-header__inner {
+      flex-wrap: wrap;
+    }
+
+    .site-nav__toggle {
+      display: inline-flex;
+    }
+
+    .site-nav__list {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      margin-top: var(--space-3);
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--space-2);
+    }
+
+    .site-nav[data-open='true'] .site-nav__list {
+      display: flex;
+    }
+
+    .site-nav__link {
+      padding: var(--space-3) var(--space-2);
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+</style>
+
+<script>
+  // Mobile hamburger toggle. Tiny vanilla JS so it works without any
+  // framework. Astro automatically bundles this.
+  const toggle = document.querySelector<HTMLButtonElement>('.site-nav__toggle');
+  const nav = document.querySelector<HTMLElement>('.site-nav');
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!open));
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+  }
+</script>

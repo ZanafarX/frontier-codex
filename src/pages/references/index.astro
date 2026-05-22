@@ -1,0 +1,188 @@
+---
+// =============================================================================
+// /references/ — listing page (grouped by category)
+// =============================================================================
+// 42 reference tables across 6 active categories (economy, combat, travel,
+// environment, progression, social) plus the schema-permitted but currently
+// empty 'equipment'. Tables render as compact cards within per-category
+// sections; empty categories are omitted.
+//
+// LAYOUT
+//   listing-header (title + count + lede)
+//   for each category in CATEGORY_ORDER:
+//     if it has entries:
+//       .talent-section header (name + table count)
+//       .compact-grid of .reference-card links
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/listings.css';
+
+// Canonical category order. Matches the schema enum order. Empty categories
+// are filtered out at render time.
+const CATEGORY_ORDER = [
+  'economy',
+  'equipment',
+  'combat',
+  'travel',
+  'environment',
+  'progression',
+  'social',
+] as const;
+
+type Category = (typeof CATEGORY_ORDER)[number];
+
+const CATEGORY_LABELS: Record<Category, string> = {
+  economy:     'Economy',
+  equipment:   'Equipment',
+  combat:      'Combat',
+  travel:      'Travel',
+  environment: 'Environment',
+  progression: 'Progression',
+  social:      'Social',
+};
+
+const allRefs = await getCollection('references');
+type Ref = CollectionEntry<'references'>;
+
+// Sort alphabetically by name within each category for predictable browsing.
+const sorted: Ref[] = [...allRefs].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+
+// Bucket by category, preserving sort order within each bucket.
+const byCategory = new Map<Category, Ref[]>();
+for (const cat of CATEGORY_ORDER) byCategory.set(cat, []);
+for (const entry of sorted) {
+  byCategory.get(entry.data.category as Category)!.push(entry);
+}
+
+const total = sorted.length;
+const activeCategories = CATEGORY_ORDER.filter(
+  (c) => (byCategory.get(c)?.length ?? 0) > 0,
+);
+const categoryCount = activeCategories.length;
+---
+
+<BaseLayout
+  title="References"
+  description="All reference tables of The Veil & Lead — economy, combat, travel, environment, progression, and social lookups."
+  pageClass="references-listing-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">References</h1>
+      <p class="listing-header__count">
+        {total} tables · {categoryCount} categories
+      </p>
+      <p class="listing-header__lede">
+        Every lookup table in <em>The Veil &amp; Lead</em> — TN ladders,
+        Tempo costs, range bands, prices, deprivation effects, and the rest.
+        The single source of truth for tabular game data.
+      </p>
+    </header>
+
+    {CATEGORY_ORDER.map((cat) => {
+      const tables = byCategory.get(cat) ?? [];
+      if (tables.length === 0) return null;
+
+      return (
+        <section class="talent-section">
+          <header class="talent-section__header">
+            <h2 class="talent-section__title">{CATEGORY_LABELS[cat]}</h2>
+            <span class="talent-section__count">
+              {tables.length} {tables.length === 1 ? 'table' : 'tables'}
+            </span>
+          </header>
+
+          <div class="compact-grid">
+            {tables.map((entry) => (
+              <a href={`/references/${entry.id}/`} class="reference-card">
+                <h3 class="reference-card__title">{entry.data.name}</h3>
+
+                {entry.data.description && (
+                  <p class="reference-card__description">
+                    {entry.data.description}
+                  </p>
+                )}
+
+                <p class="reference-card__meta">
+                  {entry.data.rows.length}
+                  {' '}
+                  {entry.data.rows.length === 1 ? 'row' : 'rows'}
+                  {' · '}
+                  {entry.data.columns.length}
+                  {' '}
+                  {entry.data.columns.length === 1 ? 'column' : 'columns'}
+                </p>
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Reference card --------------------------------------------------
+     A small navigation card. Title, optional description (clamped to 3
+     lines for height parity across the grid), and a mono meta caption.
+     The whole card is a single link target. */
+  .reference-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 120ms ease, background-color 120ms ease;
+  }
+
+  .reference-card:hover {
+    border-color: var(--color-accent);
+    background: rgba(176, 74, 47, 0.04);
+  }
+
+  .reference-card__title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    margin: 0;
+    font-style: normal;
+    line-height: var(--line-snug);
+  }
+
+  .reference-card:hover .reference-card__title {
+    color: var(--color-accent-hover);
+  }
+
+  .reference-card__description {
+    font-family: var(--font-serif);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    margin: 0;
+    /* Clamp to ~3 lines so cards stay even-height within the grid. */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .reference-card__meta {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: auto 0 0 0;  /* push to bottom of the flex column */
+  }
+</style>

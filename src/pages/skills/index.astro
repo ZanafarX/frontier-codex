@@ -1,0 +1,169 @@
+---
+// =============================================================================
+// /skills/ — listing page (grouped by category)
+// =============================================================================
+// 25 skills across 7 categories (combat, physical, social, knowledge,
+// survival, technical, psionic). Sectioned compact grid pattern — same
+// chrome as references and rules listings.
+//
+// LAYOUT
+//   listing-header
+//   for each category in CATEGORY_ORDER (if it has entries):
+//     .talent-section header (category name + skill count)
+//     .compact-grid of .skill-card links
+//
+// URL pattern: /skills/<lastIdSegment(entry.id)>/ — skill files live in
+// category subfolders, so entry.id is "combat/ballistics" but the URL
+// drops the folder.
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatSkillCategory, lastIdSegment } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const CATEGORY_ORDER = [
+  'combat',
+  'physical',
+  'social',
+  'knowledge',
+  'survival',
+  'technical',
+  'psionic',
+] as const;
+
+type Category = (typeof CATEGORY_ORDER)[number];
+
+const allSkills = await getCollection('skills');
+type Skill = CollectionEntry<'skills'>;
+
+// Alphabetize by name within each category.
+const sorted: Skill[] = [...allSkills].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+
+const byCategory = new Map<Category, Skill[]>();
+for (const cat of CATEGORY_ORDER) byCategory.set(cat, []);
+for (const entry of sorted) {
+  byCategory.get(entry.data.category as Category)!.push(entry);
+}
+
+const total = sorted.length;
+const categoryCount = CATEGORY_ORDER.filter(
+  (c) => (byCategory.get(c)?.length ?? 0) > 0,
+).length;
+---
+
+<BaseLayout
+  title="Skills"
+  description="The 25 skills of The Veil & Lead — what a character knows how to do."
+  pageClass="skills-listing-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Skills</h1>
+      <p class="listing-header__count">
+        {total} skills · {categoryCount} categories
+      </p>
+      <p class="listing-header__lede">
+        Skills represent training and expertise. Every roll in
+        <em>The Veil &amp; Lead</em> pairs a skill with an attribute — what
+        you know how to do, paired with what your body and mind can do.
+      </p>
+    </header>
+
+    {CATEGORY_ORDER.map((cat) => {
+      const skills = byCategory.get(cat) ?? [];
+      if (skills.length === 0) return null;
+
+      return (
+        <section class="talent-section">
+          <header class="talent-section__header">
+            <h2 class="talent-section__title">{formatSkillCategory(cat)}</h2>
+            <span class="talent-section__count">
+              {skills.length} {skills.length === 1 ? 'skill' : 'skills'}
+            </span>
+          </header>
+
+          <div class="compact-grid">
+            {skills.map((entry) => (
+              <a
+                href={`/skills/${lastIdSegment(entry.id)}/`}
+                class="skill-card"
+              >
+                <h3 class="skill-card__name">{entry.data.name}</h3>
+
+                <p class="skill-card__attr">
+                  {entry.data.primary_attribute}
+                  {entry.data.secondary_attribute && (
+                    <span class="skill-card__secondary">
+                      &nbsp;/ {entry.data.secondary_attribute}
+                    </span>
+                  )}
+                </p>
+
+                <p class="skill-card__summary">{entry.data.summary}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+
+  </div>
+</BaseLayout>
+
+<style>
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 120ms ease, background-color 120ms ease;
+  }
+
+  .skill-card:hover {
+    border-color: var(--color-accent);
+    background: rgba(176, 74, 47, 0.04);
+  }
+
+  .skill-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    margin: 0;
+    font-style: normal;
+    line-height: var(--line-snug);
+  }
+
+  .skill-card:hover .skill-card__name {
+    color: var(--color-accent-hover);
+  }
+
+  .skill-card__attr {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-highlight);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+
+  .skill-card__secondary {
+    color: var(--color-text-muted);
+  }
+
+  .skill-card__summary {
+    font-family: var(--font-serif);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    margin: 0;
+  }
+</style>

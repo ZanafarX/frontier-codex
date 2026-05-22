@@ -1,0 +1,158 @@
+---
+// =============================================================================
+// /settlements/ — listing page (card grid, sectioned by region)
+// =============================================================================
+// 6 settlements grouped under their parent region's heading. Each card
+// shows name, sub_name, faction_control, atmosphere, population.
+// Reuses .talent-section chrome from listings.css.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatRegion } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const settlements = (await getCollection('settlements')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+
+// Group by region. Build sections in canonical region order.
+const REGIONS = ['ash-belt', 'scorchveil', 'graven-plain', 'stormrise', 'hollowed-fen'] as const;
+type SettlementEntry = (typeof settlements)[number];
+
+const settlementsByRegion: Record<string, SettlementEntry[]> = {};
+for (const r of REGIONS) settlementsByRegion[r] = [];
+
+for (const s of settlements) {
+  if (settlementsByRegion[s.data.region]) {
+    settlementsByRegion[s.data.region].push(s);
+  }
+}
+
+// Only render sections that have settlements.
+const sections = REGIONS
+  .filter((r) => settlementsByRegion[r].length > 0)
+  .map((r) => ({
+    key: r,
+    title: formatRegion(r),
+    settlements: settlementsByRegion[r],
+  }));
+---
+
+<BaseLayout
+  title="Settlements"
+  description="The towns, camps, and crossroads that pass for civilization on the Frontier — grouped by the region they cling to."
+  pageClass="settlements-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Settlements</h1>
+      <p class="listing-header__count">{settlements.length} settlements</p>
+      <p class="listing-header__lede">
+        Where civilization clings to the Frontier — every town tells you
+        which region it's surviving and what it had to trade to get there.
+      </p>
+    </header>
+
+    {sections.map((section) => (
+      <section class="talent-section">
+        <header class="talent-section__header">
+          <h2 class="talent-section__title">{section.title}</h2>
+          <span class="talent-section__count">{section.settlements.length}</span>
+        </header>
+
+        <div class="card-grid">
+          {section.settlements.map((s) => (
+            <article class="settlement-card">
+              <a href={`/settlements/${s.id}/`} class="settlement-card__link">
+                <header class="settlement-card__header">
+                  <h3 class="settlement-card__name">{s.data.name}</h3>
+                  {s.data.sub_name && (
+                    <p class="settlement-card__subname">{s.data.sub_name}</p>
+                  )}
+                </header>
+
+                <div class="settlement-card__meta">
+                  <Badge variant="type" label={s.data.faction_control} size="sm" />
+                  {typeof s.data.population === 'number' && (
+                    <Badge
+                      variant="muted"
+                      label={`pop. ${s.data.population.toLocaleString()}`}
+                      size="sm"
+                    />
+                  )}
+                </div>
+
+                <p class="settlement-card__atmosphere">
+                  <em>{s.data.atmosphere}</em>
+                </p>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+
+  </div>
+</BaseLayout>
+
+<style>
+  .settlement-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+
+  .settlement-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .settlement-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .settlement-card__header {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-2);
+  }
+
+  .settlement-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .settlement-card__subname {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin: var(--space-1) 0 0;
+  }
+
+  .settlement-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .settlement-card__atmosphere {
+    font-family: var(--font-serif);
+    color: var(--color-highlight);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    margin: 0;
+  }
+</style>

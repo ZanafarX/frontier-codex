@@ -1,0 +1,219 @@
+---
+// =============================================================================
+// /equipment/ — Equipment hub
+// =============================================================================
+// Surfaces all six equipment-related collections in one curated index:
+// weapons, armor, ammunition, gear, plus the weapon-qualities and
+// armor-properties glossaries.
+//
+// LAYOUT
+//   1. Listing header (counts across the four equipment collections + lede).
+//   2. Four card-grid sections (weapons → armor → ammunition → gear), each
+//      with .hub-grid--compact (tighter packing because equipment cards
+//      are minimal: name + type chip).
+//   3. Glossaries section with two sub-sections (Weapon Qualities and
+//      Armor Properties) rendered as .hub-pill-list — each entry is a
+//      compact mono pill linking to its detail page.
+//
+// CARD CONTENT
+//   Weapon / armor / ammo / gear cards: name + type chip. Stats live on
+//   the detail page; the hub is purely a navigation index, so we keep
+//   cards visually consistent across all four equipment types.
+//
+// TYPE FORMATTING
+//   All four type formatters (formatWeaponType, formatArmorType,
+//   formatAmmoType, formatGearType) now live in lib/formatters.ts.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  formatWeaponType,
+  formatArmorType,
+  formatAmmoType,
+  formatGearType,
+  lastIdSegment,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+import '../../styles/hubs.css';
+
+// --- Data fetching ----------------------------------------------------------
+
+const [weapons, armor, ammunition, gear, weaponQualities, armorProperties] =
+  await Promise.all([
+    getCollection('weapons'),
+    getCollection('armor'),
+    getCollection('ammunition'),
+    getCollection('gear'),
+    getCollection('weaponQualities'),
+    getCollection('armorProperties'),
+  ]);
+
+// --- Sorting (alphabetical by name across all sections) --------------------
+
+const weaponsSorted = [...weapons].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const armorSorted = [...armor].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const ammunitionSorted = [...ammunition].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const gearSorted = [...gear].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const qualitiesSorted = [...weaponQualities].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const propertiesSorted = [...armorProperties].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+
+const equipmentTotal =
+  weapons.length + armor.length + ammunition.length + gear.length;
+---
+
+<BaseLayout
+  title="Equipment"
+  description="The complete equipment reference for The Veil & Lead — weapons, armor, ammunition, gear, and their glossaries."
+  pageClass="equipment-hub-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Equipment</h1>
+      <p class="listing-header__count">
+        {weapons.length} weapons · {armor.length} armor · {ammunition.length} ammunition · {gear.length} gear
+      </p>
+      <p class="listing-header__lede">
+        Everything a survivor can wear, carry, fire, or hide. {equipmentTotal} pieces of equipment plus the keyword glossaries that govern their behavior — Bleed, Scatter, Concealment, and the rest.
+      </p>
+    </header>
+
+    {/* --- WEAPONS --- */}
+    <section id="weapons" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Weapons</h2>
+        <span class="hub-section__count">{weapons.length}</span>
+        <a href="/weapons/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Firearms, blades, and improvised killers — from boot derringers to Gatling guns.
+      </p>
+      <div class="hub-grid hub-grid--compact">
+        {weaponsSorted.map((w) => (
+          <a href={`/weapons/${lastIdSegment(w.id)}/`} class="hub-card">
+            <h3 class="hub-card__title">{w.data.name}</h3>
+            <p class="hub-card__chip">{formatWeaponType(w.data.weapon_type)}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- ARMOR --- */}
+    <section id="armor" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Armor</h2>
+        <span class="hub-section__count">{armor.length}</span>
+        <a href="/armor/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        What stands between you and the next bullet.
+      </p>
+      <div class="hub-grid hub-grid--compact">
+        {armorSorted.map((a) => (
+          <a href={`/armor/${lastIdSegment(a.id)}/`} class="hub-card">
+            <h3 class="hub-card__title">{a.data.name}</h3>
+            <p class="hub-card__chip">{formatArmorType(a.data.armor_type)}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- AMMUNITION --- */}
+    <section id="ammunition" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Ammunition</h2>
+        <span class="hub-section__count">{ammunition.length}</span>
+        <a href="/ammunition/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Standard lead, silver, blessed iron, runescribed. Always in shorter supply than you'd like.
+      </p>
+      <div class="hub-grid hub-grid--compact">
+        {ammunitionSorted.map((a) => (
+          <a href={`/ammunition/${lastIdSegment(a.id)}/`} class="hub-card">
+            <h3 class="hub-card__title">{a.data.name}</h3>
+            <p class="hub-card__chip">{formatAmmoType(a.data.ammo_type)}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- GEAR --- */}
+    <section id="gear" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Gear</h2>
+        <span class="hub-section__count">{gear.length}</span>
+        <a href="/gear/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Tools, consumables, mounts, vehicles, foci. The Frontier's everything-else.
+      </p>
+      <div class="hub-grid hub-grid--compact">
+        {gearSorted.map((g) => (
+          <a href={`/gear/${lastIdSegment(g.id)}/`} class="hub-card">
+            <h3 class="hub-card__title">{g.data.name}</h3>
+            <p class="hub-card__chip">{formatGearType(g.data.gear_type)}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- GLOSSARIES --- */}
+    <section id="glossaries" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Glossaries</h2>
+        <span class="hub-section__count">
+          {weaponQualities.length + armorProperties.length}
+        </span>
+      </header>
+      <p class="hub-section__intro">
+        The keyword vocabulary that governs equipment behavior — a quality
+        on a weapon, a property on a piece of armor.
+      </p>
+
+      <div class="hub-subsection__header">
+        <h3 class="hub-subsection__title">Weapon Qualities</h3>
+        <span class="hub-subsection__count">{weaponQualities.length}</span>
+        <a href="/weapon-qualities/" class="hub-subsection__browse">Browse all →</a>
+      </div>
+      <ul class="hub-pill-list">
+        {qualitiesSorted.map((q) => (
+          <li>
+            <a href={`/weapon-qualities/${q.id}/`} class="hub-pill">
+              {q.data.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div class="hub-subsection__header">
+        <h3 class="hub-subsection__title">Armor Properties</h3>
+        <span class="hub-subsection__count">{armorProperties.length}</span>
+        <a href="/armor-properties/" class="hub-subsection__browse">Browse all →</a>
+      </div>
+      <ul class="hub-pill-list">
+        {propertiesSorted.map((p) => (
+          <li>
+            <a href={`/armor-properties/${p.id}/`} class="hub-pill">
+              {p.data.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+  </div>
+</BaseLayout>

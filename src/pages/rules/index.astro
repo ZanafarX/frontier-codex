@@ -1,0 +1,203 @@
+---
+// =============================================================================
+// /rules/ — listing page (table of contents, grouped by book)
+// =============================================================================
+// 11 chapters total across 5 books. Renders as a vertical TOC where each
+// book is a section header and its chapters appear as cards beneath.
+//
+// LAYOUT
+//   listing-header (title + count + lede)
+//   for each book in canonical order:
+//     .talent-section header (book name + chapter count)
+//     .chapter-list (vertical ol) of .chapter-list__entry cards
+//
+// We reuse the existing .talent-section* chrome from listings.css for the
+// per-book section header. The chapter-list cards are page-scoped — the
+// pattern is specific enough to rules that promoting it to listings.css
+// isn't warranted yet.
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatBook } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+// Canonical book order — matches the rulebook reading sequence.
+const BOOK_ORDER = [
+  'introduction',
+  'drifter',
+  'law-of-lead',
+  'current',
+  'marshals-almanac',
+] as const;
+
+type Book = (typeof BOOK_ORDER)[number];
+
+const allRules = await getCollection('rules');
+type Rule = CollectionEntry<'rules'>;
+
+// Sort by overall reading order. The `order` field is 1..11 and unique.
+const sorted: Rule[] = [...allRules].sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+// Bucket chapters by book, preserving sorted order within each bucket.
+const byBook = new Map<Book, Rule[]>();
+for (const book of BOOK_ORDER) byBook.set(book, []);
+for (const entry of sorted) {
+  // The book field is constrained by the schema enum, so the cast is safe.
+  byBook.get(entry.data.book as Book)!.push(entry);
+}
+
+const total = sorted.length;
+const bookCount = BOOK_ORDER.filter((b) => (byBook.get(b)?.length ?? 0) > 0).length;
+---
+
+<BaseLayout
+  title="Rules"
+  description="The complete rulebook of The Veil & Lead — eleven chapters across five books."
+  pageClass="rules-listing-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Rules</h1>
+      <p class="listing-header__count">
+        {total} chapters · {bookCount} books
+      </p>
+      <p class="listing-header__lede">
+        The complete rulebook of <em>The Veil &amp; Lead</em>. Start with the
+        Introduction to orient yourself in the Frontier, then walk Book I
+        through Book IV at your own pace.
+      </p>
+    </header>
+
+    {BOOK_ORDER.map((book) => {
+      const chapters = byBook.get(book) ?? [];
+      if (chapters.length === 0) return null;
+
+      return (
+        <section class="talent-section" data-filter-section>
+          <header class="talent-section__header">
+            <h2 class="talent-section__title">{formatBook(book)}</h2>
+            <span class="talent-section__count">
+              {chapters.length} {chapters.length === 1 ? 'chapter' : 'chapters'}
+            </span>
+          </header>
+
+          <ol class="chapter-list">
+            {chapters.map((entry) => (
+              <li class="chapter-list__entry">
+                <a href={`/rules/${entry.id}/`} class="chapter-list__link">
+                  <div class="chapter-list__head">
+                    {entry.data.chapter !== undefined && (
+                      <span class="chapter-list__num">
+                        Chapter {entry.data.chapter}
+                      </span>
+                    )}
+                    <h3 class="chapter-list__title">{entry.data.title}</h3>
+                  </div>
+
+                  {entry.data.summary && (
+                    <p class="chapter-list__summary">{entry.data.summary}</p>
+                  )}
+
+                  {entry.data.tags.length > 0 && (
+                    <div class="chapter-list__tags">
+                      {entry.data.tags.map((tag) => (
+                        <Badge label={tag} variant="muted" size="sm" />
+                      ))}
+                    </div>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      );
+    })}
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Chapter list (vertical, ordered) ---------------------------------
+     A reading-order list of chapter cards. The whole card is a single link
+     target — clicking anywhere on the card navigates to the chapter.
+     Tags inside the link aren't separately interactive (there's no tag
+     listing page), so nesting them inside the <a> is fine.
+     -------------------------------------------------------------------- */
+  .chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0 var(--space-6) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .chapter-list__entry {
+    margin: 0;
+  }
+
+  .chapter-list__link {
+    display: block;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 120ms ease, background-color 120ms ease;
+  }
+
+  .chapter-list__link:hover {
+    border-color: var(--color-accent);
+    background: rgba(176, 74, 47, 0.04);  /* faint rust wash */
+  }
+
+  .chapter-list__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-2);
+  }
+
+  .chapter-list__num {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .chapter-list__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0;
+    font-style: normal;
+    line-height: var(--line-snug);
+  }
+
+  .chapter-list__link:hover .chapter-list__title {
+    color: var(--color-accent-hover);
+  }
+
+  .chapter-list__summary {
+    font-family: var(--font-serif);
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    margin: 0;
+  }
+
+  .chapter-list__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+  }
+</style>

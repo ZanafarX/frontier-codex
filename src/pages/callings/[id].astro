@@ -1,0 +1,461 @@
+---
+// =============================================================================
+// /callings/<id>/ — detail page
+// =============================================================================
+// One page per calling. Ten pages total (5 mundane + 5 psionic) — static-
+// generated at build time.
+//
+// LAYOUT
+//   1. Back-link "← All Callings"
+//   2. Header: name (h1), archetype (italic), tagline (blockquote), badges
+//        (type + each prime attribute + linked discipline if psionic)
+//   3. <StatBlock>: Type · Prime Attributes · Starting Erosion
+//   4. <Content />: body — description + Starting Choices section
+//   5. Starting Loadout (h2 group):
+//        Career Skills (badge list — unlinked, skill pages don't exist yet)
+//        Starting Gear (badge list — equipment IDs link, free-text doesn't)
+//        Starting Talents (TalentCard grid — Granted or Choose One)
+//   6. Drive Examples (italic list)
+//   7. Cross-refs footer: Associated Discipline (psionic only)
+//
+// CROSS-REF RESOLUTION
+//   - Talent IDs in starting_talents.fixed / choose_one → looked up in the
+//     talents collection, rendered as <TalentCard> grid.
+//   - Equipment IDs in starting_gear → looked up in a unified Map built
+//     once across weapons + armor + ammunition + gear (keyed by flat slug
+//     via lastIdSegment, since equipment lives in subfolders). Linked
+//     when resolved; plain text otherwise.
+//   - Discipline slug → looked up in disciplines collection for display
+//     name (psionic callings only).
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import TalentCard from '../../components/TalentCard.astro';
+import { formatDiscipline, lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+import '../../styles/listings.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const callings = await getCollection('callings');
+  const talents = await getCollection('talents');
+  const weapons = await getCollection('weapons');
+  const armor = await getCollection('armor');
+  const ammunition = await getCollection('ammunition');
+  const gear = await getCollection('gear');
+  const disciplines = await getCollection('disciplines');
+
+  // --- Build lookup maps once (reused across all 10 callings) --------------
+
+  // Talents keyed by flat ID (talents use generateId: flatId).
+  const talentById = new Map<string, CollectionEntry<'talents'>>(
+    talents.map((t) => [t.id, t]),
+  );
+
+  // Equipment keyed by flat slug. Equipment lives in subfolders, so we
+  // extract the trailing segment via lastIdSegment. First-write-wins on
+  // collisions; the explicit collection order is the precedence.
+  type EquipmentRef = { name: string; href: string };
+  const equipmentBySlug = new Map<string, EquipmentRef>();
+
+  for (const w of weapons) {
+    const slug = lastIdSegment(w.id);
+    if (!equipmentBySlug.has(slug)) {
+      equipmentBySlug.set(slug, { name: w.data.name, href: `/weapons/${slug}/` });
+    }
+  }
+  for (const a of armor) {
+    const slug = lastIdSegment(a.id);
+    if (!equipmentBySlug.has(slug)) {
+      equipmentBySlug.set(slug, { name: a.data.name, href: `/armor/${slug}/` });
+    }
+  }
+  for (const am of ammunition) {
+    const slug = lastIdSegment(am.id);
+    if (!equipmentBySlug.has(slug)) {
+      equipmentBySlug.set(slug, { name: am.data.name, href: `/ammunition/${slug}/` });
+    }
+  }
+  for (const g of gear) {
+    const slug = lastIdSegment(g.id);
+    if (!equipmentBySlug.has(slug)) {
+      equipmentBySlug.set(slug, { name: g.data.name, href: `/gear/${slug}/` });
+    }
+  }
+
+  const disciplineNameById = new Map<string, string>(
+    disciplines.map((d) => [d.id, d.data.name]),
+  );
+
+  // --- Build per-page resolved props ---------------------------------------
+
+  type GearEntry =
+    | { kind: 'linked'; name: string; href: string }
+    | { kind: 'text'; label: string };
+
+  return callings.map((c) => {
+    // Resolve gear strings.
+    const resolvedGear: GearEntry[] = c.data.starting_gear.map((item) => {
+      const ref = equipmentBySlug.get(item);
+      if (ref) {
+        return { kind: 'linked', name: ref.name, href: ref.href };
+      }
+      return { kind: 'text', label: item };
+    });
+
+    // Resolve talent IDs to full entries (TalentCard expects CollectionEntry).
+    // Unresolved IDs are silently dropped — if a referenced talent is missing,
+    // we'd rather show nothing than a broken card. This shouldn't happen
+    // with validated content, but guard anyway.
+    const fixedTalents: CollectionEntry<'talents'>[] =
+      c.data.starting_talents.fixed
+        .map((id) => talentById.get(id))
+        .filter((t): t is CollectionEntry<'talents'> => !!t);
+
+    const chooseOneTalents: CollectionEntry<'talents'>[] =
+      c.data.starting_talents.choose_one
+        .map((id) => talentById.get(id))
+        .filter((t): t is CollectionEntry<'talents'> => !!t);
+
+    // Resolve linked discipline (psionic callings only).
+    const linkedDiscipline = c.data.discipline
+      ? {
+          id: c.data.discipline,
+          name: disciplineNameById.get(c.data.discipline) ?? c.data.discipline,
+        }
+      : null;
+
+    return {
+      params: { id: c.id },
+      props: {
+        entry: c,
+        resolvedGear,
+        fixedTalents,
+        chooseOneTalents,
+        linkedDiscipline,
+      },
+    };
+  });
+}
+
+// --- Page rendering ---------------------------------------------------------
+
+type GearEntry =
+  | { kind: 'linked'; name: string; href: string }
+  | { kind: 'text'; label: string };
+
+interface Props {
+  entry: CollectionEntry<'callings'>;
+  resolvedGear: GearEntry[];
+  fixedTalents: CollectionEntry<'talents'>[];
+  chooseOneTalents: CollectionEntry<'talents'>[];
+  linkedDiscipline: { id: string; name: string } | null;
+}
+
+const {
+  entry,
+  resolvedGear,
+  fixedTalents,
+  chooseOneTalents,
+  linkedDiscipline,
+} = Astro.props;
+
+const { Content } = await render(entry);
+
+// --- Stat block rows --------------------------------------------------------
+const typeLabel = entry.data.type === 'psionic' ? 'Psionic' : 'Mundane';
+const primeJoined = entry.data.prime_attributes.join(' / ');
+
+const statRows: StatRow[] = [
+  { label: 'Type', value: typeLabel, mono: false },
+  { label: 'Prime', value: primeJoined },
+  { label: 'Starting Erosion', value: entry.data.starting_erosion },
+];
+
+// --- Visibility flags -------------------------------------------------------
+const hasFixed = fixedTalents.length > 0;
+const hasChooseOne = chooseOneTalents.length > 0;
+const hasAnyStartingTalents = hasFixed || hasChooseOne;
+const hasDrives = entry.data.drive_examples.length > 0;
+const hasLoadout =
+  entry.data.career_skills.length > 0 ||
+  resolvedGear.length > 0 ||
+  hasAnyStartingTalents;
+
+// --- Page metadata ----------------------------------------------------------
+const pageTitle = entry.data.name;
+const pageDescription = `${entry.data.tagline} — ${entry.data.archetype}, a ${typeLabel.toLowerCase()} calling.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="calling-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      {/* --- Back link --- */}
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/callings/" class="detail-back__link">← All Callings</a>
+      </nav>
+
+      {/* --- Header --- */}
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <p class="detail-header__subname">{entry.data.archetype}</p>
+
+        <blockquote class="detail-header__tagline">
+          "{entry.data.tagline}"
+        </blockquote>
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={typeLabel} />
+          {entry.data.prime_attributes.map((attr) => (
+            <Badge variant="highlight" label={attr} />
+          ))}
+          {linkedDiscipline && (
+            <Badge
+              variant="discipline"
+              label={formatDiscipline(entry.data.discipline!)}
+              href={`/disciplines/${linkedDiscipline.id}/`}
+            />
+          )}
+        </div>
+      </header>
+
+      {/* --- Stat block --- */}
+      <StatBlock rows={statRows} />
+
+      {/* --- Body content --- */}
+      <section class="calling-body">
+        <Content />
+      </section>
+
+      {/* --- Starting Loadout --- */}
+      {hasLoadout && (
+        <section class="starting-loadout">
+          <h2 class="starting-loadout__title">Starting Loadout</h2>
+
+          {entry.data.career_skills.length > 0 && (
+            <section class="loadout-section">
+              <h3 class="loadout-section__title">Career Skills</h3>
+              <div class="badge-list">
+                {entry.data.career_skills.map((skill) => (
+                  <Badge variant="muted" label={skill} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {resolvedGear.length > 0 && (
+            <section class="loadout-section">
+              <h3 class="loadout-section__title">Starting Gear</h3>
+              <div class="badge-list">
+                {resolvedGear.map((g) =>
+                  g.kind === 'linked' ? (
+                    <Badge variant="default" label={g.name} href={g.href} />
+                  ) : (
+                    <Badge variant="muted" label={g.label} />
+                  ),
+                )}
+              </div>
+            </section>
+          )}
+
+          {hasAnyStartingTalents && (
+            <section class="loadout-section">
+              <h3 class="loadout-section__title">Starting Talents</h3>
+
+              {hasFixed && (
+                <div class="loadout-talents-group">
+                  <h4 class="loadout-talents-group__title">Granted</h4>
+                  <p class="loadout-talents-group__note">
+                    Automatically known from the start.
+                  </p>
+                  <div class="compact-grid">
+                    {fixedTalents.map((t) => <TalentCard talent={t} />)}
+                  </div>
+                </div>
+              )}
+
+              {hasChooseOne && (
+                <div class="loadout-talents-group">
+                  <h4 class="loadout-talents-group__title">Choose One</h4>
+                  <p class="loadout-talents-group__note">
+                    Pick one of the following at character creation. See
+                    Starting Choices above for the full rule.
+                  </p>
+                  <div class="compact-grid">
+                    {chooseOneTalents.map((t) => <TalentCard talent={t} />)}
+                  </div>
+                </div>
+              )}
+            </section>
+          )}
+        </section>
+      )}
+
+      {/* --- Drive Examples --- */}
+      {hasDrives && (
+        <section class="drive-examples">
+          <h2 class="drive-examples__title">Drive Examples</h2>
+          <ul class="drive-examples__list">
+            {entry.data.drive_examples.map((d) => <li>{d}</li>)}
+          </ul>
+        </section>
+      )}
+
+      {/* --- Cross-references footer --- */}
+      {linkedDiscipline && (
+        <footer class="detail-refs">
+          <div class="detail-refs__group">
+            <h2 class="detail-refs__label">Associated Discipline</h2>
+            <div class="detail-refs__items">
+              <Badge
+                variant="discipline"
+                label={linkedDiscipline.name}
+                href={`/disciplines/${linkedDiscipline.id}/`}
+                size="sm"
+              />
+            </div>
+          </div>
+        </footer>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Header sub-name and tagline (page-scoped) -------------------------
+     Archetype acts as the sub-name. Tagline is the loud display-font motto.
+     Same visual treatment as the discipline detail page. */
+
+  .detail-header__subname {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    margin: var(--space-2) 0 0;
+    line-height: var(--line-snug);
+  }
+
+  .detail-header__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-xl);
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    border: none;
+    background: none;
+    line-height: var(--line-snug);
+  }
+
+  /* --- Body wrapper —— spacing only, no heading override --------------- */
+
+  .calling-body {
+    margin-top: var(--space-4);
+  }
+
+  /* --- Starting Loadout section --------------------------------------- */
+
+  .starting-loadout {
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border-strong);
+  }
+
+  .starting-loadout__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-4);
+  }
+
+  .loadout-section {
+    margin-block: var(--space-5);
+  }
+
+  .loadout-section__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-style: normal;
+    margin: 0 0 var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px dashed var(--color-border);
+  }
+
+  .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .loadout-talents-group {
+    margin-block: var(--space-4);
+  }
+
+  .loadout-talents-group__title {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+
+  .loadout-talents-group__note {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin: var(--space-1) 0 var(--space-3);
+    line-height: var(--line-snug);
+  }
+
+  /* --- Drive Examples ------------------------------------------------- */
+
+  .drive-examples {
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border-strong);
+  }
+
+  .drive-examples__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-3);
+  }
+
+  .drive-examples__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .drive-examples__list li {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--color-border-strong);
+    margin: 0;
+  }
+</style>

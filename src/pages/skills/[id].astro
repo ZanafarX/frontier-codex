@@ -1,0 +1,120 @@
+---
+// =============================================================================
+// /skills/<id>/ — detail page
+// =============================================================================
+// One page per skill. 25 pages total, static-generated at build time.
+//
+// LAYOUT
+//   1. Back link → /skills/
+//   2. Header: H1 name, italic summary, badges
+//        - Primary attribute (highlight, linked to /attributes/<abbr>/)
+//        - Secondary attribute (muted "Alt: X", linked) when present
+//        - Category badge (unlinked)
+//   3. Body content (short prose explanation)
+//   4. Example Uses (.examples-list)
+//
+// URL: file IDs are "combat/ballistics" form; URL slug uses lastIdSegment
+// to drop the category folder. Cross-references in other collections
+// (origins.native_skill_choice, callings.career_skills) use the flat slug.
+// =============================================================================
+
+import {
+  getCollection,
+  render,
+  type CollectionEntry,
+} from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatSkillCategory, lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const allSkills = await getCollection('skills');
+  return allSkills.map((entry) => ({
+    params: { id: lastIdSegment(entry.id) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'skills'>;
+}
+
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+
+const categoryLabel = formatSkillCategory(entry.data.category);
+const primaryUrl = `/attributes/${entry.data.primary_attribute.toLowerCase()}/`;
+const secondaryUrl = entry.data.secondary_attribute
+  ? `/attributes/${entry.data.secondary_attribute.toLowerCase()}/`
+  : undefined;
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.summary;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="skill-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/skills/" class="detail-back__link">← All Skills</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <p class="detail-header__flavor">{entry.data.summary}</p>
+
+        <div class="detail-header__badges">
+          <Badge
+            variant="highlight"
+            label={entry.data.primary_attribute}
+            href={primaryUrl}
+          />
+          {entry.data.secondary_attribute && secondaryUrl && (
+            <Badge
+              variant="muted"
+              label={`Alt: ${entry.data.secondary_attribute}`}
+              href={secondaryUrl}
+              size="sm"
+            />
+          )}
+          <Badge variant="category" label={categoryLabel} size="sm" />
+        </div>
+      </header>
+
+      <section class="skill-body">
+        <Content />
+      </section>
+
+      <section class="skill-section">
+        <h2>Example Uses</h2>
+        <ul class="examples-list">
+          {entry.data.example_uses.map((ex) => (
+            <li>
+              <span class="examples-list__description">{ex.description}</span>
+              <span class="examples-list__sep">—</span>
+              <code class="examples-list__formula">{ex.formula}</code>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .skill-body {
+    margin-top: var(--space-5);
+  }
+
+  .skill-section {
+    margin-top: var(--space-6);
+  }
+</style>

@@ -1,0 +1,263 @@
+---
+// =============================================================================
+// /talents/<id>/ — detail page
+// =============================================================================
+// One page per talent. ~313 pages total — static-generated at build time.
+//
+// LAYOUT
+//   1. Context-aware back-link
+//        psionic talent      → /disciplines/<discipline>/  ("← Psy-Slinger")
+//        calling mundane     → /callings/<calling>/        ("← The Gunhand")
+//        combat/non-combat   → /talents/                   ("← All Talents")
+//   2. Header: name (h1), flavor quote (italic), type/rank/discipline badges
+//   3. <StatBlock>: Cost · TN (psionic only) · Tempo · Steps · Resist
+//   4. <Content />: rendered markdown body
+//        sections: ## Effect / ## Steps / ## Resist / ## Special /
+//                  ## Requirement / ## Trigger / ## Limit / ## Restriction
+//   5. Cross-refs footer (when any present): Requires / Prerequisites / Tags
+//
+// CROSS-REF RESOLUTION
+//   Psionic `requires` is an array of talent IDs. We resolve them to
+//   {id, name} pairs once in getStaticPaths (using a Map built from all
+//   talents) so each page receives pre-resolved data and renders linked
+//   badges with proper display names. If a referenced ID doesn't resolve,
+//   we fall back to the raw ID as the label — graceful degradation.
+//
+//   Mundane `prerequisites` is an array of free-text strings like
+//   "Ballistics 2". These render as plain (unlinked) muted badges. A
+//   later polish pass could parse them into linked skill references.
+//
+// KEYWORD AUTO-LINKING
+//   Deferred to Phase 3c. Body prose renders raw via <Content />. When
+//   we add the enrichment layer (a remark/rehype plugin or a wrapping
+//   component), it'll apply uniformly across all collections.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import {
+  formatCost,
+  formatTempo,
+  formatDiscipline,
+  formatCalling,
+  formatRankName,
+  formatTalentCategory,
+} from '../../lib/formatters';
+import '../../styles/detail.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const talents = await getCollection('talents');
+
+  // Build an id → display-name lookup so each page resolves its `requires`
+  // references to proper labels in a single pass. Talents are flat-ID'd
+  // (generateId: flatId), so t.id is the kebab-case filename without
+  // subfolders.
+  const nameById = new Map<string, string>(
+    talents.map((t) => [t.id, t.data.name]),
+  );
+
+  return talents.map((t) => {
+    let resolvedRequires: Array<{ id: string; name: string }> = [];
+    if (
+      t.data.type === 'psionic' &&
+      t.data.requires &&
+      t.data.requires.length > 0
+    ) {
+      resolvedRequires = t.data.requires.map((id) => ({
+        id,
+        name: nameById.get(id) ?? id,
+      }));
+    }
+    return {
+      params: { id: t.id },
+      props: { entry: t, resolvedRequires },
+    };
+  });
+}
+
+// --- Page rendering ---------------------------------------------------------
+
+interface Props {
+  entry: CollectionEntry<'talents'>;
+  resolvedRequires: Array<{ id: string; name: string }>;
+}
+
+const { entry, resolvedRequires } = Astro.props;
+const { Content } = await render(entry);
+
+// Narrow the discriminated union once. Locals carry the proper variant
+// type from here on.
+const psionicData = entry.data.type === 'psionic' ? entry.data : null;
+const mundaneData = entry.data.type === 'mundane' ? entry.data : null;
+
+// --- Context-aware back-link ------------------------------------------------
+let backHref: string;
+let backLabel: string;
+if (psionicData) {
+  backHref = `/disciplines/${psionicData.discipline}/`;
+  backLabel = formatDiscipline(psionicData.discipline);
+} else if (
+  mundaneData &&
+  mundaneData.category === 'calling' &&
+  mundaneData.calling
+) {
+  backHref = `/callings/${mundaneData.calling}/`;
+  backLabel = formatCalling(mundaneData.calling);
+} else {
+  backHref = '/talents/';
+  backLabel = 'All Talents';
+}
+
+// --- Stat block rows --------------------------------------------------------
+// Cost is universal. TN is psionic-only. Tempo / Steps / Resist appear on
+// both variants. Steps and Resist render as "Yes" / "—" booleans.
+const statRows: StatRow[] = [
+  { label: 'Cost', value: formatCost(entry.data.cost) },
+];
+if (psionicData) {
+  statRows.push({ label: 'TN', value: psionicData.tn });
+}
+statRows.push({ label: 'Tempo', value: formatTempo(entry.data.tempo) });
+statRows.push({ label: 'Steps', value: entry.data.has_steps ? 'Yes' : '—' });
+statRows.push({ label: 'Resist', value: entry.data.has_resist ? 'Yes' : '—' });
+
+// --- Cross-refs visibility --------------------------------------------------
+const hasRequires = !!psionicData && resolvedRequires.length > 0;
+const hasPrereqs = !!mundaneData && mundaneData.prerequisites.length > 0;
+const hasTags = entry.data.tags.length > 0;
+const showCrossRefs = hasRequires || hasPrereqs || hasTags;
+
+// --- Page metadata ----------------------------------------------------------
+const pageTitle = entry.data.name;
+
+let typeLabel: string;
+if (psionicData) {
+  typeLabel = `${formatDiscipline(psionicData.discipline)} · R${psionicData.rank} ${formatRankName(psionicData.rank)}`;
+} else if (mundaneData) {
+  typeLabel = `Mundane ${formatTalentCategory(mundaneData.category)}`;
+  if (mundaneData.calling) {
+    typeLabel += ` (${formatCalling(mundaneData.calling)})`;
+  }
+} else {
+  typeLabel = 'Talent';
+}
+
+const pageDescription = entry.data.flavor
+  ? `${entry.data.flavor} — ${typeLabel}.`
+  : `${entry.data.name} — ${typeLabel}.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="talent-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      {/* --- Back link --- */}
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href={backHref} class="detail-back__link">← {backLabel}</a>
+      </nav>
+
+      {/* --- Header --- */}
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.flavor && (
+          <p class="detail-header__flavor">"{entry.data.flavor}"</p>
+        )}
+
+        <div class="detail-header__badges">
+          {psionicData && (
+            <>
+              <Badge
+                variant="discipline"
+                label={formatDiscipline(psionicData.discipline)}
+                href={`/disciplines/${psionicData.discipline}/`}
+              />
+              <Badge
+                variant="rank"
+                label={`R${psionicData.rank} · ${formatRankName(psionicData.rank)}`}
+              />
+              <Badge variant="type" label="Psionic" />
+            </>
+          )}
+          {mundaneData && (
+            <>
+              <Badge
+                variant="category"
+                label={formatTalentCategory(mundaneData.category)}
+              />
+              {mundaneData.calling && (
+                <Badge
+                  variant="calling"
+                  label={formatCalling(mundaneData.calling)}
+                  href={`/callings/${mundaneData.calling}/`}
+                />
+              )}
+              <Badge variant="type" label="Mundane" />
+            </>
+          )}
+        </div>
+      </header>
+
+      {/* --- Stat block --- */}
+      <StatBlock rows={statRows} />
+
+      {/* --- Body content --- */}
+      <section class="talent-body">
+        <Content />
+      </section>
+
+      {/* --- Cross-references footer --- */}
+      {showCrossRefs && (
+        <footer class="detail-refs">
+          {hasRequires && (
+            <div class="detail-refs__group">
+              <h2 class="detail-refs__label">Requires</h2>
+              <div class="detail-refs__items">
+                {resolvedRequires.map((req) => (
+                  <Badge
+                    variant="rank"
+                    label={req.name}
+                    href={`/talents/${req.id}/`}
+                    size="sm"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {hasPrereqs && mundaneData && (
+            <div class="detail-refs__group">
+              <h2 class="detail-refs__label">Prerequisites</h2>
+              <div class="detail-refs__items">
+                {mundaneData.prerequisites.map((p) => (
+                  <Badge variant="muted" label={p} size="sm" />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {hasTags && (
+            <div class="detail-refs__group">
+              <h2 class="detail-refs__label">Tags</h2>
+              <div class="detail-refs__items">
+                {entry.data.tags.map((tag) => (
+                  <Badge variant="muted" label={tag} size="sm" />
+                ))}
+              </div>
+            </div>
+          )}
+        </footer>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>

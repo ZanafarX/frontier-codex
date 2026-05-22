@@ -1,0 +1,461 @@
+/* ============================================================================
+   DETAIL PAGE STYLES
+   ============================================================================
+   Shared page-chrome for any /<collection>/<id>/ detail page. Imported by
+   talents, and later by disciplines, weapons, factions, etc. detail pages.
+
+   Holds: back-link, header (incl. eyebrow), short-effect panel (used by
+          glossary detail pages), body wrapper, cross-references footer,
+          chapter TOC and prev/next nav (used by rules detail pages),
+          examples-list and memory-examples (used by attributes/skills
+          and origins/tragedies respectively).
+   Does NOT hold: <StatBlock> (component-scoped), entity-specific cards.
+
+   Imported via:  import '../../styles/detail.css';
+
+   The .talent-body rules override the global h2/h3 to a more restrained
+   in-body label style. Other detail pages will either reuse .talent-body
+   or define their own body wrapper depending on what their content looks
+   like — talents have dense rule-section headings; rules chapters want
+   the bigger global h2.
+   ========================================================================= */
+
+/* --- Page article wrapper -------------------------------------------------
+   Adds vertical breathing room. The .prose-wide class from global.css
+   bounds width to ~56rem — wide enough for tables, narrow enough to read.
+   ----------------------------------------------------------------------- */
+
+.detail-article {
+  padding-block: var(--space-5) var(--space-7);
+}
+
+/* --- Back link ------------------------------------------------------------ */
+
+.detail-back {
+  margin-bottom: var(--space-4);
+}
+
+.detail-back__link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: var(--space-1) 0;
+  transition: color 120ms ease;
+}
+
+.detail-back__link:hover {
+  color: var(--color-accent);
+}
+
+/* --- Detail header -------------------------------------------------------- */
+
+.detail-header {
+  margin-bottom: var(--space-4);
+}
+
+/* Small mono uppercase caption above the H1. Used by glossary- and
+   chapter-style detail pages to indicate the parent category:
+     - /rules/<id>/        — book name ("Book II — The Law of Lead")
+     - /references/<id>/   — category ("Combat")
+     - /origins/<id>/      — origin letter ("Origin A")
+   Render right inside .detail-header, BEFORE .detail-header__title. */
+.detail-header__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.detail-header__title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  color: var(--color-accent);
+  margin: 0;
+  line-height: var(--line-tight);
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: var(--space-3);
+}
+
+.detail-header__flavor {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--color-highlight);
+  margin: var(--space-4) 0 0;
+  line-height: var(--line-snug);
+}
+
+.detail-header__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+/* --- Short effect panel --------------------------------------------------
+   The one-line mechanical summary that appears below the header on
+   glossary detail pages. Format: <strong>LABEL:</strong> value. Used by:
+     - /weapon-qualities/<id>/  — "Effect: ..."
+     - /armor-properties/<id>/  — "Effect: ..."
+     - /conditions/<id>/        — "Effect: ..."
+     - /keywords/<id>/          — "Definition: ..."
+   Card-style: elevated background, dust-yellow left accent, mono body.
+   The <strong> within it is rendered as a small uppercase tag rather
+   than visual emphasis.
+
+   This is the SHORT variant — for the longer expansion-card panels used
+   in weapons/armor detail pages (which display short_effect + the full
+   rendered body of a referenced glossary entry inline), see the
+   page-scoped .property-card__short / .quality-card__short patterns.
+   Those will be promoted into <GlossaryExpansionCard> in Batch C.
+   ----------------------------------------------------------------------- */
+
+.short-effect-panel {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: var(--line-snug);
+  margin: var(--space-5) 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-strong);
+  border-left: 3px solid var(--color-highlight);
+  border-radius: var(--radius-sm);
+}
+
+.short-effect-panel strong {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  margin-right: var(--space-2);
+}
+
+/* --- Body content wrapper -------------------------------------------------
+   The .talent-body class wraps the rendered <Content /> from the talent's
+   markdown. Talent bodies are short and section-dense (## Effect, ## Steps,
+   ## Resist, ## Special, ## Trigger, ## Limit, ## Restriction). We tighten
+   the heading scale here so the body reads as a stat sheet rather than a
+   long-form chapter.
+   ----------------------------------------------------------------------- */
+
+.talent-body {
+  margin-top: var(--space-4);
+}
+
+.talent-body h2 {
+  font-size: var(--text-base);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: var(--space-2);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+.talent-body h2:first-child {
+  margin-top: var(--space-4);
+}
+
+.talent-body h3 {
+  font-size: var(--text-lg);
+  font-style: normal;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+.talent-body p:last-child {
+  margin-bottom: 0;
+}
+
+.talent-body table {
+  margin-block: var(--space-4);
+}
+
+/* --- Cross-references footer ---------------------------------------------
+   Three optional groups: Requires (psionic), Prerequisites (mundane), Tags.
+   Each renders only when non-empty. Two-column layout per group: a label
+   on the left, badge pills on the right.
+   ----------------------------------------------------------------------- */
+
+.detail-refs {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.detail-refs__group {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.detail-refs__label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  /* Override the global h2 styles that would otherwise apply huge sizing
+     and a colored heading. This label is a small caption, not a section. */
+  border: none;
+  padding: 0;
+  min-width: 7rem;
+  line-height: var(--line-tight);
+}
+
+.detail-refs__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+/* --- Chapter TOC (rules detail page) -------------------------------------
+   In-chapter table of contents card. Built from the headings returned by
+   Astro's render(), filtered to depth===2. Astro auto-generates slug IDs
+   on markdown headings; the anchors here link to those IDs on the
+   rendered <h2> elements directly. Single-level TOC — sub-section linking
+   can be added later if any single chapter justifies the noise.
+
+   Used by: /rules/<id>/ pages. Lives in detail.css (not page-scoped)
+   because a similar pattern will likely show up on References detail
+   pages once those land.
+   ----------------------------------------------------------------------- */
+
+.chapter-toc {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-block: var(--space-5) var(--space-6);
+}
+
+.chapter-toc__title {
+  /* Override the global h2 styles. This is a small caption, not a section
+     heading — we don't want the rust-red 2xl font and the bottom border. */
+  margin: 0 0 var(--space-3) 0;
+  padding: 0;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+.chapter-toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.chapter-toc__list li {
+  margin: 0;
+}
+
+.chapter-toc__list a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: var(--line-snug);
+}
+
+.chapter-toc__list a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* --- Chapter prev/next nav (rules detail page) ---------------------------
+   Two-cell strip at the bottom of each chapter. Each cell:
+     - .chapter-nav__direction — "← Previous" or "Next →"
+     - .chapter-nav__book      — small eyebrow with the parent book name
+     - .chapter-nav__title     — chapter title in display type
+   When one side is missing (intro has no prev, last chapter has no next)
+   we render an aria-hidden placeholder so the grid stays balanced on
+   desktop, then drop it entirely on mobile.
+   ----------------------------------------------------------------------- */
+
+.chapter-nav {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-strong);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-5);
+}
+
+.chapter-nav__cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-decoration: none;
+  color: inherit;
+}
+
+a.chapter-nav__cell {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+a.chapter-nav__cell:hover {
+  border-color: var(--color-border-strong);
+  background: rgba(176, 74, 47, 0.04);
+}
+
+.chapter-nav__cell--next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.chapter-nav__cell--empty {
+  /* Invisible placeholder. Keeps the two-column grid balanced when there's
+     no previous OR next chapter (Introduction / last chapter). Hidden
+     entirely on mobile so the visible cell doesn't get awkwardly half-width. */
+  visibility: hidden;
+}
+
+.chapter-nav__direction {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.chapter-nav__book {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.chapter-nav__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+  line-height: var(--line-snug);
+}
+
+a.chapter-nav__cell:hover .chapter-nav__title {
+  color: var(--color-accent-hover);
+}
+
+@media (max-width: 36rem) {
+  .chapter-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-nav__cell--next {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .chapter-nav__cell--empty {
+    display: none;
+  }
+}
+
+/* --- Examples list (attributes + skills detail pages) -------------------
+   Used to render arrays of { description, formula } pairs — attribute
+   play_examples and skill example_uses. Each item shows the natural-
+   language description, an em-dash separator, and the mechanical
+   formula in a monospaced chip. The chip wraps to its own line when
+   the description is long.
+   ----------------------------------------------------------------------- */
+
+.examples-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.examples-list li {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: var(--line-snug);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: baseline;
+  margin: 0;
+}
+
+.examples-list__description {
+  flex: 1 1 auto;
+}
+
+.examples-list__sep {
+  color: var(--color-text-muted);
+  flex: 0 0 auto;
+}
+
+.examples-list__formula {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+/* --- Memory examples (origins + tragedies detail pages) -----------------
+   Used to render arrays of memory prompt strings — origin
+   root_memory_examples and tragedy scar_memory_examples. Styled as
+   italic muted prose with a left bar accent so they read as quoted
+   character voice rather than bullet items.
+   ----------------------------------------------------------------------- */
+
+.memory-examples {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.memory-examples li {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: var(--line-snug);
+  padding: var(--space-1) 0 var(--space-1) var(--space-4);
+  border-left: 2px solid var(--color-border-strong);
+  margin: 0;
+}

@@ -1,0 +1,279 @@
+---
+// =============================================================================
+// / — homepage
+// =============================================================================
+// Replaces the Phase 1-2 placeholder style-guide. Three blocks:
+//   1. Atmospheric splash — eyebrow / title / epigraph / CTA.
+//   2. About — one italic muted lede.
+//   3. Wayfinding hub — seven cards under "Where the Road Leads".
+//
+// The CTA href is computed dynamically — we sort the rules collection
+// by `order` and take [0], which is the Introduction. If the intro
+// chapter's slug ever changes, the link follows automatically.
+//
+// Reused chrome:
+//   - global.css (typography, palette, container)
+//   - hubs.css (.hub-section, .hub-grid--standard, .hub-card and parts)
+// Page-scoped CSS only for the splash, about paragraph, and a couple
+// of homepage-specific refinements.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/hubs.css';
+
+// Pick the first rules chapter dynamically. The `order` field is
+// unique and 1..11; sorted ascending, [0] is the Introduction.
+const allRules = await getCollection('rules');
+const firstChapter = [...allRules].sort(
+  (a, b) => a.data.order - b.data.order,
+)[0];
+const introHref = `/rules/${firstChapter.id}/`;
+
+// Wayfinding card definitions. Order matches a natural reading path:
+// rules → character → powers → gear → world → threats → reference.
+const wayfindCards = [
+  {
+    href: '/rules/',
+    eyebrow: '11 chapters · 5 books',
+    title: 'Read the Rulebook',
+    flavor:
+      'Eleven chapters across five books. Start with the Introduction and walk into the Frontier from there.',
+  },
+  {
+    href: '/character/',
+    eyebrow: 'Origins · Tragedies · Callings',
+    title: 'Make a Character',
+    flavor:
+      'Every survivor on the Frontier carries a Root Memory and a Scar. Pick yours, then build out from there.',
+  },
+  {
+    href: '/disciplines/',
+    eyebrow: '5 psionic disciplines',
+    title: 'Touch the Current',
+    flavor:
+      'Psy-Slinger, Bastion Soul, Seer, Flesh Shaper, Mindweaver — five ways to reach across the Veil. Each one costs.',
+  },
+  {
+    href: '/equipment/',
+    eyebrow: 'Weapons · Armor · Ammunition · Gear',
+    title: 'Take What You Need',
+    flavor:
+      "Cold iron for what bleeds. Salt for what shouldn't. And the gun on your hip won't argue with the price of bullets.",
+  },
+  {
+    href: '/world/',
+    eyebrow: 'Factions · Regions · Settlements',
+    title: 'Walk the Frontier',
+    flavor:
+      "The Orvain Consortium's rails. The Dust Vultures' wastes. The Redeemers' pulpits. The towns clinging on in between.",
+  },
+  {
+    href: '/bestiary/',
+    eyebrow: 'Human · Veil-Born · Beast · Construct',
+    title: 'Know What Hunts You',
+    flavor:
+      'Humans with badges, Veil-Born horrors, beasts twisted by the Current, and the constructs that should not be.',
+  },
+  {
+    href: '/references/',
+    eyebrow: '42 lookup tables',
+    title: 'Tables and Lookups',
+    flavor:
+      'Every numeric reference the game needs — economy, combat, travel, environment, progression, social.',
+  },
+];
+---
+
+<BaseLayout
+  title="Home"
+  description="The Veil & Lead — a weird-west psionic horror tabletop RPG. Companion reference site for the rulebook."
+  pageClass="home-page"
+>
+
+  <section class="splash" aria-labelledby="splash-title">
+    <div class="container splash__inner">
+      <p class="splash__eyebrow">A Weird-West Psionic Horror RPG</p>
+
+      <h1 id="splash-title" class="splash__title">The Veil &amp; Lead</h1>
+
+      <blockquote class="splash__quote">
+        The frontier ain't right. Ain't been right for longer than any
+        soul can say. This is a land where the sky hangs wrong, where
+        rivers crawl uphill to spite nature's laws, and where a man
+        can fire bullets wrought from pure thought — if he's willing
+        to pay the price in blood and memory.
+      </blockquote>
+
+      <div class="splash__cta-row">
+        <a href={introHref} class="splash__cta">
+          Start with the Introduction →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <p class="about__lede">
+        This is the companion reference for <em>The Veil &amp; Lead</em>,
+        a tabletop role-playing game of weird-western psionic horror.
+        The rulebook, characters, places, and creatures all live here —
+        split by section, linked together, searchable.
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="hub-section" aria-labelledby="wayfind-heading">
+      <header class="hub-section__header">
+        <h2 id="wayfind-heading" class="hub-section__title">
+          Where the Road Leads
+        </h2>
+      </header>
+
+      <div class="hub-grid hub-grid--standard">
+        {wayfindCards.map((card) => (
+          <a href={card.href} class="hub-card">
+            <p class="hub-card__eyebrow">{card.eyebrow}</p>
+            <h3 class="hub-card__title">{card.title}</h3>
+            <p class="hub-card__flavor">{card.flavor}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* --- Splash ---------------------------------------------------------
+     Full-width band with a soft gradient from the sunken bg into the
+     normal bg. Internal .container constrains the content. */
+
+  .splash {
+    padding: var(--space-8) 0 var(--space-7);
+    border-bottom: 1px solid var(--color-border-strong);
+    background: linear-gradient(
+      180deg,
+      var(--color-bg-sunken) 0%,
+      var(--color-bg) 100%
+    );
+  }
+
+  .splash__inner {
+    /* Tighter than the default container max — keeps the splash
+       text columns visually centered and readable. */
+    max-width: 56rem;
+    text-align: center;
+  }
+
+  .splash__eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-3) 0;
+  }
+
+  .splash__title {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-4xl), 7vw, 5rem);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-5);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    /* Override any global h1 styles that add a divider underline —
+       the splash title doesn't want a horizontal rule. */
+    border: none;
+    padding: 0;
+  }
+
+  .splash__quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+    max-width: 42rem;
+    margin: 0 auto var(--space-6);
+    padding: 0;
+    border: none;
+  }
+
+  /* Decorative quote marks. Color picks up the dust-yellow highlight so
+     they read as ornaments rather than content. */
+  .splash__quote::before,
+  .splash__quote::after {
+    content: '"';
+    color: var(--color-highlight);
+    font-style: normal;
+  }
+
+  .splash__cta-row {
+    margin: 0;
+  }
+
+  .splash__cta {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-bg);
+    background: var(--color-accent);
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background 120ms ease, transform 120ms ease;
+  }
+
+  .splash__cta:hover,
+  .splash__cta:focus-visible {
+    background: var(--color-accent-hover);
+    transform: translateY(-1px);
+  }
+
+  /* --- About ----------------------------------------------------------- */
+
+  .about {
+    padding: var(--space-6) 0 var(--space-3);
+  }
+
+  .about__lede {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* --- Hub section spacing ---------------------------------------------
+     The shared hub-section chrome handles cards/headers; just give the
+     homepage's wayfinding section appropriate top/bottom breathing
+     room. */
+
+  .home-page .hub-section {
+    padding-block: var(--space-4) var(--space-7);
+  }
+
+  /* --- Mobile refinements --------------------------------------------- */
+
+  @media (max-width: 36rem) {
+    .splash {
+      padding: var(--space-6) 0 var(--space-5);
+    }
+
+    .splash__eyebrow {
+      letter-spacing: 0.14em;
+    }
+
+    .splash__quote {
+      font-size: var(--text-base);
+    }
+  }
+</style>

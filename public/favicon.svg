@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background — deep charcoal disc -->
+  <circle cx="32" cy="32" r="30" fill="#14110f" stroke="#b04a2f" stroke-width="2"/>
+  <!-- A stylized bullet, vertical, rust-toned -->
+  <path d="M 32 14 Q 28 14 28 20 L 28 44 Q 28 50 32 50 Q 36 50 36 44 L 36 20 Q 36 14 32 14 Z" fill="#b04a2f"/>
+  <!-- A subtle "veil" line across — the horizon between iron and the Current -->
+  <line x1="12" y1="32" x2="52" y2="32" stroke="#c8a45c" stroke-width="1" opacity="0.6"/>
+</svg>

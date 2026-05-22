@@ -1,0 +1,149 @@
+---
+// =============================================================================
+// /origins/ — listing page (4 hero cards)
+// =============================================================================
+// 4 origins. Renders as a hero-style card grid using the standard
+// .card-grid chrome from listings.css. Sorted by letter (A → D).
+//
+// Each card shows: the canonical letter, name, tagline, and a small
+// summary of the structured choices (attribute pair, skill pair).
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { lastIdSegment } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const allOrigins = await getCollection('origins');
+type Origin = CollectionEntry<'origins'>;
+
+const sorted: Origin[] = [...allOrigins].sort(
+  (a, b) => a.data.letter.localeCompare(b.data.letter),
+);
+
+// Build a skill-name lookup so the "skills choice" line on each card
+// shows display names ("Ballistics") instead of slugs ("ballistics").
+const allSkills = await getCollection('skills');
+const skillNameByFlat = new Map<string, string>(
+  allSkills.map((s) => [lastIdSegment(s.id), s.data.name]),
+);
+
+const total = sorted.length;
+---
+
+<BaseLayout
+  title="Origins"
+  description="The four origins of The Veil & Lead — where your character came from before everything else."
+  pageClass="origins-listing-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Origins</h1>
+      <p class="listing-header__count">{total} origins</p>
+      <p class="listing-header__lede">
+        Where you came from — the place and people that raised you, the
+        dialect you speak when you're angry, the food you crave when you're
+        homesick. Each Origin grants an attribute bump and a native skill.
+      </p>
+    </header>
+
+    <div class="card-grid">
+      {sorted.map((entry) => {
+        const attrStr = entry.data.attribute_choice.join(' / ');
+        const skillStr = entry.data.native_skill_choice
+          .map((id) => skillNameByFlat.get(id) ?? id)
+          .join(' / ');
+        return (
+          <a href={`/origins/${lastIdSegment(entry.id)}/`} class="origin-card">
+            <p class="origin-card__letter">Origin {entry.data.letter}</p>
+            <h2 class="origin-card__name">{entry.data.name}</h2>
+            <p class="origin-card__tagline">{entry.data.tagline}</p>
+            <dl class="origin-card__choices">
+              <dt>Attribute</dt>
+              <dd>{attrStr}</dd>
+              <dt>Native Skill</dt>
+              <dd>{skillStr}</dd>
+            </dl>
+          </a>
+        );
+      })}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .origin-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 120ms ease, background-color 120ms ease;
+  }
+
+  .origin-card:hover {
+    border-color: var(--color-accent);
+    background: rgba(176, 74, 47, 0.04);
+  }
+
+  .origin-card__letter {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .origin-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0;
+    font-style: normal;
+    line-height: var(--line-snug);
+  }
+
+  .origin-card:hover .origin-card__name {
+    color: var(--color-accent-hover);
+  }
+
+  .origin-card__tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    line-height: var(--line-snug);
+    margin: 0;
+  }
+
+  .origin-card__choices {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-2) var(--space-3);
+    margin: auto 0 0 0;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+  }
+
+  .origin-card__choices dt {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .origin-card__choices dd {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    margin: 0;
+  }
+</style>

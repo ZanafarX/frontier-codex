@@ -1,0 +1,104 @@
+---
+// =============================================================================
+// /weapon-qualities/<id>/ — detail page
+// =============================================================================
+// Glossary entry. Header (name, applies_to badges, tags), effect panel,
+// body content. No expansion section — weapon qualities don't reference
+// other glossary entries.
+//
+// STYLES
+//   .short-effect-panel is shared via detail.css (consolidated in
+//   Batch 14). Page-scoped block now only holds .glossary-body.
+//
+// FORMATTERS
+//   The inline formatAppliesTo function is intentionally kept inline.
+//   It renders 'all' → "All Weapons" (the descriptive form) for the
+//   detail page badge. The shared formatters.ts formatAppliesTo returns
+//   just "All" (the short form used by the listing page). Per the
+//   Batch 13b decision, this descriptive label stays.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const qualities = await getCollection('weaponQualities');
+  return qualities.map((q) => ({
+    params: { id: q.id },
+    props: { entry: q },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'weaponQualities'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// applies_to values: firearm, melee, thrown, all
+function formatAppliesTo(t: string): string {
+  const map: Record<string, string> = {
+    firearm: 'Firearm',
+    melee: 'Melee',
+    thrown: 'Thrown',
+    all: 'All Weapons',
+  };
+  return map[t] ?? t;
+}
+
+const pageTitle = entry.data.name;
+const pageDescription = `${entry.data.short_effect}`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="weapon-quality-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/weapon-qualities/" class="detail-back__link">
+          ← All Weapon Qualities
+        </a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <div class="detail-header__badges">
+          {entry.data.applies_to.map((t) => (
+            <Badge variant="type" label={formatAppliesTo(t)} />
+          ))}
+          {entry.data.tags.map((t) => (
+            <Badge variant="muted" label={t} size="sm" />
+          ))}
+        </div>
+      </header>
+
+      <p class="short-effect-panel">
+        <strong>Effect:</strong> {entry.data.short_effect}
+      </p>
+
+      <section class="glossary-body">
+        <Content />
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .glossary-body {
+    margin-top: var(--space-4);
+  }
+
+  .glossary-body p:last-child {
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,142 @@
+---
+// =============================================================================
+// /npcs/ — listing page (alphabetical card grid)
+// =============================================================================
+// Named individuals. Sorted by name. Each card shows name, role (italic),
+// faction badge (if any), location, and a "Stats" indicator when the NPC
+// has a combat stat block.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import '../../styles/listings.css';
+
+const npcs = (await getCollection('npcs')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+
+// Faction display name lookup.
+const factions = await getCollection('factions');
+const factionNameById = new Map(factions.map((f) => [f.id, f.data.name]));
+---
+
+<BaseLayout
+  title="Named Figures"
+  description="The named individuals of the Frontier — Sheriffs, Rail Barons, preachers, gunslingers, witches, and everyone else who's earned a name."
+  pageClass="npcs-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Named Figures</h1>
+      <p class="listing-header__count">{npcs.length} individuals</p>
+      <p class="listing-header__lede">
+        The people who matter — by name, by deed, or by who they answer to.
+      </p>
+    </header>
+
+    <div class="card-grid">
+      {npcs.map((n) => {
+        const hasStats = !!n.data.stats;
+        return (
+          <article class="npc-card">
+            <a href={`/npcs/${n.id}/`} class="npc-card__link">
+              <header class="npc-card__header">
+                <h3 class="npc-card__name">{n.data.name}</h3>
+                <p class="npc-card__role">{n.data.role}</p>
+              </header>
+
+              <div class="npc-card__meta">
+                {n.data.faction && (
+                  <Badge
+                    variant="type"
+                    label={factionNameById.get(n.data.faction) ?? n.data.faction}
+                    size="sm"
+                  />
+                )}
+                {hasStats && <Badge variant="highlight" label="Stat-Blocked" size="sm" />}
+              </div>
+
+              {n.data.location && (
+                <p class="npc-card__location">
+                  <span class="npc-card__label">Location:</span>
+                  {n.data.location}
+                </p>
+              )}
+            </a>
+          </article>
+        );
+      })}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .npc-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+
+  .npc-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .npc-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .npc-card__header {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-2);
+  }
+
+  .npc-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .npc-card__role {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin: var(--space-1) 0 0;
+  }
+
+  .npc-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .npc-card__location {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    margin: 0;
+  }
+
+  .npc-card__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-right: var(--space-2);
+  }
+</style>

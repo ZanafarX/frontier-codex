@@ -1,0 +1,100 @@
+---
+// =============================================================================
+// STAT BLOCK
+// =============================================================================
+// Generic horizontal label/value strip. NOT entity-specific — talent detail
+// pages pass talent stats; weapon pages will pass weapon stats; creature
+// pages will pass creature stats. The component just renders rows of
+// label/value pairs in a boxed, monospace-leaning strip.
+//
+// USAGE
+//   import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+//
+//   const rows: StatRow[] = [
+//     { label: 'Cost', value: '1 Strain' },
+//     { label: 'TN', value: 9 },
+//     { label: 'Tempo', value: 4 },
+//   ];
+//
+//   <StatBlock rows={rows} />
+//
+// PROPS
+//   rows: array of { label, value, mono? }
+//         mono defaults to true — numerals and short abbreviations read
+//         best in JetBrains Mono. Pass `mono: false` for prose values
+//         like "Weapon Base + 1" when serif is clearer.
+// =============================================================================
+
+export interface StatRow {
+  label: string;
+  value: string | number;
+  mono?: boolean;
+}
+
+interface Props {
+  rows: StatRow[];
+}
+
+const { rows } = Astro.props;
+---
+
+<dl class="stat-block">
+  {rows.map((row) => (
+    <div class="stat-block__row">
+      <dt class="stat-block__label">{row.label}</dt>
+      <dd
+        class:list={[
+          'stat-block__value',
+          { 'stat-block__value--mono': row.mono !== false },
+        ]}
+      >
+        {row.value}
+      </dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  .stat-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-6);
+    margin: var(--space-5) 0;
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .stat-block__row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+  }
+
+  .stat-block__label {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: calc(var(--text-xs) * 0.95);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .stat-block__value {
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+    white-space: nowrap;
+  }
+
+  .stat-block__value--mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+</style>

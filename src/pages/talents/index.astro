@@ -1,0 +1,207 @@
+---
+// =============================================================================
+// /talents/ — listing page (filtered grid, sectioned)
+// =============================================================================
+// ~313 talents in a sectioned, filterable grid. Five psionic sections (one
+// per discipline) plus seven mundane sections (Combat, Non-Combat, and one
+// per Calling). Filter by type, discipline, rank, category, calling. Search
+// by name. Empty sections auto-hide when filters narrow them out.
+// Click → /talents/<id>/ detail page.
+//
+// CARD MARKUP
+//   Phase 3a Batch 1 inlined the card. Phase 3b Batch 1 extracted it to
+//   <TalentCard>. This file is now structure-only: grouping, sorting,
+//   sectioning, filter wiring. Card visuals live in TalentCard.astro.
+//
+// SECTION CHROME
+//   Phase 3b Batch 2 moved .talent-section* CSS to src/styles/listings.css
+//   so the discipline-detail page can reuse the section chrome. This file's
+//   scoped <style> block is now empty and has been removed.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import TalentCard from '../../components/TalentCard.astro';
+import {
+  formatDiscipline,
+  formatCalling,
+  formatRankName,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const allTalents = await getCollection('talents');
+
+// --- Group psionic talents by discipline -------------------------------------
+const DISCIPLINES = [
+  'psy-slinger',
+  'bastion-soul',
+  'seer',
+  'flesh-shaper',
+  'mindweaver',
+] as const;
+
+// The talents collection is a discriminated union on `data.type`. Astro emits
+// CollectionEntry<'talents'> as a single object with the union at the `data`
+// field, so Extract works on `Talent['data']` (which IS a union) rather than
+// on Talent itself. Type predicates then let us narrow `.filter()` results
+// to properly-typed arrays.
+type Talent = (typeof allTalents)[number];
+type PsionicTalent = Talent & { data: Extract<Talent['data'], { type: 'psionic' }> };
+type MundaneTalent = Talent & { data: Extract<Talent['data'], { type: 'mundane' }> };
+const isPsionic = (t: Talent): t is PsionicTalent => t.data.type === 'psionic';
+const isMundane = (t: Talent): t is MundaneTalent => t.data.type === 'mundane';
+
+const psionicByDiscipline: Record<string, PsionicTalent[]> = {};
+for (const d of DISCIPLINES) psionicByDiscipline[d] = [];
+
+for (const t of allTalents.filter(isPsionic)) {
+  psionicByDiscipline[t.data.discipline].push(t);
+}
+
+// Sort each discipline's talents by rank then name.
+for (const d of DISCIPLINES) {
+  psionicByDiscipline[d].sort((a, b) => {
+    if (a.data.rank !== b.data.rank) return a.data.rank - b.data.rank;
+    return a.data.name.localeCompare(b.data.name);
+  });
+}
+
+// --- Group mundane talents ---------------------------------------------------
+const CALLINGS = ['gunhand', 'muck-raker', 'high-roller', 'shepherd', 'rail-jack'] as const;
+
+const mundaneCombat: MundaneTalent[] = [];
+const mundaneNonCombat: MundaneTalent[] = [];
+const mundaneByCalling: Record<string, MundaneTalent[]> = {};
+for (const c of CALLINGS) mundaneByCalling[c] = [];
+
+for (const t of allTalents.filter(isMundane)) {
+  if (t.data.category === 'combat') mundaneCombat.push(t);
+  else if (t.data.category === 'non-combat') mundaneNonCombat.push(t);
+  else if (t.data.category === 'calling' && t.data.calling) {
+    mundaneByCalling[t.data.calling].push(t);
+  }
+}
+mundaneCombat.sort((a, b) => a.data.name.localeCompare(b.data.name));
+mundaneNonCombat.sort((a, b) => a.data.name.localeCompare(b.data.name));
+for (const c of CALLINGS) {
+  mundaneByCalling[c].sort((a, b) => a.data.name.localeCompare(b.data.name));
+}
+
+// --- Filter bar options ------------------------------------------------------
+const typeOptions = [
+  { value: 'psionic', label: 'Psionic' },
+  { value: 'mundane', label: 'Mundane' },
+];
+const disciplineOptions = DISCIPLINES.map((d) => ({
+  value: d,
+  label: formatDiscipline(d),
+}));
+const rankOptions = [1, 2, 3, 4, 5].map((r) => ({
+  value: String(r),
+  label: `R${r} ${formatRankName(r)}`,
+}));
+const categoryOptions = [
+  { value: 'combat', label: 'Combat' },
+  { value: 'non-combat', label: 'Non-Combat' },
+  { value: 'calling', label: 'Calling' },
+];
+const callingOptions = CALLINGS.map((c) => ({
+  value: c,
+  label: formatCalling(c),
+}));
+
+// --- Section descriptors -----------------------------------------------------
+const psionicSections = DISCIPLINES.map((d) => ({
+  key: `psionic-${d}`,
+  title: formatDiscipline(d),
+  talents: psionicByDiscipline[d],
+}));
+
+const mundaneSections = [
+  { key: 'mundane-combat',     title: 'Mundane — Combat',     talents: mundaneCombat },
+  { key: 'mundane-non-combat', title: 'Mundane — Non-Combat', talents: mundaneNonCombat },
+  ...CALLINGS.map((c) => ({
+    key: `mundane-calling-${c}`,
+    title: `Mundane — ${formatCalling(c)}`,
+    talents: mundaneByCalling[c],
+  })),
+];
+---
+
+<BaseLayout
+  title="Talents"
+  description="Every talent in The Veil & Lead — psionic powers earned with sacrifice, mundane techniques honed with practice."
+  pageClass="talents-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Talents</h1>
+      <p class="listing-header__count">{allTalents.length} talents</p>
+      <p class="listing-header__lede">
+        Every talent in the game. Psionic powers earned with sacrifice;
+        mundane techniques honed with practice. Filter by what you're hunting.
+      </p>
+    </header>
+
+    <FilterBar
+      id="talents-filter"
+      targetSelector="#talents-list"
+      totalCount={allTalents.length}
+      searchPlaceholder="Search talents by name…"
+      groups={[
+        { key: 'type',       label: 'Type',       options: typeOptions },
+        { key: 'discipline', label: 'Discipline', options: disciplineOptions },
+        { key: 'rank',       label: 'Rank',       options: rankOptions },
+        { key: 'category',   label: 'Category',   options: categoryOptions },
+        { key: 'calling',    label: 'Calling',    options: callingOptions },
+      ]}
+    />
+
+    <div id="talents-list">
+
+      {/* --- Psionic sections --- */}
+      {psionicSections.map((section) => (
+        <section
+          class="talent-section"
+          data-filter-section
+          data-section-key={section.key}
+        >
+          <header class="talent-section__header">
+            <h2 class="talent-section__title">{section.title}</h2>
+            <span class="talent-section__count">{section.talents.length}</span>
+          </header>
+
+          <div class="compact-grid">
+            {section.talents.map((t) => (
+              <TalentCard talent={t} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {/* --- Mundane sections --- */}
+      {mundaneSections.map((section) => (
+        <section
+          class="talent-section"
+          data-filter-section
+          data-section-key={section.key}
+        >
+          <header class="talent-section__header">
+            <h2 class="talent-section__title">{section.title}</h2>
+            <span class="talent-section__count">{section.talents.length}</span>
+          </header>
+
+          <div class="compact-grid">
+            {section.talents.map((t) => (
+              <TalentCard talent={t} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+    </div>
+
+  </div>
+</BaseLayout>

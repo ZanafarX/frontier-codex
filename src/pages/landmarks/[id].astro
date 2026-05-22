@@ -1,0 +1,124 @@
+---
+// =============================================================================
+// /landmarks/<id>/ — detail page
+// =============================================================================
+// One page per landmark. Smaller and simpler than regions/settlements —
+// most of the content lives in the body.
+//
+// LAYOUT
+//   1. Back-link to PARENT REGION (contextual)
+//   2. Header: name (h1), flavor (when present)
+//   3. <StatBlock>: Region · Type · Danger Level
+//   4. <Content />: body
+//   5. Cross-refs footer: parent region badge
+//
+// FORMATTERS
+//   formatLandmarkType, formatDangerLevel, dangerVariant all now live in
+//   lib/formatters.ts (consolidated in Batch 13). Previous inline
+//   definitions removed.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import {
+  formatRegion,
+  formatLandmarkType,
+  formatDangerLevel,
+  dangerVariant,
+} from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const landmarks = await getCollection('landmarks');
+  return landmarks.map((l) => ({
+    params: { id: l.id },
+    props: { entry: l },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'landmarks'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const regionLabel = formatRegion(entry.data.region);
+const typeLabel = formatLandmarkType(entry.data.landmark_type);
+const dangerLabel = formatDangerLevel(entry.data.danger_level);
+
+const statRows: StatRow[] = [
+  { label: 'Region', value: regionLabel, mono: false },
+  { label: 'Type', value: typeLabel, mono: false },
+  { label: 'Danger', value: dangerLabel, mono: false },
+];
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.flavor
+  ? `${entry.data.flavor} — a ${typeLabel.toLowerCase()} landmark in ${regionLabel}.`
+  : `${entry.data.name} — a ${typeLabel.toLowerCase()} landmark in ${regionLabel}.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="landmark-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href={`/regions/${entry.data.region}/`} class="detail-back__link">
+          ← {regionLabel}
+        </a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.flavor && (
+          <p class="detail-header__flavor">"{entry.data.flavor}"</p>
+        )}
+
+        <div class="detail-header__badges">
+          <Badge variant="region" label={regionLabel} />
+          <Badge variant="type" label={typeLabel} />
+          <Badge
+            variant={dangerVariant(entry.data.danger_level)}
+            label={`Danger: ${dangerLabel}`}
+          />
+        </div>
+      </header>
+
+      <StatBlock rows={statRows} />
+
+      <section class="landmark-body">
+        <Content />
+      </section>
+
+      <footer class="detail-refs">
+        <div class="detail-refs__group">
+          <h2 class="detail-refs__label">Region</h2>
+          <div class="detail-refs__items">
+            <Badge
+              variant="region"
+              label={regionLabel}
+              href={`/regions/${entry.data.region}/`}
+              size="sm"
+            />
+          </div>
+        </div>
+      </footer>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .landmark-body {
+    margin-top: var(--space-4);
+  }
+</style>

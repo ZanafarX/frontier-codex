@@ -1,0 +1,152 @@
+---
+// =============================================================================
+// /gear/<id>/ — detail page
+// =============================================================================
+// Header, stat block (type, uses, price-or-cost-rating), optional Bonus
+// callout (when the `bonus` field is set — short mechanical effect string),
+// then body content.
+//
+// Gear schema has both price_scrip and cost_rating fields, often both
+// present. The stat block prefers price_scrip when available and falls
+// back to cost_rating only if scrip is absent (avoids redundant rows).
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import { formatScrip, lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const gears = await getCollection('gear');
+  return gears.map((g) => ({
+    params: { id: lastIdSegment(g.id) },
+    props: { entry: g },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'gear'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Inline gear-type formatter — same pattern as armor's. Move to
+// lib/formatters.ts when the gear listing page is built.
+function formatGearType(t: string): string {
+  const map: Record<string, string> = {
+    tool: 'Tool',
+    consumable: 'Consumable',
+    survival: 'Survival',
+    mount: 'Mount',
+    vehicle: 'Vehicle',
+    focus: 'Psionic Focus',
+    misc: 'Misc',
+  };
+  return map[t] ?? t;
+}
+
+const typeLabel = formatGearType(entry.data.gear_type);
+
+const statRows: StatRow[] = [
+  { label: 'Type', value: typeLabel, mono: false },
+];
+if (typeof entry.data.uses === 'number') {
+  statRows.push({ label: 'Uses', value: entry.data.uses });
+}
+if (typeof entry.data.price_scrip === 'number') {
+  statRows.push({ label: 'Price', value: formatScrip(entry.data.price_scrip) });
+} else if (typeof entry.data.cost_rating === 'number') {
+  // Scrip preferred; show cost_rating only if scrip is absent.
+  statRows.push({ label: 'Cost', value: entry.data.cost_rating });
+}
+
+const hasBonus =
+  typeof entry.data.bonus === 'string' && entry.data.bonus.length > 0;
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.flavor
+  ? `${entry.data.flavor} — ${typeLabel}.`
+  : `${entry.data.name} — ${typeLabel}.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="gear-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/gear/" class="detail-back__link">← All Gear</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.flavor && (
+          <p class="detail-header__flavor">"{entry.data.flavor}"</p>
+        )}
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={typeLabel} />
+          {entry.data.tags.map((t) => (
+            <Badge variant="muted" label={t} size="sm" />
+          ))}
+        </div>
+      </header>
+
+      <StatBlock rows={statRows} />
+
+      {hasBonus && (
+        <div class="gear-bonus">
+          <span class="gear-bonus__label">Bonus</span>
+          <span class="gear-bonus__value">{entry.data.bonus}</span>
+        </div>
+      )}
+
+      <section class="gear-body">
+        <Content />
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .gear-body {
+    margin-top: var(--space-4);
+  }
+
+  .gear-bonus {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin: var(--space-4) 0;
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-bg-sunken);
+    border-left: 3px solid var(--color-highlight);
+    border-radius: var(--radius-sm);
+  }
+
+  .gear-bonus__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+  }
+
+  .gear-bonus__value {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+  }
+</style>

@@ -1,0 +1,386 @@
+---
+// =============================================================================
+// /character/ — the Character hub
+// =============================================================================
+// An encyclopedia-shaped reference index for the five character-creation
+// primitives: Origins, Tragedies, Callings, Attributes, Skills.
+//
+// LAYOUT
+//   1. Listing header — title, summed count, lede pointing at Chapter 1
+//      for the actual walkthrough.
+//   2. Five anchored sections (Origins → Tragedies → Callings →
+//      Attributes → Skills). Each section:
+//        - Header row with title, count, and "Browse all →" link.
+//        - Short intro paragraph.
+//        - Compact mini-card grid (or, for Skills, a category-column
+//          layout with skill-name rows).
+//
+// SHARED CHROME via hubs.css
+//   .hub-section, .hub-grid*, .hub-card (base + __eyebrow / __title /
+//   __chip / __flavor), .hub-subsection__title — all in hubs.css.
+//
+// PAGE-SCOPED EXTRAS (this file)
+//   .hub-card--attribute (centered variant), .hub-card__abbr,
+//   .hub-card__name, .hub-skill-categories, .hub-skill-category__title,
+//   .hub-skill-list, .hub-skill-link family.
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  formatDiscipline,
+  formatSkillCategory,
+  lastIdSegment,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+import '../../styles/hubs.css';
+
+// --- Canonical orders -------------------------------------------------------
+
+const ATTRIBUTE_ORDER = ['IRON', 'GRIT', 'QUICK', 'SAVVY', 'SWAY', 'ECHO'] as const;
+const ATTR_ORDER_MAP = new Map<string, number>(
+  ATTRIBUTE_ORDER.map((a, i) => [a, i]),
+);
+
+const SKILL_CATEGORY_ORDER = [
+  'combat',
+  'physical',
+  'social',
+  'knowledge',
+  'survival',
+  'technical',
+  'psionic',
+] as const;
+type SkillCat = (typeof SKILL_CATEGORY_ORDER)[number];
+
+// --- Data fetching ----------------------------------------------------------
+
+const [origins, tragedies, callings, attributes, skills] = await Promise.all([
+  getCollection('origins'),
+  getCollection('tragedies'),
+  getCollection('callings'),
+  getCollection('attributes'),
+  getCollection('skills'),
+]);
+
+// --- Sorting ----------------------------------------------------------------
+
+const originsSorted = [...origins].sort(
+  (a, b) => a.data.letter.localeCompare(b.data.letter),
+);
+
+const tragediesSorted = [...tragedies].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+
+const mundaneCallings = [...callings]
+  .filter((c) => c.data.type === 'mundane')
+  .sort((a, b) => a.data.number - b.data.number);
+
+const psionicCallings = [...callings]
+  .filter((c) => c.data.type === 'psionic')
+  .sort((a, b) => a.data.number - b.data.number);
+
+const attributesSorted = [...attributes].sort((a, b) => {
+  const ai = ATTR_ORDER_MAP.get(a.data.abbr) ?? 99;
+  const bi = ATTR_ORDER_MAP.get(b.data.abbr) ?? 99;
+  return ai - bi;
+});
+
+const skillsAlpha = [...skills].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const skillsByCategory = new Map<SkillCat, CollectionEntry<'skills'>[]>();
+for (const cat of SKILL_CATEGORY_ORDER) skillsByCategory.set(cat, []);
+for (const s of skillsAlpha) {
+  skillsByCategory.get(s.data.category as SkillCat)!.push(s);
+}
+---
+
+<BaseLayout
+  title="Character"
+  description="The character creation reference for The Veil & Lead — origins, tragedies, callings, attributes, and skills."
+  pageClass="character-hub-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Character</h1>
+      <p class="listing-header__count">
+        {origins.length} origins · {tragedies.length} tragedies · {callings.length} callings · {attributes.length} attributes · {skills.length} skills
+      </p>
+      <p class="listing-header__lede">
+        Every character in <em>The Veil &amp; Lead</em> is built from five
+        primitives — where you came from, what broke you, what you do now,
+        what your body and mind can do, and what you know how to do. This
+        page is the reference index. For the step-by-step walkthrough of
+        how these combine in play, see
+        <a href="/rules/chapter-1-the-long-road/">Chapter 1: The Long Road</a>.
+      </p>
+    </header>
+
+    {/* --- ORIGINS --- */}
+    <section id="origins" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Origins</h2>
+        <span class="hub-section__count">{origins.length}</span>
+        <a href="/origins/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Where you came from. Each Origin grants a starting attribute bump and
+        a native skill.
+      </p>
+      <div class="hub-grid hub-grid--standard">
+        {originsSorted.map((entry) => (
+          <a
+            href={`/origins/${lastIdSegment(entry.id)}/`}
+            class="hub-card hub-card--origin"
+          >
+            <p class="hub-card__eyebrow">Origin {entry.data.letter}</p>
+            <h3 class="hub-card__title">{entry.data.name}</h3>
+            <p class="hub-card__flavor">{entry.data.tagline}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- TRAGEDIES --- */}
+    <section id="tragedies" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Tragedies</h2>
+        <span class="hub-section__count">{tragedies.length}</span>
+        <a href="/tragedies/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        The wound your character carries into the campaign. Each Tragedy
+        grants an attribute bump and seeds the first of your five Core
+        Memories.
+      </p>
+      <div class="hub-grid hub-grid--standard">
+        {tragediesSorted.map((entry) => (
+          <a
+            href={`/tragedies/${lastIdSegment(entry.id)}/`}
+            class="hub-card hub-card--tragedy"
+          >
+            <h3 class="hub-card__title">{entry.data.name}</h3>
+            <p class="hub-card__chip">+1 {entry.data.attribute_bonus}</p>
+            <p class="hub-card__flavor">{entry.data.summary}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- CALLINGS --- */}
+    <section id="callings" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Callings</h2>
+        <span class="hub-section__count">{callings.length}</span>
+        <a href="/callings/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        What you do on the Frontier — your archetype, role, and starting
+        kit. Five mundane paths and five psionic.
+      </p>
+
+      <h3 class="hub-subsection__title">Mundane</h3>
+      <div class="hub-grid hub-grid--standard">
+        {mundaneCallings.map((entry) => (
+          <a
+            href={`/callings/${lastIdSegment(entry.id)}/`}
+            class="hub-card hub-card--calling"
+          >
+            <h4 class="hub-card__title">{entry.data.name}</h4>
+            <p class="hub-card__chip">{entry.data.archetype}</p>
+            <p class="hub-card__flavor">{entry.data.tagline}</p>
+          </a>
+        ))}
+      </div>
+
+      <h3 class="hub-subsection__title">Psionic</h3>
+      <div class="hub-grid hub-grid--standard">
+        {psionicCallings.map((entry) => (
+          <a
+            href={`/callings/${lastIdSegment(entry.id)}/`}
+            class="hub-card hub-card--calling"
+          >
+            <h4 class="hub-card__title">{entry.data.name}</h4>
+            <p class="hub-card__chip">
+              {entry.data.archetype}
+              {entry.data.discipline && (
+                <span> · {formatDiscipline(entry.data.discipline)}</span>
+              )}
+            </p>
+            <p class="hub-card__flavor">{entry.data.tagline}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- ATTRIBUTES --- */}
+    <section id="attributes" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Attributes</h2>
+        <span class="hub-section__count">{attributes.length}</span>
+        <a href="/attributes/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        The six axes of capability. Every roll pairs an attribute with a
+        skill.
+      </p>
+      <div class="hub-grid hub-grid--attributes">
+        {attributesSorted.map((entry) => (
+          <a
+            href={`/attributes/${lastIdSegment(entry.id)}/`}
+            class="hub-card hub-card--attribute"
+          >
+            <p class="hub-card__abbr">{entry.data.abbr}</p>
+            <h3 class="hub-card__name">{entry.data.name}</h3>
+            <p class="hub-card__flavor">{entry.data.tagline}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- SKILLS --- */}
+    <section id="skills" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Skills</h2>
+        <span class="hub-section__count">{skills.length}</span>
+        <a href="/skills/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Training and expertise. Skills pair with attributes to form dice
+        pools — Attribute Rank + Skill Rank.
+      </p>
+      <div class="hub-skill-categories">
+        {SKILL_CATEGORY_ORDER.map((cat) => {
+          const skillsInCat = skillsByCategory.get(cat) ?? [];
+          if (skillsInCat.length === 0) return null;
+          return (
+            <div class="hub-skill-category">
+              <h3 class="hub-skill-category__title">
+                {formatSkillCategory(cat)}
+              </h3>
+              <ul class="hub-skill-list">
+                {skillsInCat.map((s) => (
+                  <li>
+                    <a
+                      href={`/skills/${lastIdSegment(s.id)}/`}
+                      class="hub-skill-link"
+                    >
+                      <span class="hub-skill-link__name">{s.data.name}</span>
+                      <span class="hub-skill-link__attr">
+                        {s.data.primary_attribute}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* Page-scoped extras for /character/. Base section/grid/card chrome
+     comes from hubs.css; this block holds the variants and one-off
+     layouts that are specific to the character primitives. */
+
+  /* --- Attribute card variant: centered, abbr-prominent --------------- */
+
+  .hub-card--attribute {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hub-card__abbr {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .hub-card--attribute:hover .hub-card__abbr {
+    color: var(--color-accent-hover);
+  }
+
+  .hub-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin: 0;
+    font-style: normal;
+  }
+
+  /* --- Skill categories — column layout with name+attr rows ----------- */
+
+  .hub-skill-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-4);
+  }
+
+  .hub-skill-category__title {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin: 0 0 var(--space-2) 0;
+    padding-bottom: var(--space-1);
+    border-bottom: 1px solid var(--color-border);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .hub-skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hub-skill-list li {
+    margin: 0;
+  }
+
+  .hub-skill-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+    text-decoration: none;
+    color: inherit;
+    border-radius: var(--radius-sm);
+    transition: background-color 120ms ease;
+  }
+
+  .hub-skill-link:hover {
+    background: rgba(176, 74, 47, 0.06);
+  }
+
+  .hub-skill-link__name {
+    font-family: var(--font-serif);
+    color: var(--color-accent);
+  }
+
+  .hub-skill-link:hover .hub-skill-link__name {
+    color: var(--color-accent-hover);
+  }
+
+  .hub-skill-link__attr {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+  }
+</style>

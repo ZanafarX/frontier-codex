@@ -1,0 +1,111 @@
+---
+// =============================================================================
+// BASE LAYOUT
+// =============================================================================
+// The master page template. Every page on the site wraps its content in this
+// layout to inherit the header, footer, fonts, styles, and meta tags.
+//
+// USAGE (in any .astro page):
+//   ---
+//   import BaseLayout from '../layouts/BaseLayout.astro';
+//   ---
+//   <BaseLayout title="Talents" description="Browse every Talent in the game.">
+//     <h1>Talents</h1>
+//     <p>... page content ...</p>
+//   </BaseLayout>
+//
+// PROPS
+//   title:        appears in the browser tab; also used in <title> + og:title
+//   description:  appears in search engine snippets and social previews
+//   pageClass:    optional CSS class added to <main> for page-specific styling
+//
+// PAGEFIND SEARCH SCOPE
+//   The <main> element carries `data-pagefind-body` so the site-wide
+//   search index built by astro-pagefind only sees the page's primary
+//   content — not the nav links or footer text, which would otherwise
+//   pollute every result. Added in Phase 4 Batch 1.
+// =============================================================================
+
+import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  pageClass?: string;
+}
+
+const {
+  title,
+  description = 'The Veil & Lead — a weird-west psionic horror tabletop RPG.',
+  pageClass,
+} = Astro.props;
+
+const fullTitle = title === 'Home'
+  ? 'The Veil & Lead'
+  : `${title} — The Veil & Lead`;
+
+const currentPath = Astro.url.pathname;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#14110f" />
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+
+    <!-- Preconnect to Google Fonts to shave a few ms off load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>{fullTitle}</title>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <SiteNav currentPath={currentPath} />
+
+    <main id="main-content" class={pageClass} data-pagefind-body>
+      <slot />
+    </main>
+
+    <SiteFooter />
+
+    <style>
+      /* Skip-link for keyboard users: invisible until focused */
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-accent);
+        color: var(--color-bg);
+        padding: var(--space-2) var(--space-4);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+        z-index: 1000;
+        transition: top 120ms ease;
+      }
+
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
+  </body>
+</html>

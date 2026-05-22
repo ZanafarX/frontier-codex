@@ -1,0 +1,380 @@
+---
+// =============================================================================
+// FILTER BAR
+// =============================================================================
+// Renders a row of filter pill groups + a search input + a count + clear
+// button, then wires up client-side filtering against a target container.
+//
+// HOW IT WIRES UP
+//   1. The bar has a data-filter-target attribute pointing at a CSS selector
+//      (e.g. "#talents-list").
+//   2. Inside that target, items to filter have data-filter-item plus one
+//      data-<key> attribute per filter dimension (e.g. data-discipline,
+//      data-rank, data-type, data-name).
+//   3. Sections that should auto-hide when empty have data-filter-section.
+//   4. The script in this component finds every .filter-bar on the page
+//      and wires up listeners that toggle CSS visibility on matching items.
+//
+// USAGE
+//   <FilterBar
+//     id="talents-filter"
+//     targetSelector="#talents-list"
+//     groups={[
+//       { key: 'type', label: 'Type', options: [
+//         { value: 'psionic', label: 'Psionic' },
+//         { value: 'mundane', label: 'Mundane' },
+//       ]},
+//       { key: 'discipline', label: 'Discipline', options: [...] },
+//     ]}
+//     searchPlaceholder="Search talents…"
+//     totalCount={313}
+//   />
+//
+// FILTER LOGIC
+//   OR within a group ("Psy-Slinger" OR "Bastion Soul")
+//   AND between groups (Discipline filter AND Rank filter AND Type filter)
+//   Search text further narrows: substring match against data-name.
+// =============================================================================
+
+interface FilterOption {
+  value: string;
+  label: string;
+}
+
+interface FilterGroup {
+  key: string;
+  label: string;
+  options: FilterOption[];
+}
+
+interface Props {
+  id: string;
+  targetSelector: string;
+  groups?: FilterGroup[];
+  searchPlaceholder?: string;
+  totalCount?: number;
+  showSearch?: boolean;
+}
+
+const {
+  id,
+  targetSelector,
+  groups = [],
+  searchPlaceholder = 'Search…',
+  totalCount,
+  showSearch = true,
+} = Astro.props;
+---
+
+<div
+  class="filter-bar"
+  id={id}
+  data-filter-target={targetSelector}
+  data-total={totalCount}
+>
+  <div class="filter-bar__top">
+    {showSearch && (
+      <div class="filter-bar__search">
+        <label for={`${id}-search`} class="sr-only">Search</label>
+        <input
+          type="search"
+          id={`${id}-search`}
+          class="filter-search"
+          placeholder={searchPlaceholder}
+          autocomplete="off"
+        />
+      </div>
+    )}
+
+    <div class="filter-bar__meta">
+      {totalCount !== undefined && (
+        <span class="filter-count" aria-live="polite">
+          {totalCount} of {totalCount}
+        </span>
+      )}
+      <button type="button" class="filter-clear">Clear all</button>
+    </div>
+  </div>
+
+  {groups.length > 0 && (
+    <div class="filter-bar__groups">
+      {groups.map((group) => (
+        <div class="filter-group">
+          <span class="filter-group__label">{group.label}</span>
+          <div class="filter-group__pills">
+            {group.options.map((opt) => (
+              <button
+                type="button"
+                class="filter-pill"
+                data-filter-key={group.key}
+                data-filter-value={opt.value}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .filter-bar {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5);
+    margin-block: var(--space-5);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .filter-bar__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-3);
+  }
+
+  .filter-bar__search {
+    flex: 1 1 18rem;
+  }
+
+  .filter-search {
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-bg-sunken);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+  }
+
+  .filter-search:focus {
+    outline: none;
+    border-color: var(--color-highlight);
+    box-shadow: 0 0 0 1px var(--color-highlight);
+  }
+
+  .filter-bar__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .filter-count {
+    white-space: nowrap;
+  }
+
+  .filter-clear {
+    background: transparent;
+    border: 1px solid var(--color-border-strong);
+    color: var(--color-text-muted);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+  }
+
+  .filter-clear:hover {
+    color: var(--color-text);
+    border-color: var(--color-accent);
+  }
+
+  .filter-bar__groups {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .filter-group__label {
+    flex: 0 0 6rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    text-align: right;
+  }
+
+  .filter-group__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    flex: 1 1 auto;
+  }
+
+  .filter-pill {
+    background: transparent;
+    border: 1px solid var(--color-border-strong);
+    color: var(--color-text-muted);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: border-color 0.1s, color 0.1s, background 0.1s;
+  }
+
+  .filter-pill:hover {
+    color: var(--color-text);
+    border-color: var(--color-highlight);
+  }
+
+  .filter-pill.is-active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  /* --- Responsive: stack group label above pills on narrow screens ------- */
+
+  @media (max-width: 720px) {
+    .filter-group {
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-2);
+    }
+    .filter-group__label {
+      text-align: left;
+      flex: 0 0 auto;
+    }
+  }
+</style>
+
+<script>
+  // =============================================================================
+  // FILTER BAR — CLIENT SCRIPT
+  // =============================================================================
+  // Iterates every .filter-bar on the page, reads its target selector and
+  // wires up event handlers. Multiple filter bars on one page are supported;
+  // each operates independently on its own target.
+  // =============================================================================
+
+  type FilterState = Record<string, Set<string>>;
+
+  function hookUpFilterBar(bar: HTMLElement): void {
+    const targetSelector = bar.dataset.filterTarget;
+    if (!targetSelector) return;
+
+    const target = document.querySelector(targetSelector);
+    if (!target) return;
+
+    const items = Array.from(
+      target.querySelectorAll<HTMLElement>('[data-filter-item]'),
+    );
+    const sections = Array.from(
+      target.querySelectorAll<HTMLElement>('[data-filter-section]'),
+    );
+
+    const filters: FilterState = {};
+    let searchText = '';
+
+    const pills = bar.querySelectorAll<HTMLButtonElement>('.filter-pill');
+    const searchInput = bar.querySelector<HTMLInputElement>('.filter-search');
+    const clearBtn = bar.querySelector<HTMLButtonElement>('.filter-clear');
+    const countEl = bar.querySelector<HTMLElement>('.filter-count');
+    const totalCount = items.length;
+
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const key = pill.dataset.filterKey;
+        const value = pill.dataset.filterValue;
+        if (!key || !value) return;
+
+        if (!filters[key]) filters[key] = new Set();
+        if (filters[key].has(value)) {
+          filters[key].delete(value);
+          pill.classList.remove('is-active');
+        } else {
+          filters[key].add(value);
+          pill.classList.add('is-active');
+        }
+        applyFilters();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        searchText = searchInput.value.toLowerCase().trim();
+        applyFilters();
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        Object.keys(filters).forEach((k) => filters[k].clear());
+        searchText = '';
+        if (searchInput) searchInput.value = '';
+        pills.forEach((p) => p.classList.remove('is-active'));
+        applyFilters();
+      });
+    }
+
+    function applyFilters(): void {
+      let visibleCount = 0;
+
+      for (const item of items) {
+        let show = true;
+
+        // AND between groups, OR within a group.
+        for (const key of Object.keys(filters)) {
+          const active = filters[key];
+          if (active.size === 0) continue;
+          const itemValue = item.getAttribute(`data-${key}`) ?? '';
+          if (!active.has(itemValue)) {
+            show = false;
+            break;
+          }
+        }
+
+        // Search by name (substring match on data-name).
+        if (show && searchText) {
+          const name = (item.getAttribute('data-name') ?? '').toLowerCase();
+          if (!name.includes(searchText)) show = false;
+        }
+
+        item.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      }
+
+      // Hide sections whose items are all hidden.
+      for (const section of sections) {
+        const visibleInSection = section.querySelectorAll<HTMLElement>(
+          '[data-filter-item]',
+        );
+        let anyVisible = false;
+        visibleInSection.forEach((el) => {
+          if (el.style.display !== 'none') anyVisible = true;
+        });
+        section.style.display = anyVisible ? '' : 'none';
+      }
+
+      if (countEl) {
+        countEl.textContent = `${visibleCount} of ${totalCount}`;
+      }
+    }
+  }
+
+  document
+    .querySelectorAll<HTMLElement>('.filter-bar')
+    .forEach(hookUpFilterBar);
+</script>

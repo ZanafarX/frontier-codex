@@ -1,0 +1,250 @@
+---
+// =============================================================================
+// /disciplines/<id>/ — detail page
+// =============================================================================
+// One page per discipline. Five pages total — static-generated at build time.
+//
+// LAYOUT
+//   1. Back-link "← All Disciplines"
+//   2. Header: name (h1), sub_name (italic), tagline (blockquote), badges
+//        (role + secondary_role + key_attribute + "Psionic" tag)
+//   3. <StatBlock>: Role · Key Attribute · Secondary · Total Talents
+//   4. <Content />: discipline body — Reaction Convention, Tier-Removal
+//        Hierarchy, Sub-Cluster Ladders, Key Mechanical Notes. Rendered
+//        with global heading styles (no per-page override).
+//   5. "Talents in this Discipline": five rank sections (Cantrips → Miracles),
+//        each rendering a grid of <TalentCard> for that discipline+rank.
+//        Reuses the .talent-section / .compact-grid chrome from listings.css.
+//   6. Cross-refs footer: linked calling badge (will 404 until callings
+//        detail page lands next batch).
+//
+// CROSS-REF RESOLUTION
+//   Each psionic calling has `data.discipline = "<short_name>"`. We scan
+//   callings once in getStaticPaths and pass the {id, name} pair as a prop.
+//   If no match exists, the cross-refs footer is hidden.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import TalentCard from '../../components/TalentCard.astro';
+import { formatRankName } from '../../lib/formatters';
+import '../../styles/detail.css';
+import '../../styles/listings.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const disciplines = await getCollection('disciplines');
+  const talents = await getCollection('talents');
+  const callings = await getCollection('callings');
+
+  return disciplines.map((d) => {
+    const shortName = d.data.short_name;
+
+    // Group this discipline's psionic talents by rank.
+    // TS narrows t.data inside the type-check, so t.data.rank and
+    // t.data.discipline are properly typed inside the conditional.
+    const talentsByRank: Record<number, CollectionEntry<'talents'>[]> = {
+      1: [], 2: [], 3: [], 4: [], 5: [],
+    };
+    for (const t of talents) {
+      if (t.data.type === 'psionic' && t.data.discipline === shortName) {
+        talentsByRank[t.data.rank].push(t);
+      }
+    }
+    // Alphabetical within each rank.
+    for (const r of [1, 2, 3, 4, 5]) {
+      talentsByRank[r].sort((a, b) => a.data.name.localeCompare(b.data.name));
+    }
+
+    // Find the corresponding psionic calling (every discipline currently
+    // has one). Return null if none, so the footer cleanly hides.
+    const linkedCalling = callings.find(
+      (c) => c.data.type === 'psionic' && c.data.discipline === shortName,
+    );
+
+    return {
+      params: { id: d.id },
+      props: {
+        entry: d,
+        talentsByRank,
+        linkedCalling: linkedCalling
+          ? { id: linkedCalling.id, name: linkedCalling.data.name }
+          : null,
+      },
+    };
+  });
+}
+
+// --- Page rendering ---------------------------------------------------------
+
+interface Props {
+  entry: CollectionEntry<'disciplines'>;
+  talentsByRank: Record<number, CollectionEntry<'talents'>[]>;
+  linkedCalling: { id: string; name: string } | null;
+}
+
+const { entry, talentsByRank, linkedCalling } = Astro.props;
+const { Content } = await render(entry);
+
+// --- Stat block rows --------------------------------------------------------
+const totalTalents = entry.data.talent_count_by_rank.reduce((a, b) => a + b, 0);
+
+const statRows: StatRow[] = [
+  { label: 'Role', value: entry.data.role, mono: false },
+  { label: 'Key Attribute', value: entry.data.key_attribute },
+];
+if (entry.data.secondary_role) {
+  statRows.push({ label: 'Secondary', value: entry.data.secondary_role, mono: false });
+}
+statRows.push({ label: 'Total Talents', value: totalTalents });
+
+// --- Has-any-talents check for the rank grid section ------------------------
+const hasAnyTalents = [1, 2, 3, 4, 5].some((r) => talentsByRank[r].length > 0);
+
+// --- Page metadata ----------------------------------------------------------
+const pageTitle = entry.data.name;
+const pageDescription = `${entry.data.tagline} — ${entry.data.role} discipline of The Veil & Lead.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="discipline-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      {/* --- Back link --- */}
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/disciplines/" class="detail-back__link">← All Disciplines</a>
+      </nav>
+
+      {/* --- Header --- */}
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <p class="detail-header__subname">{entry.data.sub_name}</p>
+
+        <blockquote class="detail-header__tagline">
+          "{entry.data.tagline}"
+        </blockquote>
+
+        <div class="detail-header__badges">
+          <Badge variant="discipline" label={entry.data.role} />
+          {entry.data.secondary_role && (
+            <Badge variant="muted" label={entry.data.secondary_role} />
+          )}
+          <Badge variant="highlight" label={entry.data.key_attribute} />
+          <Badge variant="type" label="Psionic" />
+        </div>
+      </header>
+
+      {/* --- Stat block --- */}
+      <StatBlock rows={statRows} />
+
+      {/* --- Body content --- */}
+      {/* No heading-override wrapper: discipline bodies have proper section
+          headings that deserve the global big-display-font h2 treatment. */}
+      <section class="discipline-body">
+        <Content />
+      </section>
+
+      {/* --- Talents in this Discipline --- */}
+      {hasAnyTalents && (
+        <section class="discipline-talents">
+          <h2 class="discipline-talents__title">Talents in this Discipline</h2>
+
+          {[1, 2, 3, 4, 5].map((rank) => {
+            const list = talentsByRank[rank];
+            if (list.length === 0) return null;
+            return (
+              <section class="talent-section">
+                <header class="talent-section__header">
+                  <h3 class="talent-section__title">
+                    Rank {rank} · {formatRankName(rank)}
+                  </h3>
+                  <span class="talent-section__count">{list.length}</span>
+                </header>
+                <div class="compact-grid">
+                  {list.map((t) => <TalentCard talent={t} />)}
+                </div>
+              </section>
+            );
+          })}
+        </section>
+      )}
+
+      {/* --- Cross-references footer --- */}
+      {linkedCalling && (
+        <footer class="detail-refs">
+          <div class="detail-refs__group">
+            <h2 class="detail-refs__label">Associated Calling</h2>
+            <div class="detail-refs__items">
+              <Badge
+                variant="calling"
+                label={linkedCalling.name}
+                href={`/callings/${linkedCalling.id}/`}
+                size="sm"
+              />
+            </div>
+          </div>
+        </footer>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Header sub-name and tagline (page-scoped) --------------------------
+     These differ from talent-detail header chrome (which only has a flavor
+     line). Disciplines have name + sub_name + tagline — three layered
+     labels. The sub_name reads as a quiet secondary identifier; the tagline
+     is the loud display-font motto. */
+
+  .detail-header__subname {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    margin: var(--space-2) 0 0;
+    line-height: var(--line-snug);
+  }
+
+  .detail-header__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-xl);
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    border: none;
+    background: none;
+    line-height: var(--line-snug);
+  }
+
+  /* --- Body wrapper —— spacing only, no heading override --------------- */
+
+  .discipline-body {
+    margin-top: var(--space-4);
+  }
+
+  /* --- Talents-in-this-Discipline section ------------------------------ */
+
+  .discipline-talents {
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border-strong);
+  }
+
+  .discipline-talents__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-3);
+  }
+</style>

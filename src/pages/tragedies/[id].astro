@@ -1,0 +1,97 @@
+---
+// =============================================================================
+// /tragedies/<id>/ — detail page
+// =============================================================================
+// One page per tragedy. 6 pages total, static-generated at build time.
+//
+// LAYOUT
+//   1. Back link → /tragedies/
+//   2. Header: H1 name, italic summary, highlight badge for +1 attr
+//        (linked to the attribute detail page)
+//   3. Body content (the prose explanation of the tragedy)
+//   4. Scar Memory Examples (.memory-examples — italic quoted prompts)
+// =============================================================================
+
+import {
+  getCollection,
+  render,
+  type CollectionEntry,
+} from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const allTragedies = await getCollection('tragedies');
+  return allTragedies.map((entry) => ({
+    params: { id: lastIdSegment(entry.id) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'tragedies'>;
+}
+
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+
+const attrUrl = `/attributes/${entry.data.attribute_bonus.toLowerCase()}/`;
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.summary;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="tragedy-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/tragedies/" class="detail-back__link">← All Tragedies</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <p class="detail-header__flavor">{entry.data.summary}</p>
+
+        <div class="detail-header__badges">
+          <Badge
+            variant="highlight"
+            label={`+1 ${entry.data.attribute_bonus}`}
+            href={attrUrl}
+          />
+        </div>
+      </header>
+
+      <section class="tragedy-body">
+        <Content />
+      </section>
+
+      <section class="tragedy-section">
+        <h2>Scar Memory Examples</h2>
+        <ul class="memory-examples">
+          {entry.data.scar_memory_examples.map((m) => (
+            <li>{m}</li>
+          ))}
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .tragedy-body {
+    margin-top: var(--space-5);
+  }
+
+  .tragedy-section {
+    margin-top: var(--space-6);
+  }
+</style>

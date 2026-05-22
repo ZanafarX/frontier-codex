@@ -1,0 +1,310 @@
+---
+// =============================================================================
+// /weapons/<id>/ — detail page
+// =============================================================================
+// One page per weapon. ~21 pages total — static-generated at build time.
+//
+// LAYOUT
+//   1. Back-link "← All Weapons"
+//   2. Header: name (h1), flavor (italic line), weapon-type badge +
+//        quality pills (unlinked summary)
+//   3. <StatBlock>: WR · Tempo · Capacity (when present) · Range · Price
+//   4. <Content />: weapon body — description prose with inline rule
+//        callouts (e.g. **Range restriction:** ...)
+//   5. Qualities section (when any): each quality fully expanded inline —
+//        name as linked h3, tags, short_effect label, full body markdown.
+//
+// QUALITY RESOLUTION
+//   Each weapon's `qualities` array is an array of quality IDs. We resolve
+//   them in getStaticPaths to the full weapon-qualities entries, then in
+//   the page frontmatter await render() on each to get its Content
+//   component. The variable rename (Content → QualityContent) avoids
+//   shadowing the outer weapon Content.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import {
+  formatRange,
+  formatScrip,
+  formatWeaponType,
+  lastIdSegment,
+} from '../../lib/formatters';
+import '../../styles/detail.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const weapons = await getCollection('weapons');
+  const qualities = await getCollection('weaponQualities');
+
+  // Quality entries live flat in src/content/weapon-qualities/, so q.id is
+  // already the kebab-case slug like "scatter" or "breaker". No subfolder
+  // stripping needed.
+  const qualityById = new Map<string, CollectionEntry<'weaponQualities'>>(
+    qualities.map((q) => [q.id, q]),
+  );
+
+  return weapons.map((w) => {
+    // Resolve quality IDs to full entries; silently drop any missing.
+    const resolvedQualities = w.data.qualities
+      .map((id) => qualityById.get(id))
+      .filter((q): q is CollectionEntry<'weaponQualities'> => !!q);
+
+    return {
+      params: { id: lastIdSegment(w.id) },
+      props: { entry: w, resolvedQualities },
+    };
+  });
+}
+
+// --- Page rendering ---------------------------------------------------------
+
+interface Props {
+  entry: CollectionEntry<'weapons'>;
+  resolvedQualities: CollectionEntry<'weaponQualities'>[];
+}
+
+const { entry, resolvedQualities } = Astro.props;
+
+// Render the weapon body.
+const { Content } = await render(entry);
+
+// Render each quality's body Content too. Promise.all keeps the awaits
+// parallel. Renaming Content → QualityContent in the destructure avoids
+// shadowing the outer weapon Content.
+const qualityRenders = await Promise.all(
+  resolvedQualities.map(async (q) => ({
+    quality: q,
+    QualityContent: (await render(q)).Content,
+  })),
+);
+
+// --- Stat block rows --------------------------------------------------------
+const statRows: StatRow[] = [
+  { label: 'WR', value: entry.data.weapon_rating },
+  { label: 'Tempo', value: entry.data.tempo },
+];
+// Melee weapons omit capacity entirely (schema optional). Skip the row when
+// absent rather than showing "—" — capacity is not unknown, it's not a
+// property of this weapon.
+if (typeof entry.data.capacity === 'number') {
+  statRows.push({ label: 'Capacity', value: entry.data.capacity });
+}
+statRows.push({ label: 'Range', value: formatRange(entry.data.optimal_range || '—') });
+statRows.push({ label: 'Price', value: formatScrip(entry.data.price_scrip) });
+
+const hasQualities = resolvedQualities.length > 0;
+
+// --- Page metadata ----------------------------------------------------------
+const pageTitle = entry.data.name;
+const typeLabel = formatWeaponType(entry.data.weapon_type);
+const pageDescription = entry.data.flavor
+  ? `${entry.data.flavor} — ${typeLabel}.`
+  : `${entry.data.name} — ${typeLabel}.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="weapon-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      {/* --- Back link --- */}
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/weapons/" class="detail-back__link">← All Weapons</a>
+      </nav>
+
+      {/* --- Header --- */}
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.flavor && (
+          <p class="detail-header__flavor">"{entry.data.flavor}"</p>
+        )}
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={typeLabel} />
+          {entry.data.qualities.map((q) => (
+            <Badge variant="quality" label={q} size="sm" />
+          ))}
+        </div>
+      </header>
+
+      {/* --- Stat block --- */}
+      <StatBlock rows={statRows} />
+
+      {/* --- Body content --- */}
+      <section class="weapon-body">
+        <Content />
+      </section>
+
+      {/* --- Qualities expansion --- */}
+      {hasQualities && (
+        <section class="weapon-qualities">
+          <h2 class="weapon-qualities__title">Qualities</h2>
+          <p class="weapon-qualities__lede">
+            Effects this weapon carries into every engagement.
+          </p>
+
+          <div class="quality-cards">
+            {qualityRenders.map(({ quality, QualityContent }) => (
+              <article class="quality-card">
+                <header class="quality-card__header">
+                  <h3 class="quality-card__name">
+                    <a href={`/weapon-qualities/${quality.id}/`}>
+                      {quality.data.name}
+                    </a>
+                  </h3>
+                  {quality.data.tags && quality.data.tags.length > 0 && (
+                    <div class="quality-card__tags">
+                      {quality.data.tags.map((t) => (
+                        <Badge variant="muted" label={t} size="sm" />
+                      ))}
+                    </div>
+                  )}
+                </header>
+
+                <p class="quality-card__short">
+                  <strong>Effect:</strong> {quality.data.short_effect}
+                </p>
+
+                <div class="quality-card__body">
+                  <QualityContent />
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Body wrapper —— spacing only, no heading override --------------- */
+
+  .weapon-body {
+    margin-top: var(--space-4);
+  }
+
+  /* --- Qualities section ----------------------------------------------- */
+
+  .weapon-qualities {
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border-strong);
+  }
+
+  .weapon-qualities__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-2);
+  }
+
+  .weapon-qualities__lede {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin: 0 0 var(--space-5);
+    line-height: var(--line-snug);
+    max-width: var(--prose-max);
+  }
+
+  /* --- Quality cards ---------------------------------------------------
+     Vertical stack (not grid) — quality bodies can be substantial
+     paragraphs, so each card gets full reading width. Dust-yellow left
+     border distinguishes them from the description body above. */
+
+  .quality-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .quality-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-left: 3px solid var(--color-highlight);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .quality-card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
+  }
+
+  .quality-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    margin: 0;
+    line-height: var(--line-tight);
+    font-style: normal;
+  }
+
+  .quality-card__name a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .quality-card__name a:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+  }
+
+  .quality-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  /* --- short_effect label box ------------------------------------------
+     The short_effect reads as a one-line summary — mono panel with a
+     tiny "Effect:" caption. Looks like a stat row, sits between the
+     name and the full body prose. */
+
+  .quality-card__short {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+    margin: 0 0 var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-bg-sunken);
+    border-radius: var(--radius-sm);
+  }
+
+  .quality-card__short strong {
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    margin-right: var(--space-2);
+  }
+
+  /* --- quality body prose ---------------------------------------------- */
+
+  .quality-card__body {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    line-height: var(--line-base);
+  }
+
+  .quality-card__body p:last-child {
+    margin-bottom: 0;
+  }
+</style>

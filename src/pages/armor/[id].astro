@@ -1,0 +1,265 @@
+---
+// =============================================================================
+// /armor/<id>/ — detail page
+// =============================================================================
+// One page per armor entry. Mirrors weapons/[id].astro's structure: header,
+// stat block, body, then expanded properties (each armor-property's full
+// body rendered inline). Back-link 404s until /armor/ listing exists.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import { formatScrip, lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const armors = await getCollection('armor');
+  const properties = await getCollection('armorProperties');
+
+  const propertyById = new Map<string, CollectionEntry<'armorProperties'>>(
+    properties.map((p) => [p.id, p]),
+  );
+
+  return armors.map((a) => {
+    const resolvedProperties = a.data.properties
+      .map((id) => propertyById.get(id))
+      .filter((p): p is CollectionEntry<'armorProperties'> => !!p);
+
+    return {
+      params: { id: lastIdSegment(a.id) },
+      props: { entry: a, resolvedProperties },
+    };
+  });
+}
+
+interface Props {
+  entry: CollectionEntry<'armor'>;
+  resolvedProperties: CollectionEntry<'armorProperties'>[];
+}
+
+const { entry, resolvedProperties } = Astro.props;
+const { Content } = await render(entry);
+
+// Render each property's body Content too.
+const propertyRenders = await Promise.all(
+  resolvedProperties.map(async (p) => ({
+    property: p,
+    PropertyContent: (await render(p)).Content,
+  })),
+);
+
+// Inline armor-type formatter. Add to lib/formatters.ts in a future pass
+// once the armor listing page also needs it.
+function formatArmorType(t: string): string {
+  const map: Record<string, string> = {
+    light: 'Light Armor',
+    medium: 'Medium Armor',
+    heavy: 'Heavy Armor',
+    shield: 'Shield',
+  };
+  return map[t] ?? t;
+}
+
+const typeLabel = formatArmorType(entry.data.armor_type);
+
+// Stat block: shields show Defense bonus instead of AR; other armor shows AR.
+// Both may show Price.
+const statRows: StatRow[] = [];
+if (entry.data.armor_type === 'shield') {
+  if (typeof entry.data.defense_bonus === 'number') {
+    statRows.push({ label: 'Defense', value: `+${entry.data.defense_bonus}` });
+  }
+} else {
+  statRows.push({ label: 'AR', value: entry.data.armor_rating });
+}
+statRows.push({ label: 'Price', value: formatScrip(entry.data.price_scrip) });
+
+const hasProperties = resolvedProperties.length > 0;
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.flavor
+  ? `${entry.data.flavor} — ${typeLabel}.`
+  : `${entry.data.name} — ${typeLabel}.`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} pageClass="armor-detail-page">
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/armor/" class="detail-back__link">← All Armor</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.flavor && (
+          <p class="detail-header__flavor">"{entry.data.flavor}"</p>
+        )}
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={typeLabel} />
+          {entry.data.properties.map((p) => (
+            <Badge variant="quality" label={p} size="sm" />
+          ))}
+        </div>
+      </header>
+
+      <StatBlock rows={statRows} />
+
+      <section class="armor-body">
+        <Content />
+      </section>
+
+      {hasProperties && (
+        <section class="armor-properties">
+          <h2 class="armor-properties__title">Properties</h2>
+          <p class="armor-properties__lede">
+            Effects this armor carries while worn.
+          </p>
+
+          <div class="property-cards">
+            {propertyRenders.map(({ property, PropertyContent }) => (
+              <article class="property-card">
+                <header class="property-card__header">
+                  <h3 class="property-card__name">
+                    <a href={`/armor-properties/${property.id}/`}>
+                      {property.data.name}
+                    </a>
+                  </h3>
+                  {property.data.tags && property.data.tags.length > 0 && (
+                    <div class="property-card__tags">
+                      {property.data.tags.map((t) => (
+                        <Badge variant="muted" label={t} size="sm" />
+                      ))}
+                    </div>
+                  )}
+                </header>
+                <p class="property-card__short">
+                  <strong>Effect:</strong> {property.data.short_effect}
+                </p>
+                <div class="property-card__body">
+                  <PropertyContent />
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Mirrors weapon-quality card pattern in src/pages/weapons/[id].astro.
+     Identical structure; separately scoped. A future refactor pass can
+     extract a shared <GlossaryExpansionCard> component. */
+
+  .armor-body {
+    margin-top: var(--space-4);
+  }
+
+  .armor-properties {
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border-strong);
+  }
+
+  .armor-properties__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-2);
+  }
+
+  .armor-properties__lede {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin: 0 0 var(--space-5);
+    line-height: var(--line-snug);
+    max-width: var(--prose-max);
+  }
+
+  .property-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .property-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-left: 3px solid var(--color-highlight);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .property-card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
+  }
+
+  .property-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    margin: 0;
+    line-height: var(--line-tight);
+    font-style: normal;
+  }
+
+  .property-card__name a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .property-card__name a:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+  }
+
+  .property-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .property-card__short {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+    margin: 0 0 var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-bg-sunken);
+    border-radius: var(--radius-sm);
+  }
+
+  .property-card__short strong {
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    margin-right: var(--space-2);
+  }
+
+  .property-card__body {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    line-height: var(--line-base);
+  }
+
+  .property-card__body p:last-child {
+    margin-bottom: 0;
+  }
+</style>

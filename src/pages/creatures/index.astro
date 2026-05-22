@@ -1,0 +1,235 @@
+---
+// =============================================================================
+// /creatures/ — listing page (sectioned compact grid + filters)
+// =============================================================================
+// ~35 creatures grouped by creature_type. Filters: faction, tier. Cards
+// show name, tier badge, faction badge, and a vitals strip (HP/Def/AR/Pool).
+// Reuses .talent-section + .compact-grid + FilterBar from the talents
+// listing pattern.
+//
+// FORMATTERS
+//   formatCreatureType and formatTier now live in lib/formatters.ts
+//   (consolidated in Batch 13b). Previous inline definitions removed.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import { formatCreatureType, formatTier } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const creatures = (await getCollection('creatures')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+
+// Faction display name lookup.
+const factions = await getCollection('factions');
+const factionNameById = new Map(factions.map((f) => [f.id, f.data.name]));
+
+const CREATURE_TYPES = ['human', 'veil-born', 'beast', 'construct'] as const;
+
+type Creature = (typeof creatures)[number];
+
+const byType: Record<string, Creature[]> = {};
+for (const t of CREATURE_TYPES) byType[t] = [];
+for (const c of creatures) {
+  if (byType[c.data.creature_type]) {
+    byType[c.data.creature_type].push(c);
+  }
+}
+
+// 1. Map to raw faction data strings/undefined
+const rawFactions = creatures.map((c) => c.data.faction);
+
+// 2. Filter out undefined values safely using a boolean check
+const validFactions = Array.from(new Set(rawFactions)).filter(
+  (f): f is Exclude<typeof f, undefined> => !!f
+);
+
+// 3. Build the options mapping safely
+const factionOptions = validFactions
+  .sort()
+  .map((f) => ({ 
+    value: f, 
+    label: factionNameById.get(f) ?? f 
+  }));
+
+const tierOptions = ['minion', 'soldier', 'elite', 'boss'].map((t) => ({
+  value: t,
+  label: formatTier(t),
+}));
+
+const sections = CREATURE_TYPES
+  .filter((t) => byType[t].length > 0)
+  .map((t) => ({
+    key: t,
+    title: formatCreatureType(t),
+    creatures: byType[t],
+  }));
+---
+
+<BaseLayout
+  title="Bestiary"
+  description="The creatures of the Frontier — humans with badges, Veil-born horrors, beasts twisted by the Current, and constructs that should not be."
+  pageClass="creatures-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Bestiary</h1>
+      <p class="listing-header__count">{creatures.length} creatures</p>
+      <p class="listing-header__lede">
+        Everything that will kill you on the Frontier — sorted by what it is,
+        filterable by who sent it and how hard it'll hit.
+      </p>
+    </header>
+
+    <FilterBar
+      id="creatures-filter"
+      targetSelector="#creatures-list"
+      totalCount={creatures.length}
+      searchPlaceholder="Search creatures…"
+      groups={[
+        { key: 'faction', label: 'Faction', options: factionOptions },
+        { key: 'tier', label: 'Tier', options: tierOptions },
+      ]}
+    />
+
+    <div id="creatures-list">
+      {sections.map((section) => (
+        <section
+          class="talent-section"
+          data-filter-section
+          data-section-key={section.key}
+        >
+          <header class="talent-section__header">
+            <h2 class="talent-section__title">{section.title}</h2>
+            <span class="talent-section__count">{section.creatures.length}</span>
+          </header>
+
+          <div class="compact-grid">
+            {section.creatures.map((c) => (
+              <article
+                class="creature-card"
+                data-filter-item
+                data-name={c.data.name.toLowerCase()}
+                data-faction={c.data.faction ?? ''}
+                data-tier={c.data.tier}
+              >
+                <a href={`/creatures/${c.id}/`} class="creature-card__link">
+                  <h3 class="creature-card__name">{c.data.name}</h3>
+
+                  <div class="creature-card__meta">
+                    <Badge
+                      variant="rank"
+                      label={`${formatTier(c.data.tier)} · ${c.data.xp_value} XP`}
+                      size="sm"
+                    />
+                    {c.data.faction && (
+                      <Badge
+                        variant="type"
+                        label={factionNameById.get(c.data.faction) ?? c.data.faction}
+                        size="sm"
+                      />
+                    )}
+                  </div>
+
+                  <dl class="creature-card__vitals">
+                    <div>
+                      <dt>HP</dt>
+                      <dd>{c.data.vitals.hp}</dd>
+                    </div>
+                    <div>
+                      <dt>Def</dt>
+                      <dd>{c.data.vitals.defense}</dd>
+                    </div>
+                    <div>
+                      <dt>AR</dt>
+                      <dd>{c.data.vitals.armor_rating}</dd>
+                    </div>
+                    <div>
+                      <dt>Mettle</dt>
+                      <dd>{c.data.vitals.mettle}</dd>
+                    </div>
+                  </dl>
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .creature-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.1s, transform 0.1s;
+  }
+
+  .creature-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+  }
+
+  .creature-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .creature-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .creature-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .creature-card__vitals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-2);
+    margin: var(--space-2) 0 0;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .creature-card__vitals > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+  }
+
+  .creature-card__vitals dt {
+    color: var(--color-text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: calc(var(--text-xs) * 0.85);
+    margin: 0;
+  }
+
+  .creature-card__vitals dd {
+    color: var(--color-text);
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

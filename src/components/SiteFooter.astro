@@ -1,0 +1,71 @@
+---
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
+// Bottom of every page. Project credit, a thematic quote, and a small
+// utility nav.
+// =============================================================================
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner container">
+    <p class="site-footer__quote">
+      "The Veil hums between the rails. Don't listen too long."
+    </p>
+
+    <div class="site-footer__meta">
+      <p>
+        <strong>The Veil &amp; Lead</strong> — a weird-west psionic horror RPG.
+        Game design and content &copy; {year}.
+      </p>
+      <p class="site-footer__small">
+        This is a companion reference for the rulebook. Built with
+        <a href="https://astro.build" rel="noopener">Astro</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-bg-sunken);
+    border-top: 1px solid var(--color-border-strong);
+    margin-top: var(--space-8);
+    padding: var(--space-6) 0 var(--space-5);
+    flex-shrink: 0;
+  }
+
+  .site-footer__inner {
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+
+  .site-footer__quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-5);
+    letter-spacing: 0.02em;
+  }
+
+  .site-footer__meta p {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-sm);
+  }
+
+  .site-footer__small {
+    font-size: var(--text-xs);
+    color: var(--color-text-faint);
+  }
+
+  .site-footer__small a {
+    color: var(--color-text-muted);
+  }
+
+  .site-footer__small a:hover {
+    color: var(--color-accent);
+  }
+</style>

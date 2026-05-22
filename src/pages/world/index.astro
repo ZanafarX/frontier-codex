@@ -1,0 +1,231 @@
+---
+// =============================================================================
+// /world/ — World hub
+// =============================================================================
+// Surfaces the five world collections — factions, regions, settlements,
+// landmarks, NPCs — in one curated index.
+//
+// LAYOUT
+//   1. Listing header (counts across all five collections + lede).
+//   2. Five card-grid sections (factions → regions → settlements →
+//      landmarks → NPCs). All use .hub-grid--standard.
+//
+// CARD CONTENT
+//   - Factions:    name + type chip + motto (italic flavor)
+//   - Regions:     name + tagline (italic flavor)
+//   - Settlements: parent-region eyebrow + name + sub_name (italic flavor)
+//   - Landmarks:   parent-region eyebrow + name + danger Badge
+//   - NPCs:        name + role (italic flavor) + faction chip (when set)
+//
+// TYPE FORMATTING
+//   titleCaseSlug, dangerVariant, formatFactionType, formatRegion all
+//   import from lib/formatters.ts (consolidated in Batch 13).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import {
+  formatFactionType,
+  formatRegion,
+  titleCaseSlug,
+  dangerVariant,
+  lastIdSegment,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+import '../../styles/hubs.css';
+
+// --- Data fetching ----------------------------------------------------------
+
+const [factions, regions, settlements, landmarks, npcs] = await Promise.all([
+  getCollection('factions'),
+  getCollection('regions'),
+  getCollection('settlements'),
+  getCollection('landmarks'),
+  getCollection('npcs'),
+]);
+
+// --- Lookups for cross-references ------------------------------------------
+
+const factionNameByShortName = new Map<string, string>(
+  factions.map((f) => [f.data.short_name, f.data.name]),
+);
+
+// --- Sorting ---------------------------------------------------------------
+
+const factionsSorted = [...factions].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const regionsSorted = [...regions].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const settlementsSorted = [...settlements].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const landmarksSorted = [...landmarks].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+const npcsSorted = [...npcs].sort(
+  (a, b) => a.data.name.localeCompare(b.data.name),
+);
+---
+
+<BaseLayout
+  title="World"
+  description="The Frontier of The Veil & Lead — factions, regions, settlements, landmarks, and notable NPCs."
+  pageClass="world-hub-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">World</h1>
+      <p class="listing-header__count">
+        {factions.length} factions · {regions.length} regions · {settlements.length} settlements · {landmarks.length} landmarks · {npcs.length} NPCs
+      </p>
+      <p class="listing-header__lede">
+        The Frontier and the powers that contest it. Five killing-grounds,
+        five rival factions, the settlements that survive in their cracks,
+        and the notable people who walk them.
+      </p>
+    </header>
+
+    {/* --- FACTIONS --- */}
+    <section id="factions" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Factions</h2>
+        <span class="hub-section__count">{factions.length}</span>
+        <a href="/factions/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        The five powers contesting the Frontier — corporate, tribal,
+        religious, arcane, and mercenary.
+      </p>
+      <div class="hub-grid hub-grid--standard">
+        {factionsSorted.map((f) => (
+          <a href={`/factions/${lastIdSegment(f.id)}/`} class="hub-card">
+            <h3 class="hub-card__title">{f.data.name}</h3>
+            <p class="hub-card__chip">{formatFactionType(f.data.type)}</p>
+            {f.data.motto && (
+              <p class="hub-card__flavor">"{f.data.motto}"</p>
+            )}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- REGIONS --- */}
+    <section id="regions" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Regions</h2>
+        <span class="hub-section__count">{regions.length}</span>
+        <a href="/regions/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        The five killing grounds — each lethal in its own way.
+      </p>
+      <div class="hub-grid hub-grid--standard">
+        {regionsSorted.map((r) => (
+          <a href={`/regions/${lastIdSegment(r.id)}/`} class="hub-card">
+            <h3 class="hub-card__title">{r.data.name}</h3>
+            <p class="hub-card__flavor">{r.data.tagline}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- SETTLEMENTS --- */}
+    <section id="settlements" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Settlements</h2>
+        <span class="hub-section__count">{settlements.length}</span>
+        <a href="/settlements/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Where people gather to do business, drink, or hide.
+      </p>
+      <div class="hub-grid hub-grid--standard">
+        {settlementsSorted.map((s) => (
+          <a href={`/settlements/${lastIdSegment(s.id)}/`} class="hub-card">
+            <p class="hub-card__eyebrow">{formatRegion(s.data.region)}</p>
+            <h3 class="hub-card__title">{s.data.name}</h3>
+            {s.data.sub_name && (
+              <p class="hub-card__flavor">{s.data.sub_name}</p>
+            )}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- LANDMARKS --- */}
+    <section id="landmarks" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">Landmarks</h2>
+        <span class="hub-section__count">{landmarks.length}</span>
+        <a href="/landmarks/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Places of power — stable breaches, scars, ruins. The wonders and
+        horrors fixed to the map.
+      </p>
+      <div class="hub-grid hub-grid--standard">
+        {landmarksSorted.map((l) => (
+          <a href={`/landmarks/${lastIdSegment(l.id)}/`} class="hub-card">
+            <p class="hub-card__eyebrow">{formatRegion(l.data.region)}</p>
+            <h3 class="hub-card__title">{l.data.name}</h3>
+            <div class="hub-card__chip-row">
+              <Badge
+                variant={dangerVariant(l.data.danger_level)}
+                label={`${titleCaseSlug(l.data.danger_level)} Danger`}
+                size="sm"
+              />
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* --- NPCS --- */}
+    <section id="npcs" class="hub-section">
+      <header class="hub-section__header">
+        <h2 class="hub-section__title">NPCs</h2>
+        <span class="hub-section__count">{npcs.length}</span>
+        <a href="/npcs/" class="hub-section__browse">Browse all →</a>
+      </header>
+      <p class="hub-section__intro">
+        Notable characters of the Frontier — allies, rivals, quest-givers,
+        and bosses.
+      </p>
+      <div class="hub-grid hub-grid--standard">
+        {npcsSorted.map((n) => (
+          <a href={`/npcs/${lastIdSegment(n.id)}/`} class="hub-card">
+            <h3 class="hub-card__title">{n.data.name}</h3>
+            <p class="hub-card__flavor">{n.data.role}</p>
+            {n.data.faction && (
+              <p class="hub-card__chip">
+                {factionNameByShortName.get(n.data.faction) ?? n.data.faction}
+              </p>
+            )}
+          </a>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Landmark danger Badge wrapper -------------------------------------
+     A bare Badge component placed inside a flex-column flex item gets
+     stretched to full width by the default align-items: stretch. The
+     chip-row wrapper switches to flex-direction:row so its children keep
+     their natural inline-block widths. Page-scoped because this is the
+     only hub that uses an interactive Badge inside a card right now.
+     If a second use case appears, promote to hubs.css.
+  */
+  .hub-card__chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-top: var(--space-1);
+  }
+</style>

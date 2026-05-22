@@ -1,0 +1,88 @@
+---
+// =============================================================================
+// /weapon-qualities/ — listing page (compact reference list)
+// =============================================================================
+// 13 weapon qualities. Alphabetical. Each entry shows the name (linked),
+// applies_to badges, tags, and short_effect. Mirrors the conditions
+// listing pattern.
+//
+// FORMATTERS
+//   formatAppliesTo now lives in lib/formatters.ts (consolidated in
+//   Batch 13b). Listing uses the short form ("All"). The detail page
+//   renders the long form ("All Weapons") with its own inline helper,
+//   kept by design.
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatAppliesTo } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const qualities = (await getCollection('weaponQualities')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+---
+
+<BaseLayout
+  title="Weapon Qualities"
+  description="Special properties carried by weapons — bleed, breaker, scatter, scope, and more. The qualities that turn a generic gun into a tool with personality."
+  pageClass="weapon-qualities-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Weapon Qualities</h1>
+      <p class="listing-header__count">{qualities.length} qualities</p>
+      <p class="listing-header__lede">
+        The special properties that distinguish weapons beyond raw stats.
+        Every quality changes how a weapon plays.
+      </p>
+    </header>
+
+    <div class="reference-list">
+      {qualities.map((q) => (
+        <article class="reference-list__entry" id={q.id}>
+          <header>
+            <h3><a href={`/weapon-qualities/${q.id}/`}>{q.data.name}</a></h3>
+            <div class="quality-entry__meta">
+              {q.data.applies_to.map((t) => (
+                <Badge variant="type" label={formatAppliesTo(t)} size="sm" />
+              ))}
+              {q.data.tags.map((t) => (
+                <Badge variant="muted" label={t} size="sm" />
+              ))}
+            </div>
+          </header>
+          <p class="quality-entry__effect">{q.data.short_effect}</p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .reference-list__entry header h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .reference-list__entry header h3 a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .quality-entry__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .quality-entry__effect {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    margin: var(--space-2) 0 0;
+  }
+</style>

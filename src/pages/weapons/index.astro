@@ -1,0 +1,126 @@
+---
+// =============================================================================
+// /weapons/ — listing page (filterable table)
+// =============================================================================
+// 21 weapons in a compact filterable table. Columns: Name, Type, WR, Tempo,
+// Cap, Range, Price, Qualities. Filter by weapon type; search by name.
+// Click name → /weapons/<id>/ detail page (Phase 3b).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import {
+  formatRange,
+  formatScrip,
+  formatWeaponType,
+  lastIdSegment,
+} from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const weapons = (await getCollection('weapons')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+
+// Build filter options from the distinct weapon_type values present.
+const typeOptions = Array.from(new Set(weapons.map((w) => w.data.weapon_type)))
+  .sort()
+  .map((t) => ({ value: t, label: formatWeaponType(t) }));
+---
+
+<BaseLayout
+  title="Weapons"
+  description="Every firearm, blade, and improvised killer in The Veil & Lead — from boot derringers to Gatling guns."
+  pageClass="weapons-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Weapons</h1>
+      <p class="listing-header__count">{weapons.length} weapons</p>
+      <p class="listing-header__lede">
+        The arms of the Frontier. A bullet doesn't care about your bloodline,
+        your wealth, or your breeding. It just cares about who pulls the trigger first.
+      </p>
+    </header>
+
+    <FilterBar
+      id="weapons-filter"
+      targetSelector="#weapons-list"
+      totalCount={weapons.length}
+      searchPlaceholder="Search weapons…"
+      groups={[
+        { key: 'type', label: 'Type', options: typeOptions },
+      ]}
+    />
+
+    <div id="weapons-list" class="listing-table-wrap">
+      <table class="listing-table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col" class="num">WR</th>
+            <th scope="col" class="num">Tempo</th>
+            <th scope="col" class="num">Cap</th>
+            <th scope="col">Range</th>
+            <th scope="col" class="num">Price</th>
+            <th scope="col">Qualities</th>
+          </tr>
+        </thead>
+        <tbody>
+          {weapons.map((w) => {
+            const slug = lastIdSegment(w.id);
+            return (
+              <tr
+                data-filter-item
+                data-name={w.data.name.toLowerCase()}
+                data-type={w.data.weapon_type}
+              >
+                <td class="name">
+                  <a href={`/weapons/${slug}/`}>{w.data.name}</a>
+                </td>
+                <td>{formatWeaponType(w.data.weapon_type)}</td>
+                <td class="num">{w.data.weapon_rating}</td>
+                <td class="num">{w.data.tempo}</td>
+                <td class="num">{w.data.capacity ?? '—'}</td>
+                <td>{w.data.optimal_range ? formatRange(w.data.optimal_range) : '—'}</td>
+                <td class="num">{formatScrip(w.data.price_scrip)}</td>
+                <td class="qualities-cell">
+                  {w.data.qualities.length === 0 ? (
+                    <span class="muted">—</span>
+                  ) : (
+                    w.data.qualities.map((q) => (
+                      <Badge
+                        variant="quality"
+                        label={q}
+                        size="sm"
+                        href={`/weapon-qualities/${q}/`}
+                      />
+                    ))
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .qualities-cell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    max-width: 22rem;
+  }
+
+  .muted {
+    color: var(--color-text-faint);
+    font-family: var(--font-mono);
+  }
+</style>

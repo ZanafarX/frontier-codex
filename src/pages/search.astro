@@ -1,0 +1,166 @@
+---
+// =============================================================================
+// /search/ — site-wide full-text search
+// =============================================================================
+// Static client-side search powered by Pagefind. The astro-pagefind
+// integration runs Pagefind after `astro build` to generate a WASM-
+// backed search index from the rendered HTML in dist/. The index is
+// served from /pagefind/ at runtime.
+//
+// DEV vs PROD
+//   Pagefind builds its index at `astro build` time. astro-pagefind's
+//   dev server serves the LAST-BUILT index in `npm run dev`, so:
+//     - First-time setup (never built): search returns nothing.
+//     - After at least one `npm run build`: search works in dev AND
+//       preview, using the most recent index. Content changes since
+//       the last build won't appear in search until the next build.
+//
+//   We detect dev mode via import.meta.env.DEV and show an info notice
+//   explaining the workflow. The notice disappears in production
+//   builds (preview, deployed).
+//
+// SCOPING
+//   Indexed content is whatever lives inside an element marked with
+//   `data-pagefind-body`. BaseLayout marks <main>, so nav and footer
+//   text don't pollute results. THIS page carries `data-pagefind-ignore`
+//   on its container so the search page itself isn't indexed (a
+//   search for "search" would otherwise match this page).
+//
+// THEMING
+//   Pagefind's UI reads several --pagefind-ui-* CSS variables. We
+//   override them on the .search-shell wrapper to align with the site
+//   palette. If the search box looks off after a build, the fix is
+//   here — no rebuild required.
+//
+// COMPONENT
+//   We use astro-pagefind's `Search` component (its public export).
+//   It internally composes Pagefind's config component and native
+//   <pagefind-searchbox> web component — the same pattern we'd write
+//   by hand, but with the right internals wired up.
+// =============================================================================
+
+import Search from 'astro-pagefind/components/Search';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/listings.css';
+
+const isDev = import.meta.env.DEV;
+---
+
+<BaseLayout
+  title="Search"
+  description="Search the entire site — rules, talents, creatures, factions, gear, places, names. Everything written on the site lives in here."
+  pageClass="search-page"
+>
+  <div class="container" data-pagefind-ignore>
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Search</h1>
+      <p class="listing-header__lede">
+        Type a name, a faction, a place, an effect. Everything written
+        on the site lives in here.
+      </p>
+    </header>
+
+    {isDev && (
+      <aside class="dev-notice" role="status" aria-live="polite">
+        <p class="dev-notice__title">First-time setup</p>
+        <p class="dev-notice__body">
+          Pagefind builds its search index at <code>npm run build</code>
+          time. If search returns nothing, you probably haven't built
+          the site yet.
+        </p>
+        <p class="dev-notice__body">
+          Run <code>npm run build</code> once. After that, search works
+          in both <code>npm run dev</code> and <code>npm run preview</code>.
+          Note that content changes since the last build won't appear
+          in results until the next build.
+        </p>
+      </aside>
+    )}
+
+    <div class="search-shell">
+      <Search className="pagefind-ui" />
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Page-wide spacing ------------------------------------------------ */
+
+  .search-page .container {
+    padding-block: var(--space-5) var(--space-7);
+  }
+
+  /* --- Dev-mode notice -------------------------------------------------
+     Visible only when running `npm run dev`. Styled like an info callout
+     to match the existing detail-page panel patterns. */
+
+  .dev-notice {
+    margin: var(--space-5) 0;
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-left: 3px solid var(--color-highlight);
+    border-radius: var(--radius-sm);
+  }
+
+  .dev-notice__title {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-highlight);
+    margin: 0 0 var(--space-2);
+  }
+
+  .dev-notice__body {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    color: var(--color-text);
+    margin: 0 0 var(--space-2);
+  }
+
+  .dev-notice__body:last-child {
+    margin-bottom: 0;
+  }
+
+  .dev-notice__body code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    background: var(--color-bg-sunken);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* --- Pagefind theming wrapper ----------------------------------------
+     Pagefind's UI reads these CSS custom properties. Setting them on
+     the wrapping element re-themes the search experience without
+     modifying Pagefind's stylesheet. */
+
+  .search-shell {
+    margin-top: var(--space-5);
+
+    /* Foreground / accent */
+    --pagefind-ui-primary: var(--color-accent);
+    --pagefind-ui-text: var(--color-text);
+
+    /* Surfaces */
+    --pagefind-ui-background: var(--color-bg-elevated);
+    --pagefind-ui-border: var(--color-border-strong);
+    --pagefind-ui-tag: var(--color-bg-sunken);
+
+    /* Geometry */
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: var(--radius-md);
+    --pagefind-ui-image-border-radius: var(--radius-sm);
+    --pagefind-ui-image-box-ratio: 3 / 2;
+
+    /* Typography — match the body font of the site */
+    --pagefind-ui-font: var(--font-serif);
+    --pagefind-ui-scale: 1;
+  }
+</style>

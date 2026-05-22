@@ -1,0 +1,70 @@
+---
+name: "Mounts and Transport"
+category: "travel"
+description: "Speed, capacity, and price of common mounts and vehicles. A mounted character uses the mount's Speed for Scramble, Rush, and Sprint."
+columns:
+  - key: "mount"
+    label: "Mount / Vehicle"
+  - key: "price"
+    label: "Price"
+    align: "right"
+  - key: "speed"
+    label: "Speed"
+    align: "center"
+  - key: "sprint"
+    label: "Sprint"
+    align: "center"
+  - key: "capacity"
+    label: "Capacity"
+  - key: "notes"
+    label: "Notes"
+rows:
+  - mount: "Mule"
+    price: "§80"
+    speed: "8m"
+    sprint: "24m"
+    capacity: "200 lbs"
+    notes: "Stubborn (SWAY + Ride TN 11 to force through danger); sure-footed."
+  - mount: "Draft Horse"
+    price: "§150"
+    speed: "10m"
+    sprint: "30m"
+    capacity: "Wagon work"
+    notes: "Not trained for riding or combat."
+  - mount: "Riding Horse"
+    price: "§250"
+    speed: "14m"
+    sprint: "42m"
+    capacity: "Rider + 50 lbs"
+    notes: "Standard mount."
+  - mount: "War-Horse"
+    price: "§800"
+    speed: "14m"
+    sprint: "42m"
+    capacity: "Rider + 50 lbs"
+    notes: "Combat-trained (doesn't panic at gunfire, blood, or normal violence); +1 Roll Bonus to Ride checks in combat."
+  - mount: "Sand-Skiff"
+    price: "§1,200"
+    speed: "20m"
+    sprint: "60m"
+    capacity: "4 passengers"
+    notes: "Scorchveil/desert only; requires Ride skill to pilot; useless without wind. QUICK + Ride TN 11 to maintain control at Sprint."
+  - mount: "Wagon"
+    price: "§300"
+    speed: "8m"
+    sprint: "N/A"
+    capacity: "1 ton"
+    notes: "Requires 2 draft horses; provides Light Cover for passengers; cannot Sprint."
+notes:
+  - "Mounted Sprint: rider must make QUICK + Ride TN 9 or become Exposed for an additional turn."
+  - "Mounted Combat Quick Reference — Melee vs. unmounted: +1 Step to damage. Long guns from moving mount: −2 dice (Pool Penalty). Mount killed/panics: QUICK + Ride TN 11 or fall (1d3 damage; Prone). Charge: +2 damage on first melee attack."
+  - "Sand-Skiffs are clan property among Dust Vultures; damaging one is an insult worse than murder."
+---
+
+Your mount is your speed, your range, and your problem when it dies.
+The War-Horse is worth twice the Riding Horse for a single reason —
+it doesn't run when it should.
+
+# =============================================================================
+# ENVIRONMENT (3)
+# =============================================================================

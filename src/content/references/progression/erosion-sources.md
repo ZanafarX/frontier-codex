@@ -1,0 +1,50 @@
+---
+name: "Erosion Sources"
+category: "progression"
+description: "Everything that adds to the Erosion track, merged across psionic and non-psionic sources. Erosion does not heal from rest."
+columns:
+  - key: "category"
+    label: "Category"
+    align: "center"
+  - key: "source"
+    label: "Source"
+  - key: "erosion"
+    label: "Erosion Gained"
+    align: "center"
+rows:
+  - category: "Psionic"
+    source: "Casting Rank 3 Talent (Power)"
+    erosion: "1"
+  - category: "Psionic"
+    source: "Casting Rank 4 Talent (Devastation)"
+    erosion: "2"
+  - category: "Psionic"
+    source: "Backlash (two 1s on Bleed Dice — The Tear)"
+    erosion: "1"
+  - category: "Psionic"
+    source: "Backlash (three 1s on Bleed Dice — The Breach)"
+    erosion: "Special (burns Memory immediately)"
+  - category: "Exposure"
+    source: "Witnessing extreme supernatural horror"
+    erosion: "1 (GM discretion)"
+  - category: "Exposure"
+    source: "Entering a Thin Place unprepared"
+    erosion: "1"
+  - category: "Exposure"
+    source: "Using Veil-touched artifacts"
+    erosion: "Varies"
+  - category: "Exposure"
+    source: "Prolonged Current exposure"
+    erosion: "1 per day"
+  - category: "Deprivation"
+    source: "Hallucinations (3+ days without water)"
+    erosion: "1"
+notes:
+  - "Non-Psionic characters can still accumulate Erosion from Backlash, Thin Place exposure, or witnessing supernatural horror — they don't channel, but the Current can still reach them."
+  - "Recovery (during Downtime): 2 XP clears 1 Erosion. Vice (drinking/gambling/drugs) clears 1. Anchoring (meaningful scene with Anchor) clears 2. Erosion Sink (item, shatters after 3 total) clears 1/session. Circle Sanctuary clears 3 (rare access)."
+  - "When the Erosion track fills, the character experiences a Break: burn one Core Memory, reset Erosion to 0."
+---
+
+The price of power is paid one drop at a time. A Psionic who uses one
+Rank 3 per session and never indulges a Vice will Break after about
+eight sessions. The math is terrible and intentional.

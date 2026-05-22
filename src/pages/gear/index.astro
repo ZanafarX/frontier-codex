@@ -1,0 +1,102 @@
+---
+// =============================================================================
+// /gear/ — listing page (filterable table)
+// =============================================================================
+// 16 gear entries with diverse gear_types. Filter by type. Columns: Name,
+// Type, Uses, Price (or Cost Rating fallback), Bonus (truncated).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import { formatScrip, lastIdSegment, truncate } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+const gear = (await getCollection('gear')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+
+function formatGearType(t: string): string {
+  const map: Record<string, string> = {
+    tool: 'Tool',
+    consumable: 'Consumable',
+    survival: 'Survival',
+    mount: 'Mount',
+    vehicle: 'Vehicle',
+    focus: 'Psionic Focus',
+    misc: 'Misc',
+  };
+  return map[t] ?? t;
+}
+
+// Build filter options from the distinct gear_type values present.
+const typeOptions = Array.from(new Set(gear.map((g) => g.data.gear_type)))
+  .sort()
+  .map((t) => ({ value: t, label: formatGearType(t) }));
+
+// Price column prefers scrip; falls back to cost rating; em-dash if neither.
+function priceCell(g: typeof gear[number]): string {
+  if (typeof g.data.price_scrip === 'number') return formatScrip(g.data.price_scrip);
+  if (typeof g.data.cost_rating === 'number') return `Cost ${g.data.cost_rating}`;
+  return '—';
+}
+---
+
+<BaseLayout
+  title="Gear"
+  description="Tools, consumables, survival kit, and specialized equipment. The Frontier will kill you in a hundred ways before anything supernatural gets a chance."
+  pageClass="gear-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Gear</h1>
+      <p class="listing-header__count">{gear.length} items</p>
+      <p class="listing-header__lede">
+        Tools for the work, consumables for the road, and specialized kit
+        for those who know what they're doing. Don't underbuy salt.
+      </p>
+    </header>
+
+    <FilterBar
+      id="gear-filter"
+      targetSelector="#gear-list"
+      totalCount={gear.length}
+      searchPlaceholder="Search gear…"
+      groups={[{ key: 'type', label: 'Type', options: typeOptions }]}
+    />
+
+    <div id="gear-list" class="listing-table-wrap">
+      <table class="listing-table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col" class="num">Uses</th>
+            <th scope="col" class="num">Price</th>
+            <th scope="col">Bonus</th>
+          </tr>
+        </thead>
+        <tbody>
+          {gear.map((g) => {
+            const slug = lastIdSegment(g.id);
+            return (
+              <tr
+                data-filter-item
+                data-name={g.data.name.toLowerCase()}
+                data-type={g.data.gear_type}
+              >
+                <td class="name"><a href={`/gear/${slug}/`}>{g.data.name}</a></td>
+                <td>{formatGearType(g.data.gear_type)}</td>
+                <td class="num">{typeof g.data.uses === 'number' ? g.data.uses : '—'}</td>
+                <td class="num">{priceCell(g)}</td>
+                <td>{g.data.bonus ? truncate(g.data.bonus, 80) : '—'}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</BaseLayout>

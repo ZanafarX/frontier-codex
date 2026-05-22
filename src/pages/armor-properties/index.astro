@@ -1,0 +1,79 @@
+---
+// =============================================================================
+// /armor-properties/ — listing page (compact reference list)
+// =============================================================================
+// 4 armor properties. Same shape as weapon-qualities but without
+// applies_to badges (armor properties always apply to armor).
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import '../../styles/listings.css';
+
+const properties = (await getCollection('armorProperties')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+---
+
+<BaseLayout
+  title="Armor Properties"
+  description="Special effects worn into combat alongside the protection — concealment, hardening, lightweight construction, the costs of going heavy."
+  pageClass="armor-properties-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Armor Properties</h1>
+      <p class="listing-header__count">{properties.length} properties</p>
+      <p class="listing-header__lede">
+        Properties layer onto armor's raw protection — concealing, hardening,
+        or paying for protection with mobility.
+      </p>
+    </header>
+
+    <div class="reference-list">
+      {properties.map((p) => (
+        <article class="reference-list__entry" id={p.id}>
+          <header>
+            <h3><a href={`/armor-properties/${p.id}/`}>{p.data.name}</a></h3>
+            {p.data.tags.length > 0 && (
+              <div class="property-entry__meta">
+                {p.data.tags.map((t) => (
+                  <Badge variant="muted" label={t} size="sm" />
+                ))}
+              </div>
+            )}
+          </header>
+          <p class="property-entry__effect">{p.data.short_effect}</p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .reference-list__entry header h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .reference-list__entry header h3 a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .property-entry__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .property-entry__effect {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    margin: var(--space-2) 0 0;
+  }
+</style>

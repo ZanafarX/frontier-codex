@@ -1,0 +1,129 @@
+---
+// =============================================================================
+// /attributes/ — listing page (card grid, canonical order)
+// =============================================================================
+// 6 attributes rendered as a compact grid of cards in canonical order:
+// IRON → GRIT → QUICK → SAVVY → SWAY → ECHO.
+//
+// LAYOUT
+//   listing-header (title + count + lede)
+//   .attribute-grid of .attribute-card links — each card shows the abbr
+//   as the primary visual, then the friendly name, then the tagline.
+// =============================================================================
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { lastIdSegment } from '../../lib/formatters';
+import '../../styles/listings.css';
+
+// Canonical order. Matches the rulebook presentation and the formula
+// notation (IRON + Brawl, ECHO + Channel, etc.).
+const ATTRIBUTE_ORDER = ['IRON', 'GRIT', 'QUICK', 'SAVVY', 'SWAY', 'ECHO'] as const;
+const ORDER_MAP = new Map<string, number>(
+  ATTRIBUTE_ORDER.map((abbr, i) => [abbr, i]),
+);
+
+const allAttrs = await getCollection('attributes');
+type Attr = CollectionEntry<'attributes'>;
+
+const sorted: Attr[] = [...allAttrs].sort((a, b) => {
+  const ai = ORDER_MAP.get(a.data.abbr) ?? 99;
+  const bi = ORDER_MAP.get(b.data.abbr) ?? 99;
+  return ai - bi;
+});
+
+const total = sorted.length;
+---
+
+<BaseLayout
+  title="Attributes"
+  description="The six attributes of The Veil & Lead — IRON, GRIT, QUICK, SAVVY, SWAY, ECHO."
+  pageClass="attributes-listing-page"
+>
+  <div class="container">
+
+    <header class="listing-header">
+      <h1 class="listing-header__title">Attributes</h1>
+      <p class="listing-header__count">{total} attributes</p>
+      <p class="listing-header__lede">
+        The six axes of capability. Every roll in <em>The Veil &amp; Lead</em>
+        builds from an attribute plus a skill — what your body and mind are
+        capable of, paired with what you know how to do.
+      </p>
+    </header>
+
+    <div class="attribute-grid">
+      {sorted.map((entry) => (
+        <a
+          href={`/attributes/${lastIdSegment(entry.id)}/`}
+          class="attribute-card"
+        >
+          <p class="attribute-card__abbr">{entry.data.abbr}</p>
+          <h2 class="attribute-card__name">{entry.data.name}</h2>
+          <p class="attribute-card__tagline">{entry.data.tagline}</p>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .attribute-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--space-4);
+    margin: var(--space-5) 0;
+  }
+
+  .attribute-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-5) var(--space-4);
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: border-color 120ms ease, background-color 120ms ease;
+  }
+
+  .attribute-card:hover {
+    border-color: var(--color-accent);
+    background: rgba(176, 74, 47, 0.04);
+  }
+
+  .attribute-card__abbr {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .attribute-card:hover .attribute-card__abbr {
+    color: var(--color-accent-hover);
+  }
+
+  .attribute-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    margin: 0;
+    font-style: normal;
+    line-height: var(--line-snug);
+  }
+
+  .attribute-card__tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: var(--line-snug);
+  }
+</style>

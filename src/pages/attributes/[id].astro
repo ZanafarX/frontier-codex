@@ -1,0 +1,143 @@
+---
+// =============================================================================
+// /attributes/<id>/ — detail page
+// =============================================================================
+// One page per attribute. 6 pages total, static-generated at build time.
+//
+// LAYOUT
+//   1. Back link → /attributes/
+//   2. Header: H1 name, italic tagline, abbr highlight badge
+//   3. Body content (short prose summary)
+//   4. Governs (bulleted list)
+//   5. In Play (.examples-list — description + formula chip)
+//   6. Ranks table (.listing-table — 5 rows, rank/label/description)
+// =============================================================================
+
+import {
+  getCollection,
+  render,
+  type CollectionEntry,
+} from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+import '../../styles/listings.css';
+
+export async function getStaticPaths() {
+  const allAttrs = await getCollection('attributes');
+  return allAttrs.map((entry) => ({
+    params: { id: lastIdSegment(entry.id) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'attributes'>;
+}
+
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+
+const pageTitle = entry.data.name;
+const pageDescription = `${entry.data.name} (${entry.data.abbr}) — ${entry.data.tagline}.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="attribute-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/attributes/" class="detail-back__link">← All Attributes</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <p class="detail-header__flavor">{entry.data.tagline}</p>
+
+        <div class="detail-header__badges">
+          <Badge variant="highlight" label={entry.data.abbr} />
+        </div>
+      </header>
+
+      <section class="attribute-overview">
+        <Content />
+      </section>
+
+      <section class="attribute-section">
+        <h2>Governs</h2>
+        <ul class="governs-list">
+          {entry.data.governs.map((g) => <li>{g}</li>)}
+        </ul>
+      </section>
+
+      <section class="attribute-section">
+        <h2>In Play</h2>
+        <ul class="examples-list">
+          {entry.data.play_examples.map((ex) => (
+            <li>
+              <span class="examples-list__description">{ex.description}</span>
+              <span class="examples-list__sep">—</span>
+              <code class="examples-list__formula">{ex.formula}</code>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="attribute-section">
+        <h2>Ranks</h2>
+        <div class="listing-table-wrap">
+          <table class="listing-table">
+            <thead>
+              <tr>
+                <th class="num">Rank</th>
+                <th>Label</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {entry.data.ranks.map((r) => (
+                <tr>
+                  <td class="num">{r.rank}</td>
+                  <td><strong>{r.label}</strong></td>
+                  <td>{r.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .attribute-overview {
+    margin-top: var(--space-5);
+  }
+
+  .attribute-section {
+    margin-top: var(--space-6);
+  }
+
+  .governs-list {
+    font-family: var(--font-serif);
+    line-height: var(--line-base);
+    padding-left: var(--space-5);
+    margin: 0;
+  }
+
+  .governs-list li {
+    margin-bottom: var(--space-2);
+  }
+
+  .governs-list li:last-child {
+    margin-bottom: 0;
+  }
+</style>

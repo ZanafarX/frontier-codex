@@ -1,0 +1,207 @@
+---
+// =============================================================================
+// TALENT CARD
+// =============================================================================
+// Compact card used in the talents listing grid (and potentially future
+// "Related Talents" sections on detail pages). Discriminated union narrowed
+// internally so call sites just pass a CollectionEntry<'talents'>.
+//
+// USAGE
+//   <TalentCard talent={t} />
+//
+// FILTERING
+//   The card emits all data-* attributes needed by FilterBar's client-side
+//   filter logic: data-filter-item, data-name, data-type, data-discipline,
+//   data-rank, data-category, data-calling. Irrelevant attributes for a
+//   given variant are set to '' (empty) so the FilterBar treats them as
+//   not-matching for that filter group — exactly the desired behaviour.
+//
+//   The listing page wraps these in sections marked data-filter-section
+//   for auto-hide-when-empty.
+//
+// STYLES
+//   Scoped to this component via Astro's per-component <style> behaviour.
+//   That means moving the card markup here also moved the visual rules
+//   here — the listing page's <style> block no longer carries .talent-card
+//   rules.
+// =============================================================================
+
+import type { CollectionEntry } from 'astro:content';
+import Badge from './Badge.astro';
+import {
+  formatCost,
+  formatTempo,
+  formatCalling,
+  formatRankName,
+  formatTalentCategory,
+} from '../lib/formatters';
+
+interface Props {
+  talent: CollectionEntry<'talents'>;
+}
+
+const { talent } = Astro.props;
+
+// --- Narrow the discriminated union once ------------------------------------
+// TS does control-flow narrowing on the `type` discriminant when used in a
+// ternary; the resulting locals are properly typed PsionicData | null and
+// MundaneData | null. This avoids fighting type Extract<> on the wrapped
+// union and keeps the JSX readable.
+const psionicData = talent.data.type === 'psionic' ? talent.data : null;
+const mundaneData = talent.data.type === 'mundane' ? talent.data : null;
+
+// Talents use generateId: flatId in the collection config, so talent.id is
+// already the flat filename like "ghost-bullet" — no subfolder stripping
+// needed.
+const slug = talent.id;
+const cardClass = psionicData ? 'talent-card--psionic' : 'talent-card--mundane';
+---
+
+<article
+  class:list={['talent-card', cardClass]}
+  data-filter-item
+  data-name={talent.data.name.toLowerCase()}
+  data-type={talent.data.type}
+  data-discipline={psionicData?.discipline ?? ''}
+  data-rank={psionicData ? String(psionicData.rank) : ''}
+  data-category={mundaneData?.category ?? ''}
+  data-calling={mundaneData?.calling ?? ''}
+>
+  <a href={`/talents/${slug}/`} class="talent-card__link">
+    <h3 class="talent-card__name">{talent.data.name}</h3>
+
+    <div class="talent-card__badges">
+      {psionicData && (
+        <Badge
+          variant="rank"
+          label={`R${psionicData.rank} · ${formatRankName(psionicData.rank)}`}
+          size="sm"
+        />
+      )}
+      {mundaneData && (
+        <>
+          <Badge
+            variant="category"
+            label={formatTalentCategory(mundaneData.category)}
+            size="sm"
+          />
+          {mundaneData.calling && (
+            <Badge
+              variant="calling"
+              label={formatCalling(mundaneData.calling)}
+              size="sm"
+            />
+          )}
+        </>
+      )}
+    </div>
+
+    <dl class="talent-card__stats">
+      <div>
+        <dt>Cost</dt>
+        <dd>{formatCost(talent.data.cost)}</dd>
+      </div>
+      <div>
+        <dt>Tempo</dt>
+        <dd>{formatTempo(talent.data.tempo)}</dd>
+      </div>
+      {psionicData && (
+        <div>
+          <dt>TN</dt>
+          <dd>{psionicData.tn}</dd>
+        </div>
+      )}
+    </dl>
+
+    {talent.data.flavor && (
+      <p class="talent-card__flavor">"{talent.data.flavor}"</p>
+    )}
+  </a>
+</article>
+
+<style>
+  .talent-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition: border-color 0.1s, transform 0.1s;
+  }
+
+  .talent-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+  }
+
+  .talent-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    color: var(--color-text);
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .talent-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    margin: 0;
+    line-height: var(--line-tight);
+  }
+
+  .talent-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  /* Compact stat row: Cost · Tempo · TN.
+     Auto columns collapse for the mundane variant which has no TN. */
+  .talent-card__stats {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: var(--space-2) var(--space-4);
+    margin: var(--space-2) 0 0;
+    padding: var(--space-2) 0;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    align-items: baseline;
+  }
+
+  .talent-card__stats > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .talent-card__stats dt {
+    color: var(--color-text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: calc(var(--text-xs) * 0.9);
+    margin: 0;
+  }
+
+  .talent-card__stats dd {
+    color: var(--color-text);
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .talent-card__flavor {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    line-height: var(--line-snug);
+    margin: 0;
+    /* Clamp to ~3 lines so cards stay even-height in the grid. */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

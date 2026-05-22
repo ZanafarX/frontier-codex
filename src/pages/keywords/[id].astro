@@ -1,0 +1,114 @@
+---
+// =============================================================================
+// /keywords/<id>/ — detail page
+// =============================================================================
+// Glossary entry. Header (name, category badge, aliases line under title),
+// definition panel, tags, body content.
+//
+// Aliases (e.g. "Erosion Track" for Erosion) render as an italic "Also
+// called: …" subtitle. The site can use these for fuzzy-matching when
+// auto-linking inline keyword mentions in talent bodies (Phase 3c).
+//
+// STYLES
+//   .short-effect-panel is shared via detail.css (consolidated in
+//   Batch 14). Page-scoped block now only holds .keyword-aliases* and
+//   .glossary-body.
+//
+// FORMATTERS
+//   formatKeywordCategory lives in lib/formatters.ts (consolidated in
+//   Batch 13b).
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatKeywordCategory } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const keywords = await getCollection('keywords');
+  return keywords.map((k) => ({
+    params: { id: k.id },
+    props: { entry: k },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'keywords'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const categoryLabel = formatKeywordCategory(entry.data.category);
+const hasAliases = entry.data.aliases.length > 0;
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.short_definition;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="keyword-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/keywords/" class="detail-back__link">← All Keywords</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {hasAliases && (
+          <p class="keyword-aliases">
+            Also called: <em>{entry.data.aliases.join(', ')}</em>
+          </p>
+        )}
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={categoryLabel} />
+          {entry.data.tags.map((t) => (
+            <Badge variant="muted" label={t} size="sm" />
+          ))}
+        </div>
+      </header>
+
+      <p class="short-effect-panel">
+        <strong>Definition:</strong> {entry.data.short_definition}
+      </p>
+
+      <section class="glossary-body">
+        <Content />
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .keyword-aliases {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin: var(--space-2) 0 0;
+    line-height: var(--line-snug);
+  }
+
+  .keyword-aliases em {
+    color: var(--color-highlight);
+    font-style: italic;
+  }
+
+  .glossary-body {
+    margin-top: var(--space-4);
+  }
+
+  .glossary-body p:last-child {
+    margin-bottom: 0;
+  }
+</style>

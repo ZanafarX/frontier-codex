@@ -1,0 +1,179 @@
+---
+// =============================================================================
+// /conditions/<id>/ — detail page
+// =============================================================================
+// Glossary entry with structured mechanical metadata. Header (name,
+// severity badge), effect panel, then up to three info groups:
+//   - Duration (single inline line, when present)
+//   - Inflicted By (bullet list of free-text strings)
+//   - Cleared By (bullet list of free-text strings)
+// Then body content.
+//
+// Back-link works — /conditions/ listing already exists from Phase 3a.
+//
+// STYLES
+//   .short-effect-panel is shared via detail.css (consolidated in
+//   Batch 14). Page-scoped block still holds the .condition-info* group
+//   layout AND the page-specific .glossary-body (which has a top border
+//   and extra padding because of the info groups between panel and
+//   body — a divergence from the other three glossary pages, kept
+//   intentionally).
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { formatSeverity } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const conditions = await getCollection('conditions');
+  return conditions.map((c) => ({
+    params: { id: c.id },
+    props: { entry: c },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'conditions'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const hasDuration = typeof entry.data.duration === 'string' && entry.data.duration.length > 0;
+const hasInflictedBy = entry.data.inflicted_by.length > 0;
+const hasClearedBy = entry.data.cleared_by.length > 0;
+const hasInfo = hasDuration || hasInflictedBy || hasClearedBy;
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.short_effect;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="condition-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/conditions/" class="detail-back__link">← All Conditions</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        {entry.data.severity && (
+          <div class="detail-header__badges">
+            <Badge
+              variant={`severity-${entry.data.severity}`}
+              label={formatSeverity(entry.data.severity)}
+            />
+          </div>
+        )}
+      </header>
+
+      <p class="short-effect-panel">
+        <strong>Effect:</strong> {entry.data.short_effect}
+      </p>
+
+      {hasInfo && (
+        <div class="condition-info">
+          {hasDuration && (
+            <div class="condition-info__row">
+              <span class="condition-info__label">Duration</span>
+              <span class="condition-info__value">{entry.data.duration}</span>
+            </div>
+          )}
+
+          {hasInflictedBy && (
+            <div class="condition-info__list">
+              <h2 class="condition-info__label">Inflicted By</h2>
+              <ul>
+                {entry.data.inflicted_by.map((s) => <li>{s}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {hasClearedBy && (
+            <div class="condition-info__list">
+              <h2 class="condition-info__label">Cleared By</h2>
+              <ul>
+                {entry.data.cleared_by.map((s) => <li>{s}</li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+
+      <section class="glossary-body">
+        <Content />
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .condition-info {
+    margin: var(--space-5) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .condition-info__row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .condition-info__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    margin: 0;
+    min-width: 7rem;
+    line-height: var(--line-tight);
+    /* Override global h2 sizing when used on a heading element */
+    border: none;
+    padding: 0;
+  }
+
+  .condition-info__value {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+  }
+
+  .condition-info__list ul {
+    margin: var(--space-2) 0 0;
+    padding-left: var(--space-5);
+  }
+
+  .condition-info__list li {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    line-height: var(--line-snug);
+    margin: 0 0 var(--space-1);
+  }
+
+  .glossary-body {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .glossary-body p:last-child {
+    margin-bottom: 0;
+  }
+</style>

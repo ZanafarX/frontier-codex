@@ -1,0 +1,187 @@
+---
+// =============================================================================
+// /origins/<id>/ — detail page
+// =============================================================================
+// One page per origin. 4 pages total, static-generated at build time.
+//
+// LAYOUT
+//   1. Back link → /origins/
+//   2. Header: "Origin A/B/C/D" eyebrow, H1 name, italic tagline
+//   3. Body content (the cultural prose explanation)
+//   4. Starting Bonus section:
+//        - Attribute (choose one) — linked badges to /attributes/<abbr>/
+//        - Native Skill (choose one) — linked badges to /skills/<id>/
+//   5. Root Memory Examples (.memory-examples — italic quoted prompts)
+//
+// CROSS-REFS
+//   - native_skill_choice strings are flat slugs ("ballistics"). We
+//     resolve them against a skillsByFlat Map built in getStaticPaths to
+//     get the display name and detail page URL. Unresolved skills fall
+//     back to plain text.
+//
+// STYLES
+//   .detail-header__eyebrow is shared via detail.css (consolidated in
+//   Batch 14). Page-scoped block now only holds the origin-specific
+//   choice-row layout.
+// =============================================================================
+
+import {
+  getCollection,
+  render,
+  type CollectionEntry,
+} from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import { lastIdSegment } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const allOrigins = await getCollection('origins');
+  const allSkills = await getCollection('skills');
+
+  // Build flat-ID → {name, slug} lookup for skill resolution.
+  const skillsByFlat = new Map<string, { name: string; slug: string }>(
+    allSkills.map((s) => {
+      const slug = lastIdSegment(s.id);
+      return [slug, { name: s.data.name, slug }];
+    }),
+  );
+
+  return allOrigins.map((entry) => {
+    const resolvedSkills = entry.data.native_skill_choice.map((id) => {
+      const found = skillsByFlat.get(id);
+      return found ?? { name: id, slug: null as string | null };
+    });
+    return {
+      params: { id: lastIdSegment(entry.id) },
+      props: { entry, resolvedSkills },
+    };
+  });
+}
+
+interface Props {
+  entry: CollectionEntry<'origins'>;
+  resolvedSkills: Array<{ name: string; slug: string | null }>;
+}
+
+const { entry, resolvedSkills } = Astro.props as Props;
+const { Content } = await render(entry);
+
+const pageTitle = entry.data.name;
+const pageDescription = entry.data.tagline;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="origin-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/origins/" class="detail-back__link">← All Origins</a>
+      </nav>
+
+      <header class="detail-header">
+        <p class="detail-header__eyebrow">Origin {entry.data.letter}</p>
+
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <p class="detail-header__flavor">{entry.data.tagline}</p>
+      </header>
+
+      <section class="origin-body">
+        <Content />
+      </section>
+
+      <section class="origin-section">
+        <h2>Starting Bonus</h2>
+
+        <div class="origin-choice">
+          <p class="origin-choice__label">Attribute (choose one)</p>
+          <div class="origin-choice__items">
+            {entry.data.attribute_choice.map((attr) => (
+              <Badge
+                variant="highlight"
+                label={attr}
+                href={`/attributes/${attr.toLowerCase()}/`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div class="origin-choice">
+          <p class="origin-choice__label">Native Skill (choose one)</p>
+          <div class="origin-choice__items">
+            {resolvedSkills.map((s) =>
+              s.slug ? (
+                <Badge
+                  variant="muted"
+                  label={s.name}
+                  href={`/skills/${s.slug}/`}
+                />
+              ) : (
+                <Badge variant="muted" label={s.name} />
+              ),
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section class="origin-section">
+        <h2>Root Memory Examples</h2>
+        <ul class="memory-examples">
+          {entry.data.root_memory_examples.map((m) => (
+            <li>{m}</li>
+          ))}
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .origin-body {
+    margin-top: var(--space-5);
+  }
+
+  .origin-section {
+    margin-top: var(--space-6);
+  }
+
+  .origin-choice {
+    display: grid;
+    grid-template-columns: minmax(10rem, 14rem) 1fr;
+    gap: var(--space-3);
+    align-items: baseline;
+    margin-bottom: var(--space-3);
+  }
+
+  .origin-choice:last-child {
+    margin-bottom: 0;
+  }
+
+  .origin-choice__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .origin-choice__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  @media (max-width: 36rem) {
+    .origin-choice {
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+  }
+</style>

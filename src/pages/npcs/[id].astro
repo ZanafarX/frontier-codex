@@ -1,0 +1,190 @@
+---
+// =============================================================================
+// /npcs/<id>/ — detail page
+// =============================================================================
+// One page per NPC. Header (name, role, faction, location), optional stat
+// block (when is_combatant + stats present), body, cross-refs footer.
+//
+// FORMATTERS
+//   formatTier now lives in lib/formatters.ts (consolidated in
+//   Batch 13b). Previous inline definition removed.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import StatBlock, { type StatRow } from '../../components/StatBlock.astro';
+import { formatTier } from '../../lib/formatters';
+import '../../styles/detail.css';
+
+export async function getStaticPaths() {
+  const npcs = await getCollection('npcs');
+  const factions = await getCollection('factions');
+
+  const factionNameById = new Map<string, string>(
+    factions.map((f) => [f.id, f.data.name]),
+  );
+
+  return npcs.map((n) => {
+    const linkedFaction = n.data.faction
+      ? {
+          id: n.data.faction,
+          name: factionNameById.get(n.data.faction) ?? n.data.faction,
+        }
+      : null;
+
+    return {
+      params: { id: n.id },
+      props: { entry: n, linkedFaction },
+    };
+  });
+}
+
+interface Props {
+  entry: CollectionEntry<'npcs'>;
+  linkedFaction: { id: string; name: string } | null;
+}
+
+const { entry, linkedFaction } = Astro.props;
+const { Content } = await render(entry);
+
+// Pull stats into a local to enable clean TS narrowing in the template.
+const stats = entry.data.stats;
+const statRows: StatRow[] = [];
+if (stats) {
+  statRows.push({ label: 'Tier', value: formatTier(stats.tier), mono: false });
+  statRows.push({ label: 'HP', value: stats.hp });
+  statRows.push({ label: 'Defense', value: stats.defense });
+  statRows.push({ label: 'Pool', value: stats.pool });
+  statRows.push({ label: 'Mettle', value: stats.mettle });
+  statRows.push({ label: 'AR', value: stats.armor_rating });
+}
+
+const hasStats = statRows.length > 0;
+const hasStatNotes = typeof stats?.notes === 'string' && stats.notes.length > 0;
+
+const pageTitle = entry.data.name;
+const pageDescription = `${entry.data.name} — ${entry.data.role}${linkedFaction ? `, ${linkedFaction.name}` : ''}.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="npc-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/npcs/" class="detail-back__link">← Named Figures</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <p class="detail-header__role">{entry.data.role}</p>
+
+        <div class="detail-header__badges">
+          {linkedFaction && (
+            <Badge
+              variant="type"
+              label={linkedFaction.name}
+              href={`/factions/${linkedFaction.id}/`}
+            />
+          )}
+          {!entry.data.is_combatant && (
+            <Badge variant="muted" label="Non-Combatant" size="sm" />
+          )}
+        </div>
+
+        {entry.data.location && (
+          <p class="npc-location">
+            <span class="npc-location__label">Location:</span>
+            {entry.data.location}
+          </p>
+        )}
+      </header>
+
+      {hasStats && <StatBlock rows={statRows} />}
+
+      {hasStatNotes && stats && (
+        <p class="npc-stat-notes">
+          <strong>Notes:</strong> {stats.notes}
+        </p>
+      )}
+
+      <section class="npc-body">
+        <Content />
+      </section>
+
+      {linkedFaction && (
+        <footer class="detail-refs">
+          <div class="detail-refs__group">
+            <h2 class="detail-refs__label">Faction</h2>
+            <div class="detail-refs__items">
+              <Badge
+                variant="type"
+                label={linkedFaction.name}
+                href={`/factions/${linkedFaction.id}/`}
+                size="sm"
+              />
+            </div>
+          </div>
+        </footer>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .detail-header__role {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-highlight);
+    font-size: var(--text-xl);
+    margin: var(--space-2) 0 0;
+    line-height: var(--line-snug);
+  }
+
+  .npc-location {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin: var(--space-3) 0 0;
+    line-height: var(--line-snug);
+  }
+
+  .npc-location__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-right: var(--space-2);
+  }
+
+  .npc-stat-notes {
+    font-family: var(--font-serif);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-4);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-bg-sunken);
+    border-radius: var(--radius-sm);
+    line-height: var(--line-snug);
+  }
+
+  .npc-stat-notes strong {
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    margin-right: var(--space-2);
+  }
+
+  .npc-body {
+    margin-top: var(--space-4);
+  }
+</style>

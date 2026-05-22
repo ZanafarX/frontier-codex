@@ -1,0 +1,437 @@
+---
+// =============================================================================
+// /creatures/<id>/ — detail page
+// =============================================================================
+// One page per creature. ~35 pages total.
+//
+// LAYOUT
+//   1. Back-link "← Bestiary"
+//   2. Header: name (h1), type + tier + faction + habitat badges
+//   3. Custom creature stat block:
+//        Row 1: HP · Defense · AR · Mettle · (Strain Cap when present)
+//        Row 2: only the deviating attributes (IRON/GRIT/QUICK/SAVVY/SWAY/ECHO)
+//   4. Attacks (when any): table in the listing-table chrome
+//   5. Traits (when any): bold-prefix-parsed list
+//   6. Abilities (when any): bold-prefix-parsed list
+//   7. <Content />: body (Tactics / Morale / Encounter Design narrative)
+//   8. Cross-refs footer: faction (linked) and habitat regions (linked)
+//
+// FORMATTERS
+//   formatCreatureType and formatTier now live in lib/formatters.ts
+//   (consolidated in Batch 13b). Previous inline definitions removed.
+//   parseLeadingBold stays inline — it's a body-text regex parser, not
+//   a slug formatter, and isn't a candidate for the formatters module.
+// =============================================================================
+
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
+import {
+  formatCreatureType,
+  formatRegion,
+  formatTier,
+} from '../../lib/formatters';
+import '../../styles/detail.css';
+import '../../styles/listings.css';
+
+// --- Static path generation -------------------------------------------------
+
+export async function getStaticPaths() {
+  const creatures = await getCollection('creatures');
+  const factions = await getCollection('factions');
+
+  const factionNameById = new Map<string, string>(
+    factions.map((f) => [f.id, f.data.name]),
+  );
+
+  return creatures.map((c) => {
+    const linkedFaction = c.data.faction
+      ? {
+          id: c.data.faction,
+          name: factionNameById.get(c.data.faction) ?? c.data.faction,
+        }
+      : null;
+
+    return {
+      params: { id: c.id },
+      props: { entry: c, linkedFaction },
+    };
+  });
+}
+
+// --- Page rendering ---------------------------------------------------------
+
+interface Props {
+  entry: CollectionEntry<'creatures'>;
+  linkedFaction: { id: string; name: string } | null;
+}
+
+const { entry, linkedFaction } = Astro.props;
+const { Content } = await render(entry);
+
+// Parse the leading **Label:** in a trait/ability string. Returns
+// {label, text} when the string starts with a bold marker, otherwise
+// just {text}.
+function parseLeadingBold(s: string): { label?: string; text: string } {
+  const match = s.match(/^\*\*([^*]+?)\*\*\s*(.*)$/);
+  if (match) return { label: match[1], text: match[2] };
+  return { text: s };
+}
+
+const typeLabel = formatCreatureType(entry.data.creature_type);
+const tierLabel = formatTier(entry.data.tier);
+
+// Has-any-attributes check: only render the attribute row if any of the
+// six fields contains a numeric value.
+const attrs = entry.data.attributes;
+const hasAttributes =
+  !!attrs &&
+  ['iron', 'grit', 'quick', 'savvy', 'sway', 'echo'].some(
+    (k) => typeof attrs[k as keyof typeof attrs] === 'number',
+  );
+
+const hasAttacks = entry.data.attacks.length > 0;
+const hasTraits = entry.data.traits.length > 0;
+const hasAbilities = entry.data.abilities.length > 0;
+const hasHabitat = entry.data.habitat.length > 0;
+
+const pageTitle = entry.data.name;
+const pageDescription =
+  `${entry.data.name} — ${tierLabel} ${typeLabel}` +
+  (linkedFaction ? ` (${linkedFaction.name})` : '') +
+  `, worth ${entry.data.xp_value} XP.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageClass="creature-detail-page"
+>
+  <div class="container">
+    <article class="detail-article prose-wide">
+
+      <nav class="detail-back" aria-label="Back navigation">
+        <a href="/creatures/" class="detail-back__link">← Bestiary</a>
+      </nav>
+
+      <header class="detail-header">
+        <h1 class="detail-header__title">{entry.data.name}</h1>
+
+        <div class="detail-header__badges">
+          <Badge variant="type" label={typeLabel} />
+          <Badge
+            variant="rank"
+            label={`${tierLabel} · ${entry.data.xp_value} XP`}
+          />
+          {linkedFaction && (
+            <Badge
+              variant="type"
+              label={linkedFaction.name}
+              href={`/factions/${linkedFaction.id}/`}
+            />
+          )}
+          {entry.data.habitat.map((r) => (
+            <Badge
+              variant="region"
+              label={formatRegion(r)}
+              href={`/regions/${r}/`}
+              size="sm"
+            />
+          ))}
+        </div>
+      </header>
+
+      {/* --- Creature stat block --- */}
+      <dl class="creature-stats">
+        <div class="creature-stats__row">
+          <div class="creature-stats__cell">
+            <dt>HP</dt><dd>{entry.data.vitals.hp}</dd>
+          </div>
+          <div class="creature-stats__cell">
+            <dt>Defense</dt><dd>{entry.data.vitals.defense}</dd>
+          </div>
+          <div class="creature-stats__cell">
+            <dt>AR</dt><dd>{entry.data.vitals.armor_rating}</dd>
+          </div>
+          <div class="creature-stats__cell">
+            <dt>Mettle</dt><dd>{entry.data.vitals.mettle}</dd>
+          </div>
+          {typeof entry.data.vitals.strain_cap === 'number' && (
+            <div class="creature-stats__cell">
+              <dt>Strain Cap</dt><dd>{entry.data.vitals.strain_cap}</dd>
+            </div>
+          )}
+        </div>
+
+        {hasAttributes && attrs && (
+          <div class="creature-stats__row creature-stats__row--attrs">
+            {typeof attrs.iron === 'number' && (
+              <div class="creature-stats__cell">
+                <dt>IRON</dt><dd>{attrs.iron}</dd>
+              </div>
+            )}
+            {typeof attrs.grit === 'number' && (
+              <div class="creature-stats__cell">
+                <dt>GRIT</dt><dd>{attrs.grit}</dd>
+              </div>
+            )}
+            {typeof attrs.quick === 'number' && (
+              <div class="creature-stats__cell">
+                <dt>QUICK</dt><dd>{attrs.quick}</dd>
+              </div>
+            )}
+            {typeof attrs.savvy === 'number' && (
+              <div class="creature-stats__cell">
+                <dt>SAVVY</dt><dd>{attrs.savvy}</dd>
+              </div>
+            )}
+            {typeof attrs.sway === 'number' && (
+              <div class="creature-stats__cell">
+                <dt>SWAY</dt><dd>{attrs.sway}</dd>
+              </div>
+            )}
+            {typeof attrs.echo === 'number' && (
+              <div class="creature-stats__cell">
+                <dt>ECHO</dt><dd>{attrs.echo}</dd>
+              </div>
+            )}
+          </div>
+        )}
+      </dl>
+
+      {/* --- Attacks --- */}
+      {hasAttacks && (
+        <section class="creature-section">
+          <h2 class="creature-section__title">Attacks</h2>
+          <div class="listing-table-wrap">
+            <table class="listing-table">
+              <thead>
+                <tr>
+                  <th scope="col">Attack</th>
+                  <th scope="col" class="num">Pool</th>
+                  <th scope="col" class="num">WR</th>
+                  <th scope="col" class="num">Tempo</th>
+                  <th scope="col">Qualities</th>
+                  <th scope="col">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {entry.data.attacks.map((a) => (
+                  <tr>
+                    <td class="name">{a.name}</td>
+                    <td class="num">{a.pool}</td>
+                    <td class="num">{a.weapon_rating}</td>
+                    <td class="num">{a.tempo}</td>
+                    <td>
+                      {a.qualities.length === 0 ? '—' : (
+                        <div class="attack-qualities">
+                          {a.qualities.map((q) => (
+                            <Badge
+                              variant="quality"
+                              label={q}
+                              href={`/weapon-qualities/${q}/`}
+                              size="sm"
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </td>
+                    <td>{a.notes ?? '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {/* --- Traits --- */}
+      {hasTraits && (
+        <section class="creature-section">
+          <h2 class="creature-section__title">Traits</h2>
+          <ul class="trait-list">
+            {entry.data.traits.map((t) => {
+              const parsed = parseLeadingBold(t);
+              return (
+                <li>
+                  {parsed.label && <strong>{parsed.label}</strong>}{' '}
+                  {parsed.text}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      {/* --- Abilities --- */}
+      {hasAbilities && (
+        <section class="creature-section">
+          <h2 class="creature-section__title">Abilities</h2>
+          <ul class="trait-list">
+            {entry.data.abilities.map((a) => {
+              const parsed = parseLeadingBold(a);
+              return (
+                <li>
+                  {parsed.label && <strong>{parsed.label}</strong>}{' '}
+                  {parsed.text}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      {/* --- Body (narrative — Tactics, Morale, Encounter Design) --- */}
+      <section class="creature-body">
+        <Content />
+      </section>
+
+      {/* --- Cross-refs footer --- */}
+      {(linkedFaction || hasHabitat) && (
+        <footer class="detail-refs">
+          {linkedFaction && (
+            <div class="detail-refs__group">
+              <h2 class="detail-refs__label">Faction</h2>
+              <div class="detail-refs__items">
+                <Badge
+                  variant="type"
+                  label={linkedFaction.name}
+                  href={`/factions/${linkedFaction.id}/`}
+                  size="sm"
+                />
+              </div>
+            </div>
+          )}
+          {hasHabitat && (
+            <div class="detail-refs__group">
+              <h2 class="detail-refs__label">Habitat</h2>
+              <div class="detail-refs__items">
+                {entry.data.habitat.map((r) => (
+                  <Badge
+                    variant="region"
+                    label={formatRegion(r)}
+                    href={`/regions/${r}/`}
+                    size="sm"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </footer>
+      )}
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  /* --- Creature stat block ---------------------------------------------
+     Two-tier: vitals on top, attributes (when present) below in a sunken
+     background. Single bordered container with dust-yellow left accent. */
+
+  .creature-stats {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-strong);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    margin: var(--space-5) 0;
+    padding: 0;
+  }
+
+  .creature-stats__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-5);
+    padding: var(--space-3) var(--space-5);
+    margin: 0;
+  }
+
+  .creature-stats__row + .creature-stats__row {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .creature-stats__row--attrs {
+    background: var(--color-bg-sunken);
+  }
+
+  .creature-stats__cell {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+  }
+
+  .creature-stats dt {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .creature-stats dd {
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  /* --- Creature sections ----------------------------------------------- */
+
+  .creature-section {
+    margin-top: var(--space-6);
+  }
+
+  .creature-section__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin: 0 0 var(--space-3);
+  }
+
+  /* --- Trait / ability list -------------------------------------------- */
+
+  .trait-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .trait-list li {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: var(--line-snug);
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--color-border-strong);
+    margin: 0;
+  }
+
+  .trait-list strong {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  /* --- Attack quality pills inside the attacks table ------------------- */
+
+  .attack-qualities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  /* --- Body narrative -------------------------------------------------- */
+
+  .creature-body {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border-strong);
+  }
+</style>
