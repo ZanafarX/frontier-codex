@@ -22,85 +22,99 @@ The Frontier operates on overlapping economies. What has value depends entirely 
 
 **Consortium Scrip** (§) is paper currency backed by the Consortium's control of the rails. It works in Consortium-controlled towns, rail stations, and most rim settlements that trade with the East. It is **worthless** in the deep wastes, in Dust Vulture territory, and in any settlement that has rejected Consortium authority.
 
-A laborer's daily wage in Rustwater is roughly §3. A revolver costs §50–80. A meal at an inn costs §1–2. A horse costs §250. The price tables in the **settlement-services** reference file list the canonical rates.
+For scale: a common meal runs §1–2 and a flophouse bed §2 a night, while a day of honest labor earns roughly 1d10 Scrip. A standard revolver — the Peacemaker — is §120, and a horse runs anywhere from Cost 3 (a poor mount) to Cost 4 (a trained one). The full rates live in the **settlement-services** reference file.
 
 ### Barter
 
-Outside Consortium reach, trade happens in goods. The canonical barter table (in the **barter-rates** reference file) lists rough exchange rates for ammunition, salt, water, food, tobacco, and ghost-rock. A box of pistol ammunition is worth roughly a day's water in the deep Scorchveil — and a day's water is worth your life there.
+Outside Consortium reach, trade happens in goods. The canonical barter table (in the **barter-rates** reference file) lists rough exchange rates for ammunition, salt, water, food, and labor. A pouch of ammunition can be worth a day's water in the deep Scorchveil — and a day's water is worth your life there.
 
-Salt holds value everywhere. A pouch of consecrated rock salt costs §20 in town and can be traded for almost anything in the wastes. Smart travelers carry more salt than they think they need.
+Salt holds value everywhere. A pouch of purified rock salt costs §40 in town and can be traded for almost anything in the wastes. Smart travelers carry more salt than they think they need.
 
 ### The Cost Rating
 
-To avoid the table micromanagement of tracking every transaction, *The Veil & Lead* uses a **Cost Rating** abstraction. Every item has a Cost Rating from 1 (trivial — a sandwich, a single bullet) to 5 (legendary — a Masterwork firearm, a war-horse, a building). Most starting characters can afford Cost 1–2 items casually; Cost 3 requires saving or a good week's work; Cost 4 is a major investment; Cost 5 is the work of a season or a major windfall.
+To avoid micromanaging every transaction, *The Veil & Lead* uses a **Cost Rating** abstraction. Every item maps to a rating from 1 to 5:
 
-The full ladder lives in the **cost-rating-scale** reference file. Use it for quick-resolution shopping; use Scrip prices for important purchases.
+| Rating | Scrip Range | Examples |
+| :-: | :-- | :-- |
+| 1 | §1–10 | Meal, drink, flophouse bed, 10 rounds of ammo |
+| 2 | §11–50 | Knife, decent room, salt pouch, basic tool |
+| 3 | §51–200 | Revolver, poor horse, box of 50 ammo, medical kit |
+| 4 | §201–1,000 | Rifle, Consortium Vest, wagon, trained horse |
+| 5 | §1,000+ | Gatling gun, Ironbrand Hardsuit, war-horse, sand-skiff |
+
+Most starting characters can afford Cost 1–2 items casually; Cost 3 requires saving or a good week's work; Cost 4 is a major investment; Cost 5 is the work of a season or a windfall. Use the rating for quick-resolution shopping; use exact Scrip prices for important purchases.
 
 ## Choosing Your Iron
 
-Your weapon is your rhythm. A pistol with a Base Tempo of 4 fires nearly twice in the same window as a rifle with Base Tempo 6 — but the rifle hits harder and reaches farther. The trade-off between speed and stopping power is one of the core tactical choices of *The Veil & Lead* combat.
+Your weapon is your rhythm. A pistol with a Base Tempo of 4 acts three times for every two shots from a rifle at Base Tempo 6 — but the rifle hits harder and reaches farther. The trade-off between speed and stopping power is one of the core tactical choices of *The Veil & Lead* combat.
 
 ### Firearm Categories
 
-The five major firearm categories, by Base Tempo:
+The major firearm categories, by Base Tempo:
 
 - **Light Pistols** (Tempo 3) — Derringer-style. Concealable, fast, weak. The High-Roller's friend.
 - **Medium Pistols** (Tempo 4) — Peacemaker, Volcanic. The Gunhand's standard. Versatile.
-- **Heavy Pistols** (Tempo 5) — Dragoon, LeMat. Hits harder than a medium. Slower draw.
+- **Heavy Pistols** (Tempo 5) — Dragoon. Hits harder than a medium; slower to bring to bear.
 - **Shotguns** (Tempo 3–5) — Sawed-Off (3), Coach Gun (4), Pump-Action (5). Scatter damage, devastating at Close range.
-- **Rifles** (Tempo 5–6) — Carbines, Repeaters (5), Buffalo Rifle (6). The long-range answer.
-- **Heavy Weapons** (Tempo 7+) — Gatling Guns. Crew-served. The Rail-Jack's signature.
+- **Rifles** (Tempo 5–6) — Repeater (5), Buffalo Rifle (6). The long-range answer.
+- **Heavy Weapons** (Tempo 6+) — Gatling guns. Crew-served or suit-mounted. The Rail-Jack's and Ironbrand's signature.
 
-A starting character typically begins with one primary firearm (matched to their Calling) and possibly a backup. The full stat blocks live in the **weapons** files; the Tempo-vs-Damage curve lives in the **weapon-base-tempos** reference table.
+A starting character typically begins with one primary firearm (matched to their Calling) and possibly a backup. The full stat blocks live in the **weapons** files; quick reference: Derringer (WR 2, §45), Peacemaker (WR 3, §120), Dragoon (WR 4, §180), Coach Gun (WR 4, §150), Repeater (WR 4, §300), Buffalo Rifle (WR 5, §450).
 
 ### Special Ammunition
 
-Most fights are won with ordinary lead. But some enemies require specialty rounds:
+Most fights are won with ordinary lead. But some enemies require specialty rounds. All special ammunition grants a **+1 Roll Bonus** against appropriate targets, on top of its listed effect:
 
-- **Salt Rounds** disrupt Psionics on hit (automatic Disruption, no Focus check). The Redeemer's signature.
-- **Iron-Core Rounds** ignore the regenerative properties of Veil-Born flesh.
-- **Ghost-Rock Dust** ammunition deals additional damage to entities tethered to the Current.
-- **Silver Bullets** apply to lycanthropic creatures (specific Veil-Born variants).
+| Round | Price/10 | Effect |
+| :-- | :-: | :-- |
+| **Salt Rounds** | §60 | WR −1 vs. living; **WR ×2 vs. spirits/Veil-Born**; disrupts psionic concentration on hit |
+| **Iron-Core** | §60 | **Breaker** (armor-piercing); +1 Tempo (recoil); bonus vs. fae and iron-vulnerable creatures |
+| **Ghost-Rock** | §200 | **+2 WR**; **Volatile** (on a Fumble, explodes for 1d6 on the shooter and jams the gun) |
+| **Hollow-Point** | §40 | +1 WR vs. unarmored; −1 WR vs. AR 2+ targets |
+| **Tracer** | §30 | Marks the target — follow-up attacks gain +1 Roll Bonus; reveals your position |
 
-Special ammunition is expensive and limited. Carry six rounds, not sixty. The **ammunition** files have the full list.
+Special ammunition is expensive and limited. Carry six rounds, not sixty. Note that Salt Rounds are the standard anti-supernatural load and the auto-disrupt makes them the bane of any Psionic; Ghost-Rock is as dangerous to the shooter as the target.
 
 ### Melee Weapons
 
-The Frontier is not primarily a melee setting, but knives, hatchets, sabers, and sledgehammers all see use. **Light Melee** weapons (Tempo 2–3) like Brass Knuckles and Bowie Knives are fast but weak; **Medium** (Tempo 4–5) like Hatchets and Sabers are balanced; **Heavy** (Tempo 5–6) like Sledgehammers and Cavalry Lances trade speed for impact.
-
-Note that Light Melee triggers **Exposed** even on standard Strikes — the cost of their speed.
+The Frontier is not primarily a melee setting, but knives, hatchets, and sledgehammers all see use. **Light Melee** (Tempo 2–3) like Brass Knuckles and the Bowie Knife (WR 2) is fast but weak; **Medium Melee** (Tempo 4) like the Hatchet (WR 4) is balanced; **Heavy Melee** (Tempo 6) like the Sledgehammer (WR 4, Breaker) trades speed for impact. Full melee stats live in the **weapons** files.
 
 ## Choosing Your Protection
 
-Armor is a trade. Every point of **Armor Rating (AR)** subtracts directly from damage taken — but heavier armor restricts speed, attracts attention, and (in Stormrise) attracts lightning.
+Armor is a trade. Every point of **Armor Rating (AR)** subtracts directly from damage taken — but heavier armor restricts speed and marks you as someone expecting trouble. Armor does **not stack**: if you wear multiple pieces, use only the highest AR. A shield's bonus is separate, since it raises Defense rather than AR.
 
-The standard armor tiers:
+The standard armor ladder:
 
-- **Duster / Reinforced Coat** (AR 1, Concealment) — the working person's protection. No restrictions.
-- **Boiler Plate** (AR 2, Hardened) — heavy industrial plating. Negates one Grievous Wound per scene; slows you down.
-- **Ironbrand Hardsuit** (AR 3, Bulky) — military-grade plate. The Ironbrand's signature. Major Defense penalty for the protection.
+| Armor | AR | Price | Properties |
+| :-- | :-: | :-: | :-- |
+| **Duster** | 1 | §50 | Concealment (+1 to hide weapons) |
+| **Boiler Plate** | 1 | §80 | Hardened (negates the first Grievous Wound of the scene) |
+| **Consortium Vest** | 2 | §400 | Lightweight (no penalties) |
+| **Ironbrand Hardsuit** | 3 | §1,500 | Bulky (−1 Defense, −1 QUICK for Tempo); Hardened |
+| **Shield** | +1 Defense | §30 | Can be sacrificed to negate one hit entirely (shield is destroyed) |
 
-Veil-touched armor exists but is rare and usually cursed. Treat any unusual piece with caution.
-
-The full stat blocks and properties live in the **armor** and **armor-properties** files.
+The **Hardened** property (on Boiler Plate and the Hardsuit) negates the first Grievous Wound you'd take in a scene — the damage still lands, but the crippling effect doesn't. Only the Hardsuit carries a movement penalty; Boiler Plate is crude and conspicuous but doesn't slow you down. Veil-touched armor exists but is rare and usually cursed — treat any unusual piece with caution. Full properties live in the **armor** and **armor-properties** files.
 
 ## Essential Gear
 
 Beyond weapons and armor, a Frontier character carries:
 
-- **Waterskin** (1 day's supply at standard climate; 2 in Scorchveil).
-- **Rations** (1 week's worth as a starting load).
-- **Bedroll** (Long Rest requires it for full recovery).
-- **Salt Pouch** (10 uses; mandatory for camping in supernatural territory).
-- **Lantern and Oil** (6 hours of light per fill).
-- **Medical Kit** (5 uses, +2 to Medicine checks).
-- **Lockpicks** (if you do that kind of work).
-- **Dynamite** (for the work that doesn't ask).
+- **Waterskin** (§5) — holds one day's water for one person.
+- **Rations** (§10) — one week's preserved food.
+- **Bedroll** (§8) — without it, a Long Rest recovers only half your normal HP.
+- **Salt Pouch** (§40) — 10 uses; ward spirits with a salt line, purify water, preserve food, or "salt the dead" to keep them down.
+- **Lantern and Oil** (§15) — 6 hours of light per fill; negates Darkness penalties.
+- **Medical Kit** (§50) — +2 Roll Bonus to Medicine; 5 uses.
+- **Filter Mask** (§80) — protection against Ash Belt toxicity; filters last about a week.
+- **Lockpicks** — +1 Finesse, if you do that kind of work.
+- **Dynamite** (§30/stick) — WR 6 in a 3m radius; bundle for more.
 
 The full gear list, with prices and effects, lives in the **gear** files. Don't underbuy salt. Veterans never run out of salt.
 
-## The Three Rules of Frontier Economics
+## Practical Advice
 
-1. **Carry more salt than you think you need.** It is consumable, it is light, and it is the difference between safe sleep and being eaten alive by Walking Dead.
-2. **Specialty ammunition is for specialty problems.** A box of Salt Rounds is useless against Consortium Enforcers. Save them for the Psionic ambush you didn't see coming.
-3. **Maintenance is non-negotiable.** A jammed revolver in a gunfight is a dead character. Use Downtime to clean weapons, restock kits, and patch armor. Tracked in **downtime-actions**.
+Three habits keep Frontier characters breathing:
+
+1. **Carry more salt than you think you need.** It is consumable, light, and the difference between safe sleep and being dragged off by something that used to be a person.
+2. **Specialty ammunition is for specialty problems.** A pouch of Salt Rounds is wasted on Consortium Enforcers. Save them for the Psionic ambush you didn't see coming.
+3. **Maintenance is non-negotiable.** A jammed revolver in a gunfight is a dead character. Use Downtime to clean weapons, restock kits, and patch armor (tracked in **downtime-actions**).

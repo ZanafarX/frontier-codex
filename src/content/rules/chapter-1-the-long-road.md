@@ -3,132 +3,185 @@ title: "Chapter 1: The Long Road"
 book: "drifter"
 chapter: 1
 order: 2
-summary: "Building your character — Origin, Tragedy, Calling, Attributes, Skills. A step-by-step walkthrough of character creation."
+summary: "Building your character — the Baseline, Origin, Tragedy, Calling, Freebies, and the Memory Palace. A step-by-step walkthrough of character creation."
 tags: ["character-creation", "core-mechanic"]
 ---
 
-> *"Out here, you don't get to be born. You get to survive being born. There's a difference."*
-> — Frontier midwife's saying
+> *"You aren't born on the Frontier. You're forged. It starts with where you screamed your first breath, but it ends with what you're willing to kill to keep breathing. A man is just a collection of scars and stories. Let's see what yours say."*
+> — Sheriff Crowe of Rustwater
 
-Every character in *The Veil & Lead* is a survivor of something. The world ended forty-seven years ago, and what walks the dust now is the second or third generation of people who have made peace with that fact — or refused to. Your character emerged from somewhere, lost something that shaped them, and chose a way to make a living in the wreckage.
+In *The Veil & Lead* you do not build a hero. Heroes died when the sky broke. You build a survivor.
 
-This chapter walks the seven steps of building that character. Take your time. The choices here are mechanical, but they are also the seeds of every scene to come.
+Character creation is not just assigning numbers to a sheet; it is defining your character's past, their trauma, their drive, and the specific skills they use to stay alive in a world that hates them. We call this process **The Long Road**.
 
-## The Baseline
+Every character is defined by three things: **Attributes** (innate capability), **Skills** (trained competence), and **Memories** (the experiences that anchor you to humanity and fuel your power). When you act, you roll a dice pool of **d8s** equal to **Attribute + Skill** and keep the two highest. This chapter walks the order of operations that turns a blank sheet into someone ready for the dust.
 
-Starting characters in *The Veil & Lead* are competent, not heroic. You are a journeyman, not a saint. You have skills enough to take work, training enough to survive a fair fight, and exactly one terrible memory that taught you who you are.
+## The Six Attributes
 
-Mechanically, every starting character has:
+Attributes are rated 1–5, where 1 is a notable weakness, 2 is the human baseline, and 5 is the peak of human potential. Every character starts with all six at Rank 1.
 
-- **Six Attributes** (IRON, GRIT, QUICK, SAVVY, SWAY, ECHO), each at Rank 1, with a pool of 7 points to distribute (Rank cap 4 at creation, hard cap 5 ever).
-- **One Origin**, which provides a free Skill at Rank 2 and a Specialization.
-- **One Tragedy**, which forms your **Scar** (the first of your five **Core Memories**) and grants one mechanical hook.
-- **One Calling**, which provides starting Talents, gear, and a role identity.
-- **Skills** purchased with 30 XP at character-creation costs (see the **XP Progression Costs** reference table).
-- **Five Core Memories** filling your **Memory Palace** — the Scar from Tragedy, plus the Root, Drive, Anchor, and Secret defined during Finishing Touches.
+| Attribute | Governs |
+| :-- | :-- |
+| **IRON** | Strength, Vitality, melee damage, Death threshold |
+| **GRIT** | Endurance, Strain capacity, poison/disease resistance, Mettle (partial) |
+| **QUICK** | Reflexes, Defense (partial), Initiative, ranged combat |
+| **SAVVY** | Perception, Mettle (partial), technical skills, Defense (partial) |
+| **SWAY** | Social leverage, leadership, influence |
+| **ECHO** | Willpower, psionic power, Erosion capacity, mental defense |
 
-The full mechanical reference for attribute caps, starting XP, and skill costs lives in the **xp-progression-costs** reference table. This chapter focuses on the *order of operations* and the *narrative work* each step is asking you to do.
+**ECHO and Psionics:** To *use* a Psionic Talent, your ECHO must be equal to or greater than the Talent's Rank. Everyone has ECHO 1 baseline, so a beginning Psionic can channel Rank 1 Talents without raising it — but higher Ranks demand higher ECHO.
 
-## Step 1: Choose Your Origin
+**Caps:** No Attribute may exceed **Rank 4 at creation**, or **Rank 5 ever** (raising to 5 requires play and XP).
 
-Your Origin is where you came from — the place and people that raised you, the dialect you speak when you're angry, the food you crave when you're homesick. The Frontier has four canonical origins: **Consortium City**, **Dust-Born**, **Rim-Born**, and **Outsider**.
+## The Skills
 
-Each Origin grants:
+Skills are rated 0–4. All skills begin at **Rank 0 (Untrained)**. Rolling a skill you don't have is done with **Disadvantage** — roll one extra die, discard the highest, then keep the best two of the rest.
 
-- A starting Skill at Rank 2 (e.g., Consortium City gives you Society 2; Dust-Born gives you Frontier 2).
-- A free Specialization in that Skill.
-- A handful of cultural prompts that suggest accents, biases, and family ties.
+There are **25 Skills** across seven categories — Combat, Physical, Social, Knowledge, Survival, Technical, and Psionic. The full list with Attribute pairings and example uses lives in this chapter's reference table; for now, know that your starting ranks come from your Origin, your Calling, and your Freebie points (below), all capped at **Rank 2 at creation**.
 
-Look through the four Origin files and pick the one that fits the story you want to tell. Don't optimize. The mechanical bonus is small; the roleplay leverage is large.
+## Step 1: The Baseline
 
-## Step 2: Choose Your Tragedy
+Begin here. Write **Rank 1** in all six Attributes and **Rank 0** in every Skill.
 
-Every player character is broken before the campaign starts. The break is your **Tragedy**, and the wound is your **Scar** — the first Pillar of your Memory Palace.
+You are not special. Not yet. You are hungry, tired, and likely haunted. Across the next four steps you will gain **four +1 Attribute increases** (one each from Origin, Tragedy, Calling, and Freebies) and a pool of **Skill ranks** to spend. That is the entire budget — there is no separate point-buy and no starting XP. The calluses you build over your soul come from the choices that follow.
 
-The six canonical Tragedies are **The Raid**, **The Debt**, **The Lost**, **The Mistake**, **The Mark**, and **The Reckoning**. Each is associated with a sensory prompt for your Scar Memory (the smell of burning pine, the gold ring as he signed the papers, the dust on his boots as he walked away) and a mechanical hook that activates in play.
+## Step 2: Origin
 
-Tragedies are not flavor. They will come up at the table. The Raid produces characters who hesitate at the sound of horses. The Debt produces characters who refuse to owe anyone anything. The Mark produces characters who can't sleep with their back to a door. Choose a Tragedy you want to play *through*, not around.
+*Where were you born?* Your Origin defines your accent, your outlook, and the strengths you developed before you could choose for yourself. Choose **one**. Gain its Attribute Bonus and one Native Skill at **Rank 1**.
 
-Your Scar is the only Memory you build during Step 2; the other four Pillars come later.
+| Origin | Attribute Bonus | Native Skill (Rank 1) |
+| :-- | :-- | :-- |
+| **Consortium City-Born** | +1 SAVVY *or* SWAY | Streetwise *or* Scrounge |
+| **Dust-Born** (Wasteland Survivor) | +1 GRIT *or* IRON | Frontier *or* Resilience |
+| **Veil-Touched** (The Cursed) | +1 ECHO *or* SAVVY | Insight *or* Lore |
+| **Rail-Rider** (The Drifter) | +1 QUICK *or* GRIT | Ride *or* Finesse |
 
-## Step 3: Choose Your Calling
+Don't optimize. The mechanical bonus is small; the roleplay leverage — where you're from, who raised you, what you crave when you're homesick — is large.
 
-Your **Calling** is your archetype — the role you fill on the Frontier. Five are mundane: **Gunhand** (the soldier and brawler), **Muck-Raker** (miner and demolitions), **High-Roller** (gambler and face), **Shepherd** (medic and protector), **Rail-Jack** (engineer and saboteur). Five are Psionic: **Psy-Slinger**, **Mindweaver**, **Seer**, **Flesh Shaper**, **Bastion Soul** — one for each of the five Disciplines.
+## Step 3: Tragedy
 
-Each Calling file specifies:
+*What broke you?* Nobody walks the Long Road whole. Your Tragedy is the defining wound of your life, and it forms your **Scar** — the first Pillar of your Memory Palace. Choose **one**. Gain its Attribute Bonus and write down your first Core Memory.
 
-- A handful of **starting Talents** (Rank 1, and a Calling-Talent unique to the archetype).
-- A list of **starting gear** appropriate to the role.
-- A suggested **primary Attribute** and **primary Skill**.
-- An **identity prompt** — how this Calling fits into Frontier society.
+| Tragedy | Attribute Bonus | Example Scar Memory |
+| :-- | :-- | :-- |
+| **The Raid** | +1 IRON | *"The smell of burning pine."* |
+| **The Debt** | +1 SWAY | *"The Baron's gold ring as he signed the papers."* |
+| **The Miracle** | +1 ECHO | *"The blue light in the darkness that shouldn't have been there."* |
+| **The Duel** | +1 QUICK | *"The surprise on my brother's face when he fell."* |
+| **The Illness** | +1 GRIT | *"The taste of bitter medicine and my mother's tears."* |
+| **The Betrayal** | +1 SAVVY | *"The dust from his boots as he walked away with everything."* |
 
-Psionic Callings additionally have:
+Tragedies are not flavor — they will come up at the table. Choose one you want to play *through*, not around. Your Scar is the only Memory you write now; the other four Pillars come in Step 6.
 
-- A required **ECHO** rank (minimum 2 at creation).
-- A starting **Focus** item (signature firearm for Psy-Slingers, surgical tools for Flesh Shapers, etc.).
-- Access to a single **Discipline** and its Rank 1 Talents.
+## Step 4: Calling
 
-If you take a Psionic Calling, you commit to the long-term cost of Erosion. Read Chapter 2 (The Soul) before you finalize this decision.
+*How do you survive?* Your Calling is your profession and archetype. Choose **one**, then:
 
-## Step 4: Distribute Attributes
+1. Add **+1 to its Prime Attribute**.
+2. Distribute **6 Skill Points** among its Career Skills (maximum starting Rank 2).
+3. Select your **two Starting Talents**.
+4. Record your Starting Gear.
 
-You have **6 Attribute Points** to distribute across the six Attributes, on top of the Rank 1 baseline. (So your maximum starting Attribute is 1 + 4 = Rank 5… but spending all 6 points on one Attribute leaves the other five at 1, which is brutal.)
+### The Mundane Callings
 
-The Attributes are:
+These rely on skill, grit, and iron — not the Current.
 
-- **IRON** — physical strength, raw force, intimidation.
-- **GRIT** — endurance, willpower, Strain capacity.
-- **QUICK** — reflexes, agility, the basis of Initiative and Defense.
-- **SAVVY** — perception, intuition, situational awareness.
-- **SWAY** — charm, deceit, presence.
-- **ECHO** — psionic capacity, soul depth, Erosion capacity.
+| Calling | Prime Attribute | Career Skills | Starting Talents |
+| :-- | :-- | :-- | :-- |
+| **The Gunhand** (Mercenary/Lawman) | +1 QUICK *or* IRON | Ballistics, Brawl, Force, Awareness, Ride | One Gunhand + one Mundane |
+| **The Muck-Raker** (Laborer/Prospector) | +1 IRON *or* GRIT | Force, Athletics, Scrounge, Melee, Resilience | One Muck-Raker + one Mundane |
+| **The High-Roller** (Face/Gambler) | +1 SWAY *or* SAVVY | Deceit, Gamble, Finesse, Insight, Persuasion | One High-Roller + one Mundane |
+| **The Shepherd** (Redeemer/Medic) | +1 SAVVY *or* ECHO | Medicine, Lore, Insight, Resilience, Frontier | One Shepherd + one Mundane |
+| **The Rail-Jack** (Saboteur/Technician) | +1 QUICK *or* SAVVY | Finesse, Stealth, Scrounge, Demolitions, Streetwise | One Rail-Jack + one Mundane |
 
-Non-Psionic characters can leave ECHO at Rank 1; Psionic Callings require ECHO 2 minimum. Higher ECHO grants larger Erosion capacity (ECHO + 5) and access to higher-Rank Talents (ECHO must equal or exceed the Talent's Rank to attempt it).
+### The Psionic Callings
 
-Attribute caps are Rank 5 at all stages of play; you cannot raise an Attribute above 5 even with XP.
+These draw on the Current. Every Psionic Calling starts with **1 point of Erosion already marked** — the price of the gift. Psionics are distrusted and hunted by the Redeemers, and slowly erode their own souls. Read Chapter 2 (The Soul) before you commit.
 
-## Step 5: Spend Starting XP on Skills
+| Calling | Prime Attribute | Career Skills | Starting Talents | Focus |
+| :-- | :-- | :-- | :-- | :-- |
+| **The Psy-Slinger** (Gun Channeler) | +1 QUICK | Channel, Ballistics, Focus, Awareness, Force | Ghost Bullet (R1) + one Mundane | Rune-Etched Revolver |
+| **The Mindweaver** (Telepath) | +1 SWAY | Channel, Deceit, Insight, Stealth, Persuasion | The Nudge (R1) + one Mundane | Prism Crystals |
+| **The Seer** (Oracle) | +1 SAVVY | Channel, Insight, Lore, Scrounge, Awareness | Glimpse (R1) + one Mundane | Tarot Cards *or* Bone Dice |
+| **The Flesh Shaper** (Healer) | +1 GRIT | Channel, Medicine, Resilience, Insight, Melee | Knit Flesh (R1) + one Mundane | Surgical Tools |
+| **The Bastion Soul** (Anchor) | +1 IRON | Channel, Resilience, Force, Brawl, Awareness | Kinetic Dampener (R1) + one Mundane | Iron Shield *or* Iron Bracers |
 
-You begin with **30 XP** to spend on Skills, using the standard progression costs (4 XP for Rank 0→1, 6 XP for 1→2, 9 XP for 2→3, 15 XP for 3→4). Cap at Rank 4 at creation. See the **xp-progression-costs** reference table for the full schedule.
+Each Calling also lists specific **Starting Gear** in its full entry (weapons, kit, and the Focus item above). Psionic Callings access a single **Discipline** and its Rank 1 Talents.
 
-There are 25 Skills across five categories (Combat, Physical, Social, Mental, Frontier/Psionic). Your Origin gives you one at Rank 2 free; your Calling suggests one or two more as primary picks. Beyond that, choose Skills that match the *kind* of character you want to play.
+## Step 5: Freebie Points
 
-A common opening spread for a starting character: one Skill at Rank 3, two Skills at Rank 2, three Skills at Rank 1. That spends 24 XP. The remaining 6 XP can buy two more Rank 1 Skills or save for a Specialization later.
+Customize with a final allocation:
 
-## Step 6: Equipment
+- **+1 to any Attribute** (maximum starting Rank 4).
+- **+4 Skill Points** to spend on *any* Skills (maximum starting Rank 2). You may buy new Skills or raise existing ones.
 
-Your Calling gives you a starting gear loadout. Beyond that, starting characters receive **§50 Scrip** (Consortium paper currency) plus a region-appropriate bundle of essentials — waterskin, bedroll, rations for one week, basic clothing.
+This is your fourth and final +1 Attribute increase, bringing your Attribute total to baseline (six 1s) plus four points spread across the build.
 
-Special Calling considerations:
-- Psy-Slingers begin with a **Bonded Focus** firearm — the same gun they will channel through for the rest of their career.
-- Flesh Shapers begin with **Surgical Tools** that double as their Focus.
-- Bastion Souls begin with an **Iron Token** or salt-circle kit appropriate to their work.
-- Seers begin with a deck of cards, a set of bone dice, or another divination Focus.
-- Mindweavers begin with a small mirror, prism, or scrying object.
+## Step 6: The Memory Palace
 
-Special ammunition (Salt Rounds, Iron-Core, Ghost-Rock Dust) is purchased separately and is expensive — see the equipment files for prices.
+Your mind is a fortress with five **Pillars**. You already have the Scar; now write the other four. Each Memory is one sentence — specific, sensory, and emotionally weighted.
 
-## Step 7: Finishing Touches
+| Pillar | Source | What It Is | Example |
+| :-- | :-- | :-- | :-- |
+| **The Scar** | Tragedy | The wound that defined you | *"The surprise on my brother's face."* |
+| **The Root** | Origin | A sensory detail of home | *"The smell of coal smoke and machine oil."* |
+| **The Drive** | Calling | Why you keep fighting | *"The weight of the badge in my pocket."* |
+| **The Anchor** | Bond | Who you love | *"Maeve's laugh on a summer evening."* |
+| **The Secret** | Hidden | What you hide from others | *"I know who really started the fire."* |
 
-You have one Memory — the Scar. You need four more to complete your Memory Palace. Fill them in this order:
+Keep them sensory and specific, not abstract — *"the smell of coal smoke and my mother's cough"* beats *"I grew up poor."* See Chapter 2 for how Memories are spent, eroded, and burned.
 
-- **The Root** (Origin) — a sensory anchor to home. Specific and small. *"The smell of coal smoke and my mother's cough." "The way the rope creaked when grandfather lit the lantern."*
-- **The Drive** (Calling) — why you keep doing what you do. *"Because someone has to stand between them and the dark." "Because the Consortium took everything, and I'm taking it back."*
-- **The Anchor** (Bond) — who you love or owe. A name. A face. *"Eliza's laugh on a summer evening." "The promise I made over Jacob's grave."*
-- **The Secret** — what you hide. The thing that would cost you everything if it surfaced. *"I'm the one who set the fire." "I'm not who I say I am."*
+## Step 7: Derived Statistics
 
-Each Memory is one sentence. Each should be specific, sensory, and emotionally weighted. Refer to the **Memory Palace** rules in Chapter 2 for the full guidance.
+Calculate these from your final Attributes:
 
-Once your five Pillars are set, name your character, decide their pronouns and rough appearance, and you are ready for the table.
+| Statistic | Formula | Typical Range |
+| :-- | :-- | :-- |
+| **Vitality** (HP) | IRON + 8 | 9–12 |
+| **Defense** | 8 + (higher of QUICK or SAVVY) | 9–12 |
+| **Speed** | QUICK + Athletics + 3 | 4–10 |
+| **Initiative** | QUICK + Awareness | 1–6 |
+| **Mettle** | (SAVVY + GRIT) ÷ 2, round up | 1–4 |
+| **Strain Cap** | GRIT + 3 | 4–8 |
+| **Erosion Cap** | ECHO + 5 | 6–10 |
+
+Vitality is what you can absorb before Bleeding Out. Mettle is your reserve of desperate will, spent on Reactions, rerolls, and clutch moments. Strain Cap and Erosion Cap measure how much exhaustion and supernatural wear you can take before it starts costing you Vitality — or your Memories.
+
+## Step 8: Final Details
+
+Record your Starting Gear from your Calling. You also begin with:
+
+- **§20 in Scrip** (Consortium paper money).
+- Clothes appropriate to your Origin.
+- One personal item of sentimental value (no mechanical benefit).
+
+Then name your character. The Frontier favors simple names, nicknames, and epithets — given names like *Caleb, Maeve, Rook, Edith*; nicknames like *"Coffin Smile," "Preacher," "Doc"*; surnames that are occupational (*Smith, Cooper*) or descriptive (*Crow, Stone, Rivers*). Decide pronouns and rough appearance, and you are ready for the table.
+
+## Character Creation Summary
+
+| Step | Action | Gains |
+| :-: | :-- | :-- |
+| 1 | Record Baseline | All Attributes 1, all Skills 0 |
+| 2 | Choose Origin | +1 Attribute, 1 Skill at Rank 1 |
+| 3 | Choose Tragedy | +1 Attribute, first Core Memory (Scar) |
+| 4 | Choose Calling | +1 Attribute, +6 Skill Points, Gear, 2 Talents |
+| 5 | Apply Freebies | +1 Attribute, +4 Skill Points |
+| 6 | Create Memories | Complete the Memory Palace (4 more) |
+| 7 | Calculate Statistics | Vitality, Defense, Speed, Initiative, Mettle, Strain Cap, Erosion Cap |
+| 8 | Final Details | Name, personal item, §20 Scrip, gear |
 
 ## Worked Example: Caleb "Sundown Stitch" Vance
 
-*Caleb is a Psy-Slinger. He grew up in the rail-yards of Rustwater (**Rim-Born** Origin → Frontier 2 + Specialization: Rail-Towns). His parents were debt-laborers who died when the Consortium repossessed the family homestead — that's his **Tragedy: The Debt**, and his Scar is "The Baron's gold ring as he signed the papers."*
+*Caleb grew up in the rail-yards of Rustwater — a **Rail-Rider** Origin, taking **+1 QUICK** and **Finesse 1**. His parents were debt-laborers who died when the Consortium repossessed the family homestead: his **Tragedy is The Debt** (**+1 SWAY**), and his Scar is "The Baron's gold ring as he signed the papers."*
 
-*He chose the **Psy-Slinger Calling** — Channel + Ballistics. Primary Attribute: QUICK 4. ECHO 2 (minimum). IRON 2, GRIT 2, SAVVY 3, SWAY 1. He spent his 30 XP on Ballistics 3, Channel 2, Awareness 2, Brawl 1.*
+*He takes the **Psy-Slinger Calling** (**+1 QUICK**). He distributes his 6 Calling Skill Points as Ballistics 2, Channel 2, Awareness 1, Force 1, and selects **Ghost Bullet (Rank 1)** plus one Mundane Talent. His gear: a Rune-Etched Revolver (Psionic Focus) and a Heavy Coat. As a Psionic, he starts with **1 Erosion** already marked.*
 
-*He took the Psy-Slinger starting kit: a rune-etched Peacemaker (Bonded Focus), 24 rounds, a duster, a knife, and §50 in Scrip. He starts with three Talents: Ghost Bullet (Rank 1 Cantrip), Tracer Round (Rank 1 Cantrip), and the Psy-Slinger Calling Talent.*
+*For Freebies, he puts **+1 into ECHO** and spends 4 Skill Points on Focus 1, Brawl 1, Stealth 1, and a second rank of Awareness.*
 
-*His remaining Memories: The Root — "The taste of black coffee at the rail-yard at dawn." The Drive — "Because the Baron's still alive somewhere, and his ring still fits." The Anchor — "My sister Lily, who works the wash-line at Rustwater." The Secret — "I sometimes hear my father's voice when I channel."*
+***Final Attributes:*** *IRON 1, GRIT 1, QUICK 3, SAVVY 1, SWAY 2, ECHO 2.*
+***Final Skills:*** *Ballistics 2, Channel 2, Awareness 2, Finesse 1, Force 1, Focus 1, Brawl 1, Stealth 1.*
+***Derived:*** *Vitality 9, Defense 11, Speed 6, Initiative 5, Mettle 1, Strain Cap 4, Erosion Cap 7 (1 already marked).*
 
-*Caleb is now a character. He has skills, gear, a discipline, and a memory palace. He has reasons to fight and reasons to be careful. He is ready for the long road.*
+*His remaining Memories — The Root: "The rhythm of boxcar wheels and cold coffee at dawn." The Drive: "Because the Baron's still alive somewhere, and his ring still fits." The Anchor: "My sister Lily, who works the wash-line at Rustwater." The Secret: "I hear my father's voice when I channel."*
+
+*Caleb is a fragile thing — one good Strain Cap of 4 and a single point of Vitality over the baseline — which is exactly the point. He has reasons to fight and reasons to be careful. He is ready for the long road.*
