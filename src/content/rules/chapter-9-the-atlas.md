@@ -7,8 +7,8 @@ summary: "The geography of the Bleeding Frontier — the five Killing Grounds, m
 tags: ["world", "world-overview", "travel", "exploration"]
 ---
 
-> *"Civilization out here isn't a state of being. It's a siege. Every town is a fortress, every road is a supply line, and every stranger is a potential breach in the wall."*
-> — Consortium surveyor's log (found bloodstained)
+> *"You ride too far, and you'll see things no man oughta. The sky'll hang wrong, the dirt'll whisper your name, rivers'll crawl uphill just to spite the rules of nature. So if you're plannin' to last longer'n a week, best you learn the landmarks. They ain't just places — they're teeth and bones in the body of a land that don't want you."*
+> — Old Pete Carver, Rustwater Barkeep
 
 The Frontier is not one place. It is five — five distinct regions where the Veil thinned in five distinct ways, breeding five distinct ecologies of horror. The towns are sieges. The roads are arteries that bleed when cut. This chapter is the GM's map.
 
@@ -18,76 +18,74 @@ The detailed region, settlement, and landmark files live in their respective col
 
 ### The Ash Belt
 
-Industrial wasteland. Toxic air, perpetual gray haze, abandoned mining towns. Controlled by the **Consortium**, who continue to mine despite the air being unbreathable to those who weren't born to it. The Veil-Born here are products of industrial death — **Hollow Men**, **Walking Dead**, things that came up through the wells.
+Industrial wasteland northwest of Rustwater: toxic air, perpetual gray haze, dead petrified forests, abandoned mining towns. Controlled by the **Consortium**, who keep mining despite air that's unbreathable to anyone not born to it. The **Circle of Ash** hides in its smoke. Its threats are products of industrial death — **Glass-Walkers** (silent crystalline predators), **Hollow Men**, and the building-sized **Ley-Engines** that pump the Current like oil.
 
-The Ash Belt's primary hazard is the air itself: GRIT TN 11 per hour without a filter mask, or take 1 Strain and a cough. Long-term exposure produces **Ashlung**, a lingering condition that doesn't heal cleanly.
+Primary hazards: the air itself (**the Filter Rule** — GRIT + Resilience TN 11 per hour without a filter mask, or take 1 Strain and a lingering cough), toxic water (drinking it unfiltered costs 1 Erosion), and permanent smog that caps visibility at Near range. A week unprotected earns **Miner's Lung** — a permanent −1 to your Strain Cap.
 
-Major settlement: **Rustwater**. The Consortium hub. Sheriff Crowe. The setting's starting town for most campaigns.
+Major settlement: **Rustwater** — the Consortium hub, Sheriff Crowe's town, and the starting town for most campaigns.
 
 ### The Scorchveil
 
-The deep desert. 120°F at noon, below freezing at midnight, sand that shifts to bury the unwary. Controlled by the **Dust Vultures**, who have mastered **Sand-Sailing** with wind-driven skiffs. The Veil-Born here are dust-spirits — **Ashborn**, **Mirages**, things that resemble water and aren't.
+The deep desert, southwest: 120°F at noon, below freezing at midnight, semi-sentient sand that shifts to bury the unwary or expose ruins. Controlled by the **Dust Vultures**, who sail the dunes on wind-driven skiffs. Its Veil-Born are dust-things — **Ashborn** (storm-spirits that reform unless killed by water or magic) and **Mirages** (Current illusions that cost Strain to interact with).
 
-Primary hazards: heat and thirst (water consumption doubles), navigation (maps are unreliable; Lodestone Compass or a Seer required for the deep desert), and **The Shifting** (failure on daily Frontier checks adds 1d3 days to the journey).
+Primary hazards: the **Sun Tax** (heat that punishes daytime travel), thirst (water consumption doubles — 2 rations of water per day), navigation (maps are unreliable; the deep desert demands a Seer or a Lodestone Compass), and **The Shifting** (a failed daily Frontier check adds 1d3 days to the journey).
 
-Major settlement: **Greystone** (cliff-fortress, steam-winch access). Major landmark: **Ojo del Diablo** (a 20-mile sinkhole lake; a Stable Breach where time runs sideways).
+Major settlement: **Greystone** (an Ironbrand-protected cliff-town on the mesa edge, reachable only by steam-winch lift). Major landmark: **Ojo del Diablo** — a 20-mile sinkhole lake, a Stable Breach where time runs sideways.
 
 ### The Stormrise Bluffs
 
-Jagged highlands under permanent storm clouds. Lightning hunts. The **Metal Rule** says that wearing AR 2+ armor during storms means rolling 1d6 every hour and taking 4d6 damage on a 1 (usually fatal). The Veil-Born here are weather entities — **Stormcallers** (Boss-tier; localized extinction events), **Lightning-Wraiths**, **Sky-Riders**.
+Jagged highlands under permanent storm clouds, northeast. Lightning hunts. The **Metal Rule**: wearing AR 2+ armor during a storm means rolling 1d6 every hour and taking 4d6 lightning damage on a 1 (usually fatal). Its Veil-Born are weather entities — chief among them the **Stormcallers**, Boss-tier riders of blue lightning that hunt anything moving fast.
 
-Primary hazards: lightning, **The Hum** (static charge inflicts −2 dice to Focus checks), **Acoustics of the Dead** (sound carries miles; base Stealth TN 15).
+Primary hazards: lightning, **The Hum** (saturating static inflicts −2 dice to Psionic Focus checks), and **Acoustics of the Dead** (canyon walls carry sound for miles; base Stealth TN 15).
 
-No major settlements; only outposts. The **Bluff Roads** are the only navigable routes, and they require a guide (§15/day).
+No major towns, only outposts (like Lathrop, built atop a Ley-Line crossing where gravity runs at 80%). The **Bluff Roads** are the only navigable routes, and they require a guide (§15/day).
 
 ### The Graven Plain
 
-Vast open grassland with shallow burial mounds visible to the horizon. Once-fertile farmland; now haunted by the dead who refuse to stay buried. Controlled by no single faction; **Redeemers** are common here, burning what shouldn't walk. The Veil-Born here are reverent dead — **Corpse-Candles**, **Bone Sentinels**, **Walking Dead**.
+Vast open grassland, eastern Frontier, where the rolling "hills" are burial mounds and the bones beneath are the size of houses. Faction presence is split between the **Circle of Ash** (at Palomera) and **Redeemer** patrols burning what shouldn't walk. Its threats are the reverent dead — **Corpse-Candles**, **Walking Dead**, and the Stone Circles that amplify any magic cast within them (+1 Rank effect, but doubled Backlash).
 
-Primary hazards: **Psychic pressure at dusk** (ECHO TN 11 or 1 Strain, no sleep that night), restless ground (disturbing graves invites consequences).
+Primary hazards: **The Humming** (at dusk the bones thrum — ECHO + Resilience TN 11 or take 1 Strain and lose the night's sleep) and **The Sleepwalker's Curse** (sleeping on bare ground risks walking toward the nearest mound).
 
-Major settlement: **Palomera** (a Redeemer-controlled mission town). Major landmark: **Red Mother's Teeth** (a circle of standing stones; the canonical Redeemer cleansing site).
+Major settlement: **Palomera** (a Circle of Ash town — see below). Major landmark: **Bell-in-the-Black** — a 50-foot obsidian monolith that tolls during storms; those who hear it must make ECHO TN 13 or carry a week-long Suggestion.
 
 ### The Fen
 
-Endless brackish swamp. Time runs differently here — a day's journey can take a week, a week's journey can take an hour. Controlled by no faction; the Fen does not tolerate authority. The Veil-Born here are drowned things — **Fen-Wraiths**, **Walking Dead** (water-logged variant), **Threadrippers** (in the deepest parts).
+Endless brackish swamp where all the water goes and the Veil is thinnest. Time runs differently here — a day's journey can take a week, or an hour. No faction holds it; the Fen does not tolerate authority. Its Veil-Born are drowned things — **Fen-Wraiths** (who would rather bargain than fight, at first) and water-logged **Walking Dead**.
 
-Primary hazards: **Time slip** (1d6/day for unpredictable hours lost or gained), **Rot** (food spoils fast, metal rusts overnight, wounds infect at double rate), **The Bargain** (Fen-Wraiths offer trades; some are even honest).
+Primary hazards: **time slip** (1d6/day for hours unpredictably lost or gained), **Rot** (food spoils fast, metal rusts overnight, wounds infect at double rate), and **The Bargain** (Fen-Wraiths offer trades — some even honest).
 
-Major settlement: **Bellhaven** (waystation on stilts; Mother Elaine, Flesh Shaper, treats Fen-Rot). Other settlement: **Mournstead** (graveyard town).
+Major settlement: **Bellhaven** (a waystation on stilts; Mother Elaine, a Flesh Shaper, treats Fen-Rot in exchange for favors). Other settlement: **Mournstead** (a town overshadowed by a cemetery three times its size).
 
 ## Major Settlements at a Glance
 
 The full settlement files are the canonical source. Key reference:
 
-- **Rustwater** (Ash Belt rim): Consortium hub. ~3,000 souls. Sheriff Crowe. Starting town.
-- **Orvain** (rail terminus, eastern Ash Belt): the Consortium's regional capital. The Rail Baron's seat.
-- **Palomera** (Graven Plain): Redeemer mission town. Burns Psionics. The Inquisitor's home.
-- **Greystone** (Scorchveil edge, cliff-mesa): Dust Vulture-adjacent. Steam-winch access only.
-- **Kessick** (Stormrise foothills): mining outpost. Unstable. Lightning damage common.
-- **Bellhaven** (Fen): stilt-village. Half-sanctuary, half-trap.
+- **Rustwater** (Ash Belt rim): Consortium hub, ~3,000 souls. Sheriff Crowe. The default starting town.
+- **Orvain** (eastern Ash Belt, rail terminus): the Consortium's regional capital and the Rail Baron's seat.
+- **Palomera** (Graven Plain): a **Circle of Ash** town and Seer lodge (Elder Rhun's seat) — one of the only places to obtain Psionic gear, Grimoires, and Flesh-Shaper healing, all traded in service rather than Scrip.
+- **Greystone** (Scorchveil edge, cliff-mesa): Ironbrand-protected, winch-lift access only. Strangers wait three days at the base to "prove they aren't Ashborn."
+- **Kessick** (Ash Belt): a major Silver Line rail hub (~6,500 souls), perpetually contested between Consortium and Vultures.
+- **Bellhaven** (Fen): a stilt-village, half-sanctuary and half-trap. ~1,200 souls.
 
-Each settlement has its own faction tensions, named NPCs, and economic specialties. Use them as **hubs**: places to resupply, take contracts, learn rumors, and recover between expeditions.
+Use settlements as **hubs**: places to resupply, take contracts, learn rumors, and recover between expeditions. Each has its own faction tensions, named NPCs, and economic specialties.
 
 ## Cursed Landmarks
 
-Three landmarks are detailed in the landmark files. They are the canonical "what's out there" reference points for adventures:
+These are the canonical "what's out there" reference points. Use them sparingly — they should feel mythic, not routine.
 
-- **Ojo del Diablo** (Scorchveil): The 20-mile sinkhole. A Stable Breach. Time runs sideways. Things come out.
-- **The Screaming Rails** (Ash Belt): A 40-mile stretch of derelict rail where the trains still run — only nobody is driving them, and the passengers don't get off.
-- **Red Mother's Teeth** (Graven Plain): The Redeemer cleansing stones. Either the holiest place on the Frontier or the location of an unsolved massacre, depending on who you ask.
-
-A campaign that visits all three has earned its ending. Use them sparingly. They should feel mythic, not routine.
+- **Ojo del Diablo** (Scorchveil): the 20-mile sinkhole lake — the site of the First Rupture and a Stable Breach. Time dilates near the shore (an hour there can be a day outside), animals won't approach, and things come out of the black water.
+- **The Screaming Rails** (Ash Belt, between Orvain and Kessick): a canyon stretch of Silver Line track where the rails themselves *scream* — audible for miles (ECHO TN 9 per hour of exposure or take 1 Strain). Trains that pass through move 50% faster under time compression, and their passengers must resist hallucinating the deaths of the workers who built the line (ECHO TN 11).
+- **Red Mother's Teeth** (Stormrise Bluffs): crimson, fang-like cliffs that bleed a coppery fluid — "Red Mother's Milk" — when lightning strikes. Drinking it grants +2 dice to Melee damage and immunity to pain for an hour, paid for with 2 Erosion and a berserker check when it fades. Addictive after three uses.
 
 ## The Five Powers
 
 The factions are detailed in the faction files. The thumbnail orientation:
 
-- **Orvain Consortium** — rails, scrip, ghost-rock mining. The cause of the Rupture. The architects of "progress."
-- **Dust Vultures** — nomadic raiders of the Scorchveil. Wind-skiffs. Forgotten how to be towns; remembered how to be free.
-- **Redeemers** — fanatic religious order. Burn Psionics. Burn Veil-touched. Save souls one bullet at a time.
-- **Circle of Ash** — underground Psionic network. Hide in plain sight. Run sanctuaries for Hollows.
-- **Ironbrands** — mercenary professionals. Take any contract. Honor any contract. Pick no sides.
+- **Orvain Consortium** — rails, Scrip, ghost-rock mining. The cause of the Rupture. The architects of "progress at any price."
+- **Dust Vultures** — nomadic raiders of the Scorchveil. Wind-skiffs. They've forgotten how to be towns and remembered how to be free.
+- **Redeemers** — a fanatic religious order. They burn Psionics and the Veil-touched alike. "Fire purifies. Salt preserves. Iron binds."
+- **Circle of Ash** — an underground network of scholars and mystics who study the Veil and run sanctuaries for Hollows. "The Veil is not a wall. It is a door."
+- **Ironbrands** — mercenary professionals in steam-assisted Hardsuits. They take any contract and break none. "Cold steel. Cold cash. No questions."
 
 Most campaigns hinge on the tensions between these five. Pick two who hate each other; the players are caught in the middle. Pick one who's hiring; the players take the work. Pick one who's hunting them; the players run.
 
@@ -97,72 +95,70 @@ Most campaigns hinge on the tensions between these five. Pick two who hate each 
 
 When traveling through dangerous territory, the **Guide** (the character with the highest **Frontier** skill in the party) rolls daily:
 
-**Pool:** SAVVY + Frontier. **TN:** Varies by pace (see below).
+**Pool:** SAVVY + Frontier. **TN:** varies by pace (below).
 
 | Result | Outcome |
-| :---- | :---- |
+| :-- | :-- |
 | Success | Normal progress; no extra cost. |
 | Failure | Delayed or hazard; consume 2× rations OR take 1 Strain. |
-| Fumble | Encounter (roll on region table or GM choice). |
+| Fumble | Encounter (roll on the region table or GM choice). |
 
 ### Pace Modifiers
 
 | Pace | Speed | Journey TN | Effect |
-| :---- | :---- | :---- | :---- |
+| :-- | :-- | :-: | :-- |
 | Cautious | ×0.75 | TN 9 | +2 dice to avoid encounters |
 | Normal | ×1 | TN 11 | Standard |
 | Fast | ×1.5 | TN 13 | −2 dice to avoid encounters |
 
-Cautious doubles your time but halves your danger. Fast does the opposite. Most cross-country travel uses Normal; the choice to deviate is itself a narrative beat.
+Cautious doubles your time but halves your danger; Fast does the reverse. Most cross-country travel uses Normal — the choice to deviate is itself a narrative beat.
 
 ### Travel Routes
 
 The five major routes (full table in **travel-summary**):
 
-- **Silver Line** (Rail): 100 mi/day, High safety, §20–50, fast and safe but Consortium-controlled.
-- **Dust Trail** (caravan): 20–30 mi/day, Low safety, cheap, budget travel with caravan protection.
-- **Current's Bend** (water): 40 mi/day, Medium safety, §15+, reaches the Fen.
-- **Bluff Roads** (mountain): 15–20 mi/day, Low safety, §15/day guide, reaches isolated Stormrise locations.
-- **Cross-Country**: 15 mi/day, variable safety, free, goes where roads don't.
+| Route | Speed | Safety | Cost | Best for |
+| :-- | :-- | :-- | :-- | :-- |
+| **Silver Line** (rail) | 100 mi/day | High | §20–50 | Fast, safe travel between major towns (Consortium-controlled) |
+| **Dust Trail** (caravan) | 20–30 mi/day | Low | Cheap | Budget travel with caravan protection (Vulture road-tax country) |
+| **Current's Bend** (water) | 40 mi/day | Medium | §15+ | Reaching the Fen; requires a Salt-Man guide |
+| **Bluff Roads** (mountain) | 15–20 mi/day | Low | §15/day guide | Reaching isolated Stormrise locations |
+| **Cross-Country** | 15 mi/day | Variable | Free | Going where the roads don't |
 
 ### Resource Consumption
 
-Daily requirements (full table in **resource-consumption**):
-
-- Civilized / Wilderness: 1 water, 1 ration.
-- Scorchveil (Desert): 2 water, 1 ration.
-- Fen (Swamp): 1 water (must purify), 1 ration (spoils fast).
+| Environment | Water/Day | Rations/Day |
+| :-- | :-: | :-- |
+| Civilized / Wilderness | 1 | 1 |
+| Scorchveil (Desert) | 2 | 1 |
+| Fen (Swamp) | 1 (must purify) | 1 (spoils fast) |
 
 ### Deprivation
 
-Going without water or food (full table in **deprivation-effects**):
-
-- 1 day without water: −1 die to physical checks.
-- 2 days: 1 Strain/hour, −2 dice.
-- 3+ days: 1 HP/hour, hallucinations (1 Erosion).
-- 3 days without food: −1 die to all checks.
-- 7 days: 1 Strain/day, −2 dice.
-- 14+ days: 1 HP/day, weakness.
-
-The Frontier's first lesson: where you stop is where you live or die.
+| Going without | Effect |
+| :-- | :-- |
+| Water — 1 day | −1 die to physical checks |
+| Water — 2 days | 1 Strain/hour; −2 dice |
+| Water — 3+ days | 1 HP/hour; hallucinations (1 Erosion) |
+| Food — 3 days | −1 die to all checks |
+| Food — 7 days | 1 Strain/day; −2 dice |
+| Food — 14+ days | 1 HP/day; weakness |
 
 ### Camp Security
 
-Full setup requires 30 minutes and at least one security measure (full table in **camp-security**):
+Full setup takes 30 minutes and at least one security measure:
 
-- **Salt Circle** (1 Salt Pouch): prevents spirit intrusion; **required** for the Tension Pool to clear overnight in supernatural territory.
-- **Watch Rotation**: Awareness checks to spot approaching threats; 2 hours of unbroken sleep per character for Long Rest benefits.
+- **Salt Circle** (1 Salt Pouch): prevents spirit intrusion — and is **required** for the Tension Pool to clear overnight in supernatural territory.
+- **Watch Rotation**: Awareness checks to spot approaching threats.
 - **Fire**: +2 TN for predators to approach; visible for miles.
 - **No Fire**: −2 to Awareness at night; less visible to enemies.
 
-Without a salt circle in supernatural territory: Tension Pool does not clear overnight. No Strain recovery from rest. Salt is cheap. Veterans never run out of salt.
+Without a salt circle in supernatural territory, the Tension Pool does not clear overnight and you get no Strain recovery from rest. Salt is cheap. Veterans never run out of salt.
 
 ## Running Exploration
 
-A good exploration session balances three things: **mapping** (where are we?), **resourcing** (what do we have?), and **encountering** (what wants us dead?). Keep all three in tension.
+A good exploration session balances three things in tension: **mapping** (where are we?), **resourcing** (what do we have?), and **encountering** (what wants us dead?).
 
-Set the pace. Make the players declare it. *Cautious or Fast?* The choice is theirs. The consequences are yours to deliver.
+Set the pace — make the players declare it. *Cautious or Fast?* The choice is theirs; the consequences are yours to deliver.
 
-Use the **Tension Pool** during travel. Every hour in dangerous territory adds 1 die. Every Fumbled Journey Check adds 1 die. The pool grows. The players know it grows. The pressure builds even when nothing has visibly happened.
-
-Most exploration days should pass uneventfully. Save the encounters for the days the Tension rolls. The contrast is the point.
+Use the **Tension Pool** during travel: every hour in dangerous territory adds a die, every Fumbled Journey Check adds a die. The pool grows, the players watch it grow, and the pressure builds even when nothing has visibly happened. Most exploration days should pass uneventfully — save the encounters for the days the Tension rolls. The contrast is the point.
