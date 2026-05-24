@@ -52,14 +52,14 @@ Your weapon is your rhythm. A pistol with a Base Tempo of 4 acts three times for
 
 The major firearm categories, by Base Tempo:
 
-- **Light Pistols** (Tempo 3) — Derringer-style. Concealable, fast, weak. The High-Roller's friend.
+- **Light Pistols** (Tempo 3) — the Derringer. Concealable, fast, weak. The High-Roller's friend.
 - **Medium Pistols** (Tempo 4) — Peacemaker, Volcanic. The Gunhand's standard. Versatile.
-- **Heavy Pistols** (Tempo 5) — Dragoon. Hits harder than a medium; slower to bring to bear.
+- **Heavy Pistols** (Tempo 5) — Dragoon, LeMat. Hit harder than a medium; slower to bring to bear. (The LeMat adds an underslung shotgun barrel.)
 - **Shotguns** (Tempo 3–5) — Sawed-Off (3), Coach Gun (4), Pump-Action (5). Scatter damage, devastating at Close range.
-- **Rifles** (Tempo 5–6) — Repeater (5), Buffalo Rifle (6). The long-range answer.
-- **Heavy Weapons** (Tempo 6+) — Gatling guns. Crew-served or suit-mounted. The Rail-Jack's and Ironbrand's signature.
+- **Rifles** (Tempo 5–6) — Carbine (5), Repeater (5), Buffalo Rifle (6), Sniper Rifle (6, Scope). The long-range answer.
+- **Heavy Weapons** (Tempo 7+) — the Gatling Gun (7). Crew-served and mounted; Area Attack and Volatile. The Rail-Jack's and Ironbrand's signature.
 
-A starting character typically begins with one primary firearm (matched to their Calling) and possibly a backup. The full stat blocks live in the **weapons** files; quick reference: Derringer (WR 2, §45), Peacemaker (WR 3, §120), Dragoon (WR 4, §180), Coach Gun (WR 4, §150), Repeater (WR 4, §300), Buffalo Rifle (WR 5, §450).
+A starting character typically begins with one primary firearm (matched to their Calling) and possibly a backup. The full stat blocks live in the **weapons** files; quick reference: Derringer (WR 2, §45), Peacemaker (WR 3, §120), Volcanic (WR 3, §150), LeMat (WR 3/4, §250), Dragoon (WR 4, §180), Carbine (WR 3, §200), Repeater (WR 4, §300), Coach Gun (WR 4, §150), Pump-Action (WR 4, §280), Buffalo Rifle (WR 5, §450), Sniper Rifle (WR 5, §550), Gatling Gun (WR 5, §2,000).
 
 ### Special Ammunition
 
@@ -77,7 +77,7 @@ Special ammunition is expensive and limited. Carry six rounds, not sixty. Note t
 
 ### Melee Weapons
 
-The Frontier is not primarily a melee setting, but knives, hatchets, and sledgehammers all see use. **Light Melee** (Tempo 2–3) like Brass Knuckles and the Bowie Knife (WR 2) is fast but weak; **Medium Melee** (Tempo 4) like the Hatchet (WR 4) is balanced; **Heavy Melee** (Tempo 6) like the Sledgehammer (WR 4, Breaker) trades speed for impact. Full melee stats live in the **weapons** files.
+The Frontier is not primarily a melee setting, but blades and bludgeons still see use. **Light Melee** (Tempo 2–3) — Brass Knuckles (WR 1, Stun) and the Bowie Knife (WR 2, Bleed) — is fast but weak. **Medium Melee** (Tempo 4–5) — the Hatchet (WR 2) and the Saber (WR 3, Parry) — is balanced. **Heavy Melee** (Tempo 5–6) — the Sledgehammer (WR 4; Breaker, Two-Handed, Stun) and the Cavalry Lance (WR 4; Reach, Mounted Only) — trades speed for impact. Note that **light melee weapons trigger Exposed even on a standard Strike** — the cost of their speed. Full melee stats live in the **weapons** files.
 
 ## Choosing Your Protection
 
