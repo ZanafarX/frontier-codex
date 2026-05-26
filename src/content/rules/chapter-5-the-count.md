@@ -98,7 +98,7 @@ Sacrifice thoroughness for speed. Most trigger the **Exposed** condition (attack
 ### Standard Actions (Tempo varies by weapon)
 
 - **Steady Shot**: full-pool ranged attack at the weapon's Base Tempo.
-- **Strike**: full-pool melee attack at the weapon's Base Tempo. *Note:* Light melee weapons (Brass Knuckles at Tempo 2, knives at Tempo 3) trigger **Exposed** even on a standard Strike — the cost of their speed.
+- **Strike**: full-pool melee attack at the weapon's Base Tempo. *Note:* Light melee weapons (Brass Knuckles at Tempo 2, knives at Tempo 3) trigger **Exposed** even on a standard Strike (it's the cost of their speed).
 - **Reload (Speed Loader)** (4): for revolvers, moon clips, or break-top mechanisms.
 - **Grapple** (5): IRON + Brawl vs. Defense; both become Grappled on success. The target may Escape on their turn (Opposed IRON + Brawl).
 - **Interact** (4): flip a table, pick up an item, kick a door, pull a lever.
@@ -182,7 +182,7 @@ At 0 Vitality you are **Downed**:
 - At the start of each of your turns, you lose 1 Vitality.
 - You can be **Stabilized** by an ally with medical training.
 
-A Downed character is not out of the fight — they can call out warnings, share information, even crawl toward cover — but they are dying.
+A Downed character is not out of the fight. They can call out warnings, share information, even crawl toward cover. But they are dying.
 
 ### Death Threshold
 
@@ -196,7 +196,7 @@ You die when your Vitality reaches **−(IRON + 2)**.
 | 4 | −6 |
 | 5 | −7 |
 
-Higher IRON gives you more time — but not much. An IRON 1 character has three turns between Downed and Dead.
+Higher IRON gives you more time, but not much. An IRON 1 character has three turns between Downed and Dead.
 
 ### Stabilization
 
@@ -249,6 +249,6 @@ Most conditions clear with the **Recover** action (Tempo 6, appropriate check vs
 
 *Tick 6: Caleb and Maeve are both due to act — a tie. Both are PCs, so the tie breaks on Initiative Margin; Maeve rolled higher, so she resolves first. She takes a Quick Shot (Tempo 3, −2 dice) at the Enforcer and gains the Exposed condition, advancing to Tick 9. Caleb takes Aim (Tempo 2) for a banked +2, advancing to Tick 8.*
 
-*The Hammer keeps advancing. At Tick 8, Caleb fires again — this time with his Aim bonus. The clock ticks on, inexorable.*
+*The Hammer keeps advancing. At Tick 8, Caleb fires again. This time with his Aim bonus. The clock ticks on, inexorable.*
 
 The Count creates a continuous, fluid combat where every weapon choice and every action has rhythmic consequence.

@@ -10,7 +10,7 @@ tags: ["psionic", "disciplines", "world"]
 > *"There are five paths through the wound. None of them lead to safety. They lead to different kinds of damage."*
 > — Mother Yarrow, Circle of Ash teacher
 
-The Current flows differently through different kinds of minds. Five disciplines have stabilized in the decades since the Rupture, each shaped by the *kind* of person who first learned to channel through it. These are not arbitrary categories — they are five different relationships with the wound between worlds.
+The Current flows differently through different kinds of minds. Five disciplines have stabilized in the decades since the Rupture, each shaped by the *kind* of person who first learned to channel through it. They represent five different relationships with the wound between worlds.
 
 This chapter is an orientation. The mechanical details — sub-cluster ladders, Reaction Conventions, Tier-Removal Hierarchies, and cross-discipline interaction catalogs — live in each Discipline's overview file. Read those carefully before committing to a Calling.
 

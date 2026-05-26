@@ -56,6 +56,8 @@ A massive industrial combine of bankers, engineers, and ruthless robber barons. 
 
 ### The Dust Vultures
 
+> *"The land takes what it wants. We are the land."*
+
 Nomadic raider clans who have adapted to the deep wastes and wear the dust of the dead. They want total freedom: to burn the tracks, tear down the walls, and return the Frontier to a state of primal survival. They are the masters of the open desert, where their Mirage-Weavers can hide a war-band in a heat-shimmer.
 
 ### The Redeemers

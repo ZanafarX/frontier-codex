@@ -78,7 +78,7 @@ Common Roll Modifiers for Channeling:
 - **Without Focus:** −2 dice Pool Penalty.
 - **Rushed:** −2.
 
-Before rolling, you may add Bleed Dice or spend Mettle for Desperation, with all the standard Backlash risks. Backlash on a Psionic feeds directly into Erosion and the Tension Pool — Channelers should think twice before adding more than one Bleed Die.
+Before rolling, you may add Bleed Dice or spend Mettle for Desperation, with all the standard Backlash risks. Backlash on a Psionic feeds directly into Erosion and the Tension Pool. Channelers should think twice before adding more than one Bleed Die.
 
 ### Step 4: Determine Outcome
 
@@ -138,7 +138,7 @@ The Bastion Soul Cantrip **Disrupt** can interrupt a channeling Psionic with an 
 
 **For Psionics:** channel from cover when possible; wait until enemies are engaged with allies; prefer Cantrips and Tactics in close combat and save Rank 3+ for moments when you have cover or distance; invest in Focus and carry a Veil Anchor.
 
-**Against Psionics:** focus fire on Open targets — every hit is a Disruption check; save Salt Rounds for the Open moment; use Disrupt or Intercept-style abilities to interrupt without spending ammunition; force them to choose between channeling and defending.
+**Against Psionics:** focus fire on Open targets (every hit is a Disruption check); save Salt Rounds for the Open moment; use Disrupt or Intercept-style abilities to interrupt without spending ammunition; force them to choose between channeling and defending.
 
 ## The Burdens of Power
 
@@ -169,7 +169,7 @@ When you **successfully** cast a Talent, its pattern lingers — you gain **Reso
 - **One at a time.** You hold Resonance with a single Talent. Casting a *different* Talent replaces it; recasting the same one maintains it.
 - **Lasts until your next Long Rest.** It persists through Short Rests, combat, and scene changes — but you wake from a full night's sleep with none, so the first Talent of the day always costs full price.
 
-A Resonance Echo reduces only the **cost**. The TN, Tempo, Open State, effect, and Backlash risk are all unchanged — a Rank 3 Echo is still TN 13 and still leaves you Open for 6 Ticks. The cost drops one rung:
+A Resonance Echo reduces only the **cost**. The TN, Tempo, Open State, effect, and Backlash risk are all unchanged. A Rank 3 Echo is still TN 13 and still leaves you Open for 6 Ticks. The cost drops one rung:
 
 | Original Cost | With Resonance |
 | :-- | :-- |
