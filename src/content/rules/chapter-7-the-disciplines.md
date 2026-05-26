@@ -40,7 +40,7 @@ The Mindweaver channels through **prisms, mirrors, or scrying objects** that ben
 
 Mechanically, Mindweavers are **control specialists**. They debuff, manipulate, and unravel. Their signature universal rule is a **Resist-based variant of Attack-Replacing**: their effects compare a Channeling Sum to a target's Resist roll rather than to a Defense Value, making armor irrelevant against most of them. They also follow the **Suicide Limit**: when a Mindweaver's effects would force a target to harm themselves, the effect has a hard ceiling — the Veil refuses to let you write someone's death note in their own hand.
 
-The Mindweaver's cost is **isolation**. The more you peer into other minds, the less your own feels like home. Veil Bleed hits Mindweavers hardest — their reflections drift first.
+The Mindweaver's cost is **isolation**. The more you peer into other minds, the less your own feels like home. Veil Bleed hits Mindweavers hardest . Their reflections drift first.
 
 ## Seer: The Silver Thread
 
@@ -52,7 +52,7 @@ The Seer's cost is **knowledge**. You see what is coming. You cannot un-see it. 
 
 ## Flesh Shaper: The Red Weave
 
-The Flesh Shaper channels through **surgical tools** — their hands, their knives, their bone saws. They heal. They modify. They build. They unmake. Of all the disciplines, theirs is the most intimate, and the most horrifying.
+The Flesh Shaper channels through **surgical tools**: their hands, their knives, their bone saws. They heal. They modify. They build. They unmake. Of all the disciplines, theirs is the most intimate, and the most horrifying.
 
 Mechanically, Flesh Shapers are **healer specialists** who also wield devastating offensive options. They stabilize the Downed, restore Vitality, remove conditions, and reshape biology. Their offensive Talents target the body directly — bones snap, tendons spasm, organs fail. Their signature universal rule is the **No-Reactions Principle**: Flesh Shaper Talents never function as Reactions, because their work requires touch and time. They are deliberate. They do not flinch.
 
@@ -86,4 +86,4 @@ By default, a Psionic Calling grants access to **one Discipline**. Cross-trainin
 
 Each Discipline's overview file is the canonical reference for its rules. Pay particular attention to the Sub-Cluster Ladder (the chains of which Talents interact with which) and the universal rules (Reaction Convention, Attack-Replacing, Tier-Removal Hierarchy, No-Reactions Principle, Suicide Limit). These are the load-bearing parts of each Discipline's design.
 
-The disciplines are not balanced against each other in a strict numerical sense — they are balanced by *role*. A party of five Psy-Slingers can win fights, but they cannot heal each other, control crowds, see the future, or anchor the Veil. The party that survives the long road is the party that brings five different relationships with the wound.
+The disciplines are are balanced by *role* rather than balanced against each other in a strict numerical sense. A party of five Psy-Slingers can win fights, but they cannot heal each other, control crowds, see the future, or anchor the Veil. The party that survives the long road is the party that brings five different relationships with the wound.

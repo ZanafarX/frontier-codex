@@ -26,7 +26,7 @@ For scale: a common meal runs §1–2 and a flophouse bed §2 a night, while a d
 
 ### Barter
 
-Outside Consortium reach, trade happens in goods. The canonical barter table (in the **barter-rates** reference file) lists rough exchange rates for ammunition, salt, water, food, and labor. A pouch of ammunition can be worth a day's water in the deep Scorchveil — and a day's water is worth your life there.
+Outside Consortium reach, trade happens in goods. The canonical barter table (in the **barter-rates** reference file) lists rough exchange rates for ammunition, salt, water, food, and labor. A pouch of ammunition can be worth a day's water in the deep Scorchveil, and a day's water is worth your life there.
 
 Salt holds value everywhere. A pouch of purified rock salt costs §40 in town and can be traded for almost anything in the wastes. Smart travelers carry more salt than they think they need.
 
@@ -46,7 +46,7 @@ Most starting characters can afford Cost 1–2 items casually; Cost 3 requires s
 
 ## Choosing Your Iron
 
-Your weapon is your rhythm. A pistol with a Base Tempo of 4 acts three times for every two shots from a rifle at Base Tempo 6 — but the rifle hits harder and reaches farther. The trade-off between speed and stopping power is one of the core tactical choices of *The Veil & Lead* combat.
+Your weapon is your rhythm. A pistol with a Base Tempo of 4 acts three times for every two shots from a rifle at Base Tempo 6, but the rifle hits harder and reaches farther. The trade-off between speed and stopping power is one of the core tactical choices of *The Veil & Lead* combat.
 
 ### Firearm Categories
 
@@ -71,7 +71,7 @@ Most fights are won with ordinary lead. But some enemies require specialty round
 | **Iron-Core** | §60 | **Breaker** (armor-piercing); +1 Tempo (recoil); bonus vs. fae and iron-vulnerable creatures |
 | **Ghost-Rock** | §200 | **+2 WR**; **Volatile** (on a Fumble, explodes for 1d6 on the shooter and jams the gun) |
 | **Hollow-Point** | §40 | +1 WR vs. unarmored; −1 WR vs. AR 2+ targets |
-| **Tracer** | §30 | Marks the target — follow-up attacks gain +1 Roll Bonus; reveals your position |
+| **Tracer** | §30 | Marks the target. Follow-up attacks gain +1 Roll Bonus; reveals your position |
 
 Special ammunition is expensive and limited. Carry six rounds, not sixty. Note that Salt Rounds are the standard anti-supernatural load and the auto-disrupt makes them the bane of any Psionic; Ghost-Rock is as dangerous to the shooter as the target.
 
@@ -81,7 +81,7 @@ The Frontier is not primarily a melee setting, but blades and bludgeons still se
 
 ## Choosing Your Protection
 
-Armor is a trade. Every point of **Armor Rating (AR)** subtracts directly from damage taken — but heavier armor restricts speed and marks you as someone expecting trouble. Armor does **not stack**: if you wear multiple pieces, use only the highest AR. A shield's bonus is separate, since it raises Defense rather than AR.
+Armor is a trade. Every point of **Armor Rating (AR)** subtracts directly from damage taken, but heavier armor restricts speed and marks you as someone expecting trouble. Armor does **not stack**: if you wear multiple pieces, use only the highest AR. A shield's bonus is separate, since it raises Defense rather than AR.
 
 The standard armor ladder:
 
@@ -93,7 +93,7 @@ The standard armor ladder:
 | **Ironbrand Hardsuit** | 3 | §1,500 | Bulky (−1 Defense, −1 QUICK for Tempo); Hardened |
 | **Shield** | +1 Defense | §30 | Can be sacrificed to negate one hit entirely (shield is destroyed) |
 
-The **Hardened** property (on Boiler Plate and the Hardsuit) negates the first Grievous Wound you'd take in a scene — the damage still lands, but the crippling effect doesn't. Only the Hardsuit carries a movement penalty; Boiler Plate is crude and conspicuous but doesn't slow you down. Veil-touched armor exists but is rare and usually cursed — treat any unusual piece with caution. Full properties live in the **armor** and **armor-properties** files.
+The **Hardened** property (on Boiler Plate and the Hardsuit) negates the first Grievous Wound you'd take in a scene. The damage still lands, but the crippling effect doesn't. Only the Hardsuit carries a movement penalty; Boiler Plate is crude and conspicuous but doesn't slow you down. Veil-touched armor exists but is rare and usually cursed. Treat any unusual piece with caution. Full properties live in the **armor** and **armor-properties** files.
 
 ## Essential Gear
 

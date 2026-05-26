@@ -50,7 +50,7 @@ Major settlement: **Palomera** (a Circle of Ash town — see below). Major landm
 
 ### The Fen
 
-Endless brackish swamp where all the water goes and the Veil is thinnest. Time runs differently here — a day's journey can take a week, or an hour. No faction holds it; the Fen does not tolerate authority. Its Veil-Born are drowned things — **Fen-Wraiths** (who would rather bargain than fight, at first) and water-logged **Walking Dead**.
+Endless brackish swamp where all the water goes and the Veil is thinnest. Time runs differently here. A day's journey can take a week, or an hour. No faction holds it; the Fen does not tolerate authority. Its Veil-Born are drowned things — **Fen-Wraiths** (who would rather bargain than fight, at first) and water-logged **Walking Dead**.
 
 Primary hazards: **time slip** (1d6/day for hours unpredictably lost or gained), **Rot** (food spoils fast, metal rusts overnight, wounds infect at double rate), and **The Bargain** (Fen-Wraiths offer trades — some even honest).
 
@@ -71,7 +71,7 @@ Use settlements as **hubs**: places to resupply, take contracts, learn rumors, a
 
 ## Cursed Landmarks
 
-These are the canonical "what's out there" reference points. Use them sparingly — they should feel mythic, not routine.
+These are the canonical "what's out there" reference points. Use them sparingly. They should feel mythic, not routine.
 
 - **Ojo del Diablo** (Scorchveil): the 20-mile sinkhole lake — the site of the First Rupture and a Stable Breach. Time dilates near the shore (an hour there can be a day outside), animals won't approach, and things come out of the black water.
 - **The Screaming Rails** (Ash Belt, between Orvain and Kessick): a canyon stretch of Silver Line track where the rails themselves *scream* — audible for miles (ECHO TN 9 per hour of exposure or take 1 Strain). Trains that pass through move 50% faster under time compression, and their passengers must resist hallucinating the deaths of the workers who built the line (ECHO TN 11).
@@ -111,7 +111,7 @@ When traveling through dangerous territory, the **Guide** (the character with th
 | Normal | ×1 | TN 11 | Standard |
 | Fast | ×1.5 | TN 13 | −2 dice to avoid encounters |
 
-Cautious doubles your time but halves your danger; Fast does the reverse. Most cross-country travel uses Normal — the choice to deviate is itself a narrative beat.
+Cautious doubles your time but halves your danger; Fast does the reverse. Most cross-country travel uses Normal. The choice to deviate is itself a narrative beat.
 
 ### Travel Routes
 
@@ -148,7 +148,7 @@ The five major routes (full table in **travel-summary**):
 
 Full setup takes 30 minutes and at least one security measure:
 
-- **Salt Circle** (1 Salt Pouch): prevents spirit intrusion — and is **required** for the Tension Pool to clear overnight in supernatural territory.
+- **Salt Circle** (1 Salt Pouch): prevents spirit intrusion, and is **required** for the Tension Pool to clear overnight in supernatural territory.
 - **Watch Rotation**: Awareness checks to spot approaching threats.
 - **Fire**: +2 TN for predators to approach; visible for miles.
 - **No Fire**: −2 to Awareness at night; less visible to enemies.
@@ -159,6 +159,6 @@ Without a salt circle in supernatural territory, the Tension Pool does not clear
 
 A good exploration session balances three things in tension: **mapping** (where are we?), **resourcing** (what do we have?), and **encountering** (what wants us dead?).
 
-Set the pace — make the players declare it. *Cautious or Fast?* The choice is theirs; the consequences are yours to deliver.
+Set the pace. Make the players declare it. *Cautious or Fast?* The choice is theirs; the consequences are yours to deliver.
 
-Use the **Tension Pool** during travel: every hour in dangerous territory adds a die, every Fumbled Journey Check adds a die. The pool grows, the players watch it grow, and the pressure builds even when nothing has visibly happened. Most exploration days should pass uneventfully — save the encounters for the days the Tension rolls. The contrast is the point.
+Use the **Tension Pool** during travel: every hour in dangerous territory adds a die, every Fumbled Journey Check adds a die. The pool grows, the players watch it grow, and the pressure builds even when nothing has visibly happened. Most exploration days should pass uneventfully. Save the encounters for the days the Tension rolls. The contrast is the point.

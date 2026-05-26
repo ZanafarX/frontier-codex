@@ -16,7 +16,7 @@ Combat in *The Veil & Lead* is not a polite exchange of blows. It is a chaotic, 
 
 ### The Cylinder
 
-Combat is tracked on **The Cylinder** — a circular track numbered **0 to 19**, representing the spinning chamber of a revolver. Twenty segments. Two **Red Lines** at segments 0 and 10 (the **Tension Lines** — significant for GM pacing tools). One marker — **The Hammer** — that advances clockwise as time passes.
+Combat is tracked on **The Cylinder** which is a circular track numbered **0 to 19**, representing the spinning chamber of a revolver. Twenty segments. Two **Red Lines** at segments 0 and 10 (the **Tension Lines** — significant for GM pacing tools). One marker — **The Hammer** — that advances clockwise as time passes.
 
 Each character has a token on the track showing when they next act.
 
@@ -41,7 +41,7 @@ This decentralizes the bookkeeping. The GM tracks The Hammer; players track them
 
 ## Initiative
 
-When violence erupts, everyone rolls to determine where they enter the timeline. This is not about who is "fastest" — it's about who was ready when the hammer dropped.
+When violence erupts, everyone rolls to determine where they enter the timeline.
 
 **Pool:** QUICK + Awareness. **TN:** 11. Apply relevant modifiers: ambush prepared +2, caught completely off-guard −2, supernatural senses as specified, Fatigued −1 die.
 
@@ -97,8 +97,8 @@ Sacrifice thoroughness for speed. Most trigger the **Exposed** condition (attack
 
 ### Standard Actions (Tempo varies by weapon)
 
-- **Steady Shot** — full-pool ranged attack at the weapon's Base Tempo.
-- **Strike** — full-pool melee attack at the weapon's Base Tempo. *Note:* Light melee weapons (Brass Knuckles at Tempo 2, knives at Tempo 3) trigger **Exposed** even on a standard Strike — the cost of their speed.
+- **Steady Shot**: full-pool ranged attack at the weapon's Base Tempo.
+- **Strike**: full-pool melee attack at the weapon's Base Tempo. *Note:* Light melee weapons (Brass Knuckles at Tempo 2, knives at Tempo 3) trigger **Exposed** even on a standard Strike — the cost of their speed.
 - **Reload (Speed Loader)** (4): for revolvers, moon clips, or break-top mechanisms.
 - **Grapple** (5): IRON + Brawl vs. Defense; both become Grappled on success. The target may Escape on their turn (Opposed IRON + Brawl).
 - **Interact** (4): flip a table, pick up an item, kick a door, pull a lever.
@@ -116,7 +116,7 @@ Sacrifice thoroughness for speed. Most trigger the **Exposed** condition (attack
 
 - **Heavy Cleave** (Base + 2): two-handed melee attack. On hit, the target makes a GRIT + Resilience check (TN 11) or is knocked **Prone**. Requires a two-handed weapon (Sledgehammer, Cavalry Lance).
 - **Reload (Manual)** (6): tube-fed rifles and single-shot weapons, or any firearm without a speed-loader.
-- **Channel** — manifest a Psionic Talent (see Chapter 6). Tempo scales with Rank:
+- **Channel**: manifest a Psionic Talent (see Chapter 6). Tempo scales with Rank:
 
   | Talent Rank | Typical Tempo |
   | :-- | :-: |
@@ -126,7 +126,7 @@ Sacrifice thoroughness for speed. Most trigger the **Exposed** condition (attack
   | Rank 4 (Devastation) | 7 |
   | Rank 5 (Miracle) | 9 |
 
-- **Recover** (6): make a check to clear a Condition — Suppressed (ECHO + Resilience, TN 11), temporary Blinded (GRIT + Resilience, TN 13), On Fire (QUICK + Athletics, TN 11). Spending 1 Mettle instead clears Suppressed instantly, without an action.
+- **Recover** (6): make a check to clear a Condition: Suppressed (ECHO + Resilience, TN 11), temporary Blinded (GRIT + Resilience, TN 13), On Fire (QUICK + Athletics, TN 11). Spending 1 Mettle instead clears Suppressed instantly, without an action.
 
 ## Damage and Vitality
 
@@ -144,7 +144,7 @@ The Weapon Rating is the weapon's base damage. Steps come from Margin (one per 3
 
 *Caleb shoots his Peacemaker (WR 3) and scores Margin 6 (+2 Steps). The target has AR 1 (Duster). Damage: 3 + 2 − 1 = 4 HP.*
 
-**Damage cannot be reduced below 0.** If a target's Armor meets or exceeds WR + Steps, the hit lands but doesn't penetrate — it simply doesn't hurt.
+**Damage cannot be reduced below 0.** If a target's Armor meets or exceeds WR + Steps, the hit lands but doesn't penetrate. It simply doesn't hurt.
 
 ### Wound Thresholds
 
@@ -169,7 +169,7 @@ When a single attack deals **5 or more damage after Armor**, the target suffers 
 | 7 | Concussion | −2 dice to all mental actions | 24 hours rest |
 | 8 | Arterial Hit | Begin Bleeding Out immediately | Stabilization required |
 
-Multiple Grievous Wounds stack. A Called Shot to a specific limb means that limb takes the Broken Bone effect automatically. An Arterial Hit causes Bleeding Out even if you still have HP. Armor with the **Hardened** property (Boiler Plate, Ironbrand Hardsuit) negates the first Grievous Wound of the scene — the damage still lands, only the Grievous Wound is prevented.
+Multiple Grievous Wounds stack. A Called Shot to a specific limb means that limb takes the Broken Bone effect automatically. An Arterial Hit causes Bleeding Out even if you still have HP. Armor with the **Hardened** property (Boiler Plate, Ironbrand Hardsuit) negates the first Grievous Wound of the scene. The damage still lands, only the Grievous Wound is prevented.
 
 ## Death and Dying
 
@@ -200,7 +200,7 @@ Higher IRON gives you more time — but not much. An IRON 1 character has three 
 
 ### Stabilization
 
-An ally can stabilize a Bleeding Out character with a **Medicine check** (Tempo 6, TN 11 + how far below 0 the patient is). Success stops the bleeding; the patient stays Downed at current Vitality but loses no more HP. Failure means they keep bleeding — try again. A Fumble inflicts an additional 1 Vitality loss. A **Medical Kit** grants +2 Roll Bonus to this check.
+An ally can stabilize a Bleeding Out character with a **Medicine check** (Tempo 6, TN 11 + how far below 0 the patient is). Success stops the bleeding; the patient stays Downed at current Vitality but loses no more HP. Failure means they keep bleeding. Try again. A Fumble inflicts an additional 1 Vitality loss. A **Medical Kit** grants +2 Roll Bonus to this check.
 
 | Patient Vitality | Stabilization TN |
 | :-: | :-: |
@@ -229,11 +229,11 @@ Cover increases TN against you. Three tiers:
 - **Hard Cover** (+4 TN): stone wall, iron plate, overturned wagon.
 - **Fortified** (+6 TN): bunker slit, murder-hole, arrow loop.
 
-Take Cover (Tempo 3) is the only Fast Action exempt from Exposed — its sole purpose is defense.
+Take Cover (Tempo 3) is the only Fast Action exempt from Exposed. Its sole purpose is defense.
 
 ## Combat Conditions
 
-Conditions are mechanical states inflicted by attacks, abilities, or environmental factors. Each has a trigger, an effect, and a clearance method. The canonical list lives in the **conditions** collection — Stunned, Suppressed, Exposed, Wounded, Bleeding Out, Frightened, Open State, Prone, Grappled, Disrupted, Encumbered, and Hollow.
+Conditions are mechanical states inflicted by attacks, abilities, or environmental factors. Each has a trigger, an effect, and a clearance method. The canonical list lives in the **conditions** collection: Stunned, Suppressed, Exposed, Wounded, Bleeding Out, Frightened, Open State, Prone, Grappled, Disrupted, Encumbered, and Hollow.
 
 The conditions you'll see most in any given fight: **Suppressed** (−2 dice from near misses and Fear) and **Exposed** (−1 TN against you after Fast Actions). The ones you'll fear most: **Stunned** (you lose ground on the Count) and **Bleeding Out** (you are dying).
 
@@ -251,4 +251,4 @@ Most conditions clear with the **Recover** action (Tempo 6, appropriate check vs
 
 *The Hammer keeps advancing. At Tick 8, Caleb fires again — this time with his Aim bonus. The clock ticks on, inexorable.*
 
-The Count creates a continuous, fluid combat where every weapon choice and every action has rhythmic consequence. There are no "rounds" — only the slow, relentless advance of The Hammer.
+The Count creates a continuous, fluid combat where every weapon choice and every action has rhythmic consequence.

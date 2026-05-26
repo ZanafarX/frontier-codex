@@ -26,7 +26,7 @@ The whole game runs on this loop. Combat, social, exploration, psionic — same 
 
 ## Step 1: Build the Pool
 
-Your dice pool is your raw capability — natural talent plus trained skill. It is measured in **d8s** (eight-sided dice).
+Your dice pool is your raw capability (natural talent plus trained skill). It is measured in **d8s** (eight-sided dice).
 
 **Base Pool = Attribute Rank + Skill Rank.**
 
@@ -47,7 +47,7 @@ If your Skill Rank is 0, you roll with **Disadvantage**:
 2. Discard the single highest die.
 3. Sum the two highest of the remaining (minimum 2 dice).
 
-If discarding would leave fewer than 2 dice, keep 2 instead. Even the least capable character has a chance — however slim — at success.
+If discarding would leave fewer than 2 dice, keep 2 instead. Even the least capable character has a chance, however slim, at success.
 
 *Caleb has SAVVY 2 but no Medicine skill. He rolls 3 dice, discards the highest, sums the best two. If he rolls [3, 5, 7], he discards the 7 and sums 3 + 5 = 8.*
 
@@ -57,7 +57,7 @@ Certain conditions add or subtract dice from your pool. **Pool Penalties are cap
 
 The full list lives in the **core-roll-modifiers** reference table. The most common penalties are **Wounded** (−1 die per threshold), **Suppressed** (−2 dice), **Blinded** (−4 dice), **Off-hand** (−2 dice), and **firing while Engaged** (−2 dice). The most common bonuses are **Assistance** (+1 per helper, max +2) and **Bleed Dice** (+1 to +3, see below).
 
-Psionic Talents can grant Pool Bonuses that exceed normal training — a Seer's *Probability Spike*, a Mindweaver's *Veil of Silence*. This is part of the cost/power exchange: Psionics pay in Strain and soul to grant capability mundane characters can't match.
+Psionic Talents can grant Pool Bonuses that exceed normal training: a Seer's *Probability Spike*, a Mindweaver's *Veil of Silence*. This is part of the cost/power exchange: Psionics pay in Strain and soul to grant capability mundane characters can't match.
 
 ## Step 2: Determine the Target Number
 
@@ -103,7 +103,7 @@ This is the math behind the feel: a 6-dice pool succeeds against Standard diffic
 
 After rolling, apply Roll Modifiers to your Base Sum. **Final Sum = Base Sum + Roll Bonuses − Roll Penalties.**
 
-Roll Modifiers represent factors *you* brought to the moment — preparation, equipment quality, expertise. They are capped at ±10 each direction.
+Roll Modifiers represent factors *you* brought to the moment: preparation, equipment quality, expertise. They are capped at ±10 each direction.
 
 The most common Roll Bonuses:
 - **Aim** (banked): +2 / +3 / +4 for 1 / 2 / 3+ actions of aiming. Lost if you move or take damage before firing.
@@ -149,11 +149,11 @@ Failure has texture too:
 
 - **Margin −1 to −2 (Near Miss):** Almost. The GM may offer Success-at-Cost (below).
 - **Margin −3 to −5 (Clear Failure):** The task simply isn't accomplished.
-- **Margin −6 or worse (Severe Failure):** Something went wrong — check for a Fumble.
+- **Margin −6 or worse (Severe Failure):** Something went wrong. Check for a Fumble.
 
 ### Success-at-Cost
 
-On a Near Miss (Margin −1 or −2), the GM may offer you success with a complication: you achieve your goal, but you spend extra ammunition or break a tool, the action takes longer, you end up exposed or out of position, a new problem surfaces, or you take 1 Strain from the exertion. You choose — accept the cost and succeed, or take the clean failure. The choice is always yours.
+On a Near Miss (Margin −1 or −2), the GM may offer you success with a complication: you achieve your goal, but you spend extra ammunition or break a tool, the action takes longer, you end up exposed or out of position, a new problem surfaces, or you take 1 Strain from the exertion. You choose: accept the cost and succeed, or take the clean failure. The choice is always yours.
 
 ### Critical Success
 
@@ -179,7 +179,7 @@ Every Fumble also adds **+1 die to the Tension Pool**. The Frontier notices your
 
 ## Bleed Dice: The Chamber
 
-Sometimes the dice aren't enough. The shot has to land. The lock has to open. The lie has to convince. **Bleed Dice** are how you reach beyond your training and pull more from the Current — and they come with a price.
+Sometimes the dice aren't enough. The shot has to land. The lock has to open. The lie has to convince. **Bleed Dice** are how you reach beyond your training and pull more from the Current, and they come with a price.
 
 ### Adding Bleed Dice
 
@@ -203,7 +203,7 @@ Add Bleed Dice when the cost of failure outweighs the cost of Backlash. A point 
 
 ## Mettle: The Reaction Currency
 
-Mettle represents your reserves of focus, grit, and desperate will — the energy you call upon in crisis to push beyond normal limits or react to sudden threats.
+Mettle represents your reserves of focus, grit, and desperate will. It is the energy you call upon in crisis to push beyond normal limits or react to sudden threats.
 
 **Mettle Pool = (SAVVY + GRIT) ÷ 2, rounded up.**
 

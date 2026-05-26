@@ -37,13 +37,13 @@ Attributes are rated 1–5, where 1 is a notable weakness, 2 is the human baseli
 
 Skills are rated 0–4. All skills begin at **Rank 0 (Untrained)**. Rolling a skill you don't have is done with **Disadvantage** — roll one extra die, discard the highest, then keep the best two of the rest.
 
-There are **25 Skills** across seven categories — Combat, Physical, Social, Knowledge, Survival, Technical, and Psionic. The full list with Attribute pairings and example uses lives in this chapter's reference table; for now, know that your starting ranks come from your Origin, your Calling, and your Freebie points (below), all capped at **Rank 2 at creation**.
+There are **25 Skills** across seven categories: Combat, Physical, Social, Knowledge, Survival, Technical, and Psionic. The full list with Attribute pairings and example uses lives in this chapter's reference table; for now, know that your starting ranks come from your Origin, your Calling, and your Freebie points (below), all capped at **Rank 2 at creation**.
 
 ## Step 1: The Baseline
 
 Begin here. Write **Rank 1** in all six Attributes and **Rank 0** in every Skill.
 
-You are not special. Not yet. You are hungry, tired, and likely haunted. Across the next four steps you will gain **four +1 Attribute increases** (one each from Origin, Tragedy, Calling, and Freebies) and a pool of **Skill ranks** to spend. That is the entire budget — there is no separate point-buy and no starting XP. The calluses you build over your soul come from the choices that follow.
+You are not special. Not yet. You are hungry, tired, and likely haunted. Across the next four steps you will gain **four +1 Attribute increases** (one each from Origin, Tragedy, Calling, and Freebies) and a pool of **Skill ranks** to spend. That is the entire budget. There is no separate point-buy and no starting XP. The calluses you build over your soul come from the choices that follow.
 
 ## Step 2: Origin
 
@@ -56,7 +56,7 @@ You are not special. Not yet. You are hungry, tired, and likely haunted. Across 
 | **Veil-Touched** (The Cursed) | +1 ECHO *or* SAVVY | Insight *or* Lore |
 | **Rail-Rider** (The Drifter) | +1 QUICK *or* GRIT | Ride *or* Finesse |
 
-Don't optimize. The mechanical bonus is small; the roleplay leverage — where you're from, who raised you, what you crave when you're homesick — is large.
+Don't optimize. The mechanical bonus is small. The roleplay leverage (where you're from, who raised you, what you crave when you're homesick) is large.
 
 ## Step 3: Tragedy
 
@@ -71,7 +71,7 @@ Don't optimize. The mechanical bonus is small; the roleplay leverage — where y
 | **The Illness** | +1 GRIT | *"The taste of bitter medicine and my mother's tears."* |
 | **The Betrayal** | +1 SAVVY | *"The dust from his boots as he walked away with everything."* |
 
-Tragedies are not flavor — they will come up at the table. Choose one you want to play *through*, not around. Your Scar is the only Memory you write now; the other four Pillars come in Step 6.
+Tragedies are not flavor. They will come up at the table. Choose one you want to play *through*, not around. Your Scar is the only Memory you write now; the other four Pillars come in Step 6.
 
 ## Step 4: Calling
 
@@ -96,7 +96,7 @@ These rely on skill, grit, and iron — not the Current.
 
 ### The Psionic Callings
 
-These draw on the Current. Every Psionic Calling starts with **1 point of Erosion already marked** — the price of the gift. Psionics are distrusted and hunted by the Redeemers, and slowly erode their own souls. Read Chapter 2 (The Soul) before you commit.
+These draw on the Current. Every Psionic Calling starts with **1 point of Erosion already marked**. It's the price of the gift. Psionics are distrusted and hunted by the Redeemers, and slowly erode their own souls. Read Chapter 2 (The Soul) before you commit.
 
 | Calling | Prime Attribute | Career Skills | Starting Talents | Focus |
 | :-- | :-- | :-- | :-- | :-- |
@@ -119,7 +119,7 @@ This is your fourth and final +1 Attribute increase, bringing your Attribute tot
 
 ## Step 6: The Memory Palace
 
-Your mind is a fortress with five **Pillars**. You already have the Scar; now write the other four. Each Memory is one sentence — specific, sensory, and emotionally weighted.
+Your mind is a fortress with five **Pillars**. You already have the Scar, now write the other four. Each Memory is specific, sensory, and emotionally weighted.
 
 | Pillar | Source | What It Is | Example |
 | :-- | :-- | :-- | :-- |
@@ -129,7 +129,7 @@ Your mind is a fortress with five **Pillars**. You already have the Scar; now wr
 | **The Anchor** | Bond | Who you love | *"Maeve's laugh on a summer evening."* |
 | **The Secret** | Hidden | What you hide from others | *"I know who really started the fire."* |
 
-Keep them sensory and specific, not abstract — *"the smell of coal smoke and my mother's cough"* beats *"I grew up poor."* See Chapter 2 for how Memories are spent, eroded, and burned.
+Keep them sensory and specific. *"The smell of coal smoke and my mother's cough"* beats *"I grew up poor."* See Chapter 2 for how Memories are spent, eroded, and burned.
 
 ## Step 7: Derived Statistics
 

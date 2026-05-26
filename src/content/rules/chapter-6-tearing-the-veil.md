@@ -28,19 +28,19 @@ Psionic Talents are organized into five Ranks of escalating cost, difficulty, an
 
 ### Rank 1 — Cantrips
 
-Minor manipulations, paid in Strain. A Cantrip should feel like effort, not danger — failure is a nosebleed and a headache, nothing more. Examples: Ghost Bullet, Iron Calm, Glimpse. Cantrips are the day-to-day work of a Psionic and won't attract much attention from the Redeemers or the Veil itself.
+Minor manipulations, paid in Strain. A Cantrip should feel like effort. Failure is a nosebleed and a headache, nothing more. Examples: Ghost Bullet, Iron Calm, Glimpse. Cantrips are the day-to-day work of a Psionic and won't attract much attention from the Redeemers or the Veil itself.
 
 ### Rank 2 — Tactics
 
-Combat-ready applications; real power, real risk. Two Strain per cast — repeated use exhausts the body quickly, and a Psionic who spams Tactics will be trembling and useless when they need their power most. Examples: Tracer Round, Iron Skin, Fortune's Favor.
+Combat-ready applications; real power, real risk. Two Strain per cast. Repeated use exhausts the body quickly, and a Psionic who spams Tactics will be trembling and useless when they need their power most. Examples: Tracer Round, Iron Skin, Fortune's Favor.
 
 ### Rank 3 — Powers
 
-The threshold where you stop paying with sweat and start paying with soul. 1 Erosion per cast — permanent. Powers do significant things: heal a Downed ally, read a mind, fire a shot that ignores walls and distance. Every use leaves a mark.
+The threshold where you stop paying with sweat and start paying with soul. 1 Erosion per cast. Powers do significant things: heal a Downed ally, read a mind, fire a shot that ignores walls and distance. Every use leaves a mark.
 
 ### Rank 4 — Devastations
 
-Awe-inspiring feats that announce your presence to anything paying attention. 2 Erosion per cast. Devastations almost always trigger environmental effects — the GM adds dice to the Tension Pool. Reality doesn't like being bent this hard.
+Awe-inspiring feats that announce your presence to anything paying attention. 2 Erosion per cast. Devastations almost always trigger environmental effects. The GM adds dice to the Tension Pool. Reality doesn't like being bent this hard.
 
 ### Rank 5 — Miracles
 
@@ -91,18 +91,18 @@ Before rolling, you may add Bleed Dice or spend Mettle for Desperation, with all
 
 ### Step 5: The Open State
 
-Unlike pulling a trigger, channeling requires sustained concentration. Between declaration and resolution, you are in **The Open State** — your mind is reaching into the Current, and you are vulnerable. Most Talents have a Tempo of 4–9; during those Ticks:
+Unlike pulling a trigger, channeling requires sustained concentration. Between declaration and resolution, you are in **The Open State**. Your mind is reaching into the Current, and you are vulnerable. Most Talents have a Tempo of 4–9; during those Ticks:
 
 - You **cannot take other Actions** (your attention is inward).
 - You can **Shift** (move up to your Speed) but cannot Scramble, Rush, Sprint, or Take Cover.
-- You **cannot make Reactions** — no Parry, no Intercept, no Dodge, no Dive.
+- You **cannot make Reactions**. No Parry, no Intercept, no Dodge, no Dive.
 - You are vulnerable to **Disruption** (see below).
 
-You're not defenseless — you can still Shift out of the way of an obvious threat — but you're significantly more exposed than a gunfighter lining up a shot.
+You're not defenseless. You can still Shift out of the way of an obvious threat, but you're significantly more exposed than a gunfighter lining up a shot.
 
 ### Step 6: Resolution
 
-When The Count reaches your resolution Tick (declaration Tick + Tempo), your Talent takes effect. Apply damage, conditions, or effects as described, and calculate Steps from Margin (each Talent specifies how Steps apply — duration, area, intensity, additional targets).
+When The Count reaches your resolution Tick (declaration Tick + Tempo), your Talent takes effect. Apply damage, conditions, or effects as described, and calculate Steps from Margin (each Talent specifies how Steps apply: duration, area, intensity, additional targets).
 
 ## Disruption
 
@@ -120,11 +120,11 @@ Roll Modifiers apply: **Veil Anchor** (+2), Wounded (−1 die per threshold). On
 
 ### Disruption by Salt
 
-Salt is anathema to the Current. **Salt Rounds** or rock salt thrown at a channeling Psionic cause **automatic Disruption** — no Focus check allowed. Take 1 Strain. The Talent fails. **Redeemer Inquisitors** carry Salt Rounds specifically to shut down Psionics before they can act; they are the canonical hard counter.
+Salt is anathema to the Current. **Salt Rounds** or rock salt thrown at a channeling Psionic cause **automatic Disruption**. No Focus check allowed. Take 1 Strain. The Talent fails. **Redeemer Inquisitors** carry Salt Rounds specifically to shut down Psionics before they can act; they are the canonical hard counter.
 
 ### Bastion Soul Disruption
 
-The Bastion Soul Cantrip **Disrupt** can interrupt a channeling Psionic without any physical attack — a psychic interference pulse that forces a Focus check at TN 11. This is the rare ranged interrupt available to non-Salt-armed combatants.
+The Bastion Soul Cantrip **Disrupt** can interrupt a channeling Psionic with an interference pulse that forces a Focus check at TN 11. This is the rare ranged interrupt available to non-Salt-armed combatants.
 
 ### Protecting Against Disruption
 
@@ -150,13 +150,13 @@ Recovery: Short Rest clears 1, Long Rest clears all, Laudanum clears 1d3 (addict
 
 ### Erosion
 
-Erosion is the long-term cost — permanent damage to the soul. Your **Erosion Capacity = ECHO + 5**, and it does *not* heal from rest. Sources: casting Rank 3 (1) and Rank 4 (2), Backlash's Tear (1) and Breach (immediate Memory burn), Thin Place exposure (1/hour unprotected), prolonged Current exposure, and extreme deprivation.
+Erosion is the long-term cost, a damage to the soul. Your **Erosion Capacity = ECHO + 5**, and it does *not* heal from rest. Sources: casting Rank 3 (1) and Rank 4 (2), Backlash's Tear (1) and Breach (immediate Memory burn), Thin Place exposure (1/hour unprotected), prolonged Current exposure, and extreme deprivation.
 
 Recovery is slow and limited: spend 2 XP (1 Erosion), indulge a Vice (1), Anchor with your Anchor Memory (2), use an Erosion Sink item (1/session, shatters after 3 total), or reach a Circle Sanctuary (3, rare). When Erosion fills, you **Break**: burn one Memory, reset Erosion to 0, live with one fewer Pillar.
 
 ### Memory Burn
 
-The ultimate cost. Triggered by Rank 5 Miracles (always), Backlash's Breach (three 1s on Bleed/Cursed Dice), a full Erosion track (the Break), or the Mindweaver's Rank 5 Memory Hole (involuntary). Choose a Memory, strike it from the sheet — the character forgets immediately and completely. The **Memory Burn** keyword covers the aftermath.
+The ultimate cost. Triggered by Rank 5 Miracles (always), Backlash's Breach (three 1s on Bleed/Cursed Dice), a full Erosion track (the Break), or the Mindweaver's Rank 5 Memory Hole (involuntary). Choose a Memory, strike it from the sheet. The character forgets immediately and completely. The **Memory Burn** keyword covers the aftermath.
 
 ## Resonance
 
@@ -197,6 +197,6 @@ This ladder is what makes a Psionic's career survivable: a signature Cantrip bec
 
 *Step 6 — Resolution. At Tick 8, Ghost Bullet manifests: his next shot ignores Armor and Cover and deals Force damage. With +2 Steps, that shot deals WR 3 + 2 = 5 damage, ignoring all defenses.*
 
-*Rook is now at Tick 8 with the effect ready, having spent 1 Strain and no Erosion — and he gained Resonance with Ghost Bullet, so his next cast of it is free. A clean Cantrip.*
+*Rook is now at Tick 8 with the effect ready, having spent 1 Strain and no Erosion (and he gained Resonance with Ghost Bullet), so his next cast of it is free. A clean Cantrip.*
 
 That is what a *cheap* cast looks like. Now imagine the same flow for a Rank 5 Miracle: Tempo 9 (Open for nearly half a round), TN 16 (possible only with real investment), and a cost of a piece of who you are, gone forever. The structure is identical. The price is everything.
