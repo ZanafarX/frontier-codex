@@ -92,7 +92,7 @@ These rely on skill, grit, and iron, not the Current.
 | **The Muck-Raker** (Laborer/Prospector) | +1 IRON *or* GRIT | Force, Athletics, Scrounge, Melee, Resilience | One Muck-Raker + one Mundane |
 | **The High-Roller** (Face/Gambler) | +1 SWAY *or* SAVVY | Deceit, Gamble, Finesse, Insight, Persuasion | One High-Roller + one Mundane |
 | **The Shepherd** (Redeemer/Medic) | +1 SAVVY *or* ECHO | Medicine, Lore, Insight, Resilience, Frontier | One Shepherd + one Mundane |
-| **The Rail-Jack** (Saboteur/Technician) | +1 QUICK *or* SAVVY | Finesse, Stealth, Scrounge, Demolitions, Streetwise | One Rail-Jack + one Mundane |
+| **The Rail-Jack** (Saboteur/Technician) | +1 QUICK *or* SAVVY | Engineering, Labor, Scrounge, Demolitions, Streetwise | One Rail-Jack + one Mundane |
 
 ### The Psionic Callings
 

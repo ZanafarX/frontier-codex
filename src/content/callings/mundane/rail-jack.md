@@ -6,8 +6,8 @@ archetype: "Saboteur / Technician"
 tagline: "The Consortium built the lock. I built the bomb that opens it."
 prime_attributes: ["QUICK", "SAVVY"]
 career_skills:
-  - "Finesse"
-  - "Stealth"
+  - "Engineering"
+  - "Labor"
   - "Scrounge"
   - "Demolitions"
   - "Streetwise"
