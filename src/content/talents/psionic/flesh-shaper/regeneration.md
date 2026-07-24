@@ -19,7 +19,7 @@ has_resist: false
 Touch a target. They heal **1 HP** at the start of each of their turns
 for the rest of the scene. Additionally, any Grievous Wound on the
 target begins healing immediately (treat as if receiving continuous
-medical attention — wound resolves in Ticks rather than hours).
+medical attention; wound resolves in Ticks rather than hours).
 
 ## Steps
 
@@ -34,4 +34,4 @@ turns** while maintaining this effect.
 
 When the scene ends, the target's body crashes. They take **1d3 Strain**
 and are **Exhausted** (−2 dice Pool Penalty) until they complete a Long
-Rest. The body healed too fast — cellular debt must be paid.
+Rest. The body healed too fast: cellular debt must be paid.

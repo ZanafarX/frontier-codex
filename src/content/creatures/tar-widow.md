@@ -8,6 +8,7 @@ vitals:
   defense: 9
   armor_rating: 1
   mettle: 0
+  speed: 8
 attacks:
   - name: "Fangs"
     pool: 5
@@ -32,7 +33,7 @@ habitat:
 ---
 
 Ambush predators found in the oily, iridescent pools that dot the
-Ash Belt — arachnid creatures roughly the size of a large dog that
+Ash Belt: arachnid creatures roughly the size of a large dog that
 lurk beneath the surface of petroleum-contaminated water, breathing
 through specialized tubes that break the surface like reeds. Their
 bodies are coated in a viscous, tar-like secretion that hardens on
@@ -40,7 +41,7 @@ contact with air, binding prey in place.
 
 Tar Widows are named for their hunting strategy: **they wait.** A
 pool that has been colonized by a Tar Widow looks identical to every
-other stagnant pool in the Ash Belt — dark, oily, and unremarkable.
+other stagnant pool in the Ash Belt: dark, oily, and unremarkable.
 The only warning is the absence of insects and the faint petroleum
 smell that is slightly stronger than the ambient Ash Belt stink.
 Miners and travelers learn to prod pools with sticks before crossing.
@@ -61,5 +62,5 @@ and waits to ambush again from a different pool.
 Tar Widows work as exploration hazards in the Ash Belt. The party
 needs to cross a stretch of pools. Some are safe. Some are not. Prod
 with a stick? Waste time going around? Walk fast and hope? The
-tension is in the uncertainty — and the sound of something large
+tension is in the uncertainty, and the sound of something large
 moving beneath the surface.

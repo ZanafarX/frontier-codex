@@ -27,7 +27,7 @@ and Awareness checks for **3 Ticks**.
 
 ## Special
 
-The cloud appears even on a **Manifest + Miss** — the bullet's impact
+The cloud appears even on a **Manifest + Miss**: the bullet's impact
 creates the effect regardless of whether it strikes a creature. In the
 Ash Belt or Scorchveil, the cloud is denser: the penalty increases to
 −3 dice.

@@ -8,6 +8,7 @@ vitals:
   defense: 11
   armor_rating: 2
   mettle: 0
+  speed: 10
 attacks:
   - name: "Crystal Jaws"
     pool: 5
@@ -36,22 +37,22 @@ and superheated Current have fused sand, ash, and bone into something
 that moves with the fluid grace of a hunting cat and reflects light
 like a cathedral window. Glass-Walkers stand roughly six feet at the
 shoulder, walk on four articulated legs made of transparent crystal,
-and hunt by vibration — they feel the footsteps of prey through the
+and hunt by vibration; they feel the footsteps of prey through the
 ground.
 
 They are nearly invisible in the perpetual smog of the Ash Belt.
 Sunlight refracts through their bodies, projecting rainbow patterns
-on the ground around them — the only warning before they strike. In
+on the ground around them, the only warning before they strike. In
 the smog, even this warning vanishes. Miners in the Ash Belt learn to
 listen for the faint **chiming sound** Glass-Walkers make when they
-move — a sound like wind through broken bottles.
+move: a sound like wind through broken bottles.
 
 Speed 10.
 
 ## Tactics
 
 Stalk prey in reduced visibility, using Transparent to close
-undetected. Strike from ambush — Crystal Jaws first, targeting the
+undetected. Strike from ambush: Crystal Jaws first, targeting the
 throat or exposed limbs. If injured, retreat into the smog and stalk
 from a different angle. **Glass-Walkers are patient and will follow
 prey for hours,** waiting for a moment of inattention.

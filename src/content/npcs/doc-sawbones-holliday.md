@@ -10,6 +10,7 @@ stats:
   pool: 5
   mettle: 1
   armor_rating: 0
+  speed: 6
   notes: "Channel pool 5. ECHO 3. Reattaches limbs for §50 — keeps the off-cuts. Unlicensed means: no Psi-Division registration. In Rustwater this is tolerated; in Orvain it would be execution."
 ---
 

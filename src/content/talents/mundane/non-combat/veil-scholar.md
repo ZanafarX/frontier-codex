@@ -16,7 +16,7 @@ has_resist: false
 ## Effect
 
 When you encounter a Veil-Born creature for the first time in a
-session, the GM tells you one of its Traits — your choice of category:
+session, the GM tells you one of its Traits, your choice of category:
 a **vulnerability**, an **immunity**, or a **behavioral pattern**
 (Tactics section of the stat block).
 

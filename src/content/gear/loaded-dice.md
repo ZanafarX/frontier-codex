@@ -10,5 +10,5 @@ flavor: "A set of dice weighted to favor specific outcomes."
 
 Loaded dice are the simpler cousin of marked cards. Detection requires
 an opposed Awareness vs. Finesse check, and the consequences of being
-caught are typically more violent than for cards — dice cheating is
+caught are typically more violent than for cards; dice cheating is
 considered a coward's crime.

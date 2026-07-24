@@ -24,9 +24,9 @@ Bonus** to treat or cure poisons and diseases.
 Additionally, given **1 hour and access to basic materials**, you can
 distill a single dose of:
 
-- **Knockout Poison** — target must Resist or fall Unconscious for 1
+- **Knockout Poison**: target must Resist or fall Unconscious for 1
   hour.
-- **Emetic** — forces the target to purge an ingested poison before it
+- **Emetic**: forces the target to purge an ingested poison before it
   takes full effect.
 
 ## Resist
@@ -36,5 +36,5 @@ Knockout Poison: **GRIT + Resilience vs. TN 13** or Unconscious for
 
 ## Special
 
-You know enough about poison to use it offensively — applying poison
+You know enough about poison to use it offensively: applying poison
 to a blade or food requires no additional check from you.

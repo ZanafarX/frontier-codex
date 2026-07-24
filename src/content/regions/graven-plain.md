@@ -13,9 +13,9 @@ settlements:
 landmarks: []
 ---
 
-From a distance, the Graven Plain looks idyllic — an ocean of yellow
+From a distance, the Graven Plain looks idyllic: an ocean of yellow
 grass. Up close, you realize the hills are burial mounds. The ground
-is paved with bones — rib cages the size of houses, femurs thick as
+is paved with bones: rib cages the size of houses, femurs thick as
 oaks. **Whatever died here was colossal.**
 
 No single faction holds the Plain. The **Circle of Ash** maintains
@@ -27,8 +27,8 @@ of the mounds. The Plain itself does most of the killing.
 
 | Feature | Effect |
 | :------ | :----- |
-| Marrow Downs | Central hills. Digging releases "Grave Gas" — a hallucinogen that makes the user believe they are an ancient giant. GRIT (TN 13) or 1d6 hours of delusion. |
-| Stone Circles | Pre-human ritual sites. Psionic Talents cast inside are **+1 Rank effect** — but **Backlash is doubled**. |
+| Marrow Downs | Central hills. Digging releases "Grave Gas": a hallucinogen that makes the user believe they are an ancient giant. GRIT (TN 13) or 1d6 hours of delusion. |
+| Stone Circles | Pre-human ritual sites. Psionic Talents cast inside are **+1 Rank effect**, but **Backlash is doubled**. |
 | Disappearances | Children who roll down hills sometimes vanish; locals report hearing them giggling underground for days. |
 
 ## Settlements

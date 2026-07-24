@@ -26,7 +26,7 @@ fragment of your will. The Hollow becomes your **Thrall**:
 - The Thrall uses its **own physical stats** but **your ECHO and Channel**
   for psionic purposes
 - The Thrall **does not feel pain, fear, or hesitation**
-- The Thrall persists **indefinitely** — until destroyed, until you
+- The Thrall persists **indefinitely**: until destroyed, until you
   release it, or until you die
 
 ## Requirement
@@ -40,14 +40,14 @@ Strain** from the severed connection.
 
 ## Special
 
-The Thrall is **not a person** — it has no will, no identity, no
+The Thrall is **not a person**: it has no will, no identity, no
 Memories. It is an instrument.
 
 This is the **opposite of The Hollow's Rest (Bastion Soul R5)**. Where
 the Bastion Soul fills the empty vessel with potential (creating a
 person), the Mindweaver fills it with their own will (creating a
 slave). The two Miracles are direct moral opposites and can be applied
-to the same Hollow with conflicting outcomes — though only one can take
+to the same Hollow with conflicting outcomes, though only one can take
 effect first.
 
 The Circle of Ash considers this Talent an abomination. The Redeemers

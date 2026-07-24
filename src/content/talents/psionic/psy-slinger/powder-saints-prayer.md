@@ -18,7 +18,7 @@ has_resist: false
 
 Touch a container of ammunition (up to 20 rounds). For the rest of the
 scene, all rounds from that container count as Salt Rounds in addition to
-their normal type — they automatically Disrupt any Psionic in the Open
+their normal type: they automatically Disrupt any Psionic in the Open
 State on hit, with no Focus check allowed.
 
 ## Steps
@@ -27,5 +27,5 @@ State on hit, with no Focus check allowed.
 
 ## Special
 
-This does not add the ×2 WR vs. spirits effect of true Salt Rounds — only
+This does not add the ×2 WR vs. spirits effect of true Salt Rounds: only
 the Disruption property. The blessing fades after one scene.

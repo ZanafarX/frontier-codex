@@ -22,5 +22,5 @@ notes:
 ---
 
 Called Shot trades accuracy for tactical control. Use it to disable
-specific threats — strip the leader of his weapon, cripple the runner
+specific threats: strip the leader of his weapon, cripple the runner
 before he escapes, head-shot the Psionic to break his Channel.

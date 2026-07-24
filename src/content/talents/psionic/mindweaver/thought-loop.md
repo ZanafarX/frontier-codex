@@ -18,7 +18,7 @@ has_resist: true
 
 Target one creature within Near range. They become trapped in a loop of
 their own surface thoughts. The target is aware of their surroundings
-but cannot focus — they are **Dazed** (−3 dice Pool Penalty to all
+but cannot focus: they are **Dazed** (−3 dice Pool Penalty to all
 actions) for **5 Ticks**.
 
 They can still move, react, and defend, but complex actions

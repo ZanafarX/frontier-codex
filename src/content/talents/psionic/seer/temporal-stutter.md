@@ -18,7 +18,7 @@ has_resist: true
 
 Target one creature within Near range. They skip forward **3 Ticks** on
 The Count. Their position on the timeline advances without them taking
-any action — they effectively lose time.
+any action; they effectively lose time.
 
 If this pushes them past their intended action, that action is **lost**.
 
@@ -34,4 +34,4 @@ ECHO + Focus vs. your Channeling Sum negates.
 
 Against targets with a long-Tempo action about to resolve (a Psionic in
 the Open State, someone performing a Heavy Cleave), the timing disruption
-is devastating — their action may resolve late or be wasted entirely.
+is devastating: their action may resolve late or be wasted entirely.

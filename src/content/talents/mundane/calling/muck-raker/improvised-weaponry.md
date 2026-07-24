@@ -23,4 +23,4 @@ the **Unfamiliar Equipment penalty** (−2 Roll Penalty).
 ## Special
 
 You can pick up and wield an environmental object as part of an attack
-action — no separate Interact action required.
+action: no separate Interact action required.

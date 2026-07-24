@@ -26,7 +26,7 @@ on yourself, lasting **1 minute**:
   intrusion, and mental effects
 - **Erosion does not increase** for any creature inside the dome from any
   source
-- The dome is **physically impenetrable** — nothing passes through the
+- The dome is **physically impenetrable**: nothing passes through the
   barrier in either direction (no bullets, no creatures, no sound). It is
   a sealed space.
 
@@ -34,7 +34,7 @@ on yourself, lasting **1 minute**:
 
 The Citadel is a time-out. A moment of perfect safety in a world that has
 forgotten what safety means. The dome shimmers faintly gray and is warm
-to the touch from the inside — the warmth of being held, of being
+to the touch from the inside: the warmth of being held, of being
 protected, of being told that nothing can reach you here. When it drops,
 the cold rushes back in. But for one minute, you were safe.
 

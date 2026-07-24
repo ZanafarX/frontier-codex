@@ -19,10 +19,10 @@ has_resist: true
 Touch the target (melee attack roll if unwilling). You seize control of
 their motor functions by directly manipulating their muscles, tendons,
 and nerves. Unlike the Mindweaver's *Puppet Strings* (which controls
-through the mind), this is **biological** — mental defenses don't apply.
+through the mind), this is **biological**: mental defenses don't apply.
 
 You dictate movement and physical actions for **10 Ticks**. The target
-is fully conscious and aware — they feel everything but can control
+is fully conscious and aware; they feel everything but can control
 nothing below the neck.
 
 ## Resist
@@ -37,7 +37,7 @@ of each turn (same check).
 
 ## Special
 
-**The Suicide Limit does NOT apply** — you're not influencing will,
+**The Suicide Limit does NOT apply**: you're not influencing will,
 you're pulling muscles. You can make the target's body harm itself. This
-is why Flesh Shapers are feared as much as Mindweavers — arguably more,
+is why Flesh Shapers are feared as much as Mindweavers, arguably more,
 because Iron Will and Poker Face don't help you here.

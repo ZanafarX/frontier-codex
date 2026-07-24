@@ -19,7 +19,7 @@ has_resist: false
 Your next shot, if it deals damage, pins the target's soul to their
 current location. For 1 minute: the target cannot be teleported, phased,
 or moved by Psionic means (including their own). Weight of Reality,
-Thread-Walker, Ghost Bullet's phasing — all fail against an anchored
+Thread-Walker, Ghost Bullet's phasing: all fail against an anchored
 target. Additionally, Ethereal creatures struck become fully material for
 the duration.
 
@@ -30,5 +30,5 @@ the duration.
 ## Special
 
 **Erasure Field (Bastion Soul R3) or higher can remove this effect from an
-ally** — Null Touch (R1) cannot reach R3 effects per the Tier-Removal
+ally.** Null Touch (R1) cannot reach R3 effects per the Tier-Removal
 Hierarchy.

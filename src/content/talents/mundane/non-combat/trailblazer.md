@@ -25,5 +25,5 @@ shortcuts exist based on terrain).
 
 You automatically detect natural hazards (quicksand, unstable ground,
 flash flood channels, thin ice) before the party enters them. No roll
-required — your experience alerts you with enough time to stop and
+required: your experience alerts you with enough time to stop and
 assess.

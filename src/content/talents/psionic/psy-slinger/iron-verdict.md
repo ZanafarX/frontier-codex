@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 Your shot bypasses **Cover** entirely. The bullet finds an impossible
-path — through a slit, around a beam, through the angle of a mirror. The
+path: through a slit, around a beam, through the angle of a mirror. The
 target's Cover modifiers do not apply to the TN.
 
 ## Steps

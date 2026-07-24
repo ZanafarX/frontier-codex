@@ -34,5 +34,5 @@ Channeling roll:
 ## Special
 
 Also called **Psychometry**. Hindsight (R1) reads location memory; Object
-Reading reads object memory. The two complement each other — a knife from
+Reading reads object memory. The two complement each other: a knife from
 a murder reads under both, but reveals different details.

@@ -30,6 +30,6 @@ notes:
   - "Fen water is technically drinkable but must be boiled / Salt-treated or it inflicts Strain from waterborne corruption."
 ---
 
-The Scorchveil is the only region where water consumption scales — the
+The Scorchveil is the only region where water consumption scales: the
 Ash Belt and Stormrise are dry but not actively trying to kill you. The
 Fen tries to kill you with what looks like water.

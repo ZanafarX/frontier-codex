@@ -24,10 +24,10 @@ have cover available within **half your Speed**. Reduce damage by your
 
 ## Requirement
 
-**Once per scene.** No Steps — this is a binary defensive Reaction.
+**Once per scene.** No Steps: this is a binary defensive Reaction.
 
 ## Special
 
-Subject to the Seer Reaction Convention. Pairs unusually well with Glimpse —
+Subject to the Seer Reaction Convention. Pairs unusually well with Glimpse:
 if Glimpse fails to turn the hit into a miss, Precognitive Dodge can still
 salvage the damage retroactively.

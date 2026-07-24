@@ -16,13 +16,13 @@ has_resist: false
 
 ## Effect
 
-You cannot be moved against your will by any Psionic effect — telekinesis,
+You cannot be moved against your will by any Psionic effect: telekinesis,
 Gravity Well, forced movement from Thunder-Clap. You are rooted. Additionally,
 you cannot be **Knocked Prone** by psionic effects.
 
 ## Special
 
-Physical force still works normally — a sledgehammer doesn't care about your
+Physical force still works normally: a sledgehammer doesn't care about your
 soul. Anchor Step interacts with Weight of Reality (R2): while both are
 active you are essentially immovable by supernatural means. Being pushed,
 tackled, or hit by a charging horse still works. The Current cannot move

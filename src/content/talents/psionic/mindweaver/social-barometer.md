@@ -32,6 +32,6 @@ has betrayed someone here before, who is performing a role).
 
 ## Special
 
-Does **not** detect threats or hostile intent — that is Crowd Pulse's
+Does **not** detect threats or hostile intent; that is Crowd Pulse's
 domain. Social Barometer reads social structure; Crowd Pulse reads
 threat-context.

@@ -23,5 +23,5 @@ unable to act).
 ## Special
 
 When you would trigger a trap, you may make a **SAVVY + Awareness check
-(TN 11)** to freeze just before triggering it — your body locks up an
+(TN 11)** to freeze just before triggering it: your body locks up an
 instant before your foot completes its step.

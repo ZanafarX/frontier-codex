@@ -23,8 +23,8 @@ Reroll any number of dice in your pool. You must keep the second result.
 
 ## Special
 
-The **first Glimpse per scene is free** — no Strain, no Mettle. Subsequent
+The **first Glimpse per scene is free**: no Strain, no Mettle. Subsequent
 uses cost 1 Strain plus 1 Mettle (per Glimpse's own stacking rule, distinct
 from the standard Seer Reaction Convention). The Glimpse "first free" rule
-and the Convention's "first cheap Reaction" rule **stack independently** —
+and the Convention's "first cheap Reaction" rule **stack independently**:
 see the discipline overview.

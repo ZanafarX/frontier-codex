@@ -32,6 +32,6 @@ for **1 hour**. Choose:
 
 ## Special
 
-The adaptation is **visible** — skin thickens, pupils dilate enormously,
+The adaptation is **visible**: skin thickens, pupils dilate enormously,
 veins darken. This marks the target as psionically altered, which may
 cause social problems.

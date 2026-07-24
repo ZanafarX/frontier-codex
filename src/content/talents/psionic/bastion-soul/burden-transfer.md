@@ -32,6 +32,6 @@ You can absorb:
 ## Special
 
 You take the full weight of whatever you absorb. If you take a Grievous
-Wound, it's real — your body suffers the Broken Bone, the Internal Bleeding,
+Wound, it's real: your body suffers the Broken Bone, the Internal Bleeding,
 the Concussion. The Bastion Soul's role is to be the one who can bear it.
 Iron endures.

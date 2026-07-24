@@ -39,7 +39,7 @@ and fight harder).
 ## Special
 
 This is the Bastion Soul as Inquisitor. The Redeemers dream of this
-Talent — a way to strip Psionics of their power without killing them. The
+Talent: a way to strip Psionics of their power without killing them. The
 experience of severance is described as deafening silence, cosmic
 loneliness, and the sudden awareness of how cold the world is without
 the Current's warmth.

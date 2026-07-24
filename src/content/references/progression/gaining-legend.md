@@ -26,6 +26,6 @@ notes:
   - "See legend-effects.md for what each Legend level means and bounty-board.md for the catch-up mechanic."
 ---
 
-Legend isn't earned by what you do — it's earned by what survives in the
+Legend isn't earned by what you do; it's earned by what survives in the
 telling. The bartender's version of your duel is the version that
 matters.

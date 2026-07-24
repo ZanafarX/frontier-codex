@@ -40,5 +40,5 @@ notes:
 ---
 
 Steps are why high rolls feel good. The difference between a 3-Margin
-hit and a 12-Margin hit isn't just "you succeeded twice as much" — it's
+hit and a 12-Margin hit isn't just "you succeeded twice as much"; it's
 the difference between wounding and dropping.

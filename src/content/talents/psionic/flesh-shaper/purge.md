@@ -30,6 +30,6 @@ Touch a creature. Remove one of the following:
 ## Special
 
 Purge is the same-discipline cure for Plague Touch (FS R3). It does NOT
-cure Pandemic at scale — Purge ends an individual infection, but cannot
+cure Pandemic at scale: Purge ends an individual infection, but cannot
 stop transmission across a population (that requires Reality Anchor or
 killing the original source).

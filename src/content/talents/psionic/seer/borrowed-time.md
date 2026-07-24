@@ -28,6 +28,6 @@ Tick delay reduced by 1 per Step (minimum **+1 Tick** delay).
 ## Special
 
 This is the Seer's primary action-economy buff. The temporal debt is
-real — the ally acts faster now but slower later. Timing the payoff is
+real: the ally acts faster now but slower later. Timing the payoff is
 critical. **If combat ends before the delayed turn, the debt is forgiven.**
 Subject to the Seer Reaction Convention.

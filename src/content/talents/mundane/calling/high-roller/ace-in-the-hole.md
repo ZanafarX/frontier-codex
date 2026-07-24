@@ -18,7 +18,7 @@ has_resist: false
 ## Effect
 
 Once per session, you may reveal a concealed weapon (Derringer, knife,
-palm pistol — **Concealable** quality only) and make an immediate
+palm pistol, **Concealable** quality only) and make an immediate
 attack as a **Reaction**, even outside your turn. This attack gains
 **+2 Roll Bonus** (the target didn't know you were armed) and resolves
 at **Tempo 0**.

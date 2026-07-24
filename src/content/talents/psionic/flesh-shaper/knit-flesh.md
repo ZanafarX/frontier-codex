@@ -30,4 +30,4 @@ the activation; the Tax is additional and scales with the roll.)
 
 Can stabilize a Downed creature automatically (no Medicine check needed)
 as part of the heal. This is the Flesh Shaper's first lesson and last
-resort — the cost is real, but so is the life saved.
+resort; the cost is real, but so is the life saved.

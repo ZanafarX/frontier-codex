@@ -11,18 +11,19 @@ stats:
   pool: 9
   mettle: 5
   armor_rating: 2
-  notes: "Speed 7. Gear: Consecrated Armor (AR 2, immune to Veil-Born corrosion), The Scripture of Ash (personal focus — a book of prayers that smolders but never burns), Vial of Sanctified Salt (3 uses, each equal to a Salt Grenade), Relic Shotgun 'Absolution' (silver-plated, scripture-etched)."
+  speed: 7
+  notes: "Gear: Consecrated Armor (AR 2, immune to Veil-Born corrosion), The Scripture of Ash (personal focus — a book of prayers that smolders but never burns), Vial of Sanctified Salt (3 uses, each equal to a Salt Grenade), Relic Shotgun 'Absolution' (silver-plated, scripture-etched)."
 ---
 
 Leader of the Redeemer Order. A man who walked into the Ash Belt
-without water, without food, and without fear — and walked out forty
+without water, without food, and without fear, and walked out forty
 days later with eyes that burn white and a voice that can stop a
 Stormcaller in its tracks. No one knows what Vane found in the ash.
 He does not speak of it. He only speaks of what must be done.
 
 Vane is tall, gaunt, and utterly still. He does not fidget, does not
 blink more than necessary, and does not raise his voice. His white
-eyes see in total darkness and glow faintly when he is angry — which,
+eyes see in total darkness and glow faintly when he is angry, which,
 by all accounts, is always.
 
 The Circle of Ash believes Vane is a latent Psionic in deep denial.
@@ -39,7 +40,7 @@ are entirely wrong.
 
 ## Traits
 
-- **Eyes of White Fire:** Darkvision. Cannot be Blinded by any means. Eyes glow in darkness — Stealth is impossible if he is looking for you.
+- **Eyes of White Fire:** Darkvision. Cannot be Blinded by any means. Eyes glow in darkness: Stealth is impossible if he is looking for you.
 - **Burning Faith:** Immune to all Psionics Rank 3 and below. **+4 to resist Rank 4-5.** Whether this is divine protection or latent psionic resistance is the subject of fierce debate.
 
 ## Abilities
@@ -51,7 +52,7 @@ are entirely wrong.
 ## Tactics
 
 Leads from the front. Enters the room first. Speaks the Judgment
-first. Fires Absolution first. He is not suicidal — he is supremely
+first. Fires Absolution first. He is not suicidal; he is supremely
 confident, and his confidence is justified by decades of survival.
 Judges the most dangerous supernatural target, activates White Fire
 if surrounded, then wades into melee with the White-Fire Touch

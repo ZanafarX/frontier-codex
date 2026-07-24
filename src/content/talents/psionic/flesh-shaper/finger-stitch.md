@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 Perform a Medicine check using **ECHO + Channel** instead of SAVVY +
-Medicine. The stitching is psionic — no medical kit required. You heal
+Medicine. The stitching is psionic; no medical kit required. You heal
 **1 HP** on success.
 
 ## Steps
@@ -28,6 +28,6 @@ Medicine. The stitching is psionic — no medical kit required. You heal
 
 Unlike Knit Flesh (which heals more but inflicts Strain on the caster
 equal to HP healed), Finger Stitch heals less but **costs only the
-Channeling Strain** — no additional Caster's Tax. This makes it
+Channeling Strain**: no additional Caster's Tax. This makes it
 sustainable for long-term field medicine. Most Flesh Shapers learn it
 first, Knit Flesh second.

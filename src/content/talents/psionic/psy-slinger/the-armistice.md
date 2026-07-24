@@ -29,10 +29,10 @@ environmental hazards and the elements remain lethal. Consumes 1 round.
 
 During The Armistice, the world goes quiet. No gunshots, no screams of
 violence. The Tension Pool is **emptied entirely**. When the minute ends,
-reality reasserts itself violently — add **2 dice** to the Tension Pool.
+reality reasserts itself violently: add **2 dice** to the Tension Pool.
 
 ## Special
 
 This affects allies as well as enemies. Both sides are disarmed. What
-happens during that minute — negotiation, flight, confession, betrayal —
+happens during that minute (negotiation, flight, confession, betrayal)
 is up to the people in it.

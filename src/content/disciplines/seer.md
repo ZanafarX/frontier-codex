@@ -11,12 +11,12 @@ talent_count_by_rank: [12, 12, 10, 10, 6]
 ---
 
 Seers navigate the causal web of the Frontier. They see past, future, and
-distant present. Their power is subtle but invaluable — they know what's
+distant present. Their power is subtle but invaluable: they know what's
 coming before it arrives, and sometimes they can change it.
 
-## Seer Reaction Convention — Universal Rule
+## Seer Reaction Convention: Universal Rule
 
-Seers are **reactive by nature** — they see things coming and respond. To
+Seers are **reactive by nature**: they see things coming and respond. To
 honor this identity without crushing the discipline under Mettle taxation,
 the following rule applies (parallel to the Bastion Soul Reaction Convention):
 
@@ -48,17 +48,17 @@ own stacking rule):
 - **Rank 1:** Glimpse, Déjà Vu, Fate's Nudge, Flicker Step
 - **Rank 2:** Borrowed Time
 - **Rank 3:** Precognitive Dodge
-- **Rank 4:** *(none — Seer R4 has no Reactions)*
+- **Rank 4:** *(none: Seer R4 has no Reactions)*
 - **Rank 5:** The Rewind, The Last Thread *(see the universal rule below)*
 
-## Miracle Reaction Rule — Universal (Cross-Discipline)
+## Miracle Reaction Rule: Universal (Cross-Discipline)
 
-This rule applies to **every Discipline**, not only Seers — but it's
+This rule applies to **every Discipline**, not only Seers, but it's
 codified here because Seers have two of the most prominent Miracle
 Reactions (The Rewind, The Last Thread).
 
 > **Miracle-tier Reactions pay only their Memory cost. No Mettle is required.
-> The act of burning a Memory IS the cost — Mettle is incidental.**
+> The act of burning a Memory IS the cost; Mettle is incidental.**
 
 This applies to:
 
@@ -77,7 +77,7 @@ characters, especially when the trigger is "you are about to die."
 | **Time** | Flicker Step | Temporal Stutter, Synchronize, Borrowed Time | Temporal Anchor, Chrono-Lock | Timeline Splice, Convergence Point, Thread-Walker | The Anchor in Time, The Rewind |
 | **Fate** | Fate's Nudge, Ill Omen | Hex, Fortune's Favor, Fate Tax | Probability Storm, Dead Man's Hand | Fate's Shears, The Arbiter, Cascade Failure | Fate's Decree |
 | **Vision** | Déjà Vu, Coin Toss, Read the Bones, Omen Reading, Hindsight, Echo of Intent | Premonition, Scry, Probability Spike, The Fatal Reading, Shared Foresight, Causal Loop | Object Reading, Thread Sight, Fate's Ledger, Paradox Gambit, Moment of Clarity | The Unraveling, Doom Clock, Destiny's Web, Prophecy of Doom | The Thousand Eyes, The Prophecy |
-| **Defense / Reactive** | Glimpse, Fate's Nudge, Flicker Step, Déjà Vu, Danger Sense | Borrowed Time, Shared Foresight, Premonition | Precognitive Dodge | — | The Last Thread |
+| **Defense / Reactive** | Glimpse, Fate's Nudge, Flicker Step, Déjà Vu, Danger Sense | Borrowed Time, Shared Foresight, Premonition | Precognitive Dodge | – | The Last Thread |
 
 ## Key Mechanical Notes
 
@@ -85,7 +85,7 @@ characters, especially when the trigger is "you are about to die."
   R4 single-target lethality within reason while preserving the 5-Tick
   warning + escape clause.
 - **Fate's Shears is the discipline's anti-luck weapon.** It works on
-  allies as well as enemies — a moral choice as much as a tactical one.
+  allies as well as enemies, a moral choice as much as a tactical one.
   Severs Critical Successes, blocks Mettle Reactions, treats doubles
   as Fumbles, and prevents psionic healing.
 - **The Tension Pool interacts heavily with Seer Talents.** Convergence
@@ -95,7 +95,7 @@ characters, especially when the trigger is "you are about to die."
 - **Pool Bonus stacking ceiling.** Probability Spike (raw +2 dice) and
   Fortune's Favor (selection consistency) cannot stack on the same roll.
   A character benefiting from both rolls the larger pool, then selects
-  their best two from it normally — Fortune's Favor doesn't add a die on
+  their best two from it normally; Fortune's Favor doesn't add a die on
   top of an existing Pool Bonus.
 - **Causal Loop's plausibility test is the GM's call.** "I bought rope in
   town" works. "I left a stick of dynamite under the throne" usually

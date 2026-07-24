@@ -27,5 +27,5 @@ draw.
 ## Special
 
 If used as your **first action in combat**, you also gain a fixed **+2 to
-your Initiative score** (does not scale with Steps — this is a one-time
+your Initiative score** (does not scale with Steps; this is a one-time
 situational bonus for opening a fight).

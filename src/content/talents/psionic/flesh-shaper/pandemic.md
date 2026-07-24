@@ -51,5 +51,5 @@ Palomera, and you may kill the only sanctuary the Hollowborn have. The
 Circle of Ash **formally forbids** this Talent. Flesh Shapers who use
 it are exiled or killed by their own.
 
-**The Tension Pool gains +2 dice when Pandemic is activated** — the
+**The Tension Pool gains +2 dice when Pandemic is activated**: the
 Current loves suffering.

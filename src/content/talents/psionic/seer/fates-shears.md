@@ -21,7 +21,7 @@ Sever a target's connection to fortune. For the rest of the scene:
 - The target **cannot benefit from Critical Successes** (double 8s are
   treated as a normal success)
 - The target **cannot use Mettle Reactions** (Dive, Dodge, Parry,
-  Intercept — their instincts are blinded)
+  Intercept; their instincts are blinded)
 - Any roll where the target's two highest dice are **equal** (doubles
   of any value) is treated as a **Fumble**
 - The target **cannot be healed by psionic means** (fate has abandoned
@@ -39,5 +39,5 @@ frays).
 ## Special
 
 This Talent is despised by other Psionics because it works on **allies
-and enemies alike** — and because the implication (that luck is a
+and enemies alike**, and because the implication (that luck is a
 quantifiable resource that can be cut) is philosophically horrifying.

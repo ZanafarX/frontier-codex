@@ -9,6 +9,7 @@ vitals:
   defense: 8
   armor_rating: 3
   mettle: 2
+  speed: 5
 attacks:
   - name: "Gatling Arm"
     pool: 7
@@ -29,7 +30,7 @@ abilities:
 habitat: []
 ---
 
-Walking tanks in steam-assisted Hardsuits — hydraulic exoskeletons of
+Walking tanks in steam-assisted Hardsuits: hydraulic exoskeletons of
 riveted iron plate and pressurized servos that turn an ordinary
 fighter into a siege weapon. A Shock-Trooper stands seven feet tall
 in their suit, weighs half a ton, and carries enough firepower to
@@ -38,7 +39,7 @@ suppress an entire street.
 The suits are brutally effective but not comfortable. The interior
 smells of oil, sweat, and hot metal. Operators suffer chronic joint
 pain, hearing loss, and claustrophobia. **Most Shock-Troopers can't
-sleep without the hum of machinery** — the silence feels wrong. They
+sleep without the hum of machinery**; the silence feels wrong. They
 are the Ironbrands' greatest asset and their most expensive
 investment.
 
@@ -49,7 +50,7 @@ release bolts. Speed 5.
 ## Tactics
 
 Advance slowly. Use Suppressing Fire to pin enemies behind cover,
-then close for Power Fist. They are the *breaching tool* — sent
+then close for Power Fist. They are the *breaching tool*: sent
 through the front door, the barricade, the wall. Contractors follow
 in their wake.
 

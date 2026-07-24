@@ -18,7 +18,7 @@ has_resist: false
 
 Touch a target. Implant a single idea, image, or emotion into their
 **subconscious**. They will dream about it during their next Long Rest.
-The dream feels meaningful and personal — the target is inclined to act
+The dream feels meaningful and personal; the target is inclined to act
 on it, **though they are not compelled**.
 
 ## Steps

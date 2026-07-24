@@ -40,5 +40,5 @@ schism deepens with time).
 ## Special
 
 If this brings a **Psionic target to 0 Mettle**, their connection to
-the Current becomes unstable — any Channeling attempt triggers
+the Current becomes unstable: any Channeling attempt triggers
 **automatic Backlash** (roll as if one Bleed Die showed a 1).

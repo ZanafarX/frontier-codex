@@ -18,7 +18,7 @@ has_resist: false
 
 Touch a major Veil breach or Thin Place. After the initial Channeling roll,
 sustain Channeling for 1 hour. On completion, you permanently seal the
-breach. This is not patching — this is rebuilding the wall from the
+breach. This is not patching; this is rebuilding the wall from the
 foundation:
 
 - The breach closes. Reality reasserts itself with a physical shockwave
@@ -33,12 +33,12 @@ foundation:
 ## Special
 
 **The Cost Beyond Memory:** You burn a Memory and take **2d6 Strain**.
-Additionally, your **ECHO is permanently reduced by 1** — you have given
+Additionally, your **ECHO is permanently reduced by 1**: you have given
 a piece of your connection to the Current to reinforce the barrier. If
-this reduces your ECHO to 0, you lose all Psionic abilities permanently —
-**but the Seal holds.**
+this reduces your ECHO to 0, you lose all Psionic abilities permanently.
+**But the Seal holds.**
 
-This is the Bastion Soul's purpose — the reason the discipline exists.
+This is the Bastion Soul's purpose: the reason the discipline exists.
 Every Bastion Soul dreams of finding a breach large enough to seal, and
 fears the cost. A Bastion Soul who has performed The Seal is revered by
 the Circle, respected by the Ironbrands, and even grudgingly acknowledged

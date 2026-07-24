@@ -26,7 +26,7 @@ fleeing law or past. **Only rule: "Don't ask questions."**
 
 ## Notes on the Waystation
 
-Mother Elaine is the matriarch — a powerful Flesh Shaper who treats
+Mother Elaine is the matriarch, a powerful Flesh Shaper who treats
 "Fen-Rot," the slow biological decay that afflicts everyone who
 breathes the Fen's air long enough. She charges in service, not
 Scrip. Debts to Mother Elaine accumulate, and she remembers every
@@ -34,7 +34,7 @@ one. The Ferryman is a mute giant who poles a flatboat through the
 swamp; he knows the safe paths through the Thousand-Lantern Fen, and
 his price is whatever feels right when you climb aboard.
 
-Source does not describe distinct named districts for Bellhaven — the
+Source does not describe distinct named districts for Bellhaven; the
 town is a single sprawl of interconnected stilt-platforms with no
 formal subdivisions. If districts emerge in future material (the
 Bellhaven docks, the boardwalks, the upper tier, etc.), they can be
@@ -44,4 +44,4 @@ Availability quirks: standard weapons are limited (the damp ruins
 firearms quickly). Special ammunition is unavailable. Psionic gear is
 rare. Grimoires are rare. Clean water is §4/gallon (the swamp water
 is undrinkable without filtration). Medical care requires service in
-return — Mother Elaine doesn't take coin.
+return; Mother Elaine doesn't take coin.

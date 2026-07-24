@@ -23,5 +23,5 @@ condition (you can spend Mettle on Reactions, you are not Flat-Footed).
 ## Special
 
 The first time per session an NPC lies to you in conversation, the GM
-tells you they're lying — you don't know *what* the lie is, only that
+tells you they're lying; you don't know *what* the lie is, only that
 it was one.

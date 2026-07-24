@@ -8,6 +8,7 @@ vitals:
   defense: 12
   armor_rating: 0
   mettle: 0
+  speed: 8
 attacks:
   - name: "Lure"
     pool: 0
@@ -31,27 +32,27 @@ habitat:
   - "the-fen"
 ---
 
-The lights of the Thousand-Lantern Fen — hovering spheres of pale
+The lights of the Thousand-Lantern Fen: hovering spheres of pale
 bioluminescence that drift above the black water like lanterns in a
 festival. They are beautiful. They are deadly. They are the lure of
 something underneath.
 
 Each Corpse-Candle is the **visible projection of a submerged
-organism** — a colony of Current-infused algae that feeds on the
+organism**, a colony of Current-infused algae that feeds on the
 bioelectric energy of living creatures. The light is hypnotic, drawing
 prey toward deep water where the colony waits. The effect is not
-psionic — it is biological, a phenomenon closer to the anglerfish
+psionic; it is biological, a phenomenon closer to the anglerfish
 than to the Mindweaver, and this makes it particularly insidious
 because psionic defenses do not help.
 
 Locals know to never follow the lights. Travelers rarely get the
 warning in time.
 
-Speed 8. Classified as Minion (Hazard) — see Swarm Colony trait.
+Speed 8. Classified as Minion (Hazard); see Swarm Colony trait.
 
 ## Tactics
 
-Corpse-Candles don't have tactics — they have instinct. The lights
+Corpse-Candles don't have tactics; they have instinct. The lights
 drift toward clusters of living creatures, maximizing lure exposure.
 When multiple prey items are drawn in simultaneously, the colony
 prioritizes the one with the strongest bioelectric signature
@@ -60,7 +61,7 @@ prioritizes the one with the strongest bioelectric signature
 ## Encounter Design
 
 A navigational hazard during Fen travel. The party sees the lights
-ahead — hundreds of them, floating in a field across the only path.
+ahead: hundreds of them, floating in a field across the only path.
 Do they blindfold themselves and navigate by touch? Do they waste
 salt to clear a lane? Do they go around and lose a day of travel? The
 Corpse-Candle encounter is about resource management and

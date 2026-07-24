@@ -5,6 +5,6 @@ applies_to: ["all"]
 tags: ["stealth"]
 ---
 
-Concealable weapons are designed to be hidden — short barrels, slim
+Concealable weapons are designed to be hidden: short barrels, slim
 profiles, sheath-friendly. The bonus applies to the check made to keep
 the weapon hidden during searches or social encounters.

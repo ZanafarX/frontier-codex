@@ -35,8 +35,8 @@ individually**).
 
 ## Special
 
-**Physical evidence remains.** Spent shell casings, blood, bodies — all
+**Physical evidence remains.** Spent shell casings, blood, bodies: all
 present. The confusion is devastating in its own right. Guards don't
 remember why they drew weapons. Witnesses don't remember the crime. The
-erased minutes feel like waking from a blackout — deeply unsettling,
+erased minutes feel like waking from a blackout: deeply unsettling,
 often causing panic.

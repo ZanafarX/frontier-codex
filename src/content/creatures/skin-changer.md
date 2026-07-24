@@ -8,6 +8,7 @@ vitals:
   defense: 10
   armor_rating: 1
   mettle: 2
+  speed: 8
 attacks:
   - name: "Claws (true form)"
     pool: 7
@@ -30,14 +31,14 @@ habitat: []
 ---
 
 A thing that wears people. Nobody knows what a Skin-Changer looks
-like underneath — the few who have seen one shed its disguise
+like underneath: the few who have seen one shed its disguise
 describe something thin, wet, and wrong, like a person turned
 inside out and stretched over a frame made of too many bones.
 
 Skin-Changers are ambush predators of the most intimate kind. They
 kill a person, consume them over the course of an hour, and then walk
 out of the room wearing the victim's face, voice, memories, and
-mannerisms with absolute fidelity. The disguise is perfect — not an
+mannerisms with absolute fidelity. The disguise is perfect: not an
 illusion, but a physical reconstruction. The only way to tell is an
 Insight check so difficult that most people don't bother, or the
 subtle wrongness that **dogs don't miss**: animals bark at
@@ -46,7 +47,7 @@ copper.
 
 They are thankfully rare. The Circle estimates fewer than a dozen
 operating on the Frontier at any time. Each one is a slow-motion
-catastrophe — by the time you realize someone in your settlement has
+catastrophe: by the time you realize someone in your settlement has
 been replaced, the Skin-Changer has already chosen its next victim.
 
 Speed 8.
@@ -55,7 +56,7 @@ Speed 8.
 
 **Infiltrate. Isolate. Replace.** A Skin-Changer never fights openly
 unless cornered or unless it has already weakened the group from
-within — poisoning supplies, leading patrols into ambushes, sowing
+within: poisoning supplies, leading patrols into ambushes, sowing
 paranoia. When it fights, it targets isolated individuals and uses
 Shed Skin only when it has the advantage.
 
@@ -64,5 +65,5 @@ Shed Skin only when it has the advantage.
 The best Skin-Changer encounter is a *mystery,* not a fight. The
 party arrives in a settlement where someone has been replaced.
 Tensions are high. Accusations fly. The real combat only happens once
-the Skin-Changer is identified — and it's already chosen its escape
+the Skin-Changer is identified, and it's already chosen its escape
 route.

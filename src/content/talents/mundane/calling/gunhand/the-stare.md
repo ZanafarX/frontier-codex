@@ -25,7 +25,7 @@ choose one:
 - The target **backs down and withdraws**.
 - The target **freezes (Stunned for 3 Ticks)**.
 
-This is not supernatural — it's the weight of a killer's gaze.
+This is not supernatural: it's the weight of a killer's gaze.
 
 ## Resist
 

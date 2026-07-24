@@ -18,8 +18,8 @@ has_resist: false
 
 You gain **+2 Roll Bonus** to all Engineering checks involving
 machines, engines, and mechanical devices. You can **diagnose a
-machine's problem by listening to it for 1 minute** (no check required
-— the GM tells you what's wrong).
+machine's problem by listening to it for 1 minute** (no check required,
+the GM tells you what's wrong).
 
 Repairs you make are more durable: **Jury-Rigged repairs** (if you
 also have that talent) last for **1 full session** instead of 1 scene.

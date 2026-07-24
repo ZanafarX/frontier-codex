@@ -17,14 +17,14 @@ has_resist: false
 ## Effect
 
 A translucent, flickering copy of yourself appears adjacent to you. It
-is you from a parallel moment — the version that went left instead of
+is you from a parallel moment: the version that went left instead of
 right, that ducked instead of fired, that ran instead of fought. The
 Splice lasts for **10 Ticks**:
 
 - The Splice acts on your Tick, taking a **separate Action with your
   stats**
 - The Splice can use any **Rank 1–2** Seer Talents you know (at no
-  additional cost — the Splice is paid for by the Erosion cost of the
+  additional cost; the Splice is paid for by the Erosion cost of the
   Splice itself)
 - The Splice has HP equal to **half your current Vitality** (round down)
   and your Defense

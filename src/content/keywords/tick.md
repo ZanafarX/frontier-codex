@@ -10,8 +10,8 @@ tags: ["combat", "the-count", "initiative", "core-mechanic"]
 ---
 
 Ticks are the continuous-time backbone of *The Veil & Lead* combat.
-The Count is a **20-segment circular track** (numbered 0-19) — visualized
-as a revolver cylinder — that all combatants share. There are no
+The Count is a **20-segment circular track** (numbered 0-19), visualized
+as a revolver cylinder, that all combatants share. There are no
 discrete "rounds" where everyone acts in sequence. Instead, the GM
 advances **The Hammer** (the current-moment marker) clockwise, and
 characters act when the Hammer reaches their position.
@@ -20,7 +20,7 @@ characters act when the Hammer reaches their position.
 | :------ | :----- |
 | **The Cylinder** | 20-segment track, 0 to 19 |
 | **The Hammer** | The marker indicating the current Tick |
-| **The Red Lines** | Segments 0 and 10 — the Tension Lines (special significance) |
+| **The Red Lines** | Segments 0 and 10 (the Tension Lines, special significance) |
 | **Tick Position** | Each character has a token showing when they next act |
 | **The Wrap** | If movement carries past 19, continue from 0 |
 

@@ -26,7 +26,7 @@ Reduce incoming damage by your **ECHO** rating. Can reduce damage to 0.
 
 ## Special
 
-This works against **physical attacks only**, not psionic effects — use Absorb
+This works against **physical attacks only**, not psionic effects: use Absorb
 (R2) for psionic damage. Subject to the **Bastion Soul Reaction Convention**:
 the first Bastion Soul Reaction in a scene costs only the listed Strain;
 subsequent Reactions add 1 Mettle.

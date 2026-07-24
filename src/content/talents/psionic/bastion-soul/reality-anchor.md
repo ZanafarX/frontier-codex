@@ -22,12 +22,12 @@ mundane reality:
 - **No Psionic Talents of any Rank can be activated** (including Rank 5
   Miracles)
 - **All active psionic effects of any Rank end permanently** (not
-  suppressed — ended)
+  suppressed; ended)
 - Veil-Born creatures within the area take **3 damage** per turn (reality
   rejects them)
 - The Tension Pool is reduced by **2 dice**
 - Thin Places within the area are temporarily sealed
-- The area feels *normal* — the first truly normal place on the Frontier.
+- The area feels *normal*: the first truly normal place on the Frontier.
   The weight lifts. The hum silences. For one minute, the world is what
   it was before the Rupture.
 

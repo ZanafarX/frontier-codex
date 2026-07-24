@@ -23,11 +23,11 @@ materializes.
 
 **Examples:**
 
-- *"An ambush from the canyon walls in 8 minutes"* — you position for
+- *"An ambush from the canyon walls in 8 minutes"*: you position for
   the ambush before it comes
-- *"The bridge will collapse when the third person crosses"* — you
+- *"The bridge will collapse when the third person crosses"*: you
   cross in pairs
-- *"The water is poisoned"* — you pour it out
+- *"The water is poisoned"*: you pour it out
 
 ## Steps
 
@@ -38,4 +38,4 @@ materializes.
 The act of seeing the threat and preparing for it may **change the
 outcome entirely** (the ambushers see you're ready and withdraw) or
 merely improve your odds. The GM determines consequences. The future is
-not fixed — it shifts in response to your actions.
+not fixed; it shifts in response to your actions.

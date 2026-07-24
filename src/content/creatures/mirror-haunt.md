@@ -30,16 +30,16 @@ abilities: []
 habitat: []
 ---
 
-An entity that exists inside reflective surfaces — water, glass,
+An entity that exists inside reflective surfaces: water, glass,
 polished metal, mirrors. Mirror Haunts are fragments of consciousness
 that slipped through the Veil during the Rupture and found that the
 thin space between a reflection and its source was a comfortable
 approximation of the dimension they came from.
 
 A Mirror Haunt manifests as the viewer's own reflection *behaving
-incorrectly* — blinking when you don't, smiling when you're terrified,
+incorrectly*: blinking when you don't, smiling when you're terrified,
 reaching toward you when your hands are at your sides. The effect is
-deeply, primally unsettling — a violation of the fundamental
+deeply, primally unsettling: a violation of the fundamental
 expectation that your reflection is you.
 
 Mirror Haunts feed on attention. The more you look, the stronger they
@@ -50,10 +50,10 @@ isn't paranoia. It's pest control.**
 
 ## Tactics
 
-The Mirror Haunt uses Reflection Strike from unexpected surfaces — a
+The Mirror Haunt uses Reflection Strike from unexpected surfaces: a
 puddle on the floor, a polished tin cup, the glass of a lantern. It
 migrates to avoid being pinpointed. If cornered in a single surface,
-it uses Shatter-Scream to create dozens of tiny reflective shards —
+it uses Shatter-Scream to create dozens of tiny reflective shards,
 each one a potential doorway.
 
 ## Encounter Design

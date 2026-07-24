@@ -28,5 +28,5 @@ fail their resist are **Suppressed until the end of your next turn**.
 ## Special
 
 The shot does not need to hit its target to trigger the Intimidation
-effect — a deliberate miss works. If you intentionally miss, the shot
+effect: a deliberate miss works. If you intentionally miss, the shot
 deals no damage but the Intimidation still applies.

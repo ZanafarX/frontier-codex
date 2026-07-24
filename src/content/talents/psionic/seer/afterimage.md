@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 For the next minute, you see faint afterimages trailing all creatures
-within Near range — ghostly echoes of their positions 2–3 seconds ago.
+within Near range: ghostly echoes of their positions 2–3 seconds ago.
 
 This grants **+2 Roll Bonus** to Awareness checks to track movement, detect
 Stealth, and predict trajectories.
@@ -29,5 +29,5 @@ Stealth, and predict trajectories.
 ## Special
 
 Invisible or Stealthed creatures leave afterimages even if you can't see
-their current position — you see where they *were*. This doesn't reveal
+their current position. You see where they *were*. This doesn't reveal
 their current location precisely, but it gives you a direction.

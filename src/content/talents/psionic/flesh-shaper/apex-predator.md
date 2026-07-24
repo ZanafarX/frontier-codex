@@ -17,11 +17,11 @@ has_resist: false
 ## Effect
 
 You undergo a total biological transformation for the rest of the scene.
-This is the **fixed combat-power transformation** — distinct from Chimera
+This is the **fixed combat-power transformation**, distinct from Chimera
 Form's modular utility:
 
 - **+3 IRON, +3 QUICK** (Attribute bonuses)
-- **AR 4** (natural armor — doesn't stack with worn armor)
+- **AR 4** (natural armor, doesn't stack with worn armor)
 - **Unarmed attacks: WR 5, Bleed**, cannot be Disarmed
 - **Speed +4**
 - **Immune** to Fear, Suppressed, and Wound penalties
@@ -45,7 +45,7 @@ violently. Take **2d6 Strain** (excess converts to HP damage). You are
 names.
 
 You are unrecognizable. Your allies may not realize who you are. Social
-interaction is impossible — you are an eight-foot nightmare of bone,
+interaction is impossible: you are an eight-foot nightmare of bone,
 sinew, and fury. Redeemers will attempt to kill you on sight, and they
 won't be wrong to try.
 

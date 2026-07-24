@@ -23,5 +23,5 @@ action and a single roll. Both receive the full healing benefit.
 
 ## Special
 
-Your First Aid is **not limited to once per character per scene** —
+Your First Aid is **not limited to once per character per scene**:
 you can treat the same character multiple times.

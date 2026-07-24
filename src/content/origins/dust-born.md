@@ -10,7 +10,7 @@ root_memory_examples:
   - "Stars undimmed by smoke or gas-light."
 ---
 
-You were born in the wastes — perhaps to a Dust Vulture clan, perhaps to
+You were born in the wastes, perhaps to a Dust Vulture clan, perhaps to
 desperate homesteaders who refused the Consortium's leash. You learned to
 read the land before you learned to read words. Water is sacred. Weakness
 is death.

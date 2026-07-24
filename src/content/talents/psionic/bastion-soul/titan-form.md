@@ -19,8 +19,8 @@ has_resist: false
 You grow to approximately 3 meters tall and your body becomes dense, gray,
 and stone-like. For the rest of the scene:
 
-- **+3 IRON** (Attribute bonus, capped at 5 — excess lost)
-- **AR 4** (natural armor — does NOT stack with worn armor)
+- **+3 IRON** (Attribute bonus, capped at 5, excess lost)
+- **AR 4** (natural armor, does NOT stack with worn armor)
 - Your melee attacks deal **WR 4** with Knockdown
 - You cannot be moved, Knocked Prone, Grappled, or affected by any movement
   effect
@@ -34,7 +34,7 @@ and stone-like. For the rest of the scene:
 ## Steps
 
 +1 AR per Step (max +1 from Steps; total AR bonus from this Talent caps at
-**+5** — equal to the R5 Apotheosis ceiling).
+**+5**, equal to the R5 Apotheosis ceiling).
 
 ## Special
 
@@ -45,8 +45,3 @@ But nothing — nothing — gets past you.
 **Aftermath:** When the scene ends, you shrink back. Take **1d6 Strain** and
 suffer **−2 dice** (Pool Penalty) to all physical actions for 1 hour as
 your muscles adjust.
-
-# =============================================================================
-# RANK 5 TALENTS (Miracles) — 1 Memory | TN 16
-# Miracles do not have Steps. Reality-altering by category, not by degree.
-# =============================================================================

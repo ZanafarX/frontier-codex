@@ -15,4 +15,4 @@ example_uses:
 ---
 
 Medicine covers first aid, surgery, diagnosis, pharmacy, and understanding
-of the human body — and its many ways of breaking.
+of the human body, and its many ways of breaking.

@@ -20,7 +20,7 @@ When you do a significant favor for an NPC (save their life, give them
 valuable information, cover for them), you may formally invoke the
 **Debt**. The NPC gains the **"Indebted"** status in the GM's notes.
 At any future point, you may call in the Debt for one favor of
-equivalent value. The NPC may refuse — but they know, and you know,
+equivalent value. The NPC may refuse, but they know, and you know,
 and everyone in town will know they broke their word.
 
 ## Limit

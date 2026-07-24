@@ -31,5 +31,5 @@ and a successful ECHO + Channel TN 13 check).
 ## Aftermath
 
 You take 1d6 Strain and are Blinded for 1 minute. Your eyes show you where
-the bullet went — through the Veil, through the screaming dark, through
+the bullet went: through the Veil, through the screaming dark, through
 the space between.

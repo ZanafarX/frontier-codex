@@ -29,7 +29,7 @@ adjacent allies in the same Reaction).
 
 ## Requirement
 
-**Cannot reflect Rank 5 Miracles** — those exceed the Talent's scope.
+**Cannot reflect Rank 5 Miracles**: those exceed the Talent's scope.
 
 ## Special
 

@@ -30,11 +30,11 @@ a firearm:
 - **Customize:** Fit the weapon to a specific user's hands, stance, and
   eye. This grants the **+1 Signature Weapon Roll Bonus** to that
   specific user for that weapon. This is an alternate path to the
-  Signature Weapon talent's +1 — it produces the same mechanical bonus
+  Signature Weapon talent's +1: it produces the same mechanical bonus
   through craft rather than bond.
 
 ## Limit
 
 A weapon can only have one active modification at a time. Customize
-replaces the need for the Signature Weapon talent for that weapon —
+replaces the need for the Signature Weapon talent for that weapon;
 the bonuses do not stack (still +1 total).

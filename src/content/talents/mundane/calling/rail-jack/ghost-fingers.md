@@ -18,7 +18,7 @@ has_resist: false
 
 You gain **+2 Roll Bonus** to all Finesse checks for **lockpicking,
 pickpocketing, and disarming mechanical traps**. Additionally, you can
-pick locks **silently** — no Stealth check required to avoid noise
+pick locks **silently**: no Stealth check required to avoid noise
 while working.
 
 ## Special

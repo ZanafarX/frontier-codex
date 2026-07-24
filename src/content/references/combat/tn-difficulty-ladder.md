@@ -48,6 +48,6 @@ notes:
   - "Approximate success rates (6-dice pool): TN 11 = 91%, TN 13 = 65%, TN 15 = 36%, TN 17 effectively 0% without bonuses."
 ---
 
-The most common GM-set difficulty is TN 13 — Standard. Set it there
+The most common GM-set difficulty is TN 13: Standard. Set it there
 unless you have a reason to deviate. Players who consistently see TN 11
 get bored; players who consistently see TN 15 get tired.

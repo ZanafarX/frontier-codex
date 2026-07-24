@@ -9,6 +9,7 @@ vitals:
   defense: 11
   armor_rating: 0
   mettle: 2
+  speed: 5
 attributes:
   echo: 4
 attacks:
@@ -32,7 +33,7 @@ habitat:
   - "stormrise"
 ---
 
-The keepers of prophecy — Seers who have spent decades studying the
+The keepers of prophecy: Seers who have spent decades studying the
 Silver Thread of possible futures until the distinction between "now"
 and "then" has blurred into irrelevance. Archivists are pale, thin,
 and slightly disconnected from consensus reality. They finish your
@@ -40,8 +41,8 @@ sentences. They duck before the shot is fired. They cry at jokes that
 haven't been told yet.
 
 Most Archivists have lost at least one Memory to their visions. Their
-eyes have a faint **violet tinge** — the telltale sign of advanced
-Erosion — and their skin is cool to the touch. They are
+eyes have a faint **violet tinge** (the telltale sign of advanced
+Erosion) and their skin is cool to the touch. They are
 simultaneously the Circle's greatest asset and its greatest
 vulnerability.
 
@@ -52,7 +53,7 @@ Speed 5.
 The Archivist never engages in melee. They use Thread-Walker to
 maintain distance, Fatal Reading to debuff the greatest threat, and
 Glimpse to keep allies alive. If cornered, they Thread-Walk to
-safety. If captured, they cooperate — *and feed their captors
+safety. If captured, they cooperate, *and feed their captors
 prophecies designed to manipulate future events in the Circle's
 favor.*
 

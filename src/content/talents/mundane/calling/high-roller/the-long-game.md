@@ -20,7 +20,7 @@ has_resist: false
 During any **Extended Check** involving social manipulation,
 negotiation, or gambling (multiple opposed rolls over time), you gain
 a cumulative **+1 Roll Bonus** for each successful check in the
-sequence (maximum **+3**). This represents you building an advantage —
+sequence (maximum **+3**). This represents you building an advantage:
 reading the pattern, steering the conversation, controlling the pace.
 
 ## Special

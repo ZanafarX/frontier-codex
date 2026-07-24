@@ -9,6 +9,7 @@ vitals:
   defense: 9
   armor_rating: 0
   mettle: 0
+  speed: 7
 attacks:
   - name: "Scrap-Rifle"
     pool: 4
@@ -31,7 +32,7 @@ habitat:
 ---
 
 Scavengers wrapped in layered rags and tinted goggles, their skin
-cracked from sun and wind. Most Raiders are desperate — clan outcasts,
+cracked from sun and wind. Most Raiders are desperate: clan outcasts,
 failed farmers, refugees who chose the waste over the Consortium's
 indentured contracts. They fight with scrap-welded weapons and the
 vicious creativity of people who have nothing left to lose.
@@ -44,7 +45,7 @@ ammunition, bone charm. Speed 7.
 
 ## Tactics
 
-Ambush from concealment — behind dunes, in slot canyons, from beneath
+Ambush from concealment: behind dunes, in slot canyons, from beneath
 sand-covered tarps. Use Scramble to stay mobile. Focus fire on
 whoever is carrying the water. Scatter and flee if the fight turns;
 regroup at a pre-arranged rally point and try again at night.

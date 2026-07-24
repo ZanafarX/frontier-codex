@@ -39,7 +39,7 @@ drive_examples:
   - "Pulling my partner from the collapse, the year I learned the company doesn't dig you out."
 ---
 
-You work with your hands — mining ghost-rock, building rail, digging
+You work with your hands, mining ghost-rock, building rail, digging
 graves. The Consortium sees you as disposable. You've learned to find
 value where others see only dirt.
 
@@ -53,4 +53,4 @@ value where others see only dirt.
   for reference; you take only one.
 - **Starting Talents:** Choose **one Muck-Raker Talent** from the
   Calling-specific list above, plus **one general Mundane Talent**
-  (Combat or Non-Combat list — player's choice).
+  (Combat or Non-Combat list, player's choice).

@@ -7,7 +7,7 @@ category: "resource"
 tags: ["fatigue", "psionic", "core-mechanic", "temporary"]
 ---
 
-Strain is the short-term cost — the body keeping score of every shot
+Strain is the short-term cost: the body keeping score of every shot
 of Current you've channeled, every hour you've spent in toxic air,
 every Fear check you've muscled through. Unlike Erosion, Strain is
 **temporary**: it heals with rest.

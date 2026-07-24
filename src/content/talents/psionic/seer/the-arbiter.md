@@ -32,7 +32,7 @@ of the dice (you cannot set values above 8 or below 1).
 
 ## Special
 
-This is **not rerolling** — this is *choosing the outcome*. You can
+This is **not rerolling**; this is *choosing the outcome*. You can
 guarantee a Critical (set both dice to 8), force a Fumble (set both
 dice to 1), or engineer any specific Margin you desire. The most precise
 and terrifying expression of fate manipulation in the Seer's arsenal.

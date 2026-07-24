@@ -56,6 +56,6 @@ notes:
   - "Pistol-Far (TN +2) covers 21-50m; pistol-Extreme (TN +4) covers 51m+. The range-bands.md macro definition (Far 21-100m) is wider than the pistol-specific tightening."
 ---
 
-The Scoped Rifle is the only weapon that gives a Roll Bonus from range —
+The Scoped Rifle is the only weapon that gives a Roll Bonus from range:
 all other modifiers are TN-track. Pistols are murderous at Point-Blank
 and useless past 50m; rifles are the inverse.

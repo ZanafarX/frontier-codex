@@ -14,5 +14,5 @@ example_uses:
     formula: "SAVVY + Ballistics"
 ---
 
-Ballistics covers all ranged weapons that fire projectiles — revolvers,
+Ballistics covers all ranged weapons that fire projectiles: revolvers,
 rifles, shotguns, and even thrown weapons like knives or dynamite.

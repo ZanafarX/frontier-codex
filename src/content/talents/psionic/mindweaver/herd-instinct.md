@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 Target a group of enemies (up to **6 creatures**) who share a social
-bond — a patrol, a gang, a squad. For the rest of the scene:
+bond: a patrol, a gang, a squad. For the rest of the scene:
 
 - When one member of the group flees, all others must make an immediate
   **Morale check at −2 TN** (harder to resist)
@@ -35,6 +35,6 @@ Channeling Sum to shield the entire group at activation.
 
 ## Special
 
-Useless against creatures without social bonds — solo Veil-Born, lone
+Useless against creatures without social bonds: solo Veil-Born, lone
 hunters, individuals on opposite sides. Devastating against organized
 units (Consortium patrols, Ironbrand squads, bandit crews).

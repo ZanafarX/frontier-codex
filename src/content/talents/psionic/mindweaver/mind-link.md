@@ -27,12 +27,12 @@ Range: Touch to initiate; **Far** range sustained thereafter.
 
 ## Steps
 
-+1 willing target per Step (network mode — all linked members can
++1 willing target per Step (network mode: all linked members can
 communicate with each other through you).
 
 ## Special
 
 If a linked target is attacked, you may spend **1 Mettle** to grant them
-**+2 Defense** (TN modifier — you're helping them dodge via shared
+**+2 Defense** (TN modifier: you're helping them dodge via shared
 awareness). This is not a Reaction; it's a Mettle expenditure available
 to you as the network hub.

@@ -29,11 +29,11 @@ within the minute, Bleeding Out begins normally.
 ## Special
 
 You are physically holding their soul in their body. You must maintain
-contact — if you let go or are moved away, the effect ends. This pairs
+contact. If you let go or are moved away, the effect ends. This pairs
 naturally with a Flesh Shaper's healing: the Bastion Soul holds the dying
 steady while the healer works. Subject to the Bastion Soul Reaction
 Convention.
 
 # =============================================================================
-# RANK 2 TALENTS (Tactics) — 2 Strain | TN 11
+# RANK 2 TALENTS (Tactics): 2 Strain | TN 11
 # =============================================================================

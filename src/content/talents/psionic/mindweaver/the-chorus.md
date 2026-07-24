@@ -34,7 +34,7 @@ individually**. Those who succeed are instead **Suppressed for 3 Ticks**.
 ## Requirement
 
 **The Suicide Limit applies** (forcing direct self-harm breaks the
-control on that individual, per Puppet Strings' formulation — the
+control on that individual, per Puppet Strings' formulation: the
 target takes 1d6 Strain instead, but the rest of the mass effect
 continues on the others).
 
@@ -46,5 +46,5 @@ to their resist roll**.
 
 **Aftermath:** When the effect ends, all affected targets take **1d3
 Strain** and experience acute dissociative shock (**−2 dice** to all
-actions for 1 hour). They remember everything — every command, every
+actions for 1 hour). They remember everything: every command, every
 action their body took without their consent.

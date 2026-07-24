@@ -16,5 +16,5 @@ has_resist: false
 ## Effect
 
 You gain **+2 Roll Bonus** to Initiative checks. Additionally, you can
-never be Surprised by a human opponent drawing a weapon — you always
+never be Surprised by a human opponent drawing a weapon: you always
 get to act.

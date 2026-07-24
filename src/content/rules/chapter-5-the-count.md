@@ -8,7 +8,7 @@ tags: ["combat", "core-mechanic", "the-count", "tempo"]
 ---
 
 > *"In a duel, time doesn't move like it does in a church service. It stretches. You see the sweat on the other man's brow, you hear the hammer click back, and you realize you have a lifetime to decide whether you're going to live or die. Then the gun goes off, and that lifetime is over in a heartbeat."*
-> — Duncan Maddox, The First Psy-Slinger
+> (Duncan Maddox, The First Psy-Slinger)
 
 Combat in *The Veil & Lead* is not a polite exchange of blows. It is a chaotic, desperate scramble for survival. It does not use "Rounds" where everyone politely waits their turn. Instead, it uses a continuous timeline called **The Count**.
 
@@ -16,7 +16,7 @@ Combat in *The Veil & Lead* is not a polite exchange of blows. It is a chaotic, 
 
 ### The Cylinder
 
-Combat is tracked on **The Cylinder** which is a circular track numbered **0 to 19**, representing the spinning chamber of a revolver. Twenty segments. Two **Red Lines** at segments 0 and 10 (the **Tension Lines** — significant for GM pacing tools). One marker — **The Hammer** — that advances clockwise as time passes.
+Combat is tracked on **The Cylinder**: a circular track numbered **0 to 19**, representing the spinning chamber of a revolver. Twenty segments. Two **Red Lines** at segments 0 and 10 (the **Tension Lines**, significant for GM pacing tools). One marker, **The Hammer**, that advances clockwise as time passes.
 
 Each character has a token on the track showing when they next act.
 
@@ -41,7 +41,7 @@ This decentralizes the bookkeeping. The GM tracks The Hammer; players track them
 
 ## Initiative
 
-When violence erupts, everyone rolls to determine where they enter the timeline.
+When violence erupts, everyone rolls to determine where they enter the timeline. This is not about who is "fastest": it's about who was ready when the hammer dropped.
 
 **Pool:** QUICK + Awareness. **TN:** 11. Apply relevant modifiers: ambush prepared +2, caught completely off-guard −2, supernatural senses as specified, Fatigued −1 die.
 
@@ -73,15 +73,15 @@ When multiple characters share the same Tick, resolve in order: PCs before NPCs 
 
 ## Tempo and Actions
 
-Every action has a **Tempo** — the time it takes to execute, in Ticks. **After acting: Current Tick + Tempo = New position.**
+Every action has a **Tempo**: the time it takes to execute, in Ticks. **After acting: Current Tick + Tempo = New position.**
 
 Fast actions let you act again sooner. Slow actions create gaps where enemies respond. This trade-off is the tactical heart of combat. Weapon-specific Tempos live in the **weapon-base-tempos** reference table.
 
 ### Instant Actions (Tempo 0)
 
-- **Speak** — a phrase, warning, or command, not a speech.
-- **Drop** — release a held item.
-- **Free Reaction** — spend Mettle for Dive, Dodge, Parry, Intercept, Steel, or Push outside your turn. (One Reaction between your turns.)
+- **Speak**: a phrase, warning, or command, not a speech.
+- **Drop**: release a held item.
+- **Free Reaction**: spend Mettle for Dive, Dodge, Parry, Intercept, Steel, or Push outside your turn. (One Reaction between your turns.)
 
 ### Fast Actions (Tempo 2–3)
 
@@ -92,13 +92,13 @@ Sacrifice thoroughness for speed. Most trigger the **Exposed** condition (attack
 - **Scramble** (3): move up to Speed + 4m erratically; attackers suffer +1 TN against you until your next turn.
 - **Quick Shot** (Base − 1, min 3): ranged attack with −2 dice Pool Penalty. Fire from the hip.
 - **Shiv** (Base − 1, min 2): light-melee attack with −1 Step to damage. Fast, but without full force.
-- **Take Cover** (3): move up to 2m to adjacent cover and gain its TN bonus immediately. *Exempt from Exposed* — its sole purpose is defense.
+- **Take Cover** (3): move up to 2m to adjacent cover and gain its TN bonus immediately. *Exempt from Exposed*: its sole purpose is defense.
 - **Stand Up** (3): leave the Prone condition.
 
 ### Standard Actions (Tempo varies by weapon)
 
 - **Steady Shot**: full-pool ranged attack at the weapon's Base Tempo.
-- **Strike**: full-pool melee attack at the weapon's Base Tempo. *Note:* Light melee weapons (Brass Knuckles at Tempo 2, knives at Tempo 3) trigger **Exposed** even on a standard Strike (it's the cost of their speed).
+- **Strike**: full-pool melee attack at the weapon's Base Tempo. *Note:* Light melee weapons (Brass Knuckles at Tempo 2, knives at Tempo 3) trigger **Exposed** even on a standard Strike, the cost of their speed.
 - **Reload (Speed Loader)** (4): for revolvers, moon clips, or break-top mechanisms.
 - **Grapple** (5): IRON + Brawl vs. Defense; both become Grappled on success. The target may Escape on their turn (Opposed IRON + Brawl).
 - **Interact** (4): flip a table, pick up an item, kick a door, pull a lever.
@@ -126,7 +126,7 @@ Sacrifice thoroughness for speed. Most trigger the **Exposed** condition (attack
   | Rank 4 (Devastation) | 7 |
   | Rank 5 (Miracle) | 9 |
 
-- **Recover** (6): make a check to clear a Condition: Suppressed (ECHO + Resilience, TN 11), temporary Blinded (GRIT + Resilience, TN 13), On Fire (QUICK + Athletics, TN 11). Spending 1 Mettle instead clears Suppressed instantly, without an action.
+- **Recover** (6): make a check to clear a Condition, Suppressed (ECHO + Resilience, TN 11), temporary Blinded (GRIT + Resilience, TN 13), On Fire (QUICK + Athletics, TN 11). Spending 1 Mettle instead clears Suppressed instantly, without an action.
 
 ## Damage and Vitality
 
@@ -144,7 +144,7 @@ The Weapon Rating is the weapon's base damage. Steps come from Margin (one per 3
 
 *Caleb shoots his Peacemaker (WR 3) and scores Margin 6 (+2 Steps). The target has AR 1 (Duster). Damage: 3 + 2 − 1 = 4 HP.*
 
-**Damage cannot be reduced below 0.** If a target's Armor meets or exceeds WR + Steps, the hit lands but doesn't penetrate. It simply doesn't hurt.
+**Damage cannot be reduced below 0.** If a target's Armor meets or exceeds WR + Steps, the hit lands but doesn't penetrate; it simply doesn't hurt.
 
 ### Wound Thresholds
 
@@ -169,7 +169,7 @@ When a single attack deals **5 or more damage after Armor**, the target suffers 
 | 7 | Concussion | −2 dice to all mental actions | 24 hours rest |
 | 8 | Arterial Hit | Begin Bleeding Out immediately | Stabilization required |
 
-Multiple Grievous Wounds stack. A Called Shot to a specific limb means that limb takes the Broken Bone effect automatically. An Arterial Hit causes Bleeding Out even if you still have HP. Armor with the **Hardened** property (Boiler Plate, Ironbrand Hardsuit) negates the first Grievous Wound of the scene. The damage still lands, only the Grievous Wound is prevented.
+Multiple Grievous Wounds stack. A Called Shot to a specific limb means that limb takes the Broken Bone effect automatically. An Arterial Hit causes Bleeding Out even if you still have HP. Armor with the **Hardened** property (Boiler Plate, Ironbrand Hardsuit) negates the first Grievous Wound of the scene; the damage still lands, only the Grievous Wound is prevented.
 
 ## Death and Dying
 
@@ -182,7 +182,7 @@ At 0 Vitality you are **Downed**:
 - At the start of each of your turns, you lose 1 Vitality.
 - You can be **Stabilized** by an ally with medical training.
 
-A Downed character is not out of the fight. They can call out warnings, share information, even crawl toward cover. But they are dying.
+A Downed character is not out of the fight: they can call out warnings, share information, even crawl toward cover, but they are dying.
 
 ### Death Threshold
 
@@ -229,7 +229,7 @@ Cover increases TN against you. Three tiers:
 - **Hard Cover** (+4 TN): stone wall, iron plate, overturned wagon.
 - **Fortified** (+6 TN): bunker slit, murder-hole, arrow loop.
 
-Take Cover (Tempo 3) is the only Fast Action exempt from Exposed. Its sole purpose is defense.
+Take Cover (Tempo 3) is the only Fast Action exempt from Exposed: its sole purpose is defense.
 
 ## Combat Conditions
 
@@ -247,8 +247,8 @@ Most conditions clear with the **Recover** action (Tempo 6, appropriate check vs
 
 *Tick 4: The Enforcer acts. He takes a Steady Shot (Tempo 5) at Maeve, hits, and deals 4 damage. He advances to Tick 9.*
 
-*Tick 6: Caleb and Maeve are both due to act — a tie. Both are PCs, so the tie breaks on Initiative Margin; Maeve rolled higher, so she resolves first. She takes a Quick Shot (Tempo 3, −2 dice) at the Enforcer and gains the Exposed condition, advancing to Tick 9. Caleb takes Aim (Tempo 2) for a banked +2, advancing to Tick 8.*
+*Tick 6: Caleb and Maeve are both due to act: a tie. Both are PCs, so the tie breaks on Initiative Margin; Maeve rolled higher, so she resolves first. She takes a Quick Shot (Tempo 3, −2 dice) at the Enforcer and gains the Exposed condition, advancing to Tick 9. Caleb takes Aim (Tempo 2) for a banked +2, advancing to Tick 8.*
 
-*The Hammer keeps advancing. At Tick 8, Caleb fires again. This time with his Aim bonus. The clock ticks on, inexorable.*
+*The Hammer keeps advancing. At Tick 8, Caleb fires again, this time with his Aim bonus. The clock ticks on, inexorable.*
 
-The Count creates a continuous, fluid combat where every weapon choice and every action has rhythmic consequence.
+The Count creates a continuous, fluid combat where every weapon choice and every action has rhythmic consequence. There are no "rounds": only the slow, relentless advance of The Hammer.

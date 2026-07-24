@@ -34,11 +34,11 @@ of triggering, not planting).
 
 ## Steps
 
-+1 Strain damage per Step (per the R3 ceiling — max 8 Strain combined
++1 Strain damage per Step (per the R3 ceiling: max 8 Strain combined
 with Margin).
 
 ## Special
 
 The target does not know the venom is planted. **Erasure Field (Bastion
-Soul R3) or higher can detect and remove it** — Null Touch (R1) cannot
+Soul R3) or higher can detect and remove it**: Null Touch (R1) cannot
 reach R3 effects per the Tier-Removal Hierarchy.

@@ -19,4 +19,4 @@ exchange to an NPC: something they want in return for something you
 need. If what you offer is genuinely valuable to them (GM adjudicates),
 you gain **+3 Roll Bonus** to the Persuasion or Deceit check. If the
 offer is *exactly* what they want most, the GM may rule that no check
-is required — the deal is too good to refuse.
+is required: the deal is too good to refuse.

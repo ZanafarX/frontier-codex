@@ -22,7 +22,7 @@ bounty target (via Bounty Hunter's Eye), you are **immune to the
 Suppressed condition** caused by that target or their allies.
 
 Additionally, **Fear effects from Veil-Born creatures** do not cause
-you to flee — on a failed Fear check, you become **Suppressed instead
+you to flee: on a failed Fear check, you become **Suppressed instead
 of Frightened**.
 
 ## Special

@@ -22,7 +22,7 @@ and mental intrusion**. This includes Focus checks against Disruption.
 ## Special
 
 Mindweavers using Surface Read or similar Talents sense a "wall" when they
-touch your mind — they know you're protected. **Iron Will does NOT defend
-against biological effects** (Vital Read, Empathic Anatomy, Boil Blood) —
-those bypass mental defenses entirely. The fortress is in your head, not
+touch your mind: they know you're protected. **Iron Will does NOT defend
+against biological effects** (Vital Read, Empathic Anatomy, Boil Blood).
+Those bypass mental defenses entirely. The fortress is in your head, not
 your bloodstream.

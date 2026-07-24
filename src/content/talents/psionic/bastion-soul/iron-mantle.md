@@ -29,6 +29,6 @@ All allies within Near range gain the following for the rest of the scene:
 
 ## Special
 
-The Mantle is visible — a faint gray shimmer around each protected ally,
+The Mantle is visible: a faint gray shimmer around each protected ally,
 like heat haze. Enemy Psionics can see who is protected and adjust tactics
 accordingly. The Mantle ends if you are knocked unconscious.

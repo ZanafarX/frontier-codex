@@ -33,7 +33,7 @@ proceed normally; failure fails the Talent and applies the Strain.
 
 ## Special
 
-The Leash is invisible but the target feels it — a tightness in the throat,
+The Leash is invisible but the target feels it: a tightness in the throat,
 a pressure on the chest, a constant low-grade headache. They know they're
 being suppressed. Removing the Leash requires Grounding (R2) from another
 Bastion Soul (opposed roll vs. your original Channeling Sum) or leaving

@@ -16,11 +16,11 @@ has_resist: false
 ## Effect
 
 When you are hidden (successful Stealth check), you may move at **full
-Speed without breaking Stealth** — normally, movement requires a new
+Speed without breaking Stealth**; normally, movement requires a new
 check.
 
 Additionally, when in a crowd or a social setting, you can **"vanish"**
-by spending 1 Mettle — you slip away unnoticed, requiring observers to
+by spending 1 Mettle: you slip away unnoticed, requiring observers to
 make an Awareness check (**TN = your QUICK + Stealth**) to realize
 you've left.
 

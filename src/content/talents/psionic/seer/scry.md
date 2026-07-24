@@ -19,7 +19,7 @@ has_resist: false
 You project your senses to a location you have previously visited or can
 identify by description, **up to 10 miles** away. You see, hear, smell,
 and feel temperature as if standing there for up to **1 minute**. You
-are incorporeal and invisible — a ghost observer.
+are incorporeal and invisible: a ghost observer.
 
 ## Steps
 
@@ -35,5 +35,5 @@ snap-back.**
 ## Special
 
 Psionics at the observed location may sense the Scry (**ECHO + Awareness
-TN 13**). A Bastion Soul's Null Zone blocks Scry entirely — you cannot
+TN 13**). A Bastion Soul's Null Zone blocks Scry entirely; you cannot
 project into a sealed area.

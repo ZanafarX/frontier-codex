@@ -19,7 +19,7 @@ has_resist: false
 Touch the target (or use line of sight for a creature you've observed for
 at least 1 minute). You learn the following:
 
-- Their **approximate remaining lifespan** (barring violent intervention) —
+- Their **approximate remaining lifespan** (barring violent intervention):
   years, months, or days
 - The **most likely cause of their death**
 - Whether they will **betray someone they currently trust** (yes / no /
@@ -35,5 +35,5 @@ truthfully but symbolically).
 
 **Learning your own death is dangerous.** If you use this on yourself,
 take 1 additional Strain as the knowledge settles. Seers who read their
-own Ledger too often become paralyzed by foreknowledge — this is a
+own Ledger too often become paralyzed by foreknowledge; this is a
 common path to laudanum addiction.

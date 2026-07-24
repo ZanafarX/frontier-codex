@@ -8,6 +8,7 @@ vitals:
   defense: 8
   armor_rating: 3
   mettle: 1
+  speed: 5
 attacks:
   - name: "Bone Club (arm)"
     pool: 6
@@ -36,11 +37,11 @@ habitat:
   - "graven-plain"
 ---
 
-Ancient guardians of the Graven Plain — massive humanoid constructs
+Ancient guardians of the Graven Plain: massive humanoid constructs
 assembled from the colossal bones that litter the region, animated by
 a Current so old it predates the Rupture. They stand twelve feet
 tall, assembled from rib-cage armor, femur limbs, and skulls that
-serve as sense organs. They do not move until disturbed — and
+serve as sense organs. They do not move until disturbed, and
 disturbance, to a Bone Sentinel, means approaching the burial mounds
 they guard.
 
@@ -55,21 +56,21 @@ from the landscape until they move. The first warning is a sound like
 an avalanche of skulls.
 
 Speed 5. Note: `creature_type` is "construct" rather than "veil-born"
-per the Ancient trait — the Sentinels predate the Veil.
+per the Ancient trait: the Sentinels predate the Veil.
 
 ## Tactics
 
 Bone Sentinels do not pursue. They activate when their threshold is
 crossed, attack anything within their patrol radius (Far range from
 the mound), and return to dormancy when the intruders leave or die.
-They fight with brutal simplicity — Bone Club to smash, Bone Shard
+They fight with brutal simplicity: Bone Club to smash, Bone Shard
 Burst if surrounded, Trample if enemies try to flee through their
 space.
 
 ## Encounter Design
 
 Bone Sentinels are *guardian* encounters. The party needs something
-from a burial mound — a relic, a Circle text, a sealed door that
+from a burial mound: a relic, a Circle text, a sealed door that
 might lead to answers about the pre-Rupture world. The Sentinel
 stands between them and their objective. They can fight it (hard,
 and it reassembles), sneak past it (very hard), or find a way to

@@ -35,10 +35,10 @@ vs. your original Channeling Sum** to break free early.
 **Suicide Limit:** If you force the target to harm themselves directly
 (shoot themselves, walk off a cliff), the control **breaks immediately**
 and they take **1d6 Strain** instead. This is the discipline's hard
-ethical brake — the will fights back at the moment of self-erasure.
+ethical brake: the will fights back at the moment of self-erasure.
 
 ## Special
 
 Unlike The Wet Strings (Flesh Shaper R3), Puppet Strings controls
-through the mind, not the body — so mental defenses apply normally.
+through the mind, not the body, so mental defenses apply normally.
 Iron Will (BS R1) grants its +2 to the resist roll.

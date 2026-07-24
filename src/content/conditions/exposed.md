@@ -14,7 +14,7 @@ severity: "minor"
 ---
 
 Exposed is the tax on speed. Most Fast Actions (Tempo 2-3) trigger
-Exposed — drawing your weapon, scrambling between cover, aiming — because
+Exposed (drawing your weapon, scrambling between cover, aiming) because
 moving fast means your eyes and body aren't where they need to be to
 defend yourself.
 

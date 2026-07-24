@@ -62,5 +62,5 @@ notes:
 ---
 
 Your mount is your speed, your range, and your problem when it dies.
-The War-Horse is worth twice the Riding Horse for a single reason —
+The War-Horse is worth twice the Riding Horse for a single reason:
 it doesn't run when it should.

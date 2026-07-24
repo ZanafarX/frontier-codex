@@ -21,7 +21,7 @@ they may roll **one additional die** and discard the lowest before
 determining their two highest.
 
 This effectively grants **Advantage** (the inverse of the Unskilled Check
-penalty) — selection consistency, not raw power.
+penalty): selection consistency, not raw power.
 
 ## Steps
 
@@ -31,5 +31,5 @@ penalty) — selection consistency, not raw power.
 
 **Cannot stack with other Pool Bonuses on the same roll.** A character
 benefiting from Fortune's Favor and a Pool Bonus rolls the larger pool,
-then selects their best two from it normally — Fortune's Favor doesn't
+then selects their best two from it normally; Fortune's Favor doesn't
 stack an additional die on top of a Pool Bonus.

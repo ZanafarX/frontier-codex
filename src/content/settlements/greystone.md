@@ -27,18 +27,18 @@ environmental_mechanics:
 
 Built directly into a mesa's vertical face on the Scorchveil edge.
 Accessible only by steam-winch lift. The town is composed of caves
-and suspended walkways. Locals are terrified of Ashborn infiltrators —
+and suspended walkways. Locals are terrified of Ashborn infiltrators:
 dust-spirits that can take human shape long enough to be invited up
 the lift before they reform inside the walls.
 
 ## Notes on the Cliff Fortress
 
 Mayor Krell is a retired Ironbrand who runs Greystone like a military
-base. He wears a partial Hardsuit at all times — a calling card and a
+base. He wears a partial Hardsuit at all times, a calling card and a
 constant reminder. The Winch-Master, never named, is the most
 powerful person in town: if he doesn't like you, you don't go up. The
 filter system is the town's signature feature and its core
-vulnerability — every contingency Krell has planned assumes the lift
+vulnerability: every contingency Krell has planned assumes the lift
 works.
 
 Availability quirks: standard weapons are freely available. Special

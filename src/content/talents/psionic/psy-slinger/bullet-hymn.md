@@ -29,11 +29,11 @@ from any firearm), the Bullet Hymn:
 ## The Relic
 
 The bullet can be given to allies, sold, or hidden. It is a physical
-object — about the size of a normal round but cold to the touch and
+object, about the size of a normal round but cold to the touch and
 faintly luminescent. Anyone who holds it hears a distant hum.
 
 ## Special
 
 Only one Bullet Hymn can exist at a time. Creating a second destroys the
-first. The bullet remembers what it was made from — the firer experiences
+first. The bullet remembers what it was made from: the firer experiences
 a flash of the burned Memory at the moment of firing.

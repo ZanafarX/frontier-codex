@@ -30,7 +30,7 @@ GRIT + Resilience vs. your Channeling Sum.
 
 ## Special
 
-Target can still speak, see, and use purely mental abilities — the
+Target can still speak, see, and use purely mental abilities; the
 paralysis is muscular, not neurological. This distinguishes Paralytic
 Touch from Marrow Lock (which targets bones) and Bone Cage (which
 encages the skeleton).

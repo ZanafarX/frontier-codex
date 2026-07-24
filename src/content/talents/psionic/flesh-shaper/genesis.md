@@ -21,7 +21,7 @@ is designed to your specifications:
 
 - **Maximum size:** Horse-sized
 - **Maximum stats:** **Pool 6, HP 8, WR 3, AR 2**
-- The creature is **loyal to you** — it obeys simple commands and
+- The creature is **loyal to you**: it obeys simple commands and
   recognizes you as its creator
 - The creature has **basic animal intelligence** (cannot speak, cannot
   use tools, cannot Channel)
@@ -30,12 +30,12 @@ is designed to your specifications:
 
 ## Requirement
 
-Touch — requires organic matter, at least **10 kg of tissue**, living
+Touch; requires organic matter, at least **10 kg of tissue**, living
 or dead.
 
 ## Special
 
-The creature is visibly unnatural — its proportions are slightly wrong,
+The creature is visibly unnatural: its proportions are slightly wrong,
 its eyes are uniformly colored (no iris), and it smells faintly of
 ozone. It is alive, it can suffer, and it will die. The ethical
 questions are immediate and unanswerable.

@@ -35,7 +35,7 @@ Speed is halved.
 
 ## Special
 
-**Rank 5 Miracles still function within the Null Zone** — those bend reality
+**Rank 5 Miracles still function within the Null Zone**: those bend reality
 at a level beyond the discipline. Use Reality Anchor (R4) for total psionic
 shutdown including Miracles, or The Citadel (R5) to actively block Miracles
 from outside.

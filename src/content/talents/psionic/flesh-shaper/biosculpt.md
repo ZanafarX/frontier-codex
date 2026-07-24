@@ -21,7 +21,7 @@ Choose **one**:
 
 - **Enhanced Senses:** +1 die (Pool Bonus) to Awareness permanently.
   Eyes glow faintly.
-- **Reinforced Skeleton:** +1 Vitality permanently. Bones are denser —
+- **Reinforced Skeleton:** +1 Vitality permanently. Bones are denser;
   you sink faster in water.
 - **Accelerated Reflexes:** +1 to Initiative permanently. Hands twitch
   at rest.

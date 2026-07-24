@@ -30,5 +30,5 @@ creature through combat.
 Veil-Born creatures are immune to the Erosion effect (they are already of
 the Current). All other creatures, including mundane humans, have an
 Erosion track (ECHO + 5) and are vulnerable. Against a mundane target,
-this can be devastating — an untrained mind has little Erosion capacity to
+this can be devastating: an untrained mind has little Erosion capacity to
 spare.

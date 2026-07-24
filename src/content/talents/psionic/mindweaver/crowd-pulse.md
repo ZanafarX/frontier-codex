@@ -20,7 +20,7 @@ You sense the **threat-context** of every creature within Near range
 simultaneously: who is hostile, who is fleeing, who is hunting, who is
 afraid, who is preparing violence within the next minute.
 
-This is **broader but shallower** than Surface Read — emotions and
+This is **broader but shallower** than Surface Read: emotions and
 intentions only, not specific thoughts.
 
 If any creature in range intends violence within the next minute, you
@@ -34,6 +34,6 @@ one target's read to Surface Read depth).
 
 ## Special
 
-Does **not** detect interpersonal dynamics or social roles — that is
+Does **not** detect interpersonal dynamics or social roles; that is
 Social Barometer's domain. Crowd Pulse reads threat; Barometer reads
 structure.

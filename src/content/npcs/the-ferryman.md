@@ -10,12 +10,13 @@ stats:
   pool: 5
   mettle: 1
   armor_rating: 0
+  speed: 6
   notes: "IRON 4. Defense 9 is the Soldier baseline (source gives only IRON, Pool, HP). A mute giant. Poles a flatboat through the swamp; knows safe paths through the Thousand-Lantern Fen and across the Two-Mouth Spring."
 ---
 
 A mute giant who poles a flatboat through the swamp. Knows safe paths
-through the **Thousand-Lantern Fen** — the field of corpse-candles
-that lures travelers to drowning — and the seasonal currents of the
+through the **Thousand-Lantern Fen** (the field of corpse-candles
+that lures travelers to drowning) and the seasonal currents of the
 Two-Mouth Spring.
 
 The Ferryman is never named. His price is whatever feels right when
@@ -34,7 +35,7 @@ or a gun.
 
 ## Plot Anchor
 
-Any plot that requires reaching a specific point in the Fen — the
+Any plot that requires reaching a specific point in the Fen (the
 swamp center for Mother Elaine's herb, a Brood Mother island, the
-Cypress Cathedral — requires the Ferryman. He chooses whether the
+Cypress Cathedral) requires the Ferryman. He chooses whether the
 trip happens, and his refusal cannot be bought once given.

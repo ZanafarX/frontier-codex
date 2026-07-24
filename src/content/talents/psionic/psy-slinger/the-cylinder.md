@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 You fire six shots, each loaded with a fragment of emotional memory (not a
-Core Memory — surface impressions). Each shot deals **standard WR damage**
+Core Memory: surface impressions). Each shot deals **standard WR damage**
 AND, if it hits, inflicts a specific debilitating emotion on the target
 (you choose). Consumes 6 rounds.
 

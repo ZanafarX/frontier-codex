@@ -20,7 +20,7 @@ runs the lift's steam systems, the filter protocols at the cliff
 base, and the records of who has and hasn't yet completed the
 three-day Ashborn-screening wait.
 
-In a combat encounter he is a Soldier-tier civilian — competent with
+In a combat encounter he is a Soldier-tier civilian, competent with
 a wrench, unwilling to fight if the lift isn't already broken. His
 real threat is **denial of access.** Anyone who needs into Greystone
 on their schedule, not his, has a problem only he can solve.

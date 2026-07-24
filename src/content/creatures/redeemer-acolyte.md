@@ -9,6 +9,7 @@ vitals:
   defense: 7
   armor_rating: 0
   mettle: 0
+  speed: 7
 attacks:
   - name: "Torch"
     pool: 4
@@ -51,4 +52,4 @@ courage than skill, and they scream prayers while they do it.
 ## Morale
 
 Fanatical (−4) when facing "witches." Normal when facing mundane
-threats — they signed up to fight the supernatural, not bandits.
+threats; they signed up to fight the supernatural, not bandits.

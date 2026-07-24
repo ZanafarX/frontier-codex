@@ -36,6 +36,6 @@ Touch a target. They become immune to the following for **1 hour**:
 
 This is the Bastion Soul's most sacred Talent. It holds a dying soul in
 place while others work to save it. A Psionic ally at 1 Memory remaining
-can Channel freely while Soul Anchored — the safety net is real, if
+can Channel freely while Soul Anchored: the safety net is real, if
 temporary. When the effect ends, all blocked Erosion and Memory Burns
 apply retroactively if the source is still active.

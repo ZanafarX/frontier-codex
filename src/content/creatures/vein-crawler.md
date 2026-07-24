@@ -8,6 +8,7 @@ vitals:
   defense: 7
   armor_rating: 0
   mettle: 0
+  speed: 3
 attacks:
   - name: "Burrow"
     pool: 3
@@ -38,7 +39,7 @@ with luminescent Current. They burrow into living flesh through
 wounds and existing orifices, feeding on the host's bioelectric field.
 
 Miners call them **"Glowguts"** and consider them an occupational
-hazard — an infestation, not a monster. The problem is that a Vein
+hazard, an infestation, not a monster. The problem is that a Vein
 Crawler infestation doesn't just drain your energy. *It changes you.*
 Infected hosts become increasingly attuned to the Current, developing
 involuntary psionic sensitivity that manifests as hallucinations,
@@ -53,13 +54,13 @@ Speed 3. Classified as Minion (Parasite).
 
 Vein Crawlers swarm from mine walls, floor cracks, and spoil heaps.
 They target wounded characters (drawn by the bioelectric spike of
-injury). In open combat they are negligible — **the danger is the
+injury). In open combat they are negligible; **the danger is the
 infestation that follows.**
 
 ## Encounter Design
 
 Vein Crawlers are a *long-term* horror. The combat encounter is
-trivial — stomp the worms. The real encounter is realizing, three
+trivial: stomp the worms. The real encounter is realizing, three
 days later, that *something got inside you.* Use them to create
 paranoia about wounds, mining operations, and the Consortium's
 quarantine practices.

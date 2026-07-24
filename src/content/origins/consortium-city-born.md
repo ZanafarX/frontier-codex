@@ -10,7 +10,7 @@ root_memory_examples:
   - "The taste of coal dust in every breath."
 ---
 
-You were raised in one of the Consortium's industrial cities — Orvain,
+You were raised in one of the Consortium's industrial cities: Orvain,
 Kessick, or one of the smaller company towns. You know the rhythm of factory
 whistles and the value of Scrip. You understand how power flows through
 bureaucracy, and you've learned to navigate the crowded streets where

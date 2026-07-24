@@ -19,7 +19,7 @@ cleared_by:
 severity: "moderate"
 ---
 
-Suppression is the workhorse status of *The Veil & Lead* — the default
+Suppression is the workhorse status of *The Veil & Lead*: the default
 "you got rattled" outcome of near-misses, fear, and shock. The −2 dice
 penalty (Pool Penalty) is significant but not crippling, and it can be
 shaken off with a Mettle expenditure or six Ticks of Recover.

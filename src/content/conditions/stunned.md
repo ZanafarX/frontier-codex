@@ -14,13 +14,13 @@ cleared_by:
 severity: "severe"
 ---
 
-Stunned represents being rocked — a blow to the head, an overwhelming
+Stunned represents being rocked: a blow to the head, an overwhelming
 psionic intrusion, a body that needs a moment to remember how to work.
 
 When you would become Stunned, roll **GRIT + Resilience vs. TN 11.**
 On success, you resist the Stun and act normally. On failure, you
 become Stunned: when your Tick is called, you cannot take an Action.
-You may still spend Mettle on Reactions (Dive, Dodge, Parry, Intercept) —
+You may still spend Mettle on Reactions (Dive, Dodge, Parry, Intercept);
 your body is rocked, not unconscious. Your token advances **3 Ticks** on
 The Count and you act normally when your new Tick is called.
 

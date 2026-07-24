@@ -18,7 +18,7 @@ has_resist: true
 
 Target one creature within Near range. They must roll Resist (see below)
 or be **Immobilized** (Speed 0) for **5 Ticks**. Their bones lock in
-place — they can still speak, breathe, and move their eyes, but their
+place; they can still speak, breathe, and move their eyes, but their
 limbs, spine, and jaw are rigid.
 
 ## Resist

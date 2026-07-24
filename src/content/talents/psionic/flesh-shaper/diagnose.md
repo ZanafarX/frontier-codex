@@ -30,6 +30,6 @@ old wounds that never healed right).
 
 ## Special
 
-Iron Will (BS R1) does not block Diagnose — this reads the body, not
+Iron Will (BS R1) does not block Diagnose; this reads the body, not
 the mind. The target may sense the touch as warm pressure, but cannot
 prevent the read short of refusing contact.

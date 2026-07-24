@@ -27,7 +27,7 @@ drive_examples:
   - "The card that lands face-up before I touch the deck."
 ---
 
-You see what others cannot — glimpses of the future, echoes of the
+You see what others cannot: glimpses of the future, echoes of the
 past, the threads of causality that bind event to event. Your gift is
 maddening, but invaluable.
 
@@ -41,5 +41,5 @@ maddening, but invaluable.
   take only one. The blindfold is included regardless.
 - **Starting Talents:** You start with **Glimpse (Rank 1 Cantrip)**
   automatically. Choose **one general Mundane Talent** (Combat or
-  Non-Combat list — player's choice).
+  Non-Combat list, player's choice).
 - **Starting Erosion:** 1 (the cost of the gift).

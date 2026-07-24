@@ -29,4 +29,4 @@ If you are hit, damaged, or forced to move, the Vigil ends.
 
 If the Downed ally dies while under your Vigil (from a new attack, not
 from bleeding), you may **Spark any one of your Memories** as a free
-action — the emotional shock focuses you.
+action: the emotional shock focuses you.

@@ -9,6 +9,7 @@ vitals:
   defense: 10
   armor_rating: 1
   mettle: 2
+  speed: 7
 attacks:
   - name: "Pump-Action Shotgun"
     pool: 6
@@ -33,14 +34,14 @@ habitat: []
 
 Witch-hunters with eyes like burning coals and voices that cut
 through panic like a sermon through silence. Inquisitors are the
-Redeemers' elite — part detective, part executioner, part priest.
+Redeemers' elite: part detective, part executioner, part priest.
 They can smell Erosion on a person the way a bloodhound smells fear,
 and they have spent years studying the Current so they can destroy
 those who use it.
 
 An Inquisitor never travels alone. They are always accompanied by at
 least **two Purifiers**, and often a squad of Acolytes for "witness
-duty" — because every burning needs witnesses to spread the word.
+duty," because every burning needs witnesses to spread the word.
 
 Gear: Boiler Plate (AR 1, Hardened), Holy Vestments (+2 Mental
 Defense), Salt Grenades ×2, journal of confessions, iron manacles.

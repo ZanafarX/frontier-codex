@@ -24,5 +24,5 @@ in the aftermath of violence.
 ## Limit
 
 Maximum **2 Mettle** recovered per scene. Does not trigger from Coup
-de Grace against helpless targets — there's no clarity in an
+de Grace against helpless targets: there's no clarity in an
 execution, only weight.

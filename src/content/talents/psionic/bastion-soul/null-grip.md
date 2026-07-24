@@ -33,4 +33,4 @@ immune to psionic effects:
 
 This is the bodyguard Talent. Hold someone's hand and they're shielded. Hold
 the door closed and a Mindweaver can't telekinetically open it. The
-limitation is your hands — you can only touch so many things at once.
+limitation is your hands: you can only touch so many things at once.

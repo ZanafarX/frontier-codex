@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 You transform yourself for the rest of the scene. This is the
-**modular/utility transformation** — choose **2 Mutations** from the
+**modular/utility transformation**: choose **2 Mutations** from the
 table below. Each Mutation grants a specialized capability for a specific
 role or environment.
 
@@ -46,7 +46,7 @@ non-allies is impossible. Redeemers will attack on sight.
 **Aftermath:** When the scene ends, you take **1d3 Strain** as your body
 snaps back.
 
-**Distinct From Apex Predator:** Chimera Form is *modular* — pick the
+**Distinct From Apex Predator:** Chimera Form is *modular*: pick the
 right tools for the job (Gills for water, Wall-Crawler for stealth,
 Venom Glands for assassination). Apex Predator is *fixed* combat power.
 

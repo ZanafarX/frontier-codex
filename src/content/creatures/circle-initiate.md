@@ -9,6 +9,7 @@ vitals:
   defense: 8
   armor_rating: 0
   mettle: 0
+  speed: 6
 attributes:
   echo: 2
 attacks:
@@ -30,7 +31,7 @@ habitat:
 
 Scholars who traded the relative safety of ignorance for the
 dangerous enlightenment of forbidden knowledge. Initiates are the
-Circle's students — researchers, librarians, and apprentices who
+Circle's students: researchers, librarians, and apprentices who
 spend their days cataloguing pre-Rupture texts and their nights
 trembling at what they've read.
 
@@ -45,8 +46,9 @@ quill, candle. Speed 6.
 ## Tactics
 
 Stay behind Guardians. Use Glimpse to help allies avoid critical
-failures. **Surrender immediately if threatened directly** — their
+failures. **Surrender immediately if threatened directly**: their
 knowledge is more valuable than their pride.
+
 
 ## Morale
 

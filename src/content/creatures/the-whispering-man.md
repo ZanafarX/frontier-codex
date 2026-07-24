@@ -8,6 +8,7 @@ vitals:
   defense: 11
   armor_rating: 0
   mettle: 2
+  speed: 10
 attributes:
   echo: 4
 attacks: []
@@ -26,13 +27,13 @@ habitat:
 ---
 
 A tall, thin figure glimpsed at the edge of torchlight on the Graven
-Plain — always standing still, always facing the observer, always
+Plain: always standing still, always facing the observer, always
 just too far away to see clearly. Witnesses describe him as wearing a
 dark coat and a wide-brimmed hat. His face is a smudge. His voice,
 however, is crystal clear: **he whispers your name.**
 
 The Whispering Man is a psionic predator that feeds on memory. It is
-not a ghost — it is something that came through the Veil during the
+not a ghost; it is something that came through the Veil during the
 Rupture and has been walking the Graven Plain ever since, drawn to
 the psychic residue of the ancient dead interred beneath the hills.
 It approaches lone travelers, speaks their name, and asks them a
@@ -41,12 +42,12 @@ response. If you refuse, it asks again. And again. **Its patience is
 infinite.**
 
 Those who engage with the Whispering Man too long find themselves
-forgetting things — first small details, then significant events,
+forgetting things: first small details, then significant events,
 then people. The Circle has documented three cases of individuals who
 became Hollow after sustained contact, though the Whispering Man was
 never seen to lay a hand on them.
 
-Speed 10. The Whispering Man does not make physical attacks — the
+Speed 10. The Whispering Man does not make physical attacks: the
 `attacks[]` array is intentionally empty.
 
 ## Tactics
@@ -54,7 +55,7 @@ Speed 10. The Whispering Man does not make physical attacks — the
 The Whispering Man does not fight. *It erodes.* It appears at the
 edge of camp during watch shifts. It calls the guard's name. It asks
 about their childhood. It is patient, soft-spoken, and terrifyingly
-polite. If the party ignores it, it escalates — appearing during the
+polite. If the party ignores it, it escalates: appearing during the
 day, whispering from empty rooms, asking the same question through
 the mouths of NPCs who don't remember speaking.
 
@@ -62,7 +63,7 @@ the mouths of NPCs who don't remember speaking.
 
 The Whispering Man is a slow-burn horror encounter designed to span
 multiple sessions on the Graven Plain. **It cannot be fought.** It
-can only be endured, avoided, or outsmarted — and the party must
+can only be endured, avoided, or outsmarted, and the party must
 leave the Plain to escape it. Use it to erode resources (Erosion,
 sleep deprivation, paranoia) and to ask players uncomfortable
 questions about their characters' pasts.

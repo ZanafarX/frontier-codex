@@ -36,12 +36,12 @@ specific memory, skill, or piece of knowledge from their mind.
 ## Resist
 
 Target may roll ECHO + Focus vs. your Channeling Sum. If they beat your
-roll, the Talent fails — but they **still know you tried**.
+roll, the Talent fails, but they **still know you tried**.
 
 ## Special
 
 **The Scar:** The target feels a permanent, aching void where the
 memory was. They know something is missing but can never remember what.
 
-Soul Anchor (BS R3) protects against Memory Burn — and by extension,
+Soul Anchor (BS R3) protects against Memory Burn, and by extension,
 shields a target from Memory Hole during its 1-hour duration window.

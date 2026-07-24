@@ -19,7 +19,7 @@ When you arrive in a new settlement, you may declare that someone here
 owes you (or owes someone who owes you). Make a **SAVVY + Streetwise**
 check (TN 11 for large settlements, TN 13 for small ones, TN 15 for
 isolated outposts). On success, the GM determines who the debtor is
-and what they owe — the debt grants you one favor: a place to sleep,
+and what they owe. The debt grants you one favor: a place to sleep,
 a piece of information, an introduction, safe passage, or a small item
 (Cost Rating 1–2). The favor is freely given, but the debtor resents
 it.

@@ -18,7 +18,7 @@ has_resist: false
 
 For the next hour, you receive automatic warnings about mechanical traps,
 ambushes, and environmental hazards within Near range. You don't know the
-specific nature of the threat — only its **direction** and **approximate
+specific nature of the threat: only its **direction** and **approximate
 severity** (minor / moderate / lethal).
 
 ## Steps

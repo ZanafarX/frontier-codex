@@ -17,5 +17,5 @@ example_uses:
 ---
 
 Frontier covers tracking, navigation, foraging, making camp, and surviving
-in the hostile environments of the Frontier — the Ash Belt, the Scorchveil,
+in the hostile environments of the Frontier: the Ash Belt, the Scorchveil,
 the Fen.

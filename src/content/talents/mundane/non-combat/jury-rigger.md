@@ -16,7 +16,7 @@ has_resist: false
 ## Effect
 
 You can repair a broken or damaged item to functional status using
-scavenged materials in **10 minutes**. The repair is temporary — the
+scavenged materials in **10 minutes**. The repair is temporary: the
 item works for 1 scene or 1 hour (whichever comes first) before
 breaking again permanently unless properly repaired. Jury-Rigged items
 suffer a **−1 Roll Penalty** when used.

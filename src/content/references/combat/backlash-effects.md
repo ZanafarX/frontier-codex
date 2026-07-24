@@ -34,5 +34,5 @@ notes:
 ---
 
 Backlash is the immediate spike where Veil Bleed is the slow poison. A
-Psionic who triggers Backlash repeatedly isn't just hurting themselves —
+Psionic who triggers Backlash repeatedly isn't just hurting themselves;
 they're pulling the Veil thinner for everyone in the scene.

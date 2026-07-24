@@ -18,7 +18,7 @@ cleared_by:
 severity: "moderate"
 ---
 
-Grappled is positional control — you cannot move from your space, and
+Grappled is positional control: you cannot move from your space, and
 your weapon options are reduced to Light weapons and Unarmed strikes
 with a Tempo 3 ceiling. No heavy melee, no rifle work, no Channeling
 that requires gestures (GM discretion).
@@ -29,6 +29,6 @@ and you break free. Lose and you stay locked.
 
 Many Veil-Born grapple attacks (Hollow Man Grab, Walking Dead Embrace,
 Fen-Wraith Cold Touch) chain into a **secondary effect** that activates
-*while* the target is Grappled — cold drain, drowning, etc. Breaking
+*while* the target is Grappled: cold drain, drowning, etc. Breaking
 the grapple ends the secondary effect. This makes Escape attempts
 existentially urgent in many Veil-Born encounters.

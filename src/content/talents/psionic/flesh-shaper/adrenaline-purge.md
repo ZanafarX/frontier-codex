@@ -27,7 +27,7 @@ for **5 Ticks**.
 ## Special
 
 The emotional numbness is temporary but unsettling. Targets describe
-feeling "hollow" during the immunity period — aware that they should be
+feeling "hollow" during the immunity period, aware that they should be
 afraid but unable to access the emotion. Characters who receive this
 repeatedly may develop emotional blunting (roleplay consequence, not
 mechanical).

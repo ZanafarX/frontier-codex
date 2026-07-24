@@ -32,12 +32,12 @@ Target rolls **IRON + Force** vs. your Channeling Sum.
 
 ## Requirement
 
-**Concentration** — you must spend your action each turn to maintain Gravity
+**Concentration**: you must spend your action each turn to maintain Gravity
 Well. If you take damage, you must make a Focus check vs. TN 11 or the
 effect ends.
 
 ## Special
 
 Damage is fixed (no dice variance) to keep within R3 ceiling. The crushing
-sensation is purely supernatural — no visible force is applied, but bones
+sensation is purely supernatural: no visible force is applied, but bones
 creak and breathing becomes labored.

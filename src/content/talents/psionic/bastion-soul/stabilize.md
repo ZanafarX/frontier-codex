@@ -23,7 +23,7 @@ Touch a target. Halt all ongoing Psionic deterioration on them for **1 hour**:
 - Veil Bleed symptoms are suppressed (penalties from Erosion stages are
   temporarily removed)
 - Active psionic effects causing ongoing damage (Flesh Garden, Plague Touch,
-  Psychic Venom) are paused — not removed, but frozen in place
+  Psychic Venom) are paused, not removed, but frozen in place
 
 ## Steps
 
@@ -32,6 +32,6 @@ Touch a target. Halt all ongoing Psionic deterioration on them for **1 hour**:
 ## Special
 
 This is the Bastion Soul's primary supportive cantrip. A Psionic ally pushing
-too hard can be Stabilized before they Break. The effect is temporary — when
+too hard can be Stabilized before they Break. The effect is temporary: when
 it ends, all paused effects resume where they left off. It buys time, not
 salvation.

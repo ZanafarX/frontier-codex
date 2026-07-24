@@ -9,6 +9,7 @@ vitals:
   defense: 9
   armor_rating: 1
   mettle: 0
+  speed: 7
 attacks:
   - name: "Repeater"
     pool: 5
@@ -28,7 +29,7 @@ habitat:
   - "ash-belt"
 ---
 
-Professional soldiers trained to protect the Silver Line — the
+Professional soldiers trained to protect the Silver Line, the
 armored trains that are the Consortium's lifeline. Rail-Guards are a
 cut above Enforcers: they've survived at least one Veil-Born attack
 on the tracks and earned the right to wear the grey coat. Most sleep
@@ -41,7 +42,7 @@ signal whistle, ration tin. Speed 7.
 ## Tactics
 
 Hold positions behind hard cover. Use overlapping fields of fire. One
-guards, one reloads. They do not pursue — their job is to protect
+guards, one reloads. They do not pursue; their job is to protect
 the train, not chase glory. If the train moves, they move with it,
 leaving attackers behind.
 

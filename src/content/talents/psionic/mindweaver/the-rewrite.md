@@ -19,7 +19,7 @@ has_resist: true
 Touch a target. You completely **rewrite their identity**. New name,
 new history, new personality, new loyalties.
 
-The rewrite is **deep** — it replaces Core Memories with fabricated
+The rewrite is **deep**: it replaces Core Memories with fabricated
 ones, adjusts emotional responses, and realigns priorities. The target
 genuinely **becomes a different person**.
 
@@ -29,14 +29,14 @@ suppressed.
 ## Resist
 
 ECHO + Focus vs. your Channeling Sum. On success, the Rewrite **partially
-fails** — the target gains the new identity but experiences disturbing
+fails**: the target gains the new identity but experiences disturbing
 "bleed-through" from the old one (dreams, phantom emotions, inexplicable
 skills).
 
 ## Requirement
 
 **Reversal:** Only another **Miracle-level effect** can undo a Rewrite.
-The original identity may be gone forever — or it may be buried,
+The original identity may be gone forever, or it may be buried,
 waiting.
 
 ## Special
@@ -46,7 +46,7 @@ Mindweavers are hunted, feared, and killed on sight by the Redeemers.
 Creating a new person from the shell of the old one is, by any moral
 framework, **murder**.
 
-The Unbreaking (BS R5) can restore a Psionically damaged mind — at
+The Unbreaking (BS R5) can restore a Psionically damaged mind; at
 Miracle tier, the two effects exist in a precarious balance. A Bastion
 Soul who reaches a Rewrite target in time can sometimes pull them back.
 Sometimes.

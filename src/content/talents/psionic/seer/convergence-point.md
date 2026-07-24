@@ -23,7 +23,7 @@ For **1 minute**, the affected Near range area becomes a temporal nexus:
 - All Channeling rolls within the area (any discipline) gain **+2 Roll
   Bonus**
 - **Bleed Dice rolled within the area have a 25% chance** (1–2 on a d8)
-  of exploding — adding their face value to the sum AND rolling again.
+  of exploding: adding their face value to the sum AND rolling again.
   This applies to both allies and enemies.
 - The Tension Pool immediately gains **+2 dice**. Reality is protesting.
 
@@ -34,7 +34,7 @@ For **1 minute**, the affected Near range area becomes a temporal nexus:
 ## Special
 
 This is a **double-edged sword**. It supercharges all Psionics in the
-area — yours and theirs. The Bleed Dice modification makes Bleed
+area: yours and theirs. The Bleed Dice modification makes Bleed
 devastatingly powerful but also dramatically increases Backlash risk.
 Use in situations where you need overwhelming psionic force and are
 willing to accept the consequences.

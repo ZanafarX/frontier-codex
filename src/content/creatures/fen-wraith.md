@@ -8,6 +8,7 @@ vitals:
   defense: 10
   armor_rating: 0
   mettle: 0
+  speed: 7
 attacks:
   - name: "Cold Touch"
     pool: 7
@@ -33,12 +34,12 @@ habitat:
 
 Marsh spirits born from the accumulated grief of every soul the Fen
 has swallowed. They manifest as shapes of fog and dark water in the
-rough outline of drowned victims — hair trailing like weeds, fingers
+rough outline of drowned victims: hair trailing like weeds, fingers
 elongated into translucent tendrils, mouths open in a silent scream.
 They smell of stagnant water and old sorrow.
 
-Fen-Wraiths are territorial. They claim a stretch of swamp — a
-particular pond, a specific bend in the waterway — and defend it
+Fen-Wraiths are territorial. They claim a stretch of swamp, a
+particular pond, a specific bend in the waterway, and defend it
 against all intrusion. But they are also **lonely.** Some Fen-Wraiths
 will attempt to communicate before attacking, writing words in the
 condensation on glass, arranging corpse-candles in patterns, or
@@ -61,7 +62,7 @@ freezes. **Fen-Wraiths are patient. They can wait all night.**
 ## Encounter Design
 
 The best Fen-Wraith encounter is one where the party *must* cross
-its territory — a bridge over its pond, a path through its swamp.
-Negotiation is possible (they want something — a memory, a song, a
+its territory: a bridge over its pond, a path through its swamp.
+Negotiation is possible (they want something: a memory, a song, a
 living person to keep them company), but the price is always
 uncomfortable.

@@ -18,7 +18,7 @@ has_resist: false
 
 Touch a firearm. You learn the following about the last time it was fired:
 
-- Who held it (a psychic impression — face, emotional state, hand size)
+- Who held it (a psychic impression: face, emotional state, hand size)
 - What it was aimed at (a flash of the target)
 - Whether the shot killed
 

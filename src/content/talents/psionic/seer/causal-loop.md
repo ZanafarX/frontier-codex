@@ -34,7 +34,7 @@ has veto power over implausible claims.
 
 ## Special
 
-This is the Seer's most beloved utility Talent — it lets them *always
+This is the Seer's most beloved utility Talent: it lets them *always
 seem prepared*. Whether they actually foresaw the need or are
 retroactively editing causality is an open question even among the
 Circle of Ash.

@@ -49,5 +49,5 @@ Focus check (TN 11) or be expelled and take 1d3 Strain. A trusted
 guardian is recommended.
 
 # =============================================================================
-# RANK 4 TALENTS (Devastations) — 2 Erosion | TN 15
+# RANK 4 TALENTS (Devastations): 2 Erosion | TN 15
 # =============================================================================

@@ -28,5 +28,5 @@ materials for **one** of the following:
 ## Limit
 
 You can carry a maximum of **3 remedies** at a time (they spoil).
-Cannot gather in desert terrain (Scorchveil) or the Ash Belt — there's
+Cannot gather in desert terrain (Scorchveil) or the Ash Belt. There's
 nothing growing.

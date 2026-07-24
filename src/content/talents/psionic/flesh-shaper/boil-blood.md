@@ -34,5 +34,5 @@ failure to stay within R3 ceiling).
 ## Special
 
 Creatures **without blood** (constructs, some Veil-Born) are **immune**.
-Iron Will (BS R1) does NOT defend against Boil Blood — this is
+Iron Will (BS R1) does NOT defend against Boil Blood; this is
 biological, not mental.

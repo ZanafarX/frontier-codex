@@ -20,7 +20,7 @@ has_resist: true
 
 The caster must make an immediate Focus check (**ECHO + Focus vs. TN 11**) or
 their Channeling is **Disrupted**. This functions identically to Disruption
-by Salt — automatic, brutal, and immediate.
+by Salt: automatic, brutal, and immediate.
 
 ## Resist
 
@@ -36,5 +36,5 @@ they take 1 Strain feedback per the standard Disruption rules.
 
 Unlike Disruption by damage (which requires hitting the target first), Disrupt
 is a psychic interference pulse that doesn't require a physical attack. Range
-is limited to Close — you must be near the caster. Subject to the Bastion
+is limited to Close: you must be near the caster. Subject to the Bastion
 Soul Reaction Convention.

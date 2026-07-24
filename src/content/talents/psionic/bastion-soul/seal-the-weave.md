@@ -38,8 +38,8 @@ cumulative −1 per attempt).
 ## Special
 
 This is Thread-Cutter Round (Psy-Slinger R4) in Talent form, but more
-thorough — it also freezes Erosion and blocks Bleed Dice. Against enemy
+thorough: it also freezes Erosion and blocks Bleed Dice. Against enemy
 Psionics, this is the nuclear option short of a Miracle. **Per the
 Tier-Removal Hierarchy, Seal the Weave severs ALL ranks of effects on the
-target while active** — even though the Talent itself is R3. The
+target while active**, even though the Talent itself is R3. The
 single-target scope is the trade-off.

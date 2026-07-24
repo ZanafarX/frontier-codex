@@ -16,7 +16,7 @@ has_resist: true
 
 ## Effect
 
-A section of the target's body necrotizes instantly — skin blackens,
+A section of the target's body necrotizes instantly: skin blackens,
 muscle dies, bone goes brittle. The target takes **3 damage** (ignoring
 AR) and suffers a permanent **−1 die** (Pool Penalty) to actions
 involving the affected body part until healed by a Flesh Shaper or
@@ -34,5 +34,5 @@ GRIT + Resilience vs. your Channeling Sum negates.
 
 This is the offensive mirror of Knit Flesh. Where healing stitches
 tissue together, Necrotize commands it to unravel. The sound is
-distinctive — a wet tearing followed by the smell of decay. **Witnesses
+distinctive: a wet tearing followed by the smell of decay. **Witnesses
 must make ECHO + Resilience (TN 9) or become Suppressed from disgust.**

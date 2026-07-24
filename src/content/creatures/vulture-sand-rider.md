@@ -9,6 +9,7 @@ vitals:
   defense: 10
   armor_rating: 0
   mettle: 0
+  speed: 8
 attacks:
   - name: "Carbine"
     pool: 5
@@ -30,7 +31,7 @@ habitat:
   - "scorchveil"
 ---
 
-Elite scouts mounted on wind-skiffs — lightweight sail-craft that
+Elite scouts mounted on wind-skiffs: lightweight sail-craft that
 skim the dunes at terrifying speed. Sand-Riders are the Vulture
 clans' cavalry, reconnaissance, and first-strike force. They are
 chosen from the fastest and most reckless young warriors, and they
@@ -55,4 +56,4 @@ Raider.
 
 Aggressive (−1). Sand-Riders are young and proud. They may press a
 losing fight to prove themselves, but will flee if their skiff is
-destroyed — the shame is punishment enough.
+destroyed: the shame is punishment enough.

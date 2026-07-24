@@ -24,6 +24,6 @@ all checks to escape Grapples, bindings, or restraints.
 
 ## Special
 
-You automatically identify alternate routes through buildings — vents,
+You automatically identify alternate routes through buildings: vents,
 maintenance tunnels, crawlspaces, sewers. The GM tells you if such a
 route exists when you enter a structure.

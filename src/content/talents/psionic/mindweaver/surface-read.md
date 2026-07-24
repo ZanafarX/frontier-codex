@@ -27,4 +27,4 @@ You sense the target's current emotional state and **surface thoughts**
 
 Target is unaware they've been read **unless they have ECHO 3+**, in
 which case they feel "watched." Iron Will (BS R1) blocks Surface Read
-entirely — the mental fortress is opaque to surface-level reads.
+entirely: the mental fortress is opaque to surface-level reads.

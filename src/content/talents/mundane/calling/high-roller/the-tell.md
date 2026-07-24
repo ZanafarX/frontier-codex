@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 After you observe a character in any social interaction or combat for
-**one full round**, the GM reveals their "tell" — a behavioral cue
+**one full round**, the GM reveals their "tell": a behavioral cue
 that signals their next major intention (bluffing, about to attack,
 planning to flee, concealing fear). For the rest of the scene, you
 gain **+2 Roll Bonus** to Insight, Force, and Persuasion checks

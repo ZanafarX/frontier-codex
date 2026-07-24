@@ -20,7 +20,7 @@ Touch a surface (wall, floor, ground). You receive a brief psychic
 impression of the **most significant event** that occurred within Close
 range of this point in the **last 24 hours**.
 
-You see it from the location's perspective — a silent, colorless flash
+You see it from the location's perspective: a silent, colorless flash
 lasting about 5 seconds, **with sound included**.
 
 ## Steps
@@ -29,7 +29,7 @@ lasting about 5 seconds, **with sound included**.
 
 ## Special
 
-"Most significant" is determined by emotional intensity — violence, fear,
+"Most significant" is determined by emotional intensity: violence, fear,
 passion, and death leave the strongest imprints. A quiet room where
 nothing happened gives you nothing. A room where someone was murdered
 screams.

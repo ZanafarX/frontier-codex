@@ -13,7 +13,7 @@ cleared_by:
 severity: "critical"
 ---
 
-Hollow is the game's endpoint condition — the moment when a Psionic
+Hollow is the game's endpoint condition: the moment when a Psionic
 character (or rarely, a non-Psionic who has lost enough Memories
 through trauma) burns their final Memory and there is nothing left to
 anchor the self. The body remains. The eyes move. **There is nothing
@@ -37,7 +37,7 @@ Socially:
 
 The single canonical way to reverse a Hollow state is **The Hollow's
 Rest** (Bastion Soul Rank 5 Miracle), which rebuilds the empty
-Memory Palace with 5 fresh slots — but does NOT restore lost Memories.
+Memory Palace with 5 fresh slots, but does NOT restore lost Memories.
 The Hollow becomes a person again, with the same skills and Attributes,
 but a blank personality shaped by whoever they encounter first. They
 are not who they were. They may never be.

@@ -25,7 +25,7 @@ cellular level. The target may:
 - Remove all **diseases, poisons, and parasites**
 - Remove all **Biosculpt and Adaptive Evolution modifications** (if
   desired)
-- **Reverse aging by up to 20 years** (appearance only — lifespan is
+- **Reverse aging by up to 20 years** (appearance only, lifespan is
   unchanged)
 - **Change any physical characteristic** (height, build, sex, features)
 
@@ -35,12 +35,12 @@ cellular level. The target may:
 reshapes flesh, not spirit.
 
 **The Caster's Price:** You burn a Memory and take **2d6 Strain**. The
-process requires total concentration for 1 hour — you are unconscious
+process requires total concentration for 1 hour: you are unconscious
 to the outside world.
 
 ## Special
 
-The rebuilt target is physically perfect — but they may not recognize
+The rebuilt target is physically perfect, but they may not recognize
 themselves. If the changes are dramatic enough, the GM may require
 **Resilience checks to adjust**. The Consortium would pay any price for
 a Flesh Shaper who can perform the Crucible. The implications for

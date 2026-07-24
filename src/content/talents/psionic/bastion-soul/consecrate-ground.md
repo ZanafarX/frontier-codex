@@ -33,7 +33,7 @@ yourself. The area becomes resistant to the Current for **8 hours**:
 ## Special
 
 This functions similarly to the Shepherd's mundane Sanctified Ground but
-is more powerful (it taxes Channeling and the Tension Pool cost is lower —
+is more powerful (it taxes Channeling and the Tension Pool cost is lower,
 Strain instead of a Salt Pouch). The trade-off is the **1 HP cost** and the
 Erosion risk inherent in any Psionic Talent. The HP cost cannot be reduced
-or absorbed — the ritual requires real blood on real ground.
+or absorbed: the ritual requires real blood on real ground.

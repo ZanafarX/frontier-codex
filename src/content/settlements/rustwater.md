@@ -50,7 +50,7 @@ Enforcer without immediate bloodshed.**
 ## Notes on the Crossroads
 
 Rustwater sits at the edge of the Ash Belt rather than at its
-industrial heart — the mining and rail infrastructure here is a
+industrial heart; the mining and rail infrastructure here is a
 fingerhold of Consortium reach, not the full chokehold of Orvain or
 Kessick. The town's contested status is its defining feature: nobody
 wins here, but nobody can be cleanly evicted either. Maeve Callahan's

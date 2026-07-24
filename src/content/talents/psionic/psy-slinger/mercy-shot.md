@@ -24,5 +24,5 @@ target also clears 1 Strain.
 ## Special
 
 Must hit the ally (roll against their Defense, but they can choose not to
-Dodge/Dive). If you miss, nothing happens — the bullet is still physical
+Dodge/Dive). If you miss, nothing happens; the bullet is still physical
 if it strikes an unintended target.

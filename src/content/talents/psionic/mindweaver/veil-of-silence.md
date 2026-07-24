@@ -31,6 +31,6 @@ Even if spotted, observers forget the target's face within moments.
 
 This is the Mindweaver's signature infiltration tool. Combine with
 **Persona Mask (R2)** for full psionic-disguise infiltration. Note that
-the duration breaks on Rank 2+ Channeling — a Mindweaver hiding under
+the duration breaks on Rank 2+ Channeling: a Mindweaver hiding under
 Veil of Silence can still cast Cantrips (Nudge, Whisper, Forget Me)
 without breaking it.

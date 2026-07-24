@@ -16,7 +16,7 @@ has_resist: false
 
 ## Effect
 
-You read the target's physiological responses — heart rate, breathing,
+You read the target's physiological responses: heart rate, breathing,
 pupil dilation, micro-expressions. For the rest of the scene, you gain
 **+2 Roll Bonus** to Insight checks against this target (you must be
 able to see or touch them within Close range).
@@ -32,10 +32,10 @@ mouth denies).
 
 This is a **biological lie detector**. Unlike Surface Read (which reads
 thoughts), Vital Read reads *bodies*. **It cannot be blocked by Iron
-Will, Poker Face, or mental defenses** — because it's not reading the
+Will, Poker Face, or mental defenses**: because it's not reading the
 mind. Only a Flesh Shaper's own Fleshcraft (consciously controlling
 autonomic responses) can defeat it.
 
 # =============================================================================
-# RANK 2 TALENTS (Tactics) — 2 Strain | TN 11
+# RANK 2 TALENTS (Tactics): 2 Strain | TN 11
 # =============================================================================

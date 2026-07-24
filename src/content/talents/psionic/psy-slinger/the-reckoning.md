@@ -30,7 +30,7 @@ target's Defense individually. AR applies separately per target. Consumes
 
 ## Special
 
-Targets do not need to be the people you killed — but the *bullets* travel
+Targets do not need to be the people you killed, but the *bullets* travel
 as if they remember. The shots seek with the conviction of past murders.
 If you have killed fewer than three creatures with this weapon, you may
 only fire as many shots as your kill count.

@@ -8,6 +8,6 @@ qualities: ["bleed"]
 flavor: "A heavy-bladed fighting knife designed for both utility and combat."
 ---
 
-The Bowie is the standard fighting knife of the Frontier — long enough to
+The Bowie is the standard fighting knife of the Frontier: long enough to
 reach the vitals, sturdy enough for camp work, balanced for throwing in
 a pinch.

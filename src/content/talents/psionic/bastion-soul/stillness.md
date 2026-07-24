@@ -30,12 +30,12 @@ For **1 hour**, you are invisible to all psionic detection:
 
 ## Special
 
-You appear as a "dead spot" to psionic senses — a place where the Current
+You appear as a "dead spot" to psionic senses: a place where the Current
 doesn't flow. Seers describe it as looking at a shadow that has no source.
 This cuts both ways: being invisible to psionic detection means you can't
 be helped by psionic buffs either (Probability Spike, Shared Foresight,
 etc.).
 
 # =============================================================================
-# RANK 3 TALENTS (Powers) — 1 Erosion | TN 13
+# RANK 3 TALENTS (Powers): 1 Erosion | TN 13
 # =============================================================================

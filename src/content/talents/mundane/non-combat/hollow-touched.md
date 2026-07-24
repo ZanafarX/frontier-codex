@@ -19,6 +19,6 @@ has_resist: false
 You are **immune to the Fear Aura** of Minion- and Soldier-tier
 Veil-Born creatures. Against Elite and Boss Fear effects, you gain
 **+2 Roll Bonus** to your ECHO + Resilience check to resist.
-Additionally, you can sense when a Veil Breach is imminent — the GM
+Additionally, you can sense when a Veil Breach is imminent: the GM
 warns you **1 round (approximately 10 Ticks)** before a Tension Pool
 Rupture occurs.

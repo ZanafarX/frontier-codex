@@ -18,7 +18,7 @@ has_resist: false
 
 Place a temporal mark on a target within Near range. Declare a number of
 Ticks (minimum **5**, maximum **20**). When The Count reaches the
-designated Tick, the target suffers an unavoidable catastrophic event —
+designated Tick, the target suffers an unavoidable catastrophic event:
 a structural collapse, a ricocheted bullet from a different fight, a
 heart attack, a freak accident.
 
@@ -31,7 +31,7 @@ ignoring **AR**.
 
 ## Requirement
 
-**No Resist** — fate is not negotiable. However, if the target leaves
+**No Resist**: fate is not negotiable. However, if the target leaves
 the scene entirely (flees beyond Far range before the clock strikes),
 the doom dissipates harmlessly.
 

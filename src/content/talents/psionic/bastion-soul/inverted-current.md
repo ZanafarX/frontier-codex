@@ -28,13 +28,13 @@ reality, the Current strengthens the barrier:
   duration
 - Thin Places within the area are sealed (as Veil Suture, but permanent
   for the duration of this Talent)
-- The area feels *wrong* to Psionics — the power flows backward, and
+- The area feels *wrong* to Psionics: the power flows backward, and
   using it is like breathing underwater. **All Channeling within the area
   has its TN increased by +4.**
 
 ## Special
 
-The reversed Current is visible — a faint luminescence that flows *upward*,
+The reversed Current is visible: a faint luminescence that flows *upward*,
 like rain falling toward the sky. The sensation is indescribable. Psionics
 report feeling their Erosion literally drain away, replaced by a warmth
 they haven't felt since before they first touched the Current. For some,

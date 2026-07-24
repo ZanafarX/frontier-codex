@@ -20,7 +20,7 @@ Link your Count position with a willing ally's. For the rest of the scene,
 you share the same Tick position on The Count. When either of you acts,
 you both act simultaneously.
 
-Actions can be coordinated perfectly — flanking, simultaneous shots,
+Actions can be coordinated perfectly: flanking, simultaneous shots,
 cover-and-advance.
 
 ## Steps

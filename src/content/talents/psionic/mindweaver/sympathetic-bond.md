@@ -28,9 +28,9 @@ the other is also Suppressed.
 ## Special
 
 **The bond works both ways.** This can be used offensively (bond an
-enemy to their leader — hurt the leader, and the enemy suffers) or
-supportively (bond yourself to an ally — you share their suffering,
+enemy to their leader; hurt the leader, and the enemy suffers) or
+supportively (bond yourself to an ally; you share their suffering,
 potentially triggering your own protective instincts).
 
-The bonded creatures feel a phantom connection — a tug in the chest,
+The bonded creatures feel a phantom connection: a tug in the chest,
 shared heartbeats.

@@ -25,12 +25,12 @@ Consumes 1 round.
 ## Resolution
 
 The bullet completes its journey. It deals **WR × 3** damage, ignoring AR
-and Cover. It hits automatically — the target had no time to dodge,
+and Cover. It hits automatically: the target had no time to dodge,
 because no time has passed for the bullet.
 
 ## The Catch
 
 If you die before triggering, the bullet vanishes. If the target dies by
 other means, the bullet finds them anyway, exiting the corpse with a sound
-only you can hear. The burned Memory is the trigger phrase itself — once
+only you can hear. The burned Memory is the trigger phrase itself: once
 spoken, you forget *what you said*.

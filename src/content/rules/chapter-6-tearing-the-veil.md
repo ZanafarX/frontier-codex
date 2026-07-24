@@ -8,7 +8,7 @@ tags: ["psionic", "channeling", "core-mechanic", "current"]
 ---
 
 > *"The Current is not a tool. The Current is a wound. We don't use it. We bleed through it. Every time."*
-> — Mother Yarrow, Circle of Ash teacher
+> (Mother Yarrow, Circle of Ash teacher)
 
 To channel the Current is to reach through the wound between worlds and pull. The Veil resists. The Current responds. And the channeler pays the price.
 
@@ -26,25 +26,25 @@ Psionic Talents are organized into five Ranks of escalating cost, difficulty, an
 | 4 | Devastation | 2 Erosion | 15 | 7 | Severe |
 | 5 | Miracle | 1 Memory | 16 | 9 | Catastrophic |
 
-### Rank 1 — Cantrips
+### Rank 1: Cantrips
 
-Minor manipulations, paid in Strain. A Cantrip should feel like effort. Failure is a nosebleed and a headache, nothing more. Examples: Ghost Bullet, Iron Calm, Glimpse. Cantrips are the day-to-day work of a Psionic and won't attract much attention from the Redeemers or the Veil itself.
+Minor manipulations, paid in Strain. A Cantrip should feel like effort, not danger: failure is a nosebleed and a headache, nothing more. Examples: Ghost Bullet, Iron Calm, Glimpse. Cantrips are the day-to-day work of a Psionic and won't attract much attention from the Redeemers or the Veil itself.
 
-### Rank 2 — Tactics
+### Rank 2: Tactics
 
-Combat-ready applications; real power, real risk. Two Strain per cast. Repeated use exhausts the body quickly, and a Psionic who spams Tactics will be trembling and useless when they need their power most. Examples: Tracer Round, Iron Skin, Fortune's Favor.
+Combat-ready applications; real power, real risk. Two Strain per cast: repeated use exhausts the body quickly, and a Psionic who spams Tactics will be trembling and useless when they need their power most. Examples: Tracer Round, Iron Skin, Fortune's Favor.
 
-### Rank 3 — Powers
+### Rank 3: Powers
 
-The threshold where you stop paying with sweat and start paying with soul. 1 Erosion per cast. Powers do significant things: heal a Downed ally, read a mind, fire a shot that ignores walls and distance. Every use leaves a mark.
+The threshold where you stop paying with sweat and start paying with soul. 1 Erosion per cast, permanent. Powers do significant things: heal a Downed ally, read a mind, fire a shot that ignores walls and distance. Every use leaves a mark.
 
-### Rank 4 — Devastations
+### Rank 4: Devastations
 
-Awe-inspiring feats that announce your presence to anything paying attention. 2 Erosion per cast. Devastations almost always trigger environmental effects. The GM adds dice to the Tension Pool. Reality doesn't like being bent this hard.
+Awe-inspiring feats that announce your presence to anything paying attention. 2 Erosion per cast. Devastations almost always trigger environmental effects: the GM adds dice to the Tension Pool. Reality doesn't like being bent this hard.
 
-### Rank 5 — Miracles
+### Rank 5: Miracles
 
-The impossible. Stopping time. Resurrection. Leveling a building with a thought. Miracles cost **1 Memory** — burned permanently. The Memory you burn is gone: not just the slot, but the experience. You will never remember your mother's face, or the smell of your childhood home, or the name of your first love. The power is worth it. Until it isn't.
+The impossible. Stopping time. Resurrection. Leveling a building with a thought. Miracles cost **1 Memory**, burned permanently. The Memory you burn is gone: not just the slot, but the experience. You will never remember your mother's face, or the smell of your childhood home, or the name of your first love. The power is worth it. Until it isn't.
 
 A Miracle's TN is 16, its Tempo 9. Channeling one in combat means you are Open for nearly half a fight, and the Veil-Born will sense you. You do not cast Miracles casually. You cast them once, for one reason, and you live with what you spent.
 
@@ -78,7 +78,7 @@ Common Roll Modifiers for Channeling:
 - **Without Focus:** −2 dice Pool Penalty.
 - **Rushed:** −2.
 
-Before rolling, you may add Bleed Dice or spend Mettle for Desperation, with all the standard Backlash risks. Backlash on a Psionic feeds directly into Erosion and the Tension Pool. Channelers should think twice before adding more than one Bleed Die.
+Before rolling, you may add Bleed Dice or spend Mettle for Desperation, with all the standard Backlash risks. Backlash on a Psionic feeds directly into Erosion and the Tension Pool: Channelers should think twice before adding more than one Bleed Die.
 
 ### Step 4: Determine Outcome
 
@@ -91,14 +91,14 @@ Before rolling, you may add Bleed Dice or spend Mettle for Desperation, with all
 
 ### Step 5: The Open State
 
-Unlike pulling a trigger, channeling requires sustained concentration. Between declaration and resolution, you are in **The Open State**. Your mind is reaching into the Current, and you are vulnerable. Most Talents have a Tempo of 4–9; during those Ticks:
+Unlike pulling a trigger, channeling requires sustained concentration. Between declaration and resolution, you are in **The Open State**: your mind is reaching into the Current, and you are vulnerable. Most Talents have a Tempo of 4–9; during those Ticks:
 
 - You **cannot take other Actions** (your attention is inward).
 - You can **Shift** (move up to your Speed) but cannot Scramble, Rush, Sprint, or Take Cover.
-- You **cannot make Reactions**. No Parry, no Intercept, no Dodge, no Dive.
+- You **cannot make Reactions**: no Parry, no Intercept, no Dodge, no Dive.
 - You are vulnerable to **Disruption** (see below).
 
-You're not defenseless. You can still Shift out of the way of an obvious threat, but you're significantly more exposed than a gunfighter lining up a shot.
+You're not defenseless: you can still Shift out of the way of an obvious threat, but you're significantly more exposed than a gunfighter lining up a shot.
 
 ### Step 6: Resolution
 
@@ -120,11 +120,11 @@ Roll Modifiers apply: **Veil Anchor** (+2), Wounded (−1 die per threshold). On
 
 ### Disruption by Salt
 
-Salt is anathema to the Current. **Salt Rounds** or rock salt thrown at a channeling Psionic cause **automatic Disruption**. No Focus check allowed. Take 1 Strain. The Talent fails. **Redeemer Inquisitors** carry Salt Rounds specifically to shut down Psionics before they can act; they are the canonical hard counter.
+Salt is anathema to the Current. **Salt Rounds** or rock salt thrown at a channeling Psionic cause **automatic Disruption**: no Focus check allowed. Take 1 Strain. The Talent fails. **Redeemer Inquisitors** carry Salt Rounds specifically to shut down Psionics before they can act; they are the canonical hard counter.
 
 ### Bastion Soul Disruption
 
-The Bastion Soul Cantrip **Disrupt** can interrupt a channeling Psionic with an interference pulse that forces a Focus check at TN 11. This is the rare ranged interrupt available to non-Salt-armed combatants.
+The Bastion Soul Cantrip **Disrupt** can interrupt a channeling Psionic without any physical attack: a psychic interference pulse that forces a Focus check at TN 11. This is the rare ranged interrupt available to non-Salt-armed combatants.
 
 ### Protecting Against Disruption
 
@@ -138,7 +138,7 @@ The Bastion Soul Cantrip **Disrupt** can interrupt a channeling Psionic with an 
 
 **For Psionics:** channel from cover when possible; wait until enemies are engaged with allies; prefer Cantrips and Tactics in close combat and save Rank 3+ for moments when you have cover or distance; invest in Focus and carry a Veil Anchor.
 
-**Against Psionics:** focus fire on Open targets (every hit is a Disruption check); save Salt Rounds for the Open moment; use Disrupt or Intercept-style abilities to interrupt without spending ammunition; force them to choose between channeling and defending.
+**Against Psionics:** focus fire on Open targets: every hit is a Disruption check; save Salt Rounds for the Open moment; use Disrupt or Intercept-style abilities to interrupt without spending ammunition; force them to choose between channeling and defending.
 
 ## The Burdens of Power
 
@@ -150,26 +150,26 @@ Recovery: Short Rest clears 1, Long Rest clears all, Laudanum clears 1d3 (addict
 
 ### Erosion
 
-Erosion is the long-term cost, a damage to the soul. Your **Erosion Capacity = ECHO + 5**, and it does *not* heal from rest. Sources: casting Rank 3 (1) and Rank 4 (2), Backlash's Tear (1) and Breach (immediate Memory burn), Thin Place exposure (1/hour unprotected), prolonged Current exposure, and extreme deprivation.
+Erosion is the long-term cost: permanent damage to the soul. Your **Erosion Capacity = ECHO + 5**, and it does *not* heal from rest. Sources: casting Rank 3 (1) and Rank 4 (2), Backlash's Tear (1) and Breach (immediate Memory burn), Thin Place exposure (1/hour unprotected), prolonged Current exposure, and extreme deprivation.
 
 Recovery is slow and limited: spend 2 XP (1 Erosion), indulge a Vice (1), Anchor with your Anchor Memory (2), use an Erosion Sink item (1/session, shatters after 3 total), or reach a Circle Sanctuary (3, rare). When Erosion fills, you **Break**: burn one Memory, reset Erosion to 0, live with one fewer Pillar.
 
 ### Memory Burn
 
-The ultimate cost. Triggered by Rank 5 Miracles (always), Backlash's Breach (three 1s on Bleed/Cursed Dice), a full Erosion track (the Break), or the Mindweaver's Rank 5 Memory Hole (involuntary). Choose a Memory, strike it from the sheet. The character forgets immediately and completely. The **Memory Burn** keyword covers the aftermath.
+The ultimate cost. Triggered by Rank 5 Miracles (always), Backlash's Breach (three 1s on Bleed/Cursed Dice), a full Erosion track (the Break), or the Mindweaver's Rank 5 Memory Hole (involuntary). Choose a Memory, strike it from the sheet: the character forgets immediately and completely. The **Memory Burn** keyword covers the aftermath.
 
 ## Resonance
 
-> *"The Current remembers. Cast the same spell enough times, and it starts to flow like water down a familiar channel. That's Resonance. The power knows the shape of your mind — and your mind knows the shape of the power."*
-> — Elder Rhun, Circle of Ash
+> *"The Current remembers. Cast the same spell enough times, and it starts to flow like water down a familiar channel. That's Resonance. The power knows the shape of your mind, and your mind knows the shape of the power."*
+> (Elder Rhun, Circle of Ash)
 
-When you **successfully** cast a Talent, its pattern lingers — you gain **Resonance** with that Talent, and recasting it invokes a **Resonance Echo** at reduced cost.
+When you **successfully** cast a Talent, its pattern lingers: you gain **Resonance** with that Talent, and recasting it invokes a **Resonance Echo** at reduced cost.
 
 - **Gained** the instant a Channeling roll succeeds. Failure grants nothing; Backlash doesn't prevent it (the Talent still succeeded).
 - **One at a time.** You hold Resonance with a single Talent. Casting a *different* Talent replaces it; recasting the same one maintains it.
-- **Lasts until your next Long Rest.** It persists through Short Rests, combat, and scene changes — but you wake from a full night's sleep with none, so the first Talent of the day always costs full price.
+- **Lasts until your next Long Rest.** It persists through Short Rests, combat, and scene changes, but you wake from a full night's sleep with none, so the first Talent of the day always costs full price.
 
-A Resonance Echo reduces only the **cost**. The TN, Tempo, Open State, effect, and Backlash risk are all unchanged. A Rank 3 Echo is still TN 13 and still leaves you Open for 6 Ticks. The cost drops one rung:
+A Resonance Echo reduces only the **cost**. The TN, Tempo, Open State, effect, and Backlash risk are all unchanged: a Rank 3 Echo is still TN 13 and still leaves you Open for 6 Ticks. The cost drops one rung:
 
 | Original Cost | With Resonance |
 | :-- | :-- |
@@ -179,24 +179,24 @@ A Resonance Echo reduces only the **cost**. The TN, Tempo, Open State, effect, a
 | 2 Erosion | 1 Erosion |
 | 1 Memory | 1 Memory (no reduction) |
 
-This ladder is what makes a Psionic's career survivable: a signature Cantrip becomes free to repeat, and a Rank 3 Power can be re-cast for Strain instead of Erosion — paying with the body instead of the soul. But **Miracles are exempt.** A Rank 5 Talent burns a Memory every single time, Resonance or not. Cast the same Miracle twice in a day and you lose two Memories. The Current offers no discounts on the impossible — which is exactly why the wise fear their own power.
+This ladder is what makes a Psionic's career survivable: a signature Cantrip becomes free to repeat, and a Rank 3 Power can be re-cast for Strain instead of Erosion, paying with the body instead of the soul. But **Miracles are exempt.** A Rank 5 Talent burns a Memory every single time, Resonance or not. Cast the same Miracle twice in a day and you lose two Memories. The Current offers no discounts on the impossible, which is exactly why the wise fear their own power.
 
 ## A Worked Channeling Example
 
 *Rook is at Tick 4. He has his rune-etched revolver (Bonded Focus), ECHO 3, Channel 2. He declares **Ghost Bullet** (Rank 1 Cantrip).*
 
-*Step 1 — Declaration. He has his Focus (no penalty). ECHO 3 ≥ Rank 1 ✓. He pays 1 Strain (track now 1/4, Winded).*
+*Step 1: Declaration. He has his Focus (no penalty). ECHO 3 ≥ Rank 1 ✓. He pays 1 Strain (track now 1/4, Winded).*
 
-*Step 2 — Cost paid.*
+*Step 2: Cost paid.*
 
-*Step 3 — The Roll. Pool: ECHO 3 + Channel 2 = 5 dice. TN 9. Roll Bonus: Bonded Focus +1. He rolls 5d8 → [2, 4, 5, 6, 8]. Top two: 6 + 8 = 14, +1 Bonded Focus = 15. Final Sum 15 vs. TN 9 → Success, Margin 6 → +2 Steps.*
+*Step 3: The Roll. Pool: ECHO 3 + Channel 2 = 5 dice. TN 9. Roll Bonus: Bonded Focus +1. He rolls 5d8 → [2, 4, 5, 6, 8]. Top two: 6 + 8 = 14, +1 Bonded Focus = 15. Final Sum 15 vs. TN 9 → Success, Margin 6 → +2 Steps.*
 
-*Step 4 — Outcome: Success.*
+*Step 4: Outcome: Success.*
 
-*Step 5 — Open State. Ghost Bullet Tempo 4. He is Open from Tick 4 to Tick 8. An enemy fires at him at Tick 6 and hits for 3 damage. He must roll ECHO 3 + Focus 2 = 5 dice vs. TN 11 (8 + 3). He rolls a 12 — Success, channeling continues.*
+*Step 5: Open State. Ghost Bullet Tempo 4. He is Open from Tick 4 to Tick 8. An enemy fires at him at Tick 6 and hits for 3 damage. He must roll ECHO 3 + Focus 2 = 5 dice vs. TN 11 (8 + 3). He rolls a 12: Success, channeling continues.*
 
-*Step 6 — Resolution. At Tick 8, Ghost Bullet manifests: his next shot ignores Armor and Cover and deals Force damage. With +2 Steps, that shot deals WR 3 + 2 = 5 damage, ignoring all defenses.*
+*Step 6: Resolution. At Tick 8, Ghost Bullet manifests: his next shot ignores Armor and Cover and deals Force damage. With +2 Steps, that shot deals WR 3 + 2 = 5 damage, ignoring all defenses.*
 
-*Rook is now at Tick 8 with the effect ready, having spent 1 Strain and no Erosion (and he gained Resonance with Ghost Bullet), so his next cast of it is free. A clean Cantrip.*
+*Rook is now at Tick 8 with the effect ready, having spent 1 Strain and no Erosion, and he gained Resonance with Ghost Bullet, so his next cast of it is free. A clean Cantrip.*
 
 That is what a *cheap* cast looks like. Now imagine the same flow for a Rank 5 Miracle: Tempo 9 (Open for nearly half a round), TN 16 (possible only with real investment), and a cost of a piece of who you are, gone forever. The structure is identical. The price is everything.

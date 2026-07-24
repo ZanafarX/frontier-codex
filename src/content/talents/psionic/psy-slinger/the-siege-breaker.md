@@ -19,7 +19,7 @@ has_resist: false
 Your next shot destroys Cover and structures. It passes through up to
 **3 meters** of solid material (wood, stone, even iron) before striking a
 target on the other side. Any Cover it passes through is permanently
-destroyed — the wall collapses, the wagon splinters, the fortification
+destroyed: the wall collapses, the wagon splinters, the fortification
 cracks. The shot deals **WR + 3** damage to the final target, ignoring AR.
 
 ## Steps

@@ -9,7 +9,7 @@ category: "currency"
 tags: ["economy", "consortium", "civilization"]
 ---
 
-Scrip (symbol: **§**) is the official money of the Orvain Consortium —
+Scrip (symbol: **§**) is the official money of the Orvain Consortium:
 paper notes backed by the Consortium's control of industrial cities and
 the rail network. It is the currency of **civilization** on the
 Frontier, such as civilization is.
@@ -22,10 +22,10 @@ Frontier, such as civilization is.
 
 **Where Scrip fails:**
 
-- Deep Scorchveil (Dust Vulture territory) — useful only as kindling.
+- Deep Scorchveil (Dust Vulture territory), useful only as kindling.
 - Isolated settlements with no rail access.
 - Anywhere the Consortium's authority is actively rejected.
-- Palomera (Circle of Ash) — trades in knowledge and favors only.
+- Palomera (Circle of Ash), trades in knowledge and favors only.
 
 **The Cost Rating shortcut:**
 
@@ -40,7 +40,7 @@ Rather than listing exact Scrip prices for everything, the game uses a
 | 4 | §201 – §1,000 | Rifle, Consortium Vest, wagon, trained horse |
 | 5 | §1,000+ | Gatling gun, Ironbrand Hardsuit, war-horse, sand-skiff |
 
-Beyond Scrip, the Frontier runs on three other currencies — **Salt**
+Beyond Scrip, the Frontier runs on three other currencies: **Salt**
 (universal barter and supernatural ward), **Lead** (ammunition as
 trade good), and **Water** (priceless in the wastes). A merchant in
 Rustwater takes your Scrip; a Khan in the dunes laughs at it; a

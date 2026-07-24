@@ -33,7 +33,7 @@ makes outcomes unpredictable.
 ## Special
 
 In a Probability Storm, skilled characters perform worse than expected
-and unskilled characters perform better than expected — the playing
+and unskilled characters perform better than expected; the playing
 field levels violently. Use this when the enemy has superior numbers and
 skills. The Storm is visible: coins spin endlessly, compasses whirl,
 dice thrown nearby land on edges.

@@ -38,13 +38,13 @@ habitat:
 ---
 
 A massive Veil-corrupted organism that has taken root in the deep
-Fen — a sessile predator disguised as a small island of dense
+Fen, a sessile predator disguised as a small island of dense
 vegetation in the swamp. The "island" is the creature's body: a mound
 of interwoven tendrils, root-like appendages, and sac-like organs
-that produce a steady stream of smaller creatures — **Broodlings** —
+that produce a steady stream of smaller creatures, **Broodlings**,
 that hunt on the Brood Mother's behalf and return with food.
 
-From above, a Brood Mother island looks inviting — dry ground in an
+From above, a Brood Mother island looks inviting: dry ground in an
 endless swamp, covered in lush (if unusual) vegetation. Exhausted
 travelers who land their boats and make camp on a Brood Mother rarely
 realize their mistake until *the ground moves.*
@@ -76,14 +76,14 @@ there are **4**) prevents further spawning from that organ.
 ## Tactics
 
 The Brood Mother plays dead until prey is on its surface, then
-activates — tendrils erupt from the "ground," broodlings emerge from
+activates: tendrils erupt from the "ground," broodlings emerge from
 vegetation, and the island itself begins to contract. Its goal is to
 Engulf as many targets as possible. **It prioritizes the heaviest
 (most nutritious) targets.**
 
 ## Encounter Design
 
-The party needs to cross the deep Fen. They spot dry land — an
+The party needs to cross the deep Fen. They spot dry land, an
 island. They land. They rest. And then the ground moves. This is an
 *escape* encounter: get off the island before it closes around you.
 Burn it if you can. Salt it if you can spare the salt. But mostly,

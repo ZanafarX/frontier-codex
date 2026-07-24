@@ -36,14 +36,9 @@ gains, for the rest of the scene:
 **Aftermath:** When the effect ends, the bone growths retract. The
 target takes **2 Strain and 1 HP damage** (the retraction is painful).
 
-The target looks monstrous — bone protruding through skin, joints
+The target looks monstrous: bone protruding through skin, joints
 armored with calcified plates, hands tipped with finger-length spurs.
 This is battlefield modification, not cosmetic enhancement. The sound of
 bone pushing through skin is unforgettable.
 
 Active form can be ended early by Reality Anchor (BS R4) or higher.
-
-# =============================================================================
-# RANK 5 TALENTS (Miracles) — 1 Memory | TN 16
-# Miracles do not have Steps. Reality-altering by category, not by degree.
-# =============================================================================

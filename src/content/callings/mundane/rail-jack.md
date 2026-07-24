@@ -6,8 +6,8 @@ archetype: "Saboteur / Technician"
 tagline: "The Consortium built the lock. I built the bomb that opens it."
 prime_attributes: ["QUICK", "SAVVY"]
 career_skills:
-  - "Engineering"
-  - "Labor"
+  - "Finesse"
+  - "Stealth"
   - "Scrounge"
   - "Demolitions"
   - "Streetwise"
@@ -53,4 +53,4 @@ way in, you crawl through the vents.
   starting_gear for reference; you take only one.
 - **Starting Talents:** Choose **one Rail-Jack Talent** from the
   Calling-specific list above, plus **one general Mundane Talent**
-  (Combat or Non-Combat list — player's choice).
+  (Combat or Non-Combat list, player's choice).

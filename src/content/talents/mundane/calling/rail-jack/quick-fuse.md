@@ -19,7 +19,7 @@ has_resist: false
 
 You can arm or throw an explosive as a **Fast action (Tempo 3)**
 instead of a Standard action (Tempo 4+). Additionally, you can light
-and throw a stick of dynamite in a single action — no separate
+and throw a stick of dynamite in a single action: no separate
 Interact action to light the fuse.
 
 ## Special

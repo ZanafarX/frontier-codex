@@ -33,5 +33,5 @@ warded object:
 
 The object feels heavier, denser, more *present*. Warded iron in particular
 has a dull gray sheen Psionics find uncomfortable to look at. Warding a Salt
-Pouch extends its effective duration — a warded pouch doesn't lose potency
+Pouch extends its effective duration: a warded pouch doesn't lose potency
 as quickly.

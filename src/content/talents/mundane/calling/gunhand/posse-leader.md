@@ -20,7 +20,7 @@ has_resist: false
 When you travel with hired NPCs (deputies, escorts, mercenaries), they
 gain **+1** to all Morale checks and **+1 Roll Bonus** to Initiative.
 Additionally, you can command up to **SWAY + 2 NPCs** as a coherent
-unit during combat — they act on your Initiative Tick and follow simple
+unit during combat; they act on your Initiative Tick and follow simple
 tactical orders (advance, hold, retreat, focus fire) without individual
 rolls.
 

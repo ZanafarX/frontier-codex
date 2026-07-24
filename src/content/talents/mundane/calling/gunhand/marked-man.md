@@ -20,7 +20,7 @@ has_resist: true
 Publicly declare a single enemy as your target. For the rest of the
 scene, you gain **+1 Roll Bonus** to all attacks against that target
 and **+1 damage** on hits against them. However, you suffer **−1 Roll
-Penalty** to attacks against any *other* target — your focus is
+Penalty** to attacks against any *other* target; your focus is
 singular.
 
 ## Resist

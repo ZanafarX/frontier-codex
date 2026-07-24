@@ -27,7 +27,7 @@ You experience a flash of recognition. Ask the GM **one** of the following:
 - *"What is the fastest way out?"*
 
 The GM answers truthfully with a brief impression (a feeling, an image, a
-direction — not a detailed briefing).
+direction, not a detailed briefing).
 
 ## Steps
 
@@ -35,6 +35,6 @@ direction — not a detailed briefing).
 
 ## Special
 
-Can only be triggered **once per scene**. The flash is involuntary — your
+Can only be triggered **once per scene**. The flash is involuntary: your
 eyes roll white for a heartbeat, and anyone watching knows you just Saw
 something. Subject to the Seer Reaction Convention.

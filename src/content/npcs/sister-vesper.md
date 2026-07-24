@@ -11,12 +11,13 @@ stats:
   pool: 6
   mettle: 2
   armor_rating: 1
+  speed: 7
   notes: "Former Redeemer who defected after one of her own pyres took an innocent child. She knows how Inquisitors think, how they hunt, and how they fail — and she teaches Palomera's Ash-Guard militia to exploit every one of those failures."
 ---
 
 A former Redeemer who defected after one of her own pyres took an
 innocent child. She knows how Inquisitors think, how they hunt, and
-how they fail — and she teaches the Palomera Ash-Guard militia to
+how they fail, and she teaches the Palomera Ash-Guard militia to
 exploit every one of those failures.
 
 Sister Vesper does not talk about her time in the Order. The Circle
@@ -28,7 +29,7 @@ plot she will not show anyone.
 ## Tactics
 
 Vesper trains, she doesn't lead from the front by default. When
-Palomera is breached, she is the last line at the Dovecote stairs —
+Palomera is breached, she is the last line at the Dovecote stairs:
 between the Lodge and the Inquisitor at the door. She knows the
 Sermon by heart and has trained the Ash-Guard to recognize Mark the
 Witch the moment it's spoken. Her Elite Pool of 6 includes

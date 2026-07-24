@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 Target one creature within Near range. You **erase their ability to
-think**. Not their memories, not their personality — their **capacity
+think**. Not their memories, not their personality: their **capacity
 for conscious thought itself**.
 
 The target becomes a living vegetable: breathing, blinking, heart
@@ -25,7 +25,7 @@ beating, but no one is home. There is no will, no awareness, no
 experience.
 
 **Duration:** **Permanent.** Only another Miracle can reverse it, or a
-Flesh Shaper attempting Resurrection on a mind (GM adjudicates — this
+Flesh Shaper attempting Resurrection on a mind (GM adjudicates, this
 is uncharted territory).
 
 ## Resist
@@ -40,6 +40,6 @@ kept alive indefinitely.
 
 The Redeemers would burn you alive for this. The Circle of Ash would
 exile you. **Even other Mindweavers would be horrified.** Use of this
-Talent should carry **massive narrative consequences** — at the GM's
+Talent should carry **massive narrative consequences**: at the GM's
 discretion, this may permanently change how factions treat the
 character, and may attract attention from forces beyond the Veil itself.

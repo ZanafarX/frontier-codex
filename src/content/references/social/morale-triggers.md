@@ -25,5 +25,5 @@ notes:
 ---
 
 Morale is the tool that turns a slaughter into a surrender. Use it when
-you want your villains to feel human — and skip it when you want your
+you want your villains to feel human, and skip it when you want your
 monsters to feel like monsters.

@@ -31,6 +31,6 @@ Consecrate a small area (one room, one campsite, one crossroads). For
 
 ## Special
 
-The consecration is visible in the supernatural spectrum — Psionics
+The consecration is visible in the supernatural spectrum: Psionics
 and Veil-Born can see the ward as a faint luminescence. Destroying the
 salt circle breaks the consecration.

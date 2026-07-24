@@ -14,6 +14,6 @@ example_uses:
     formula: "SAVVY + Demolitions"
 ---
 
-Demolitions covers the creation, placement, and defusal of explosives — from
+Demolitions covers the creation, placement, and defusal of explosives, from
 ghost-rock charges to dynamite bundles. It is the skill of Rail-Jacks
 clearing tunnels and saboteurs bringing down bridges.

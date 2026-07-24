@@ -34,6 +34,6 @@ also takes Strain when the curse bites).
 
 ## Special
 
-The Hex is visible to those who know what to look for — a faint violet
+The Hex is visible to those who know what to look for: a faint violet
 haze clings to the target. Other Psionics can identify a Hexed creature
 with an Awareness check (TN 11).

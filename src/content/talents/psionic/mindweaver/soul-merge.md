@@ -19,7 +19,7 @@ has_resist: false
 Touch a **willing target**. You merge your consciousness with them for
 **1 hour**. During the merge:
 
-- A new, composite personality emerges — aspects of both minds combined
+- A new, composite personality emerges: aspects of both minds combined
 - The merged entity uses the **higher of each Attribute** from both
   participants
 - The merged entity has access to **all Skills, Talents, and Memories**
@@ -31,7 +31,7 @@ Touch a **willing target**. You merge your consciousness with them for
 ## Requirement
 
 **Both participants burn a Memory.** You burn yours when Channeling; the
-partner loses one during the merge — the intimacy of total exposure
+partner loses one during the merge: the intimacy of total exposure
 erodes identity. **If one participant has only 1 Memory remaining, they
 cannot participate without becoming Hollow.**
 
@@ -40,5 +40,5 @@ cannot participate without becoming Hollow.**
 **The Fracture:** When the hour ends, separation is **agonizing**. Both
 participants take **1d6 Strain** and **1 Erosion**. There is a chance
 (GM discretion, more likely at high Erosion) that **fragments of one
-personality remain in the other** — phantom memories, borrowed
+personality remain in the other**: phantom memories, borrowed
 mannerisms, skills that shouldn't be there.

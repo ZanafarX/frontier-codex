@@ -13,4 +13,4 @@ root_memory_examples:
 You were born in a Thin Place, or during a Rupture, or under some other ill
 omen. The Veil touched you before you had a name. You see things others
 don't. You hear the hum beneath the silence. People have always looked at
-you sideways — and they're right to.
+you sideways, and they're right to.

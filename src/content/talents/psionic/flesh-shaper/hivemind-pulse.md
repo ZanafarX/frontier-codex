@@ -21,7 +21,7 @@ within Near range. For **10 Ticks**:
 
 - You feel the **precise location, health state, and emotional state**
   of every creature
-- You can **communicate biologically** (not telepathically — through
+- You can **communicate biologically** (not telepathically, through
   shared nerve impulses) with willing creatures, granting **+2 dice**
   (Pool Bonus) to coordinated actions
 - You can **identify Skin-Changers, Veil-Born in disguise, and
@@ -37,7 +37,7 @@ within Near range. For **10 Ticks**:
 ## Special
 
 You are the **hub**. If you are knocked unconscious, the web collapses.
-**Bastion Souls within the area create "dead zones" in the web** — you
+**Bastion Souls within the area create "dead zones" in the web**: you
 sense them as cold spots where the pulse doesn't reach. This is sensory
 only; no Bastion Soul Talent is required to create the dead zone, just
 their presence.

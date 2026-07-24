@@ -10,10 +10,10 @@ tags: ["gm-tool", "pacing", "horror", "veil"]
 ---
 
 The Tension Pool is the GM's primary pacing instrument. Dice are added
-visibly — the players hear the clatter — when the world's patience runs
+visibly (the players hear the clatter) when the world's patience runs
 out. Combat, Psionic casting (especially Rank 2+), Bleed Die 1s, player
 Fumbles, time spent in dangerous territory, loud explosions, breaking
-wards, witnessing trauma — all feed the pool.
+wards, witnessing trauma; all feed the pool.
 
 | Pool State | Narrative Feel |
 | :---- | :---- |
@@ -23,7 +23,7 @@ wards, witnessing trauma — all feed the pool.
 | Full (6 dice) | Critical. Reality is about to break. |
 
 When the sixth die enters, the GM rolls all dice in the pool. Each 1
-rolled is a **Rupture** of escalating severity — atmospheric shifts,
+rolled is a **Rupture** of escalating severity: atmospheric shifts,
 reality glitches, Veil-Born manifestations, full Breaches.
 
 Players can lower the pool through **Salt Circles**, **Ritual

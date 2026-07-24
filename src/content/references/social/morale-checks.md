@@ -52,4 +52,4 @@ notes:
 
 Negative modifiers make NPCs hold; positive modifiers make them crack.
 A Fanatic Redeemer defending home, with a leader standing and inspiring,
-gets TN modifier −8 — they don't break.
+gets TN modifier −8; they don't break.

@@ -18,13 +18,13 @@ severity: "moderate"
 
 Frightened is a two-phase condition: a forced movement away from the
 source for one round, then a transition into Suppressed for the rest of
-the scene. The flee phase is the worst of it — the character actively
+the scene. The flee phase is the worst of it: the character actively
 moves away from the threat at full Speed regardless of tactical
 positioning. The Suppressed remainder is the lingering damage to
 composure.
 
 Critical Frightened effects (Margin 9+ on Mass Hysteria) also cause the
-target to **drop held items** as they flee — useful for disarming
+target to **drop held items** as they flee, useful for disarming
 without lethality.
 
 Frightened is one of the few mechanics where Fear immunity matters

@@ -26,5 +26,5 @@ stacks with worn armor.
 ## Special
 
 The target's skin visibly thickens and darkens. This is obviously
-unnatural — Redeemers and Consortium Psi-Division can identify the
+unnatural; Redeemers and Consortium Psi-Division can identify the
 modification on sight. Removable by Grounding (BS R2) or higher.

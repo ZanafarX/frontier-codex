@@ -8,6 +8,7 @@ vitals:
   defense: 12
   armor_rating: 0
   mettle: 0
+  speed: 10
 attacks:
   - name: "Flay"
     pool: 4
@@ -27,22 +28,22 @@ habitat:
 
 Dust-spirits that coalesce during sandstorms in the Scorchveil,
 spinning into vaguely humanoid shapes of whirling grit and debris.
-They are not ghosts — they are the Current given form through friction
+They are not ghosts; they are the Current given form through friction
 and fury, temporary constructs that exist only as long as the wind
 sustains them.
 
 Ashborn are fast, erratic, and almost impossible to see during a
-storm. They strip flesh from bone with grinding spirals of sand — a
+storm. They strip flesh from bone with grinding spirals of sand, a
 death that is as slow as it is inevitable unless you can disperse
 them first. **Water is their great weakness.** A full canteen thrown
-at an Ashborn collapses it instantly — but on the Scorchveil, water
+at an Ashborn collapses it instantly, but on the Scorchveil, water
 is life, and spending it on a dust-ghost is a terrible trade.
 
-Speed 10. Classified as Minion (Swarm) — see Swarm trait.
+Speed 10. Classified as Minion (Swarm); see Swarm trait.
 
 ## Tactics
 
-Swarm the weakest or most encumbered target — the one carrying the
+Swarm the weakest or most encumbered target: the one carrying the
 water, the one in heavy armor. Ignore during sandstorms (they're
 everywhere and undifferentiated from the wind). The GM should
 describe the wind *becoming* hostile rather than clearly defined

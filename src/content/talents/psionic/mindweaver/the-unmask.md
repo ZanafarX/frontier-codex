@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 Target one creature within Near range. They are confronted with the
-absolute truth about themselves — every self-deception, every
+absolute truth about themselves: every self-deception, every
 rationalization, every comfortable lie demolished in an instant.
 
 ## Resist

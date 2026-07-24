@@ -30,7 +30,7 @@ second target takes **Strain damage equal to half the original damage
 ## Special
 
 Can target the original attacker, making them feel the wound they
-inflicted. Iron Will (BS R1) does NOT block Empathic Echo's Strain —
+inflicted. Iron Will (BS R1) does NOT block Empathic Echo's Strain:
 this is a sensory reflection, not mental intrusion (debatable, but
 ruled this way for clarity).
 

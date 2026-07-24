@@ -17,8 +17,8 @@ has_resist: false
 ## Effect
 
 Deaden sensation in a specific area of a creature's body (one hand, one
-foot, a section of torso). The area feels nothing — no pain, no
-temperature, no touch — for **1 minute**.
+foot, a section of torso). The area feels nothing: no pain, no
+temperature, no touch, for **1 minute**.
 
 **Uses:** Painless surgery, removing embedded bullets or arrows without
 causing Strain from pain, resisting torture (the torturer's efforts
@@ -32,5 +32,5 @@ Grievous Wounds in the numbed area for the duration.
 ## Special
 
 A numbed hand cannot perform fine manipulation (**−2 dice** to Finesse).
-A numbed leg reduces Speed by **2**. The trade-off is deliberate — you
+A numbed leg reduces Speed by **2**. The trade-off is deliberate: you
 lose sensation but also lose pain.

@@ -7,26 +7,26 @@ summary: "The Core Resolution Mechanic. Pool, TN, roll, modifiers, comparison. T
 tags: ["core-mechanic", "dice", "core-resolution"]
 ---
 
-> *"It's a game of choices. The dice tell you what fate handed you. Everything else — the aim you took, the iron you carry, the ground you're standing on — that's what you bring to the table."*
-> — Sheriff Crowe of Rustwater
+> *"It's a game of choices. The dice tell you what fate handed you. Everything else, the aim you took, the iron you carry, the ground you're standing on, that's what you bring to the table."*
+> (Sheriff Crowe of Rustwater)
 
-Every meaningful action — pulling a trigger, picking a lock, convincing a stranger, channeling the Current — is resolved through the same fundamental process. Master this chapter, and you understand the skeleton on which the entire game hangs.
+Every meaningful action (pulling a trigger, picking a lock, convincing a stranger, channeling the Current) is resolved through the same fundamental process. Master this chapter, and you understand the skeleton on which the entire game hangs.
 
 ## The Core Mechanic
 
 Resolution follows five steps:
 
-1. **Build the Pool** — Determine how many dice you roll.
-2. **Determine the Target Number** — Establish what you need to achieve.
-3. **Roll and Sum** — Roll your dice and add the two highest.
-4. **Apply Roll Modifiers** — Add your bonuses, subtract your penalties.
-5. **Compare to TN** — Determine success, failure, Critical, or Fumble.
+1. **Build the Pool**: Determine how many dice you roll.
+2. **Determine the Target Number**: Establish what you need to achieve.
+3. **Roll and Sum**: Roll your dice and add the two highest.
+4. **Apply Roll Modifiers**: Add your bonuses, subtract your penalties.
+5. **Compare to TN**: Determine success, failure, Critical, or Fumble.
 
-The whole game runs on this loop. Combat, social, exploration, psionic — same five steps every time.
+The whole game runs on this loop. Combat, social, exploration, psionic: same five steps every time.
 
 ## Step 1: Build the Pool
 
-Your dice pool is your raw capability (natural talent plus trained skill). It is measured in **d8s** (eight-sided dice).
+Your dice pool is your raw capability: natural talent plus trained skill. It is measured in **d8s** (eight-sided dice).
 
 **Base Pool = Attribute Rank + Skill Rank.**
 
@@ -79,9 +79,9 @@ Set TN 13 by default. Players who consistently see TN 11 get bored; players who 
 
 ### TN Modifiers
 
-External circumstances adjust TN — cover, range, target state, positioning. Full table in **core-roll-modifiers**. Key examples: **Light Cover** +2, **Hard Cover** +4, **Flanking** −2, **Higher Ground** −1, **Far Range** +2 (pistol), **Point-Blank** −2 (pistol/shotgun).
+External circumstances adjust TN: cover, range, target state, positioning. Full table in **core-roll-modifiers**. Key examples: **Light Cover** +2, **Hard Cover** +4, **Flanking** −2, **Higher Ground** −1, **Far Range** +2 (pistol), **Point-Blank** −2 (pistol/shotgun).
 
-**TN floor:** 5. **TN ceiling:** uncapped — but at TN 17+, raw dice cannot succeed (the max sum of two d8s is 16). Roll Modifiers, Bleed Dice, or Specializations become mandatory.
+**TN floor:** 5. **TN ceiling:** uncapped, but at TN 17+, raw dice cannot succeed (the max sum of two d8s is 16). Roll Modifiers, Bleed Dice, or Specializations become mandatory.
 
 ## Step 3: Roll and Sum
 
@@ -124,8 +124,8 @@ Compare your Final Sum to the TN.
 
 | Outcome | Condition |
 | :-- | :-- |
-| **Success** | Final Sum ≥ TN — scaled by Margin Steps |
-| **Critical Success** | Both kept dice are natural 8s **and** the roll succeeds — choose one Critical benefit |
+| **Success** | Final Sum ≥ TN, scaled by Margin Steps |
+| **Critical Success** | Both kept dice are natural 8s **and** the roll succeeds: choose one Critical benefit |
 | **Failure** | Final Sum < TN |
 | **Fumble** | The roll fails, Margin is −6 or worse, **and** more than half your dice show 1s or 2s |
 
@@ -149,7 +149,7 @@ Failure has texture too:
 
 - **Margin −1 to −2 (Near Miss):** Almost. The GM may offer Success-at-Cost (below).
 - **Margin −3 to −5 (Clear Failure):** The task simply isn't accomplished.
-- **Margin −6 or worse (Severe Failure):** Something went wrong. Check for a Fumble.
+- **Margin −6 or worse (Severe Failure):** Something went wrong: check for a Fumble.
 
 ### Success-at-Cost
 
@@ -162,18 +162,18 @@ A Critical occurs when **both kept dice are natural 8s** and the roll succeeds. 
 - **Vital Strike:** the attack deals +1 damage.
 - **Adrenaline Surge:** regain 1 Mettle.
 - **Trigger a Weapon Quality** (Bleed, Stun, Knockdown, etc.) that's normally optional.
-- **Narrative advantage** at the GM's discretion — information revealed, a tactical opening created, enemy morale broken.
+- **Narrative advantage** at the GM's discretion: information revealed, a tactical opening created, enemy morale broken.
 
 *(For psionic Channeling, a Critical instead manifests the Talent with +1 Step to its effect.)*
 
 ### Fumble
 
-A Fumble requires **all three** conditions: the roll fails, your Margin is −6 or worse, and more than half your dice show 1s or 2s. This keeps Fumbles rare even on bad failures — you must roll badly *and* roll low. When one occurs, the action fails and the GM describes an additional setback:
+A Fumble requires **all three** conditions: the roll fails, your Margin is −6 or worse, and more than half your dice show 1s or 2s. This keeps Fumbles rare even on bad failures: you must roll badly *and* roll low. When one occurs, the action fails and the GM describes an additional setback:
 
 - Weapon jams; clear it with an action.
 - An ally is endangered, or you leave yourself exposed.
 - Equipment is damaged; needs Downtime repair.
-- For Psionic Channeling: **Fumble Backlash** — a discipline-flavored catastrophe (see the **Backlash** keyword).
+- For Psionic Channeling: **Fumble Backlash**, a discipline-flavored catastrophe (see the **Backlash** keyword).
 
 Every Fumble also adds **+1 die to the Tension Pool**. The Frontier notices your mistakes.
 
@@ -195,15 +195,15 @@ Count the **1s rolled on Bleed Dice only**:
 | Two 1s | **The Tear:** 1 Erosion. The Current has reached deeper than you intended. | Moderate |
 | Three 1s | **The Breach:** Burn 1 Memory immediately. The action succeeds at maximum effect (treat Margin as 12+ regardless). | Severe |
 
-The probabilities are real but manageable: with 3 Bleed Dice, the chance of at least one 1 is **~33%**, two 1s is **~4.4%**, and three 1s is under **0.2%**. You will trigger The Flicker. You will rarely trigger The Tear. You will almost never trigger The Breach — but "almost never" includes the night you needed it most.
+The probabilities are real but manageable: with 3 Bleed Dice, the chance of at least one 1 is **~33%**, two 1s is **~4.4%**, and three 1s is under **0.2%**. You will trigger The Flicker. You will rarely trigger The Tear. You will almost never trigger The Breach, but "almost never" includes the night you needed it most.
 
 ### When to Use Bleed Dice
 
-Add Bleed Dice when the cost of failure outweighs the cost of Backlash. A point of Strain is cheap when the alternative is dying. Don't add them when the math can't help (if you need Sum 22 and your max is 16, dice won't get you there — you need Roll Modifiers or another approach) or when the stakes are low. Never risk your soul for routine work.
+Add Bleed Dice when the cost of failure outweighs the cost of Backlash. A point of Strain is cheap when the alternative is dying. Don't add them when the math can't help (if you need Sum 22 and your max is 16, dice won't get you there: you need Roll Modifiers or another approach) or when the stakes are low. Never risk your soul for routine work.
 
 ## Mettle: The Reaction Currency
 
-Mettle represents your reserves of focus, grit, and desperate will. It is the energy you call upon in crisis to push beyond normal limits or react to sudden threats.
+Mettle represents your reserves of focus, grit, and desperate will: the energy you call upon in crisis to push beyond normal limits or react to sudden threats.
 
 **Mettle Pool = (SAVVY + GRIT) ÷ 2, rounded up.**
 
@@ -233,13 +233,13 @@ SAVVY contributes situational awareness; GRIT contributes stubborn endurance. To
 
 ### The Desperation Die
 
-When you activate Desperation, any die that rolls its maximum (8) **explodes** — roll it again, add the new result, and chain on further 8s. A single die could theoretically produce 8 + 8 + 8 + 5 = 29.
+When you activate Desperation, any die that rolls its maximum (8) **explodes**: roll it again, add the new result, and chain on further 8s. A single die could theoretically produce 8 + 8 + 8 + 5 = 29.
 
-But if an exploding die's reroll shows a 1, it becomes a **Cursed Die**, treated as a Bleed Die for Backlash. Count Cursed Die 1s together with any Bleed Die 1s. Desperation can therefore cause Backlash even without Bleed Dice — the Current responds to anyone reaching beyond their limits, and larger pools create more chances for catastrophe. With a 6-dice pool, at least one explosion occurs ~53% of the time, and at least one Cursed Die ~6.6% of the time. Manageable — until you get greedy.
+But if an exploding die's reroll shows a 1, it becomes a **Cursed Die**, treated as a Bleed Die for Backlash. Count Cursed Die 1s together with any Bleed Die 1s. Desperation can therefore cause Backlash even without Bleed Dice: the Current responds to anyone reaching beyond their limits, and larger pools create more chances for catastrophe. With a 6-dice pool, at least one explosion occurs ~53% of the time, and at least one Cursed Die ~6.6% of the time. Manageable. Until you get greedy.
 
 ## Opposed Rolls
 
-When two characters directly contest each other — grappling, racing, debating, staring down — both roll their relevant pools (typically against TN 11, modified by circumstance), apply Roll Modifiers, and the higher Final Sum wins. Compute the Margin of Victory (winner's Sum − loser's) where the degree of success matters. This is the resolution loop for Grapples, Psionic Duels, persuasion contests, and any situation where two living wills pull against each other.
+When two characters directly contest each other, grappling, racing, debating, staring down, both roll their relevant pools (typically against TN 11, modified by circumstance), apply Roll Modifiers, and the higher Final Sum wins. Compute the Margin of Victory (winner's Sum − loser's) where the degree of success matters. This is the resolution loop for Grapples, Psionic Duels, persuasion contests, and any situation where two living wills pull against each other.
 
 ## When NOT to Roll
 

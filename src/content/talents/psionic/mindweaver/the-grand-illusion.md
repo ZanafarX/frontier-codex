@@ -31,7 +31,7 @@ maintain). Maximum **1 minute**.
 
 ## Requirement
 
-**Interact:** Physical contact reveals the illusion — a hand passes
+**Interact:** Physical contact reveals the illusion: a hand passes
 through. **Insight vs. your Channeling Sum** to see through it without
 touching. **Animals and creatures with ECHO 4+ are not fooled.**
 
@@ -39,4 +39,4 @@ touching. **Animals and creatures with ECHO 4+ are not fooled.**
 
 Concentration ends if you take damage and fail a Focus check (TN 11),
 or if you Channel another Talent. The Grand Illusion is dramatic but
-fragile — use it for misdirection, not as a sustained shield.
+fragile; use it for misdirection, not as a sustained shield.

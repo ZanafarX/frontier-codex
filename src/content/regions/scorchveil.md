@@ -40,7 +40,7 @@ Vultures are the land, and the land is the Vultures.
 **Greystone** is the cliff-fortress town built into a mesa face on the
 Scorchveil's edge, accessible only by steam-winch lift. Source also
 names **Brannoch**, a fortified trail outpost serving as neutral
-smuggler ground ("Ask No Questions, Tell No Lies") — no settlement
+smuggler ground ("Ask No Questions, Tell No Lies"); no settlement
 file yet.
 
 ## Landmarks

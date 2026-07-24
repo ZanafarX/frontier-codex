@@ -16,7 +16,7 @@ has_resist: false
 
 ## Effect
 
-You experience the target's physical sensations for **1 minute** — pain,
+You experience the target's physical sensations for **1 minute**: pain,
 hunger, fatigue, illness, pleasure.
 
 This grants **+2 Roll Bonus** to Medicine checks on this target and
@@ -32,5 +32,5 @@ Diagnose check.
 You feel their pain, including Wound penalties. If the target is
 severely injured, you take **1 Strain** from sympathetic shock. If the
 target dies while you are linked, you take **1d3 Strain**. Iron Will
-(BS R1) does not block Empathic Anatomy — biological link, not psychic
+(BS R1) does not block Empathic Anatomy: biological link, not psychic
 intrusion.

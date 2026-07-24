@@ -24,7 +24,7 @@ thrown weapon).
 
 Reduce incoming damage by your **ECHO** rating. If the damage is reduced
 to 0, you catch the projectile. A caught bullet can be loaded into your
-weapon as a free action — it is now infused with the Current and deals
+weapon as a free action; it is now infused with the Current and deals
 **+1 WR** on its next firing.
 
 ## Steps

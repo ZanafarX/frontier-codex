@@ -24,7 +24,7 @@ learn:
 - **Time of death** (accurate to the hour)
 - **Last meal consumed**
 - Any **substances in the blood at death** (poison, alcohol, drugs)
-- The **last thing the eyes saw** (a brief, blurry image — like a fading
+- The **last thing the eyes saw** (a brief, blurry image, like a fading
   photograph)
 
 ## Steps
@@ -37,9 +37,9 @@ smelled, pain level at death).
 This is forensic investigation through flesh. Unlike Object Reading
 (Seer R3, which reads emotional imprints on objects), Corpse Whisper
 reads **biological data**. It's clinical, precise, and deeply disturbing
-to watch — the Flesh Shaper's eyes roll back as they experience the
+to watch: the Flesh Shaper's eyes roll back as they experience the
 victim's final moments in fast-forward.
 
 # =============================================================================
-# RANK 3 TALENTS (Powers) — 1 Erosion | TN 13
+# RANK 3 TALENTS (Powers): 1 Erosion | TN 13
 # =============================================================================

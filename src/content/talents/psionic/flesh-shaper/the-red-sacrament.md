@@ -31,9 +31,9 @@ creature's maximum Vitality**. Additionally:
 
 ## Requirement
 
-The creature must have been alive within the last round — you cannot
+The creature must have been alive within the last round; you cannot
 use this on a corpse that's been dead for hours. The dead creature's
-body is **consumed** — reduced to ash and dust. There is nothing left
+body is **consumed**: reduced to ash and dust. There is nothing left
 to bury.
 
 This is **not a Reaction.** The trigger establishes when the Talent
@@ -43,7 +43,7 @@ the caster can be interrupted, attacked, or Disrupted normally).
 ## Special
 
 **The Cost Beyond Memory:** You burn a Memory and gain **2 Erosion**
-immediately (the act of converting death to life tears at your soul) —
+immediately (the act of converting death to life tears at your soul);
 this is reflected in the compound cost.
 
 The ethical dimension is brutal: to save your allies, you must watch

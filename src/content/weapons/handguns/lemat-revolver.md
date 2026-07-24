@@ -10,7 +10,7 @@ qualities: ["scatter"]
 flavor: "A nine-shot revolver with an underslung shotgun barrel."
 ---
 
-The LeMat is a beast of a weapon — heavy, complex, and devastating. Its
+The LeMat is a beast of a weapon: heavy, complex, and devastating. Its
 primary cylinder holds nine pistol rounds (WR 3), while a secondary barrel
 beneath fires a single shotgun shell (WR 4, Scatter, Close range only).
 

@@ -21,7 +21,7 @@ vivid, overwhelming detail. You choose the memory (it must be one
 you've discovered through **Surface Read, Mind Link, Dreamwalk, or
 Confessional**).
 
-The reliving is immersive — the target is functionally **unaware of
+The reliving is immersive: the target is functionally **unaware of
 their surroundings for 10 Ticks**.
 
 You may alter details of the relived memory: introducing elements that

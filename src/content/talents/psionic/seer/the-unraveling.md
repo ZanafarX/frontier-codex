@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 All enemies within Near range see simultaneous visions of their own
-deaths — dozens of versions, layered and flickering.
+deaths: dozens of versions, layered and flickering.
 
 ## Resist
 
@@ -37,5 +37,5 @@ Each affected enemy rolls ECHO + Resilience vs. your Channeling Sum.
 This is a mass-morale weapon. Against **disciplined enemies** (Ironbrands,
 Consortium regulars), the resist roll gains **+2**. Against
 **undisciplined groups** (bandits, Dust Vultures), it gains no bonus.
-**Against Veil-Born, it has no effect** — they do not fear death as
+**Against Veil-Born, it has no effect**: they do not fear death as
 humans do.

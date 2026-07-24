@@ -37,9 +37,9 @@ GRIT + Resilience vs. your Channeling Sum.
 ## Special
 
 **Cure:** Medicine check (**TN 15**), **Purge** (from another Flesh
-Shaper — including the caster), or **24 hours of misery**.
+Shaper, including the caster), or **24 hours of misery**.
 
 The ethical weight of creating disease is enormous. The Circle of Ash
 teaches Plague Touch as a deterrent and last resort. Flesh Shapers who
-use it casually are shunned — even by other Psionics. **For contagious
+use it casually are shunned, even by other Psionics. **For contagious
 plague, see Pandemic (R4).**

@@ -18,7 +18,7 @@ has_resist: true
 
 Touch a target. Plant a **false memory** in their mind. The memory must
 be plausible given the target's life experience. It feels completely
-real — the target cannot distinguish it from genuine memory without
+real: the target cannot distinguish it from genuine memory without
 external evidence. The memory includes appropriate emotional weight and
 physical sensations.
 
@@ -31,7 +31,7 @@ ECHO + Focus vs. your Channeling Sum. On success, the memory feels
 
 ## Steps
 
-+1 month of **conviction durability** per Step — at higher Steps, the
++1 month of **conviction durability** per Step: at higher Steps, the
 memory resists contradictory evidence longer (the target rationalizes
 contradictions instead of doubting the memory).
 
@@ -40,7 +40,7 @@ contradictions instead of doubting the memory).
 **Removal:** A **Bastion Soul's Grounding (R2)** or higher dispels a
 fresh Implant Memory while it's still active. Another Mindweaver can
 strip it surgically. Or the target may confront undeniable
-contradictory evidence and shatter the implant on their own —
+contradictory evidence and shatter the implant on their own,
 sometimes traumatically.
 
 This is the constructive counterpart to Memory Hole. Where Memory Hole

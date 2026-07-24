@@ -29,5 +29,5 @@ notes:
   - "Mounted characters use the mount's Speed for all movement actions. See mounts-and-transport.md."
 ---
 
-Position is leverage. Shift is the most underused action in combat — players
+Position is leverage. Shift is the most underused action in combat: players
 forget they get a free half-Speed move every turn.

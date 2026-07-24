@@ -24,7 +24,7 @@ damage to a target wearing Armor or using a physical Shield, that item is
 ## Special
 
 This is the universal physical-defense breaker. The Sunder effect is
-permanent — armor and shields cannot be repaired without specialist
+permanent: armor and shields cannot be repaired without specialist
 craftwork.
 
-(No Steps — the rule-breaking + flat WR+3 is the talent's identity.)
+(No Steps: the rule-breaking + flat WR+3 is the talent's identity.)

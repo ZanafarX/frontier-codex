@@ -30,7 +30,7 @@ but name.**
 
 ## Notes on the Rail Hub
 
-Kessick has no single defining leader in source — it's defined by its
+Kessick has no single defining leader in source; it's defined by its
 factions rather than its figures. The Rail-Jacks (the worker gang, not
 to be confused with the player Calling) run the yards. The Ironbrands
 run the wall. The Consortium runs the books. The Vultures run the
@@ -39,9 +39,9 @@ nights. Every shift change is a potential incident.
 Availability quirks: standard weapons are freely available. Special
 ammunition is freely available (the town is built around firefights).
 Psionic gear is rare. Grimoires are unavailable. Clean water is
-§2/gallon. Medical care costs §30+ — there are always wounded.
+§2/gallon. Medical care costs §30+; there are always wounded.
 
-The Kessick junction is also the haunt of the Iron Revenant — a
+The Kessick junction is also the haunt of the Iron Revenant, a
 ghost-train Veil-Born that has cost the Consortium three repair crews.
 Trains now route around the haunted stretch, adding two days and
 significant cost to every passage.

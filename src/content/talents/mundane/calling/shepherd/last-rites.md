@@ -22,7 +22,7 @@ has_resist: false
 You perform proper funeral rites on a corpse. A body that receives
 Last Rites **cannot rise as undead** (Walking Dead, Hollow Man, etc.)
 under any circumstances. Additionally, the soul of the deceased is
-**"settled"** — Seers and Mindweavers cannot contact or read the dead
+**"settled"**: Seers and Mindweavers cannot contact or read the dead
 person's psychic imprint.
 
 ## Special

@@ -38,7 +38,7 @@ habitat:
   - "scorchveil"
 ---
 
-The Scorchveil's apex predator — a burrowing colossus that cruises
+The Scorchveil's apex predator: a burrowing colossus that cruises
 beneath the dunes the way a whale cruises beneath the ocean. Sand
 Leviathans are rarely seen in their entirety; what surfaces is
 usually a ridge of chitinous plates, a fin of crystallized sand, or
@@ -46,7 +46,7 @@ a mouth. *The mouth is the size of a train car.*
 
 They navigate by vibration, sensing footsteps on the sand from miles
 away. Dust Vulture clans know to **"walk soft"** in Leviathan
-territory — bare feet, slow steps, no metal on the ground. The
+territory: bare feet, slow steps, no metal on the ground. The
 Consortium's rail-laying crews learned this the hard way when a
 Leviathan surfaced beneath a construction camp and swallowed eleven
 men, three horses, and a boiler.
@@ -63,7 +63,7 @@ Tier classified as Boss (Environmental).
 
 The Leviathan is a force of nature. It surfaces to feed, consumes
 what it can reach, and submerges. It does not pursue targets that
-stop moving. It cannot be fought in any conventional sense — the
+stop moving. It cannot be fought in any conventional sense: the
 goal is to avoid it, distract it, or survive its passing.
 
 ## Encounter Design
@@ -71,7 +71,7 @@ goal is to avoid it, distract it, or survive its passing.
 The Sand Leviathan is a *survival* set piece. The party is crossing
 the deep Scorchveil. The sand begins to tremble. The dunes shift in
 ways that have nothing to do with wind. The encounter is about
-movement, silence, and sacrifice — do you freeze and hope it passes?
+movement, silence, and sacrifice: do you freeze and hope it passes?
 Do you throw your pack mule toward the disturbance to buy time? Do
 you run and risk the vibrations drawing it after you? **There is no
 winning. There is only escaping.**

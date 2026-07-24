@@ -36,7 +36,7 @@ from the temporal dislocation but gain the tactical information.
 
 ## Special
 
-**You age 1 year during the minute outside time.** This is cumulative — a
+**You age 1 year during the minute outside time.** This is cumulative: a
 Seer who uses this Talent frequently ages prematurely. At the GM's
 discretion, repeated use may begin to cause visible aging (gray hair,
 wrinkles, joint pain). Time always collects its debts.

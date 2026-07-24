@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 Immediately stop a **Bleeding** condition on a target (including
-Arterial Hit from the Grievous Wound table). The wound is sealed —
+Arterial Hit from the Grievous Wound table). The wound is sealed,
 messily, painfully, but completely. The target takes **1 Strain** from
 the pain but is no longer losing HP per turn.
 

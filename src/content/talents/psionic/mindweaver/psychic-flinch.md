@@ -23,7 +23,7 @@ or an adjacent ally.
 The attacker suffers **−2 dice** (Pool Penalty) to this attack only.
 They hesitate, their aim wavers, their swing pulls short.
 
-The flinch is involuntary — there is no Resist.
+The flinch is involuntary; there is no Resist.
 
 ## Steps
 
@@ -32,8 +32,8 @@ The flinch is involuntary — there is no Resist.
 ## Special
 
 If the attack misses by **Margin 1–2** (Near Miss), the attacker is
-also **Suppressed** — they second-guess their own competence.
+also **Suppressed**: they second-guess their own competence.
 
 **Mindweaver has no Reaction Convention.** Psychic Flinch always costs
-the full 1 Mettle + 1 Strain — there is no first-free discount. This
+the full 1 Mettle + 1 Strain; there is no first-free discount. This
 is the only Reaction in the entire discipline.

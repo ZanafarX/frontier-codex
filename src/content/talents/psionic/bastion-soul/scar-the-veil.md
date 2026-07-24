@@ -33,7 +33,7 @@ the Veil's ability to thin in this exact location:
 
 ## Special
 
-The scar is visible — a permanent discoloration in the air, like a bruise
+The scar is visible: a permanent discoloration in the air, like a bruise
 on reality. Other Psionics who see it feel discomfort. The Circle of Ash
 has mixed feelings about Veil Scars: they are effective, but they are also
 wounds upon wounds. Some argue scarring the Veil is no better than tearing

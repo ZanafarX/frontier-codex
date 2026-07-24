@@ -16,15 +16,15 @@ has_resist: false
 
 ## Effect
 
-Touch a Hollow — a creature that has lost all Memories. After the initial
+Touch a Hollow, a creature that has lost all Memories. After the initial
 Channeling roll, sustain Channeling for 30 minutes. On completion, you
 restore the Hollow's capacity for identity. **This does not return their
-lost Memories — those are gone.** Instead:
+lost Memories: those are gone.** Instead:
 
 - The Hollow regains consciousness, awareness, and the ability to form new
   Memories
 - Their Memory Palace is rebuilt with **5 empty Pillar slots**
-- They must create new Memories through experience — new relationships,
+- They must create new Memories through experience: new relationships,
   new traumas, new anchors
 - They retain their physical skills and Attribute ratings, but their
   personality is a blank slate, shaped by whoever and whatever they
@@ -32,13 +32,13 @@ lost Memories — those are gone.** Instead:
 
 ## Special
 
-**The Cost Beyond Memory:** You burn a Memory and the Hollow absorbs it —
-your burned Memory becomes their first new Core Memory. They carry a piece
+**The Cost Beyond Memory:** You burn a Memory and the Hollow absorbs it.
+Your burned Memory becomes their first new Core Memory. They carry a piece
 of you. They know your face, your voice, and the feeling of what you
 sacrificed for them.
 
 This is the opposite of the Mindweaver's Hollow Crown. Where the Mindweaver
 fills the empty vessel with their will (creating a thrall), the Bastion
 Soul fills it with potential (creating a person). The restored Hollow is
-not who they were. They may never be. But they are *someone* — and in a
+not who they were. They may never be. But they are *someone*, and in a
 world where identity is the last currency, that matters.

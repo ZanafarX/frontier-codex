@@ -31,7 +31,7 @@ whose mind you have read with Surface Read. For the rest of the scene:
 
 ## Special
 
-This defeats **psionic security measures** — Consortium Psi-Division
+This defeats **psionic security measures**: Consortium Psi-Division
 checkpoints that scan for specific psychic signatures can be bypassed.
 **Physical appearance is unchanged**; combine with Veil of Silence,
 Liar's Mirror, or mundane disguise for full infiltration.

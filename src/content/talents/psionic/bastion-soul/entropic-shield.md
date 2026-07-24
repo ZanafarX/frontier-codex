@@ -34,7 +34,7 @@ projectile entering the dome from outside ages rapidly:
 
 ## Special
 
-Allies inside the dome can fire *out* — projectiles leaving the dome are
+Allies inside the dome can fire *out*: projectiles leaving the dome are
 unaffected (time compression is one-directional). This makes the dome a
 perfect defensive position: you can shoot out, they can't shoot in. The
-limitation is size (Close range) and duration — and the 2 Erosion cost.
+limitation is size (Close range) and duration, and the 2 Erosion cost.

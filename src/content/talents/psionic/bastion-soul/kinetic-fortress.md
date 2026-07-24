@@ -32,7 +32,7 @@ function normally.**
 
 ## Special
 
-You can see the bullets hanging in the air — suspended in the null field,
+You can see the bullets hanging in the air: suspended in the null field,
 spinning lazily before losing momentum and falling. The fortress does NOT
 stop psionic attacks that aren't physical (Phantom Pain passes through; a
 telekinetically thrown rock does not). For total projectile shutdown including

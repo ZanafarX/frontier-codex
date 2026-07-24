@@ -21,7 +21,7 @@ You can **read Consortium coded communications** (telegraph cipher,
 rail schedules, internal memos) without a check.
 
 You know the standard patrol schedules, security protocols, and shift
-changes for Consortium facilities — the GM provides this information
+changes for Consortium facilities: the GM provides this information
 when you observe a Consortium location for **30 minutes**.
 
 ## Special

@@ -19,7 +19,7 @@ has_resist: false
 You can place a **shaped charge** that deals its full damage in one
 direction and **zero damage behind it** (instead of the normal
 Scatter/Blast pattern). Your explosives never accidentally
-chain-detonate — you control which charges blow and in what sequence.
+chain-detonate: you control which charges blow and in what sequence.
 
 Additionally, you can calculate exactly how much explosive is needed
 to breach a specific barrier, meaning you never waste charges.

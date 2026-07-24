@@ -10,7 +10,7 @@ root_memory_examples:
   - "The horizon always moving, never arriving."
 ---
 
-You grew up on the rails — a child of workers, stowaways, or traveling
+You grew up on the rails, a child of workers, stowaways, or traveling
 entertainers. You've seen more of the Frontier than most will in a
 lifetime. You learned to adapt, to read people quickly, and to never get
 too attached to any one place.

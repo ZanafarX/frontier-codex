@@ -16,7 +16,7 @@ has_resist: false
 
 ## Effect
 
-Touch a Thin Place — an area where the Veil is worn and the Current bleeds
+Touch a Thin Place, an area where the Veil is worn and the Current bleeds
 through. Temporarily seal it for **24 hours**:
 
 - The Thin Place ceases to function as such (Channeling bonuses from Thin
@@ -32,6 +32,6 @@ through. Temporarily seal it for **24 hours**:
 ## Special
 
 This is one of the most valuable utilities in the game. The ability to seal
-Thin Places — even temporarily — can turn a death-trap location into a
+Thin Places (even temporarily) can turn a death-trap location into a
 survivable one. The Circle of Ash desperately wants Bastion Souls who can
 do this. The Consortium wants to capture and study them.

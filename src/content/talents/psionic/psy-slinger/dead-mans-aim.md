@@ -19,7 +19,7 @@ has_resist: false
 Make a Ballistics attack using **ECHO + Channel** instead of QUICK +
 Ballistics. The shot is guided by psychic instinct: it ignores **Pool
 Penalties** from Wounded, Suppressed, Blinded, and Off-hand. Your physical
-state does not matter — the Current sees the target.
+state does not matter; the Current sees the target.
 
 ## Steps
 
@@ -28,5 +28,5 @@ state does not matter — the Current sees the target.
 ## Special
 
 A Psy-Slinger who can still pull a trigger can land impossible shots
-through Dead Man's Aim — the talent represents the soul aiming when the
+through Dead Man's Aim: the talent represents the soul aiming when the
 body cannot. Particularly devastating when used while Downed.

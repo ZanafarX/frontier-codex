@@ -100,4 +100,4 @@ notes:
 ---
 
 These are the rates a stranger pays. A regular customer, a faction ally,
-or a known Drifter may pay considerably less — or considerably more.
+or a known Drifter may pay considerably less, or considerably more.

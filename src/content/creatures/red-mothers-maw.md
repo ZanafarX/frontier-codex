@@ -44,13 +44,13 @@ abilities:
 habitat: []
 ---
 
-Not a creature — a *wound.* The Red Mother's Maw is a Thin Place
+Not a creature: a *wound.* The Red Mother's Maw is a Thin Place
 given form: a pulsating chasm in the earth, roughly thirty meters
 across, ringed with teeth of crystallized Current and lined with
 flesh that shouldn't exist. The ground around it is warm and wet. The
 air smells of copper and ozone. **It breathes.**
 
-The Circle of Ash believes the Maw is a digestive organ — part of
+The Circle of Ash believes the Maw is a digestive organ, part of
 something so vast it extends through the Veil into whatever lies
 beyond. The Consortium believes it is a geological anomaly worth
 mining (they sent an expedition; it did not return). The Dust
@@ -62,7 +62,7 @@ space, and hiccups time until everything within its reach slides
 slowly, inevitably, into its gullet.
 
 Tier classified as Boss (Environmental). The HP field is recorded as
-**0** in frontmatter because the Maw has no functional HP track — it
+**0** in frontmatter because the Maw has no functional HP track; it
 is indestructible. Sealing is the only resolution.
 
 ## The Sealing Ritual
@@ -76,13 +76,13 @@ Closing the Maw requires an **Extended Check**:
 | Pool | ECHO + Channel (or ECHO + Lore for non-Psionics with Circle of Ash texts) |
 | Interval | Each roll takes 1 minute of sustained concentration at the Maw's edge |
 | Salt Cost | Each roll consumes 5 pounds of salt (thrown into the Maw) |
-| Fumble | The Maw retaliates — Pseudopod attack on the ritualist, automatic hit |
+| Fumble | The Maw retaliates: Pseudopod attack on the ritualist, automatic hit |
 | Temporary Seal | Success closes the Maw for 1d6 weeks per surplus success beyond the threshold |
 
 ## Tactics
 
 Exist. Warp reality. Pull everything toward itself. The Maw is not
-*fought* — it is survived and sealed. Combat against the Maw should
+*fought*; it is survived and sealed. Combat against the Maw should
 be an escape sequence or a ritual-closing with the Maw's pseudopods
 and Reality Warps as interruptions.
 
@@ -90,5 +90,5 @@ and Reality Warps as interruptions.
 
 The Maw is a set-piece, not a monster. The party needs to get
 something near it (a lost artifact, a trapped NPC), survive its
-influence, and get out — or perform a sealing ritual that requires
+influence, and get out, or perform a sealing ritual that requires
 multiple Extended Checks while the Maw tries to eat the ritualist.

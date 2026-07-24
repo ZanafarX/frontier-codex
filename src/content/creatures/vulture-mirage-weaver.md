@@ -9,6 +9,7 @@ vitals:
   defense: 9
   armor_rating: 0
   mettle: 1
+  speed: 6
 attributes:
   echo: 3
 attacks:
@@ -30,14 +31,14 @@ habitat:
 
 Mindweaver outcasts who found a home among the clans, where psionic
 power is respected rather than feared. Mirage-Weavers are the reason
-Vulture war-bands can cross open desert without being spotted — they
+Vulture war-bands can cross open desert without being spotted: they
 wrap their people in veils of shimmering unreality, turning a column
 of fifty raiders into a heat-shimmer on the horizon.
 
 Most Mirage-Weavers bear the **ritual scarification** of the Cindermaw
 or Ashblood clans: parallel lines across the cheekbones that glow
 faintly violet when they Channel. They speak rarely, and when they
-do, people listen — because a Mirage-Weaver who talks to *you* is a
+do, people listen, because a Mirage-Weaver who talks to *you* is a
 Mirage-Weaver who isn't inside your head.
 
 Gear: Crystal prism (Focus), layered robes, waterskin, pouch of
@@ -47,7 +48,7 @@ hallucinogenic dust. Speed 6.
 
 Never enter direct combat. Stay hidden behind the war-band. Use Veil
 of Silence to cover the approach, then Phantom Pain on the biggest
-threat — the gunslinger, the Psionic, the one who looks like a
+threat: the gunslinger, the Psionic, the one who looks like a
 leader. If discovered, flee using The Nudge to plant the urge "look
 the other way" in pursuers.
 

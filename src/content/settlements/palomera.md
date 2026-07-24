@@ -27,7 +27,7 @@ environmental_mechanics:
 
 A hidden valley in the Graven Plain, cloaked by psionic illusions.
 The entrance looks like a deadly rockslide. Inside: a lush (if strange)
-refuge for the **Hollowborn** — those touched by the Veil who flee
+refuge for the **Hollowborn**, those touched by the Veil who flee
 Redeemer persecution. The population is small but genetically diverse
 due to the constant trickle of refugees.
 
@@ -42,11 +42,11 @@ due to the constant trickle of refugees.
 
 Elder Rhun, the oldest Seer on the Frontier, presides from a
 preservation tank deep beneath the Dovecote. He no longer speaks
-aloud — communicates telepathically. Sister Vesper, a former Redeemer
+aloud; communicates telepathically. Sister Vesper, a former Redeemer
 who defected after one of her own pyres took an innocent child,
 trains the Ash-Guard militia in how Inquisitors think and fight.
 
 Availability quirks: medical care is free, but requires service in
-return — the Circle never takes Scrip. Clean water is free.
+return; the Circle never takes Scrip. Clean water is free.
 Psionic gear and Grimoires are abundant. Standard weapons are limited
 (this isn't a fighting town). Special ammunition is unavailable.

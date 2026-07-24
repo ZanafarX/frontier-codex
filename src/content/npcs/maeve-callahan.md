@@ -10,11 +10,12 @@ stats:
   pool: 7
   mettle: 3
   armor_rating: 1
+  speed: 7
   notes: "Channel pool 7. Former Mindweaver who has reportedly 'retired' from active casting — though the Lanterns Saloon's strict 'No Magic' rule has never been broken, which suggests her retirement may not be as complete as advertised. Knows everyone's secrets. Sells information. Enforces Rustwater neutrality."
 ---
 
 Former Mindweaver, now saloon owner. Maeve Callahan runs **The
-Lanterns** — the de facto town hall of Rustwater and the only
+Lanterns**: the de facto town hall of Rustwater and the only
 building in town with reliable electric lights. She enforces a strict
 "No Magic" rule inside, which she has personally enforced exactly
 once and which has never needed enforcing since.
@@ -26,7 +27,7 @@ one.
 
 ## Tactics
 
-Maeve doesn't fight in her own saloon — the rule is the rule, and
+Maeve doesn't fight in her own saloon; the rule is the rule, and
 breaking it would cost her more than any single encounter is worth.
 Outside the Lanterns, she's an Elite-tier Mindweaver with three
 Mettle and a long memory. She prefers to never be in a position

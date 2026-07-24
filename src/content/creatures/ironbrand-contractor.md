@@ -9,6 +9,7 @@ vitals:
   defense: 9
   armor_rating: 1
   mettle: 1
+  speed: 7
 attacks:
   - name: "Repeater"
     pool: 5
@@ -27,14 +28,14 @@ abilities: []
 habitat: []
 ---
 
-The backbone of the guild — professional guns-for-hire who ask no
+The backbone of the guild: professional guns-for-hire who ask no
 questions and answer to the contract. Contractors are veterans of at
 least two years' service, which on the Frontier means they have
 survived things that would break most people. They are calm,
 competent, and relentlessly practical.
 
 An Ironbrand Contractor can be identified by the **Anvil Brand** on
-their left forearm — a stylized anvil seared into the skin during
+their left forearm: a stylized anvil seared into the skin during
 their oath ceremony. It cannot be forged. It cannot be removed
 without taking the arm.
 
@@ -45,7 +46,7 @@ ration pack, contract badge. Speed 7.
 
 Disciplined fire-and-maneuver. Use cover, coordinate with squadmates,
 maintain spacing. They won't break contract but will execute a
-tactical withdrawal if outmatched — retreating isn't losing, it's
+tactical withdrawal if outmatched; retreating isn't losing, it's
 repositioning.
 
 ## Morale

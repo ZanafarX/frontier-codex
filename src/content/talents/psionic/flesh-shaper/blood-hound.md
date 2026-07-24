@@ -29,6 +29,6 @@ bleeding targets.
 
 ## Special
 
-This works in conditions where visual tracking fails — darkness, rain,
+This works in conditions where visual tracking fails: darkness, rain,
 ash storms. The scent is vivid to you: you can distinguish between
 different individuals' blood and estimate how much has been lost.

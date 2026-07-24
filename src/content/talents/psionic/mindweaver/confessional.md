@@ -21,7 +21,7 @@ deepest held secrets relevant to the current situation. They are aware
 they are speaking and horrified by it, but cannot stop.
 
 The confession lasts approximately **30 seconds** (enough for
-substantial information — typically one major secret).
+substantial information, typically one major secret).
 
 ## Resist
 
@@ -35,7 +35,7 @@ another layer or secret).
 ## Special
 
 This is **a violation**. NPCs subjected to Confessional react with
-extreme hostility afterward — betrayal, shame, and rage. **PCs can
+extreme hostility afterward: betrayal, shame, and rage. **PCs can
 choose to resist automatically** (player agency), but their character
 still feels the pull.
 

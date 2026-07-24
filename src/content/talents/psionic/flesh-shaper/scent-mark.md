@@ -35,7 +35,7 @@ GRIT + Resilience vs. your Channeling Sum negates.
 
 ## Special
 
-In the **Fen**, this is a death sentence — Fen-Wraiths hunt by spiritual
+In the **Fen**, this is a death sentence: Fen-Wraiths hunt by spiritual
 scent, and the pheromone mark makes the target a beacon. In the
 **Scorchveil**, it attracts Sand Mites and worse. Context determines
 severity.

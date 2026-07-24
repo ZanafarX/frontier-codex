@@ -21,7 +21,7 @@ landmarks:
 
 Named for the perpetual haze of coal smoke and supernatural ash that
 hangs over the region, the Ash Belt is the industrial heart of the
-Frontier — and its most polluted organ. The ground here is dead. Trees
+Frontier, and its most polluted organ. The ground here is dead. Trees
 are petrified, twisted shapes of black carbon that shatter like glass.
 Water runs with an oily, iridescent sheen that tastes of copper and
 sickness.
@@ -40,7 +40,7 @@ its smoke.
 
 ## Settlements
 
-The three settlement files attached to this region — **Orvain** (the
+The three settlement files attached to this region: **Orvain** (the
 Consortium capital, fortress-city built into Black Iron Mountain),
 **Kessick** (the rail hub, only legal source of "clean" Consortium
 water), and **Rustwater** (The Crossroads, contested neutral ground at
@@ -50,7 +50,7 @@ open flames after dark) which doesn't yet have a settlement file.
 
 ## Landmarks
 
-The **Screaming Rails** — the stretch of Silver Line between Orvain
+The **Screaming Rails**: the stretch of Silver Line between Orvain
 and Kessick where the track itself wails with the voices of the dead
 who built it. Source also names **Iron's Harvest** (cursed metal that
 grows from the earth overnight and rusts on contact with air) which

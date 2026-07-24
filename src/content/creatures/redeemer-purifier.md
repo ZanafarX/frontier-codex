@@ -9,6 +9,7 @@ vitals:
   defense: 8
   armor_rating: 1
   mettle: 1
+  speed: 6
 attacks:
   - name: "Coach Gun (Salt Rounds)"
     pool: 5
@@ -30,13 +31,13 @@ habitat: []
 ---
 
 Soldiers of the faith armed with fire and fury. Purifiers are the
-Redeemers' professional military wing — men and women who have
+Redeemers' professional military wing: men and women who have
 survived at least one full Breach and lived to tell the tale. They
 carry coach guns loaded with rock salt and hand-held flamers fed by
 pressurized oil canisters. They smell like kerosene and righteousness.
 
 Most Purifiers have burn scars on their arms from their own weapons.
-They consider this a mark of devotion — proof that they have walked
+They consider this a mark of devotion: proof that they have walked
 through fire and been found worthy. The scars are sometimes
 self-inflicted during initiation.
 
@@ -48,7 +49,7 @@ Defense), flask of oil, 10 salt shells, fire-starter kit. Speed 6.
 Advance in pairs. The first Purifier fires the flamer to flush
 targets from cover or ignite terrain. The second follows with the
 coach gun to finish what stumbles into the open. Against Psionics,
-they prioritize disruption — salt shells first, then fire. They do
+they prioritize disruption: salt shells first, then fire. They do
 not take prisoners when fighting "the Touched."
 
 ## Morale

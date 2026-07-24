@@ -38,7 +38,7 @@ manipulates circumstance, not substance.
 
 ## Special
 
-Fate's Decree is the Seer equivalent of a wish — and like all wishes,
+Fate's Decree is the Seer equivalent of a wish, and like all wishes,
 the universe interprets it with **hostile literalism**. *"The next
 bullet misses"* might mean the shot goes wide and kills a bystander.
 *"The storm arrives"* might bring a Veil Rupture with it. The GM is

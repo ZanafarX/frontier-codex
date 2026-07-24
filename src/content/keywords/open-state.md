@@ -12,7 +12,7 @@ tags: ["psionic", "channeling", "vulnerability", "core-mechanic"]
 The Open State is the unique vulnerability of Psionic power. Where a
 gunfighter pulls a trigger and resolves their attack instantly, a
 Psionic *holds the channel open* for the duration of the Talent's
-Tempo — anywhere from 4 to 9 Ticks. During this window, the caster is
+Tempo, anywhere from 4 to 9 Ticks. During this window, the caster is
 reaching into the Current and shaping it; their attention is **inward**;
 they are not the alert, defensive combatant they were a moment before.
 
@@ -25,7 +25,7 @@ they are not the alert, defensive combatant they were a moment before.
 - Vulnerable to **Disruption** (see the Disrupted condition):
   - Taking damage forces an ECHO + Focus check (TN 8 + damage taken)
     or the Talent fails.
-  - Salt Rounds and rock salt cause **automatic Disruption** — no save.
+  - Salt Rounds and rock salt cause **automatic Disruption**: no save.
 
 **Tactical implications:**
 
@@ -36,7 +36,7 @@ they are not the alert, defensive combatant they were a moment before.
 | Prefer low-Tempo Talents in danger | Force them to choose: cast or defend |
 | Invest in Focus skill and Veil Anchor | Use Disrupt (Bastion Soul R1) for ranged interrupt |
 
-The Open State is also what **Threadrippers** sense — the structured
+The Open State is also what **Threadrippers** sense: the structured
 Current flowing through a casting Psionic is a neon sign that draws
 Veil-Born predators from miles away. Rank 3+ Channeling events
 specifically risk pulling 1d3 Threadrippers to the scene over the

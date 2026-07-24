@@ -26,7 +26,7 @@ drive_examples:
   - "Knowing I'm the only thing standing between the Veil and someone else."
 ---
 
-You are a void in the psionic field — a null point that absorbs and
+You are a void in the psionic field, a null point that absorbs and
 negates magical energy. Where you stand, the Veil cannot reach. You
 are the shield against the supernatural.
 
@@ -36,10 +36,10 @@ are the shield against the supernatural.
 - **Skill Allocation:** Distribute **6 Skill Points** among Career
   Skills (maximum starting Rank 2).
 - **Starting Focus:** The `iron-shield-bracers` entry covers both
-  options — Iron Shield (occupies off-hand slot) *or* Iron Bracers
+  options: Iron Shield (occupies off-hand slot) *or* Iron Bracers
   (no slot occupied). The gear file documents both variants under one
   ID; declare which you carry at character creation.
 - **Starting Talents:** You start with **Kinetic Dampener (Rank 1
   Cantrip)** automatically. Choose **one general Mundane Talent**
-  (Combat or Non-Combat list — player's choice).
+  (Combat or Non-Combat list, player's choice).
 - **Starting Erosion:** 1 (the cost of the gift).

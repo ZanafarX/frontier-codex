@@ -25,6 +25,6 @@ Penalty for being below half HP) for the rest of the scene.
 
 ## Special
 
-Does **not heal damage** — only masks the pain. If the target reaches 0
+Does **not heal damage**; only masks the pain. If the target reaches 0
 HP, they collapse immediately with **no warning**. The body has been
 lying to them about how badly it's hurt.

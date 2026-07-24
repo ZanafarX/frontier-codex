@@ -37,7 +37,7 @@ and strike true when physics says they shouldn't.
   Skills (maximum starting Rank 2).
 - **Starting Talents:** You start with **Ghost Bullet (Rank 1
   Cantrip)** automatically. Choose **one general Mundane Talent**
-  (Combat or Non-Combat list — player's choice).
+  (Combat or Non-Combat list, player's choice).
 - **Starting Erosion:** 1 (the cost of the gift).
 - **Note on starting gear:** The Rune-Etched Revolver is a unique
   Calling-specific item that mechanically matches a Peacemaker (WR 3,

@@ -20,7 +20,7 @@ Before any binary outcome is determined (a choice between two options, a
 yes/no decision, left or right at a fork), you know which option leads to
 the better outcome **for you** in the immediate future (next 10 minutes).
 
-"Better" is subjective — the Current shows survival, not morality.
+"Better" is subjective: the Current shows survival, not morality.
 
 ## Steps
 

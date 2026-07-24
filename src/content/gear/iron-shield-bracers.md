@@ -8,7 +8,7 @@ tags: ["focus", "bastion-soul", "defensive"]
 flavor: "Heavy cold-iron armor pieces that ground the wearer against the Current."
 ---
 
-Bastion Souls channel through cold iron — either a small shield strapped
+Bastion Souls channel through cold iron: either a small shield strapped
 to the arm or a pair of articulated bracers. The iron's anti-Veil
 properties amplify the Bastion's own nullification.
 

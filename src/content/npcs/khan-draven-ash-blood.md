@@ -11,12 +11,13 @@ stats:
   pool: 9
   mettle: 4
   armor_rating: 1
-  notes: "Speed 9. Gear: Chitin Armor (AR 1, light, crafted from Veil-born carapace), trophy necklace (ears and Ironbrand contract badges), bone totem. Has never lost a fight, never broken a promise, never forgiven a slight. Consortium standing bounty: §5,000."
+  speed: 9
+  notes: "Gear: Chitin Armor (AR 1, light, crafted from Veil-born carapace), trophy necklace (ears and Ironbrand contract badges), bone totem. Has never lost a fight, never broken a promise, never forgiven a slight. Consortium standing bounty: §5,000."
 ---
 
 Warlord of the **Cindermaw Clan**, the largest and most violent Dust
 Vulture group in the Scorchveil. Draven earned his surname the old
-way — by drinking the blood of a Skin-Changer he killed with his bare
+way: by drinking the blood of a Skin-Changer he killed with his bare
 hands at age sixteen. The blood changed him. His skin has a faint
 grey pallor, his eyes reflect light like an animal's, and his wounds
 close faster than they should.
@@ -47,7 +48,7 @@ necklace.
 ## Tactics
 
 Opens with War Cry, then charges the strongest enemy. Does not waste
-time on weaklings — goes for the leader, the Psionic, the one with
+time on weaklings; goes for the leader, the Psionic, the one with
 the best weapon. Fights in melee exclusively and trusts his Raiders
 to handle ranged threats. When Blood Fury activates, he becomes a
 whirlwind of bone and fury.

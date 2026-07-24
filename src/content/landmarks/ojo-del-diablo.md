@@ -6,7 +6,7 @@ danger_level: "extreme"
 flavor: "A circular sinkhole lake twenty miles wide, in the heart of the Scorchveil. The water is black and motionless. It reflects stars that don't match the sky overhead."
 ---
 
-This is the site of the **First Rupture** — the original tear where
+This is the site of the **First Rupture**: the original tear where
 the Veil was first opened, and the wound from which everything else
 has bled. The Devil's Eye has never closed. It never will.
 
@@ -25,7 +25,7 @@ who reach its shore do not return. Those who do return wrong.
 
 ## Legends
 
-Locals throw offerings into the water — coins, guns, fingers — hoping
+Locals throw offerings into the water (coins, guns, fingers), hoping
 the Devil looks away. Retrieving an offering is said to grant a wish.
 The price is always ironic tragedy.
 
@@ -39,7 +39,7 @@ The price is always ironic tragedy.
 
 ## GM Notes
 
-Ojo del Diablo is the Frontier's nuclear option for plot stakes — a
+Ojo del Diablo is the Frontier's nuclear option for plot stakes: a
 place where the answer to "what is the Veil?" is closest to retrievable.
 It should be treated as the most dangerous fixed location on the map.
 A Circle of Ash expedition that returns from the Eye usually returns

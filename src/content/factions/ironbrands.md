@@ -19,7 +19,7 @@ notable_members:
 
 War is business, and business is booming. The Ironbrands are a
 mercenary guild of the highest caliber. They are famous for their
-**Hardsuits** — steam-assisted, hydraulic armor plating that turns a
+**Hardsuits**: steam-assisted, hydraulic armor plating that turns a
 man into a walking tank.
 
 The Ironbrands have no politics. They will guard a Redeemer church
@@ -50,4 +50,4 @@ overlapping fields of fire, clear communication, and pre-planned
 retreat routes. They use Shock-Troopers as the anvil and Contractors
 as the hammer. Every engagement has an exit strategy because dead
 mercenaries don't collect payment. They will execute a tactical
-withdrawal if outmatched — retreating isn't losing, it's repositioning.
+withdrawal if outmatched; retreating isn't losing, it's repositioning.

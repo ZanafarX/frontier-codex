@@ -7,7 +7,7 @@ tags: ["detection", "underground"]
 flavor: "A brass-and-glass mechanical bird that twitches in the presence of bad air or worse things."
 ---
 
-The Clockwork Canary is a Rail-Jack's tunnel companion — an automaton
+The Clockwork Canary is a Rail-Jack's tunnel companion: an automaton
 calibrated to detect gas pockets, ghost-rock vapors, and the spectral
 emanations of nearby Veil-Born creatures.
 

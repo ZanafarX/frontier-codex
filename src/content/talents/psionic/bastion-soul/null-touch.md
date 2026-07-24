@@ -27,5 +27,5 @@ it ends immediately. The target is also immune to Rank 1 psionic effects for
 ## Special
 
 Unwilling targets require a melee attack roll to touch. **Cannot affect
-higher-rank effects** — see the Tier-Removal Hierarchy in the discipline
+higher-rank effects**: see the Tier-Removal Hierarchy in the discipline
 overview.

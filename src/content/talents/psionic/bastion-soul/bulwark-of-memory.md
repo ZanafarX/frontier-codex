@@ -40,10 +40,10 @@ number of allies). Creating a 4th requires dropping one.
 
 Duration is **permanent** until the Bastion Soul dies or voluntarily removes
 the protection. If you die, the protection fades over 24 hours. This is the
-Bastion Soul's most emotionally significant Talent — you are personally
+Bastion Soul's most emotionally significant Talent: you are personally
 guarding someone's identity. Allies who have benefited from your Bulwark
 know what you did for them.
 
 # =============================================================================
-# RANK 4 TALENTS (Devastations) — 2 Erosion | TN 15
+# RANK 4 TALENTS (Devastations): 2 Erosion | TN 15
 # =============================================================================

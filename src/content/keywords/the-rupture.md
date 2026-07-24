@@ -11,7 +11,7 @@ tags: ["history", "cosmology", "core-lore"]
 
 The Rupture is the event that broke the world. It is the dividing line
 between the **Gilded Age** (the era before, remembered only in
-fragments) and the present — the post-Rupture Frontier.
+fragments) and the present: the post-Rupture Frontier.
 
 **The cause:** The Orvain Consortium's industrial drilling pierced a
 layer of **metaphysical bedrock**, breaching the barrier between
@@ -20,7 +20,7 @@ layer of **metaphysical bedrock**, breaching the barrier between
 too far, piercing the skin of the world in places that were meant to
 remain whole.
 
-**The Flickers** came first — shadows that moved without people,
+**The Flickers** came first: shadows that moved without people,
 storms that rained salt, sleepers waking in languages dead
 civilizations hadn't invented yet.
 
@@ -32,7 +32,7 @@ orange.
 
 The Eastern government drew the **Quarantine Line** and declared
 everything west of it to be the Lost Territories. The Long Silence
-followed — twenty years of chaos in which the dead rose, animals
+followed: twenty years of chaos in which the dead rose, animals
 twisted, society collapsed into desperate pockets, and humanity nearly
 flickered out. The Frontier survived because **we are stubborn
 creatures.** Walls of iron. Lines of salt. Deals with the new powers.

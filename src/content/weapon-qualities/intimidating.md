@@ -5,6 +5,6 @@ applies_to: ["all"]
 tags: ["social"]
 ---
 
-Some weapons are loud, ugly, or both — designed less to kill than to make
+Some weapons are loud, ugly, or both, designed less to kill than to make
 the killing seem inevitable. The Pump-Action's distinctive rack, the
 Sledgehammer's casual menace.

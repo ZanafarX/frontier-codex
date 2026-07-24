@@ -32,6 +32,6 @@ Alter your scent profile for **1 hour**. Choose one:
 
 ## Special
 
-People consciously notice nothing, but their subconscious responds —
+People consciously notice nothing, but their subconscious responds:
 discomfort around a Threatening Flesh Shaper, ease around a Calming one.
 Useful in social situations the caster can't control with words.

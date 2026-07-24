@@ -36,7 +36,7 @@ converts to Erosion). You experience a splitting headache that imposes
 **−2 dice** (Pool Penalty) to all actions for **24 hours**.
 
 The Thousand Eyes is sensory overload on a cosmic scale. You see your
-own death — many versions of it. You see your allies' deaths. You see
+own death. Many versions of it. You see your allies' deaths. You see
 the Veil opening. The information doesn't go away when the Talent ends;
 it fades slowly over days, leaving afterimages of futures that may
 never happen. Many Seers who use this Talent develop **permanent

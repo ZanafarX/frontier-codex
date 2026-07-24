@@ -22,7 +22,7 @@ Choose a Reputation type when you acquire this talent:
 - **Respected:** Persuasion checks gain **+2 Roll Bonus** against those
   who've heard of you.
 - **Notorious:** Deceit checks gain **+2 Roll Bonus** against those
-  who've heard of you (your reputation is already unbelievable — people
+  who've heard of you (your reputation is already unbelievable; people
   accept outrageous claims).
 
 ## Special
@@ -30,5 +30,5 @@ Choose a Reputation type when you acquire this talent:
 **Spreading:** After any significant public action (winning a duel,
 saving a town, committing a massacre), the GM determines whether
 witnesses carry your name to nearby settlements. In towns where your
-Reputation has spread, you have the bonus on first social impressions
-— but enemies may also recognize you and come looking.
+Reputation has spread, you have the bonus on first social impressions,
+but enemies may also recognize you and come looking.

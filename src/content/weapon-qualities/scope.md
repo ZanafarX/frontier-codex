@@ -7,5 +7,5 @@ tags: ["precision", "range"]
 
 Scoped weapons are calibrated for a single optimal engagement distance.
 Inside that window, they are devastating. Outside it, the scope obstructs
-rather than helps — close-range targets vanish from the field of view
+rather than helps; close-range targets vanish from the field of view
 entirely.

@@ -47,13 +47,13 @@ the East, but built on cursed earth.
 ## Notes on the Cage
 
 Baron Thorne hasn't been seen in a year. Orders arrive via pneumatic
-tube. The prevailing rumor — quietly circulating in the Dregs and
-loudly denied in the Glass District — is that he's gone Hollow and
+tube. The prevailing rumor (quietly circulating in the Dregs and
+loudly denied in the Glass District) is that he's gone Hollow and
 the Board is covering it up. Director Kael runs the Psi-Division and
 wears gloves at all times to hide Veil Bleed scars; she is, on paper,
 the most powerful Consortium-licensed Mindweaver on the Frontier.
 
 Availability quirks: clean water is cheapest here (§1/gallon).
 Standard weapons require Consortium licensing. Psionic gear and
-Grimoires are illegal — possession is sufficient cause for execution.
+Grimoires are illegal; possession is sufficient cause for execution.
 Special ammunition is freely available to the licensed.

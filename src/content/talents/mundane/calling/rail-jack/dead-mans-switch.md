@@ -25,7 +25,7 @@ detonates. The switch can also be set to a specific condition: *"If
 that door opens," "If the rope is cut," "If I say the word."*
 
 The setup is visible to anyone observing (you're holding a trigger,
-there's a wire), which is the point — it's a deterrent.
+there's a wire), which is the point: it's a deterrent.
 
 ## Special
 

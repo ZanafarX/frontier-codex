@@ -52,7 +52,7 @@ The Raider. The Scout. The Beast-Tamer. The Mirage-Weaver.
 
 Hit-and-run. Ambush. Psychological warfare. Vultures attack supply
 lines and isolated patrols, not fortified positions. They use the
-terrain like a weapon — sandstorms for cover, slot canyons for
+terrain like a weapon: sandstorms for cover, slot canyons for
 ambushes, the blinding sun at their backs. If a fight turns against
 them, they scatter like sand and regroup later. The only exception is
-when a Khan calls **Ashak** (blood-debt) — then they fight to the last.
+when a Khan calls **Ashak** (blood-debt), then they fight to the last.

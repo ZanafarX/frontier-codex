@@ -52,4 +52,4 @@ learned that words are cheaper than bullets.
   Both are listed in starting_gear for reference; you take only one.
 - **Starting Talents:** Choose **one High-Roller Talent** from the
   Calling-specific list above, plus **one general Mundane Talent**
-  (Combat or Non-Combat list — player's choice).
+  (Combat or Non-Combat list, player's choice).

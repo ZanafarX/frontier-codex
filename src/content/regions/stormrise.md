@@ -16,13 +16,13 @@ landmarks:
 ---
 
 The highest elevation in the Frontier and the most volatile. The sky
-is a permanent bruise of purple and orange. Thunder is constant — you
+is a permanent bruise of purple and orange. Thunder is constant; you
 feel it in your teeth.
 
 No single faction controls the Stormrise. Independent settlements
 cling to its bluffs. **Circle of Ash** outposts study the Ley-Line
 crossings that warp reality here. The Consortium has abandoned every
-attempt to lay rail through this region — the storms eat infrastructure
+attempt to lay rail through this region; the storms eat infrastructure
 faster than crews can build it.
 
 ## Threats & Features
@@ -30,7 +30,7 @@ faster than crews can build it.
 | Feature | Effect |
 | :------ | :----- |
 | Stormcallers | Elemental riders of blue lightning. Hunt anything moving fast. Walk slowly to avoid. |
-| Flash Floods | Not water — static discharge and fist-sized hail. GRIT (TN 13) or take 2d6 damage. |
+| Flash Floods | Not water: static discharge and fist-sized hail. GRIT (TN 13) or take 2d6 damage. |
 | Ley-Line Crossings | Reality breaks. Gravity at 80%. Time moves strangely. |
 
 ## Settlements
@@ -38,7 +38,7 @@ faster than crews can build it.
 Source names **Lathrop**, built directly on a massive Ley-Line
 crossing where gravity is 80% normal and people age differently
 depending on which side of the street they live on. No settlement file
-exists yet — none of the 6 planned settlements are in this region.
+exists yet; none of the 6 planned settlements are in this region.
 
 ## Landmarks
 

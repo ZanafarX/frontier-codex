@@ -25,7 +25,7 @@ state by anchoring it to its own past. This can:
 - Rebuild a **collapsed structure** (one room, one wall, one bridge)
 - Reverse the damage from a **Veil Rupture** on a small area (one
   building, one stretch of road)
-- Restore a **Psionically damaged mind** — remove one permanent psionic
+- Restore a **Psionically damaged mind**: remove one permanent psionic
   effect (a Mindweaver's Rewrite, a Memory Palace Siege's lasting damage,
   the psychological scars of Ego Death)
 
@@ -37,8 +37,8 @@ was *damaged*, not what was *destroyed*.
 
 ## Special
 
-The restored thing is exactly as it was — not improved, not altered, just
+The restored thing is exactly as it was: not improved, not altered, just
 *whole*. A broken sword reforged by The Unbreaking has the same nick in
 the handle it had before it shattered. A restored room has the same scuff
-marks on the floor. The Current doesn't create — the Bastion Soul reminds
+marks on the floor. The Current doesn't create: the Bastion Soul reminds
 reality of what used to be, and reality grudgingly agrees.

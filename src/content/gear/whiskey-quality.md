@@ -9,7 +9,7 @@ flavor: "Aged Consortium whiskey in a cut-glass bottle. Worth more as a bribe th
 ---
 
 Quality whiskey serves three purposes: drinking, gifting, and bribing.
-A bottle is more valuable as social currency than its price suggests —
+A bottle is more valuable as social currency than its price suggests:
 it's a tangible signal of respect, taste, and resources.
 
 **Use:** Spending a bottle as part of a social check (Persuasion, Force,

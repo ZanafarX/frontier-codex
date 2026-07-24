@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 Choose an ally within Near range (can be yourself). Their next roll this
-scene gains **+2 dice** (Pool Bonus) — raw power, not accuracy.
+scene gains **+2 dice** (Pool Bonus): raw power, not accuracy.
 
 ## Steps
 

@@ -29,13 +29,13 @@ intact**.
 
 - Permanently loses **1 ECHO** (their soul is cracked)
 - Gains a **permanent Derangement or physical mutation** (GM's choice)
-- Is forever **"Cold"** to the touch — body temperature never fully
+- Is forever **"Cold"** to the touch (body temperature never fully
   returns
 - **Cannot be resurrected again** (one trip through death is the limit)
 
 **The Caster's Price:** You burn a Memory and take **2d6 Strain** (which
 may convert to Erosion if it exceeds your cap).
 
-**What Comes Back:** The target returns with all their memories — but
+**What Comes Back:** The target returns with all their memories, but
 something else may have noticed the door opening. The Tension Pool
 gains **+2 dice** when Resurrection is performed.

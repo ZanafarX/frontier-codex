@@ -29,7 +29,7 @@ is negated entirely.
 ## Special
 
 Unlike Kinetic Dampener (which blocks physical damage), Absorb blocks
-**psionic** damage specifically — Phantom Pain, Boil Blood, Psychic Venom,
+**psionic** damage specifically: Phantom Pain, Boil Blood, Psychic Venom,
 and similar effects. The two Talents complement each other: Dampener for
 bullets, Absorb for the Current. Subject to the Bastion Soul Reaction
 Convention.

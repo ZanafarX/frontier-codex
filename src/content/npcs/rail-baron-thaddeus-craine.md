@@ -11,19 +11,20 @@ stats:
   pool: 8
   mettle: 3
   armor_rating: 2
-  notes: "Speed 6. Gear: Consortium Vest (AR 2), Masterwork Dragoon (WR 4, Tempo 5, Breaker), Cane-Sword (WR 3, Tempo 4, Concealed — +2 Initiative if opponents don't expect it), gold pocket watch, leather ledger (contains enough blackmail to topple three towns), cigar case. Short, fastidious, never raises his voice — he doesn't need to."
+  speed: 6
+  notes: "Gear: Consortium Vest (AR 2), Masterwork Dragoon (WR 4, Tempo 5, Breaker), Cane-Sword (WR 3, Tempo 4, Concealed — +2 Initiative if opponents don't expect it), gold pocket watch, leather ledger (contains enough blackmail to topple three towns), cigar case. Short, fastidious, never raises his voice — he doesn't need to."
 ---
 
 A regional governor who rules the Kessick junction with the calm
 efficiency of a man who has signed more death warrants than he can
-count. Craine is a Consortium lifer — born in Orvain, educated in the
+count. Craine is a Consortium lifer: born in Orvain, educated in the
 East, sent west to squeeze profit from the rails. He is short,
 fastidious, and never raises his voice. He doesn't need to. **The
 dozen armed men who follow him everywhere raise their voices plenty.**
 
 Craine's most dangerous weapon is his ledger. He knows who owes what,
 who's been stealing, and who's been talking to the Dust Vultures. He
-has never drawn his Dragoon in anger — but his bodyguards have drawn
+has never drawn his Dragoon in anger, but his bodyguards have drawn
 theirs 347 times, by his count.
 
 ## Attacks
@@ -50,7 +51,7 @@ with guards, positions himself behind hard cover, and opens
 negotiations before opening fire. If combat begins, he targets the
 party's most mercenary-looking member with Blood Money, uses Slippery
 to survive incoming fire, and calls reinforcements immediately. He
-will retreat through a pre-planned escape route if the fight turns —
+will retreat through a pre-planned escape route if the fight turns;
 **he always has one.**
 
 ## Morale
@@ -61,6 +62,6 @@ for the damages.
 ## Plot Anchor
 
 Kessick is Craine's seat. Any plot hook involving Kessick's
-Consortium operations — the labor train, the rail yards, the Dust
-Vulture raids, the Iron Revenant detour at the junction — runs
+Consortium operations (the labor train, the rail yards, the Dust
+Vulture raids, the Iron Revenant detour at the junction) runs
 through Craine's office, whether the party realizes it or not.

@@ -40,10 +40,10 @@ scene ends**. The network is taxing.
 ## Special
 
 **You are the hub.** If you are knocked unconscious or Disrupted, the
-network collapses — all connected members take **1 Strain** from the
+network collapses: all connected members take **1 Strain** from the
 sudden psychic disconnect.
 
 **Enemy Psionics can attempt to infiltrate the network** (ECHO + Channel
 vs. your Channeling Sum to eavesdrop). The discipline namesake of
-"The Whispering Gallery" is no accident — voices carry where you don't
+"The Whispering Gallery" is no accident: voices carry where you don't
 want them to.

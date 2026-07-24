@@ -19,7 +19,7 @@ has_resist: false
 **Trigger:** You or an ally just failed a Skill check.
 
 Store the failed roll. The next time you or that ally makes a check using
-the **same Skill**, they gain **+3 Roll Bonus** — fate compensating for
+the **same Skill**, they gain **+3 Roll Bonus**: fate compensating for
 the earlier failure.
 
 The stored bonus lasts until used or until the next Long Rest.
@@ -32,8 +32,8 @@ The stored bonus lasts until used or until the next Long Rest.
 
 **Only one Fate Tax can be stored at a time.** If you store a new one,
 the previous bonus is lost. This encourages the Seer to view failure as
-investment — the Frontier takes from you, and sometimes it pays you back.
+investment: the Frontier takes from you, and sometimes it pays you back.
 
 # =============================================================================
-# RANK 3 TALENTS (Powers) — 1 Erosion | TN 13
+# RANK 3 TALENTS (Powers): 1 Erosion | TN 13
 # =============================================================================

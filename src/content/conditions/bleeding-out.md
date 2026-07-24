@@ -27,9 +27,9 @@ Vitality. You die when your Vitality reaches **−(IRON + 2).**
 | 4 | −6 Vitality |
 | 5 | −7 Vitality |
 
-Higher IRON gives you more time — but not much. A Downed character is
-**not out of the fight** — they can call warnings, share information,
-even crawl toward cover — but they are dying.
+Higher IRON gives you more time, but not much. A Downed character is
+**not out of the fight** (they can call warnings, share information,
+even crawl toward cover), but they are dying.
 
 | Patient Vitality | Stabilization TN |
 | :---: | :---: |

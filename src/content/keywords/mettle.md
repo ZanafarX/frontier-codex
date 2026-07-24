@@ -7,7 +7,7 @@ category: "mechanic"
 tags: ["resource", "reactions", "core-mechanic"]
 ---
 
-Mettle is what you spend when normal effort isn't enough — when you
+Mettle is what you spend when normal effort isn't enough: when you
 need to dodge a bullet you didn't see coming, push through a failed
 fear check, or take a hit meant for your friend. It represents the
 deep reserves of focus and stubborn endurance that you can call upon
@@ -15,8 +15,8 @@ in crisis.
 
 **Mettle Pool = (SAVVY + GRIT) ÷ 2, rounded up.**
 
-SAVVY contributes your situational awareness — noticing threats and
-opportunities. GRIT contributes your stubborn endurance — refusing to
+SAVVY contributes your situational awareness: noticing threats and
+opportunities. GRIT contributes your stubborn endurance: refusing to
 go down.
 
 **Refresh:**
@@ -25,7 +25,7 @@ go down.
 - **The Ember:** +2 Mettle when you Spark a Memory this way.
 - **Camp (Long Rest):** +1 if you eat and sleep.
 - **Critical Success:** May regain 1 Mettle.
-- **Strain ≥ ½ Cap (Fatigued or worse):** No refresh — exhaustion
+- **Strain ≥ ½ Cap (Fatigued or worse):** No refresh: exhaustion
   blocks the Mettle restoration.
 
 **Spending:**
@@ -44,5 +44,5 @@ go down.
 between your turns. Push, Steel, and Desperation are not Reactions and
 don't count against this limit.
 
-Mettle is the Frontier's currency of *agency* — the system's answer to
+Mettle is the Frontier's currency of *agency*: the system's answer to
 "the dice don't always have to win."

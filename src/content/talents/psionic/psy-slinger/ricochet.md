@@ -21,8 +21,8 @@ around a corner. The attack ignores Cover penalties to TN.
 
 ## Steps
 
-+1 bounce per Step (each subsequent bounce can hit an additional target —
-make a separate Channeling Sum vs. Defense check for each new target — or
++1 bounce per Step (each subsequent bounce can hit an additional target,
+make a separate Channeling Sum vs. Defense check for each new target, or
 navigate complex geometry).
 
 ## Requirement

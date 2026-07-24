@@ -21,13 +21,13 @@ for 5 Ticks**:
 
 - A **frozen creature** cannot act, cannot be damaged, cannot be moved,
   and is unaware that time is passing
-- A **frozen object** hangs motionless regardless of gravity — a falling
+- A **frozen object** hangs motionless regardless of gravity: a falling
   boulder stops mid-air, a bullet hangs suspended, a door cannot be
   opened or closed
 
 ## Resist
 
-ECHO + Resilience vs. your Channeling Sum (creatures only — objects have
+ECHO + Resilience vs. your Channeling Sum (creatures only, objects have
 no Resist roll).
 
 ## Steps
@@ -37,5 +37,5 @@ no Resist roll).
 ## Special
 
 When the effect ends, the creature or object **resumes exactly as it
-was** — the boulder continues falling, the bullet continues flying, the
+was**: the boulder continues falling, the bullet continues flying, the
 creature continues their action. Timing the release is everything.

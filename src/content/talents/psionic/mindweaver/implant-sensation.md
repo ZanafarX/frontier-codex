@@ -32,4 +32,4 @@ distinguish it from reality without a successful Insight check
 **Examples:** The smell of smoke, the sound of approaching footsteps,
 the feeling of bugs crawling, the taste of poison. The Insight check is
 a recognition check (the sensation feels imposed once recognized), not
-a Resist — the sensation occurs regardless.
+a Resist; the sensation occurs regardless.

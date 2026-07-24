@@ -25,7 +25,7 @@ at night, burning the dead to prevent them from rising. They are the
 ones who hunt down the Fen-Wraiths and the Hollow Men.
 
 But their protection comes with terror. The Redeemers believe that
-Psionics — the very power some use to survive — is a corruption of
+Psionics (the very power some use to survive) is a corruption of
 the soul. They hunt "Witches" and "Devils" with equal fervor. To a
 Redeemer, a Psy-Slinger is just a demon that hasn't turned yet. They
 carry flamethrowers and shotguns loaded with rock salt, and they do
@@ -49,17 +49,17 @@ The Inquisitor. The Preacher. The Witch-Hunter. The Medic.
 
 ## The Horror of the Redeemers
 
-The Redeemers are not mindless fanatics — or at least, most of them
+The Redeemers are not mindless fanatics, or at least, most of them
 aren't. Many genuinely believe they are protecting humanity. The
 Acolytes are often frightened teenagers who watched the Veil take
 their families. The Purifiers are veterans who have seen what happens
 when a Psionic loses control. The tragedy of the Redeemers is that
-they are sometimes *right* — and that rightness fuels atrocities.
+they are sometimes *right*, and that rightness fuels atrocities.
 
 ## Faction Tactics
 
 Redeemers fight with zealous aggression and total commitment. They
-advance in pairs — Purifiers flush targets with fire while Acolytes
+advance in pairs: Purifiers flush targets with fire while Acolytes
 close with salt and torches. They target Psionics first, always.
 Their Inquisitors are terrifyingly effective at identifying and
 suppressing supernatural threats, and their faith gives them genuine

@@ -8,9 +8,9 @@ tags: ["gm-tool", "combat", "world-overview", "bestiary"]
 ---
 
 > *"You can tell a lot about a man by what kills him. If it's a bullet, he was slow. If it's a knife, he was careless. If it's something that drank his eyes and wore his skin... well, he was just unlucky."*
-> — Doc "Sawbones" Holliday
+> (Doc "Sawbones" Holliday)
 
-The Frontier is an ecosystem of violence. Every shadow has teeth. Every silence has a pulse. The things that crawl out of the Veil are not random — they are symptoms of a wound that will not close, and each one fills a niche in a food chain that puts humanity somewhere in the middle.
+The Frontier is an ecosystem of violence. Every shadow has teeth. Every silence has a pulse. The things that crawl out of the Veil are not random: they are symptoms of a wound that will not close, and each one fills a niche in a food chain that puts humanity somewhere in the middle.
 
 This chapter is the GM's guide to *using* the bestiary. Individual stat blocks live in the **creatures** collection. This chapter covers how to read them, how to combine them, and how to make them memorable.
 
@@ -58,7 +58,7 @@ Creatures in *The Veil & Lead* fall into four types.
 
 The Consortium Enforcer. The Dust Vulture Raider. The Redeemer Inquisitor. The Ironbrand Mercenary. The Circle of Ash Acolyte.
 
-Humans are the most common enemy. They use weapons the players recognize, follow morale rules (below), and respond to negotiation, intimidation, and surrender. A fight with humans can end many ways — capture, parley, retreat, mutual exhaustion.
+Humans are the most common enemy. They use weapons the players recognize, follow morale rules (below), and respond to negotiation, intimidation, and surrender. A fight with humans can end many ways: capture, parley, retreat, mutual exhaustion.
 
 Humans are also where the world's politics live. A successful Dust Vulture raid is not just a fight; it is a statement about who controls a corridor of the Scorchveil this season. Treat human encounters as embedded in faction stories. As the book puts it: *killing a Fen-Wraith is survival; killing a Consortium Enforcer is politics.*
 
@@ -66,11 +66,11 @@ Humans are also where the world's politics live. A successful Dust Vulture raid 
 
 The Hollow Man. The Ashborn. The Fen-Wraith. The Stormcaller. The Threadripper. The Skin-Changer. The Walking Dead. The Corpse-Candle. The Mirror Haunt.
 
-Veil-Born are manifestations of the wound — not alive the way humans are, and (with rare exceptions like Fen-Wraiths, who bargain) impossible to reason with. Nearly all of them share three traits:
+Veil-Born are manifestations of the wound: not alive the way humans are, and (with rare exceptions like Fen-Wraiths, who bargain) impossible to reason with. Nearly all of them share three traits:
 
-- **Salt Vulnerability** — salt disrupts the Current that sustains them; Salt Rounds and rock salt deal ×2 damage, and a salt barrier can stop them cold.
-- **Iron Sensitivity** — cold iron causes them pain; iron weapons deal +1 WR against them automatically, no special ammunition needed.
-- **No Morale** — they don't understand self-preservation and never check morale. They fight until destroyed.
+- **Salt Vulnerability**: salt disrupts the Current that sustains them; Salt Rounds and rock salt deal ×2 damage, and a salt barrier can stop them cold.
+- **Iron Sensitivity**: cold iron causes them pain; iron weapons deal +1 WR against them automatically, no special ammunition needed.
+- **No Morale**: they don't understand self-preservation and never check morale. They fight until destroyed.
 
 Veil-Born often have additional **specific vulnerabilities**: fire, water, daylight, electricity. The party should learn these through play. The first encounter with a Hollow Man should be terrifying. The fifth should feel manageable. The system rewards knowledge over levels.
 
@@ -78,7 +78,7 @@ Veil-Born often have additional **specific vulnerabilities**: fire, water, dayli
 
 The Clockwork Hound. The Bone Sentinel. The Iron Revenant.
 
-Constructs are mechanical or magical creations that operate by predictable logic. They don't sense the Current the way Veil-Born do. They are **immune to Fear, Poison, Bleeding, Strain, Erosion, and Psionics**, and they cannot be healed — only repaired (SAVVY + Craft). Each tends to have a precise weakness instead: electricity and water short out a Clockwork Hound; sabotage and disassembly disable others.
+Constructs are mechanical or magical creations that operate by predictable logic. They are not Veil-Born: they don't sense the Current the way Veil-Born do. They are **immune to Fear, Poison, Bleeding, Strain, Erosion, and Psionics**, and they cannot be healed: only repaired (SAVVY + Craft). Each tends to have a precise weakness instead: electricity and water short out a Clockwork Hound; sabotage and disassembly disable others.
 
 The Iron Revenant is the canonical exception: a construct so old it predates the Rupture, and might predate even the Current itself.
 
@@ -86,21 +86,21 @@ The Iron Revenant is the canonical exception: a construct so old it predates the
 
 The Glass-Walker. The Vein Crawler. The Sand Leviathan. The Tar Widow.
 
-Beasts are Veil-warped fauna — animals changed by exposure to the Current but not technically Veil-Born. They have natural behaviors (territorial, predatory, ambush-driven) the players can exploit. A Glass-Walker can be lured. A Sand Leviathan can be redirected. A Tar Widow can be burned out of its pool.
+Beasts are Veil-warped fauna: animals changed by exposure to the Current but not technically Veil-Born. They have natural behaviors (territorial, predatory, ambush-driven) the players can exploit. A Glass-Walker can be lured. A Sand Leviathan can be redirected. A Tar Widow can be burned out of its pool.
 
 Beasts also have **ecological roles** in their regions. Killing all the Vein Crawlers in a mining shaft might solve the immediate problem and create a worse one when the population they preyed on explodes.
 
 ## Morale
 
-Most human enemies have a breaking point. **Morale** simulates it. It's an optional rule. Use it when you want fights to end through something other than total annihilation, and skip it for mindless enemies, cornered foes with nothing to lose, and fights meant to go to the death. Full rules in **morale-triggers**, **morale-checks**, **morale-results**, and **morale-by-enemy-type**.
+Most human enemies have a breaking point. **Morale** simulates it. It's an optional rule: use it when you want fights to end through something other than total annihilation, and skip it for mindless enemies, cornered foes with nothing to lose, and fights meant to go to the death. Full rules in **morale-triggers**, **morale-checks**, **morale-results**, and **morale-by-enemy-type**.
 
 ### When to Check Morale
 
-- **Bloodied** — an NPC drops to 25% HP or below.
-- **Leader Falls** — the group's leader is killed or incapacitated.
-- **Outnumbered** — 50% or more of the NPC group is down.
-- **Overwhelming Display** — they witness something terrifying (a Psionic Devastation, a monster, an ally torn apart).
-- **Cornered** — their escape route is cut off while they're losing.
+- **Bloodied**: an NPC drops to 25% HP or below.
+- **Leader Falls**: the group's leader is killed or incapacitated.
+- **Outnumbered**: 50% or more of the NPC group is down.
+- **Overwhelming Display**: they witness something terrifying (a Psionic Devastation, a monster, an ally torn apart).
+- **Cornered**: their escape route is cut off while they're losing.
 
 ### The Check
 
@@ -137,11 +137,11 @@ Each faction fights differently even at the same XP budget. Consortium Enforcers
 | Result | Outcome |
 | :-- | :-- |
 | Success | Stands firm; continues fighting. |
-| Failure by 1–3 | **Shaken** — −2 dice to all actions until rallied or the threat passes. |
-| Failure by 4–6 | **Breaks** — attempts to flee; will surrender if cornered. |
-| Failure by 7+ | **Routs** — panicked flight; drops weapons, screams, tramples allies. |
+| Failure by 1–3 | **Shaken**: −2 dice to all actions until rallied or the threat passes. |
+| Failure by 4–6 | **Breaks**: attempts to flee; will surrender if cornered. |
+| Failure by 7+ | **Routs**: panicked flight; drops weapons, screams, tramples allies. |
 
-A leader can **Rally** a Shaken or Broken ally with a Rally action (SWAY + Force or Persuasion, TN 11); routed NPCs can't be rallied in combat — they're gone. Players can also force the issue: an **Intimidate** action (IRON + Force or SWAY + Force vs. the target's ECHO + 8) triggers an immediate Morale check at +2 TN, and a Critical makes them fail it automatically.
+A leader can **Rally** a Shaken or Broken ally with a Rally action (SWAY + Force or Persuasion, TN 11); routed NPCs can't be rallied in combat. They're gone. Players can also force the issue: an **Intimidate** action (IRON + Force or SWAY + Force vs. the target's ECHO + 8) triggers an immediate Morale check at +2 TN, and a Critical makes them fail it automatically.
 
 Morale is what lets parties win fights they could never have killed their way through.
 
@@ -157,9 +157,9 @@ Show the monster before the fight. Footprints. A song heard over the ridge. A bo
 
 ### 2. Mid-Fight: Give the Monster a Choice Point
 
-Every monster encounter should have at least one moment where the party can make a non-combat choice. A captured Vulture might know the route. A Hollow Man might be wearing someone's coat. A Fen-Wraith might want to bargain. These choices are where stories happen — combat is just where consequences play out.
+Every monster encounter should have at least one moment where the party can make a non-combat choice. A captured Vulture might know the route. A Hollow Man might be wearing someone's coat. A Fen-Wraith might want to bargain. These choices are where stories happen: combat is just where consequences play out.
 
-### 3. Post-Fight: Don't Just Loot — Mourn (or Don't)
+### 3. Post-Fight: Don't Just Loot, Mourn (or Don't)
 
 After the fight, give the party a moment with the bodies. Did they recognize anyone? Was the Vulture wearing a Consortium pendant? Did the Hollow Man have a wedding ring? The aftermath is where the world fills back in.
 
@@ -169,15 +169,15 @@ A Boss encounter should answer a question that has been building for the entire 
 
 When designing a Boss fight:
 
-- **The Boss should reflect a theme** — the Stormcaller is the Frontier's anger; the Red Mother's Maw is the cost of motherhood and survival; the Whispering Man is the temptation of knowledge.
+- **The Boss should reflect a theme**: the Stormcaller is the Frontier's anger; the Red Mother's Maw is the cost of motherhood and survival; the Whispering Man is the temptation of knowledge.
 - **The arena should matter.** A Stormcaller fight in an open plain is different from one in a mineshaft.
-- **There should be a way to win that isn't just damage.** Sealing a Breach, severing a tether, performing a ritual, freeing a hostage. Give the party a tactical objective beyond reducing HP to 0.
+- **There should be a way to win that isn't just damage.** Sealing a Breach, severing a tether, performing a ritual, freeing a hostage: give the party a tactical objective beyond reducing HP to 0.
 - **There should be a way to lose that isn't just dying.** Sometimes the party survives but the Boss escapes; sometimes they kill it but the town burns; sometimes it converts an NPC they loved. Defeat is a continuum, not a binary.
 
 A great Boss encounter ends with the players quieter than they started. The fight was won, but at what cost?
 
 ## The Bestiary Is a Toolbox
 
-The creatures collection is not a sandbox of "things to throw at the party." It is a library of mood. Each entry captures a specific flavor of horror that fits a specific region and theme. Use them deliberately. A Skin-Changer is a question about identity. A Threadripper is the tax the Current sends when you channel too much.
+The creatures collection is not a sandbox of "things to throw at the party." It is a library of mood: each entry capturing a specific flavor of horror that fits a specific region and theme. Use them deliberately. A Skin-Changer is not just a tough fight; it is a question about identity. A Threadripper is not just a Veil-Born predator; it is the tax the Current sends when you channel too much.
 
 Choose your monsters for what they *mean*. The math will work itself out.

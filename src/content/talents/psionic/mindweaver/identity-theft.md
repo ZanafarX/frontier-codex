@@ -22,7 +22,7 @@ hour**:
 - You gain **access to the target's memories, knowledge, skills, and
   social connections** (use their Social skill ranks instead of yours
   for checks involving their identity)
-- The target **loses access to their own identity** — they don't know
+- The target **loses access to their own identity**: they don't know
   who they are, though they retain motor skills and combat ability
 - To all **psionic detection**, you register as the target and vice
   versa
@@ -37,7 +37,7 @@ ECHO + Focus vs. your Channeling Sum negates entirely.
 
 ## Special
 
-**Physical appearance is NOT changed** — this is a purely psychic swap.
+**Physical appearance is NOT changed**: this is a purely psychic swap.
 Combine with **Fleshcraft (Flesh Shaper R3)** from an ally or mundane
 disguise for complete impersonation.
 

@@ -8,6 +8,7 @@ vitals:
   defense: 7
   armor_rating: 0
   mettle: 0
+  speed: 5
 attacks:
   - name: "Grab"
     pool: 4
@@ -30,13 +31,13 @@ abilities: []
 habitat: []
 ---
 
-They were people once. Now they are empty — shells animated by the
+They were people once. Now they are empty: shells animated by the
 residual Current that pooled in the space where a soul used to be.
 Hollow Men are what happens when a Psionic burns their last Memory,
 or when a corpse is left unsalted in a place where the Veil is thin.
 The body walks. The eyes move. But there is nothing behind them.
 
-Hollow Men are drawn to **warmth** — body heat, firelight, the glow
+Hollow Men are drawn to **warmth**: body heat, firelight, the glow
 of a gas lamp. They approach slowly, arms outstretched, making a
 sound that might be weeping or might be the wind through an empty
 ribcage. They do not run. They do not stop. They simply walk toward
@@ -49,7 +50,7 @@ Frontier.** This is why.
 ## Tactics
 
 Walk toward warmth. Grab and hold. Multiple Hollow Men will converge
-on the same target — the warmest body in the room. They are most
+on the same target: the warmest body in the room. They are most
 dangerous in enclosed spaces where their slowness is less of a
 disadvantage.
 

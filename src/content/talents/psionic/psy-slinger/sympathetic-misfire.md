@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 Target one visible enemy holding a firearm within Near range. Their weapon
-jams — it cannot be fired until they spend an action clearing it
+jams; it cannot be fired until they spend an action clearing it
 (**Tempo 4** for the target).
 
 ## Resist

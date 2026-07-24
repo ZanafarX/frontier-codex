@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 Fire a shot that bounces off every hard surface in a room or enclosed
-area (maximum Near range). The bullet doesn't hit anyone — it maps the
+area (maximum Near range). The bullet doesn't hit anyone; it maps the
 space. You gain perfect knowledge of the area's layout, including: number
 of creatures present (and their locations), all exits, hidden compartments
 or passages (if any surface is hollow). Consumes 1 round.

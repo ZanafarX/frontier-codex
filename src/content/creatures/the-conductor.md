@@ -8,6 +8,7 @@ vitals:
   defense: 12
   armor_rating: 0
   mettle: 3
+  speed: 7
 attacks: []
 traits:
   - "**Spectral:** Immune to mundane physical attacks. Salt, Ghost-Rock, and iron deal normal damage. Psionic attacks deal ×2 damage."
@@ -22,33 +23,33 @@ abilities:
 habitat: []
 ---
 
-The ghost of the Screaming Rails — a spectral figure in a conductor's
+The ghost of the Screaming Rails: a spectral figure in a conductor's
 uniform that manifests aboard trains traveling through Thin Places.
 The Conductor appears in the last car, punching phantom tickets and
 checking watches that run backward. He is polite, soft-spoken, and
 *entirely wrong.*
 
 The Conductor is the collective manifestation of every soul lost to
-rail disasters on the Frontier — **hundreds of deaths compressed
+rail disasters on the Frontier: **hundreds of deaths compressed
 into a single, recurring haunting.** He appears when the rails
 themselves are stressed: during storms, in Thin Places, when the
 Tension Pool is high. He walks through the train, car by car, and
 asks each passenger for their "ticket."
 
-Those who produce a ticket — any ticket, real or improvised — are
+Those who produce a ticket, any ticket, real or improvised, are
 left alone. Those who cannot are "removed from the service." What
 this means varies: some are found outside the train, miles from the
 track, with no memory of leaving. Some are found in the cargo hold,
 aged years in minutes. Some are not found at all.
 
-Speed 7. The Conductor makes no conventional attacks — the
+Speed 7. The Conductor makes no conventional attacks: the
 `attacks[]` array is intentionally empty.
 
 ## Tactics
 
 The Conductor does not fight. *He conducts.* He walks through the
 train, asks for tickets, and Removes those who cannot produce them.
-The encounter is a ticking clock — how many cars between him and the
+The encounter is a ticking clock: how many cars between him and the
 party? Who has a ticket? Who can improvise one? Can the Psionic
 weaken him before he reaches the engine? Can someone stop the train?
 
@@ -60,5 +61,5 @@ temperature drops, and the last car goes dark. Passengers begin
 screaming. The Conductor is coming. Each car he passes through goes
 silent. The party has minutes to prepare: distribute "tickets" (any
 physical token), protect the passengers, and decide whether to
-confront or endure. **Fighting is possible but costly** — and the
+confront or endure. **Fighting is possible but costly**, and the
 train can't be stopped until he's dealt with or reaches the engine.

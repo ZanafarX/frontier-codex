@@ -8,6 +8,7 @@ vitals:
   defense: 12
   armor_rating: 0
   mettle: 3
+  speed: 16
 attacks:
   - name: "Thunder-Lance"
     pool: 10
@@ -39,12 +40,12 @@ habitat:
 ---
 
 Elemental nightmares that ride the perpetual storms of the Stormrise
-Bluffs — skeletal figures of crackling blue lightning mounted on
+Bluffs: skeletal figures of crackling blue lightning mounted on
 spectral cloud-horses that gallop across the sky. They are the
 Frontier's equivalent of natural disasters with a personal grudge:
 ancient, powerful, and drawn to movement and metal.
 
-Stormcallers hunt by detecting **electrical activity** — the firing
+Stormcallers hunt by detecting **electrical activity**: the firing
 of neurons, the spark of a telegraph, the static charge of a Psionic
 in the Open State. They attack anything that moves fast, anything
 that carries significant metal, and anything that dares to fly. *The
@@ -55,7 +56,7 @@ The Circle of Ash believes Stormcallers are the ghosts of a
 pre-human civilization that worshipped the sky. The Dust Vultures
 believe they are the Frontier's immune system, punishing anyone who
 reaches too high. Whatever they are, they are beautiful and
-terrible — blue lightning dancing in the shape of a rider, and your
+terrible: blue lightning dancing in the shape of a rider, and your
 last thought before the lance hits is how gorgeous the storm looks
 from below.
 
@@ -68,13 +69,13 @@ Thunder-Lance at anyone moving quickly or carrying significant metal.
 It uses Static Burst when enemies cluster. Trample is reserved for
 isolated targets or Psionics in the Open State (the electrical
 activity draws it like blood in water). Flash Step allows it to
-reposition constantly — **fighting a Stormcaller is like fighting
+reposition constantly: **fighting a Stormcaller is like fighting
 weather.**
 
 ## Encounter Design
 
 Stormcallers should feel like environmental catastrophes with agency.
-The encounter isn't "fight the boss" — it's "survive the storm."
+The encounter isn't "fight the boss"; it's "survive the storm."
 Encourage players to find shelter, ditch metal gear, and stop moving.
 Direct confrontation requires preparation: non-metal weapons, Bastion
 Soul support, and elevated positions to bring the fight to melee

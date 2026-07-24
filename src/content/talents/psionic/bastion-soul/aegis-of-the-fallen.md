@@ -38,6 +38,6 @@ per Step.
 ## Special
 
 This is the Bastion Soul's tragedy Talent. You become stronger as your
-allies fall. The worse things get, the harder you are to kill — but you're
+allies fall. The worse things get, the harder you are to kill, but you're
 watching the people you swore to protect bleed out around you. The Aegis
 burns brightest when everything is already lost.

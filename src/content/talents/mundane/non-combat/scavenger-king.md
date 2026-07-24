@@ -18,7 +18,7 @@ has_resist: false
 After any combat encounter or when exploring ruins, wreckage, or
 abandoned structures, you may make a **SAVVY + Scrounge** check
 (TN 11). On success, you find one useful item the GM would not have
-otherwise included — a forgotten box of ammunition, a flask of clean
+otherwise included: a forgotten box of ammunition, a flask of clean
 water, a map fragment, a half-used medical kit. The item's Cost Rating
 cannot exceed the location's danger tier (safe settlement = Cost 1,
 dangerous ruins = Cost 2, Veil-touched location = Cost 3).

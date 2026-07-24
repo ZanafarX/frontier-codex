@@ -16,12 +16,12 @@ has_resist: true
 
 ## Effect
 
-Subtly alter a single target's emotional state within Near range — shift
+Subtly alter a single target's emotional state within Near range: shift
 calm to uneasy, irritation to fury, affection to suspicion. The change
 **feels natural to the target**; they rationalize it as their own
 reaction.
 
-This does not compel action — it changes the emotional context in which
+This does not compel action; it changes the emotional context in which
 they make decisions.
 
 ## Resist

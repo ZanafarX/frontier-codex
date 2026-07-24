@@ -31,7 +31,7 @@ For **1 hour**, you can sense the following within Near range:
 
 ## Special
 
-You don't see these things — you feel them. Thin Places feel like cold
+You don't see these things: you feel them. Thin Places feel like cold
 pressure on your skin. Active psionics feel like static electricity.
 Veil-touched objects feel like holding a dead thing that should be alive.
 The sensory information is visceral and reliable.

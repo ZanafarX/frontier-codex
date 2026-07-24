@@ -9,6 +9,7 @@ vitals:
   defense: 8
   armor_rating: 1
   mettle: 0
+  speed: 6
 attacks:
   - name: "Volcanic Pistol"
     pool: 4
@@ -31,7 +32,7 @@ habitat:
 Hired muscle in bowler hats and dusters. Most were dockworkers or
 factory enforcers back East before the Consortium shipped them out
 here with a pistol and a contract they can't read. They fight for
-pay, not loyalty — and the pay isn't good enough to die for.
+pay, not loyalty, and the pay isn't good enough to die for.
 
 Gear: Duster (AR 1), 12 rounds standard, billy club, tin badge, flask
 of rotgut. Speed 6.
@@ -39,7 +40,7 @@ of rotgut. Speed 6.
 ## Tactics
 
 Fight in pairs; one suppresses while the other advances. Flee or
-surrender at half HP. They are not brave — they are *employed.* If
+surrender at half HP. They are not brave; they are *employed.* If
 the party flashes more money than the Consortium is paying, an
 Enforcer might suddenly remember he left the stove on.
 

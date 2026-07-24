@@ -18,7 +18,7 @@ has_resist: true
 
 Give the target within Near range a single instruction of up to one
 sentence. The instruction must be something the target *could*
-rationalize as reasonable — *"Drop your weapon," "Walk outside," "Tell
+rationalize as reasonable: *"Drop your weapon," "Walk outside," "Tell
 me who hired you."*
 
 The target carries out the instruction on their next turn.

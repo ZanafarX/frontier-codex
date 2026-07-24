@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 You gain **+3 Roll Bonus** to resist any attempt to read your emotions,
-intentions, or truthfulness — including Insight skill checks, the
+intentions, or truthfulness, including Insight skill checks, the
 **Surface Read** psionic Talent (Mindweaver R1), and the High-Roller's
 **Read the Room** Calling Talent. Additionally, when you lie, the TN
 for others to detect it with Insight increases by **+2 (TN modifier)**.

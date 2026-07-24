@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 Target one Psionic creature within Near range. Their current Resonance is
-destroyed — they lose whatever Resonance they have built and cannot establish
+destroyed: they lose whatever Resonance they have built and cannot establish
 new Resonance until their next Long Rest.
 
 ## Resist

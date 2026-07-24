@@ -20,7 +20,7 @@ has_resist: false
 Once per session, before any roll is made (yours or another
 character's, PC or NPC, within earshot), declare **"the fix is in."**
 The roll **automatically succeeds with a Margin of 3 (1 Step)**. This
-is not supernatural — it represents you having rigged the situation in
+is not supernatural. It represents you having rigged the situation in
 advance: greased a palm, loosened a bolt, planted misinformation,
 stacked the deck.
 

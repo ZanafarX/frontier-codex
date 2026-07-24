@@ -34,4 +34,4 @@ Success negates the Stun and Strain entirely; failure applies both.
 
 This affects allies as well as enemies. **Your own ongoing effects also end.**
 Per the Tier-Removal Hierarchy, this Talent does NOT affect Rank 5
-Miracles — those continue.
+Miracles: those continue.

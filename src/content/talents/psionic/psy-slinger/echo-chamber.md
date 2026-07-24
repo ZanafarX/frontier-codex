@@ -17,7 +17,7 @@ has_resist: false
 ## Effect
 
 Instantly repeat the last **mundane Ballistics attack** you made this
-scene — same target, same damage calculation, same Roll Modifiers. Use
+scene: same target, same damage calculation, same Roll Modifiers. Use
 your Channeling result as the attack roll. The echo doesn't consume
 ammunition. Tempo is Weapon Base − 1 (minimum 3).
 
@@ -28,9 +28,9 @@ ammunition. Tempo is Weapon Base − 1 (minimum 3).
 ## Limit
 
 Once per scene. Cannot echo another Echo Chamber. **Cannot echo a Talent
-— only mundane Ballistics attacks can be echoed.**
+only mundane Ballistics attacks can be echoed.**
 
 ## Special
 
-The echo-shot is visually distinct — a translucent, screaming duplicate of
+The echo-shot is visually distinct: a translucent, screaming duplicate of
 the original bullet. Witnesses see double for a heartbeat.

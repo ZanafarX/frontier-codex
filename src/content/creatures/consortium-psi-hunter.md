@@ -9,6 +9,7 @@ vitals:
   defense: 10
   armor_rating: 2
   mettle: 2
+  speed: 7
 attacks:
   - name: "Repeater"
     pool: 6
@@ -39,13 +40,13 @@ habitat:
 Specialized agents from the Orvain Psi-Division, trained to locate,
 suppress, and capture rogue Psionics. They wear the black coat and
 carry enough salt to season a lake. The Consortium doesn't want
-Psionics dead — it wants them registered, controlled, and profitable.
+Psionics dead; it wants them registered, controlled, and profitable.
 A Psi-Hunter who brings one in alive gets a month's bonus. One who
 brings in a corpse gets a reprimand.
 
 Psi-Hunters travel in **cells of three**: one tracker, one suppressor,
 one binder. They are coldly professional and deeply unsettling to be
-around — something about the Null-Iron in their bracers makes the air
+around: something about the Null-Iron in their bracers makes the air
 taste metallic and wrong.
 
 Gear: Consortium Vest (AR 2), Null-Iron Bracers (+2 Defense vs.
@@ -54,7 +55,7 @@ Crystal. Speed 7.
 
 ## Tactics
 
-Identify the Psionic first — *always.* Use Psi-Sense to locate them,
+Identify the Psionic first, *always.* Use Psi-Sense to locate them,
 then open with Salt Grenades to disrupt any active Channeling. Close
 to baton range. Capture alive if possible; kill if the target
 manifests Rank 3+ power. They never engage alone.

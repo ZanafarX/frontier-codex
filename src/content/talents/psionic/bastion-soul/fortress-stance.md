@@ -20,7 +20,7 @@ For the rest of the scene, while you remain stationary (no movement, not
 even a Shift):
 
 - You gain **+2 AR** (stacks with worn armor)
-- You gain **+2 Defense** (TN modifier — harder to hit)
+- You gain **+2 Defense** (TN modifier, harder to hit)
 - You cannot be moved, Knocked Prone, or Grappled by any means (physical
   or psionic)
 - Allies within Close range (2m) gain **Light Cover** (+2 TN to be hit) as
@@ -33,6 +33,6 @@ even a Shift):
 
 ## Special
 
-Defense bonus is fixed at +2 — does not scale with Steps. The moment you
+Defense bonus is fixed at +2. It does not scale with Steps. The moment you
 take any voluntary movement (even a Shift), the effect ends. This is a
-commitment — you plant yourself and become a wall.
+commitment: you plant yourself and become a wall.

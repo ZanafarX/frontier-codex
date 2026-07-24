@@ -19,7 +19,7 @@ has_resist: false
 **Trigger:** A creature within Near range successfully casts a psionic Talent.
 
 You absorb some of the Current they channeled. The caster takes **3 Strain**.
-You heal Strain equal to half the amount inflicted (round up — so 2 Strain
+You heal Strain equal to half the amount inflicted (round up: so 2 Strain
 healed at base).
 
 ## Steps

@@ -16,7 +16,7 @@ and the crank turns.
 **Mounting required:** The Gatling cannot be fired from the hip. It must
 be mounted on a tripod, wagon, or fortification.
 
-**Crew:** Optimal use requires two crew — a gunner to aim and crank, and a
+**Crew:** Optimal use requires two crew: a gunner to aim and crank, and a
 loader to feed the belt. Solo operation suffers −2 dice and rate-of-fire
 limitations.
 

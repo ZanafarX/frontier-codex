@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 Touch the target (melee attack roll if unwilling). You implant a
-biological construct inside them — a mass of living tissue that grows,
+biological construct inside them: a mass of living tissue that grows,
 feeds on the host, and obeys your commands. The construct deals **1
 damage per turn** (ignoring AR) and can be commanded to:
 

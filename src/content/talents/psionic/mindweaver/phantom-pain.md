@@ -34,6 +34,6 @@ Strain damage still applies.
 
 ## Special
 
-**Armor provides no protection** — this is a mental attack. Iron Will
+**Armor provides no protection**: this is a mental attack. Iron Will
 (BS R1) grants its standard +2 to resist the Stun (but not the Strain).
 Absorb (BS R2) reduces the Strain by ECHO + IRON.

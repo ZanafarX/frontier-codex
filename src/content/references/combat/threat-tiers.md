@@ -64,7 +64,7 @@ notes:
   - "See encounter-budget.md for combining tiers into balanced encounters."
 ---
 
-Tiers are shorthand for combat weight — they tell you how many of something
+Tiers are shorthand for combat weight: they tell you how many of something
 it takes to threaten a party. Don't mix the tier baseline with creature
 quirks; a Stormcaller is technically a Boss, but it's also a localized
 extinction event.

@@ -18,7 +18,7 @@ has_resist: false
 
 When you hit with a **Two-Handed melee weapon** (Sledgehammer,
 Pickaxe), the target's **AR is reduced by 1** for the rest of the
-scene (the armor is dented, cracked, warped). This effect stacks — two
+scene (the armor is dented, cracked, warped). This effect stacks: two
 Breaker's Swings reduces AR by 2. AR cannot be reduced below 0.
 
 ## Special

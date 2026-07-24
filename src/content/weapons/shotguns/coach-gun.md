@@ -10,6 +10,6 @@ qualities: ["scatter"]
 flavor: "A double-barreled shotgun designed for defending stagecoaches."
 ---
 
-The coach gun is a classic — two barrels, two shots, devastating effect.
+The coach gun is a classic: two barrels, two shots, devastating effect.
 It's the standard scattergun of guards, homesteaders, and anyone who
 values reliability and stopping power over capacity.

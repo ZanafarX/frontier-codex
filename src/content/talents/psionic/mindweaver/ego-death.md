@@ -34,9 +34,9 @@ intact Memories gain +2 to resist** (the Bulwark protects them).
 ## Special
 
 When the effect ends, the target remembers the experience. It is
-**deeply traumatic** — **1 Strain** from the psychic aftershock.
+**deeply traumatic**: **1 Strain** from the psychic aftershock.
 Characters who have experienced Ego Death often develop an obsessive
 need to reaffirm their identity afterward.
 
-Soul Anchor (BS R3) blocks Ego Death entirely — Anchor reaches R1–R3
+Soul Anchor (BS R3) blocks Ego Death entirely; Anchor reaches R1–R3
 identity attacks.

@@ -18,7 +18,7 @@ has_resist: false
 
 Repair an item made of **organic material** (leather, wood, rope, bone,
 sinew) by stimulating its cellular memory. The item returns to **Standard
-Quality** regardless of its current state — torn leather reseals, snapped
+Quality** regardless of its current state: torn leather reseals, snapped
 rope re-braids, cracked wood knits.
 
 ## Steps

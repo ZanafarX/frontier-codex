@@ -10,11 +10,12 @@ stats:
   pool: 7
   mettle: 2
   armor_rating: 0
+  speed: 6
   notes: "Channel pool 7. ECHO 4. HP 9 is below typical Elite range — Mother Elaine is older and physically frail; her power is in the Channeling. Treats Fen-Rot, the biological decay endemic to long-term Fen residents. Charges in service, not Scrip. Debts accumulate. She remembers every one."
 ---
 
 The matriarch of Bellhaven. A powerful Flesh Shaper who treats
-**Fen-Rot** — the slow biological decay that afflicts everyone who
+**Fen-Rot**: the slow biological decay that afflicts everyone who
 breathes the Fen's air long enough.
 
 Mother Elaine charges in service, not Scrip. Debts to her

@@ -32,7 +32,7 @@ Strain that exceeds your cap **converts to HP damage** as normal.
 
 ## Special
 
-This is the Flesh Shaper's most selfless Talent — and potentially their
+This is the Flesh Shaper's most selfless Talent, and potentially their
 most self-destructive. A Flesh Shaper who Mass Mends a full party of
 injured allies may drop themselves to **0 HP** from the Strain overflow.
 They heal everyone else and kill themselves in the process. This happens

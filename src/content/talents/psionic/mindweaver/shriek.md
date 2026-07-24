@@ -33,6 +33,6 @@ ECHO + Resilience vs. your Channeling Sum.
 ## Special
 
 This is one of the Mindweaver's few area-effect combat talents. It's
-**indiscriminate** — warn your allies. Glass and mirrors within the
+**indiscriminate**: warn your allies. Glass and mirrors within the
 area shatter, which may have environmental consequences (silent witness
 in a glass-walled office, mirror in a Veil-touched mansion, etc.).

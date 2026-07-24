@@ -19,7 +19,7 @@ has_resist: true
 Your next shot, if it deals damage to a Psionic target, severs their
 connection to the Current for the rest of the scene. The target cannot
 Channel any Talents, cannot use Resonance, and loses any active psionic
-effects they are maintaining. Their Erosion track does not reset — the
+effects they are maintaining. Their Erosion track does not reset: the
 connection is *cut*, not *healed*.
 
 ## Resist

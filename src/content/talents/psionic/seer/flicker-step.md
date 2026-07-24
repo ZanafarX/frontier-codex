@@ -20,7 +20,7 @@ has_resist: false
 
 You briefly phase out of the present moment. Move up to **half your Speed**
 without triggering Exposure, free attacks, or Overwatch. You appear to
-flicker — present, then not, then present again in a new position.
+flicker: present, then not, then present again in a new position.
 
 ## Steps
 
@@ -30,6 +30,6 @@ Speed).
 ## Special
 
 You cannot attack or interact with objects during the flicker. **This is
-purely repositional.** The sound of your movement is muffled — enemies who
+purely repositional.** The sound of your movement is muffled; enemies who
 weren't looking at you may not notice you've moved. Subject to the Seer
 Reaction Convention.

@@ -39,12 +39,7 @@ attempted.
 
 ## Special
 
-**Reality Anchor (Bastion Soul R4) or higher can remove this** —
+**Reality Anchor (Bastion Soul R4) or higher can remove this**:
 Grounding (R2) cannot reach R4 effects per the Tier-Removal Hierarchy.
 Without a Bastion Soul, removal requires **another Mindweaver** or
 **extreme willpower** (ECHO + Focus **TN 16**, once per day).
-
-# =============================================================================
-# RANK 5 TALENTS (Miracles) — 1 Memory | TN 16
-# Miracles do not have Steps. They are reality-altering by category, not by degree.
-# =============================================================================

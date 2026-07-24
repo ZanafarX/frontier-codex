@@ -14,7 +14,7 @@ stats:
   notes: "Preservation Tank: Rhun's body is suspended in amber fluid inside a reinforced glass-and-iron tank. The tank must be destroyed (24 HP, AR 4) to reach Rhun directly. ECHO 5, Channel 5. Knows all Seer Talents at Rank 4 and below, plus The Rewind (R5 Miracle). Has lost 3 of his 5 Memories — exists in serene incompleteness."
 ---
 
-The oldest living Seer on the Frontier — and possibly the oldest
+The oldest living Seer on the Frontier, and possibly the oldest
 living human, though no one can verify this because no one remembers
 when he was born, including Rhun himself. He exists in a preservation
 tank deep beneath the Lodge at Palomera, suspended in a viscous amber
@@ -28,7 +28,7 @@ and carrying the faint taste of honey and ash.
 
 He is the most powerful Psionic known to be alive, and **he is
 dying.** Slowly, the amber fluid is losing its potency. The Circle
-searches desperately for a way to sustain him — or for someone to
+searches desperately for a way to sustain him, or for someone to
 inherit his visions before the Thread goes dark.
 
 ## Attacks
@@ -45,8 +45,8 @@ inherit his visions before the Thread goes dark.
 ## Traits
 
 - **Preservation Tank:** Rhun's body is suspended in amber fluid inside a reinforced glass-and-iron tank. The tank must be destroyed (24 HP, AR 4) to reach Rhun directly. Rhun inside the tank has only 10 HP and 0 AR.
-- **Telepathic Communication:** Speaks directly into minds within Far range. No language barrier. No need for line of sight — if he knows you're there, he can reach you.
-- **Web of Fate:** Rhun has seen the moment of his death. He cannot be killed before that moment arrives (the GM determines when). Any attack that would kill him before the appointed time automatically misses, deals minimum damage, or is deflected by an improbable coincidence. **Functionally immortal — until it isn't.**
+- **Telepathic Communication:** Speaks directly into minds within Far range. No language barrier. No need for line of sight: if he knows you're there, he can reach you.
+- **Web of Fate:** Rhun has seen the moment of his death. He cannot be killed before that moment arrives (the GM determines when). Any attack that would kill him before the appointed time automatically misses, deals minimum damage, or is deflected by an improbable coincidence. **Functionally immortal, until it isn't.**
 
 ## Abilities
 
@@ -60,7 +60,7 @@ protected by Guardians, Archivists, and the architectural defenses of
 Palomera. If the Lodge is breached, he uses Future Echo to prevent
 killing blows against key defenders, Thread Cascade to empower his
 protectors, and Telekinetic Crush only as a last resort. If his tank
-is breached, he activates **The Rewind** — and in those ten rewound
+is breached, he activates **The Rewind**, and in those ten rewound
 seconds, his Guardians act on his telepathic warning to prevent
 whatever caused the breach.
 

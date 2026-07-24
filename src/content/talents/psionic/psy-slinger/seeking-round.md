@@ -16,7 +16,7 @@ has_resist: false
 
 ## Effect
 
-Your shot actively hunts the target. **Do not roll vs. Defense — the
+Your shot actively hunts the target. **Do not roll vs. Defense: the
 attack automatically hits**, provided the target is within range. The
 attack deals fixed damage equal to your Weapon's **WR**. (You still roll
 Channeling vs. TN 13 to manifest.)

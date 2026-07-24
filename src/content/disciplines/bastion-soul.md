@@ -13,12 +13,12 @@ talent_count_by_rank: [12, 11, 10, 9, 6]
 
 Bastion Souls are living voids in the magical field. Where others channel the
 Current, Bastion Souls absorb and negate it. They are the shield against the
-supernatural — the one person in the room that the Mindweaver cannot touch,
+supernatural: the one person in the room that the Mindweaver cannot touch,
 the wall that the Psy-Slinger cannot shoot through.
 
-## Bastion Soul Reaction Convention — Universal Rule
+## Bastion Soul Reaction Convention: Universal Rule
 
-Bastion Souls are **reactive defenders by nature** — they exist to interrupt,
+Bastion Souls are **reactive defenders by nature**: they exist to interrupt,
 absorb, and negate. To honor this identity without crushing the discipline
 under Mettle taxation, the following rule applies (parallel to the Seer
 Reaction Convention):
@@ -50,11 +50,11 @@ Psionic effects of which Ranks. Cross-references in other discipline artifacts
 | :---- | :---: | :---- |
 | Null Touch | R1 | R1 only |
 | Grounding | R2 | R1–R2 |
-| Soul Anchor | R3 | R1–R3 (defensive — protects target from new effects) |
-| Erasure Field | R3 | R1–R3 (offensive — purges existing effects) |
+| Soul Anchor | R3 | R1–R3 (defensive: protects target from new effects) |
+| Erasure Field | R3 | R1–R3 (offensive: purges existing effects) |
 | Seal the Weave | R3 | All ranks (severs entire connection, but on one target) |
 | Reality Anchor | R4 | All ranks within area |
-| The Citadel | R5 | All ranks (impenetrable barrier — only Talent that blocks R5 effects from outside) |
+| The Citadel | R5 | All ranks (impenetrable barrier: only Talent that blocks R5 effects from outside) |
 
 **Reading the hierarchy:** A Mindweaver R3 effect on an ally cannot be removed
 by Null Touch (R1) or Grounding (R2). The Bastion Soul needs Erasure Field (R3)
@@ -76,7 +76,7 @@ when noting "X can be removed by Erasure Field or higher."
   psychic fortress doesn't help against a hand on your wrist counting your
   pulse.
 - **Attribute caps for transformations.** Titan Form caps IRON at 5 and AR
-  bonus at +5 from the Talent — both below R5 Apotheosis ceilings (Attribute
+  bonus at +5 from the Talent, both below R5 Apotheosis ceilings (Attribute
   6, AR 5). All four cross-discipline transformation Talents (Apex Predator,
   Apotheosis, Titan Form, Chimera Form) follow consistent rank-ceiling logic.
 - **Damage caps locked.** Entropic Shield (max 9 entry damage), Fracture
@@ -88,4 +88,4 @@ when noting "X can be removed by Erasure Field or higher."
   active effects; The Citadel actively *prevents* Miracles from crossing
   the dome.
 - **Consecrate Ground costs HP in addition to Strain.** This is the only
-  Bastion Soul Talent with an HP component — see the cost frontmatter.
+  Bastion Soul Talent with an HP component; see the cost frontmatter.

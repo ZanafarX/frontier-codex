@@ -34,6 +34,6 @@ remain burned. Tension Pool dice are not removed.
 
 ## Special
 
-This is a lesser Rewind — it resets bodies, not time. The world around
+This is a lesser Rewind: it resets bodies, not time. The world around
 you continues normally; only the anchored creatures snap back. Enemies
 who saw you die will be very confused when you reappear.

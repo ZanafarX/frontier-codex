@@ -21,7 +21,7 @@ simultaneously with a single emotional directive: *"Flee this place,"
 "Ignore the strangers passing through," "Turn your anger toward the
 Sheriff."*
 
-The targets act on the emotion naturally — **this is mass Mood Shift,
+The targets act on the emotion naturally: **this is mass Mood Shift,
 not mass compulsion.**
 
 ## Resist

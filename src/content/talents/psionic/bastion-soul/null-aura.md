@@ -27,6 +27,6 @@ of their turns (the null field burns them).
 
 ## Special
 
-The aura is perceptible — Psionics feel a painful static, like needles in
+The aura is perceptible: Psionics feel a painful static, like needles in
 the teeth, when near you. Non-Psionics feel nothing. The aura does not
-affect mundane actions — only Channeling.
+affect mundane actions, only Channeling.

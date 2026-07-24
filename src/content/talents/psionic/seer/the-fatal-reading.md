@@ -26,7 +26,7 @@ Defense for the rest of the scene.
 
 ## Special
 
-This is a **Fear effect** — targets immune to Fear are immune to The
+This is a **Fear effect**: targets immune to Fear are immune to The
 Fatal Reading. The Talent is the Seer's signature debuff: a single,
 specific prophecy that lingers in the target's mind and bleeds into every
 action they take for the rest of the scene.

@@ -27,7 +27,7 @@ Prophecy must be:
 
 The Prophecy becomes a **narrative truth**. The GM must work toward
 fulfilling it, though the *exact circumstances* and *timing* are the
-GM's to determine. The Prophecy will come true — but perhaps not in the
+GM's to determine. The Prophecy will come true, but perhaps not in the
 way anyone expected.
 
 ## Special
@@ -37,4 +37,4 @@ them. They *know* it will happen. This provides **+2 Roll Bonus** to all
 actions taken in direct pursuit of the Prophecy's fulfillment.
 
 However, **attempting to *prevent* your own Prophecy causes 1 Erosion
-per attempt** — the Current punishes contradiction.
+per attempt**: the Current punishes contradiction.

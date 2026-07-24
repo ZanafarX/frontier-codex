@@ -38,7 +38,7 @@ drive_examples:
   - "The day my partner put on his iron and didn't come home."
 ---
 
-You make your living with violence — as a hired gun, a bounty hunter,
+You make your living with violence, as a hired gun, a bounty hunter,
 a sheriff, or a soldier. Your reputation is your resume, and your
 revolver is your reference letter.
 
@@ -49,4 +49,4 @@ revolver is your reference letter.
   Skills (maximum starting Rank 2).
 - **Starting Talents:** Choose **one Gunhand Talent** from the
   Calling-specific list above, plus **one general Mundane Talent**
-  (Combat or Non-Combat list — player's choice).
+  (Combat or Non-Combat list, player's choice).

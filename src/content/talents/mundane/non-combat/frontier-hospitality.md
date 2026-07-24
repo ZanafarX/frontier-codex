@@ -26,4 +26,4 @@ lasts until you or your allies do something to worsen it.
 ## Limit
 
 Cannot affect the same NPC more than once per session. The NPC must
-share the meal willingly — this is not coercion.
+share the meal willingly. This is not coercion.

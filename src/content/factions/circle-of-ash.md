@@ -38,7 +38,7 @@ whispers to you, you take it to the Circle.
 
 ## Organization
 
-The Circle operates in **Lodges** — hidden libraries often built
+The Circle operates in **Lodges**: hidden libraries often built
 inside ruins or beneath massive trees. They communicate through coded
 messages and dreams. Their largest open settlement, Palomera, is
 cloaked in psionic illusions in a hidden valley of the Graven Plain

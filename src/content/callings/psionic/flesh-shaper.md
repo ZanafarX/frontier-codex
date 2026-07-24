@@ -26,7 +26,7 @@ drive_examples:
   - "The first time I felt a body's wrongness — and corrected it."
 ---
 
-You manipulate living tissue — knitting wounds, accelerating healing,
+You manipulate living tissue, knitting wounds, accelerating healing,
 and (if desperate) reshaping flesh into new configurations. Your gift
 is visceral, intimate, and disturbing.
 
@@ -37,8 +37,8 @@ is visceral, intimate, and disturbing.
   Skills (maximum starting Rank 2).
 - **Starting Talents:** You start with **Knit Flesh (Rank 1 Cantrip)**
   automatically. Choose **one general Mundane Talent** (Combat or
-  Non-Combat list — player's choice).
+  Non-Combat list, player's choice).
 - **Starting Erosion:** 1 (the cost of the gift).
 - **Note on starting gear:** The Leather Apron is a narrative item with
-  no AR — it protects your clothes from blood, not your body from
+  no AR: it protects your clothes from blood, not your body from
   bullets.

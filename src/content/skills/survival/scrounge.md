@@ -15,5 +15,5 @@ example_uses:
 ---
 
 Scrounge covers locating useful items in wreckage, ruins, or refuse. It's
-the skill of the desperate — those who survive by finding value where
+the skill of the desperate: those who survive by finding value where
 others see trash.

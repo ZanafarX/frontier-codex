@@ -33,5 +33,5 @@ You vanish and reappear instantly at any location you can see within
 
 You can bring **one willing, touched creature** with you at +1 Tempo
 (Tempo 4 instead of 3). Anchor Shot (Psy-Slinger R3) and Weight of
-Reality (Bastion Soul R2) can prevent Thread-Walker from initiating —
+Reality (Bastion Soul R2) can prevent Thread-Walker from initiating:
 the silver thread won't take you anywhere.

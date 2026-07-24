@@ -19,7 +19,7 @@ has_resist: false
 When you need to flee a location (alarm raised, cover blown, building
 collapsing), you gain **+3 Roll Bonus** to all Athletics and Stealth
 checks for the next **5 minutes**. During this time, you can retrace
-your entry route from memory perfectly — no Navigation check required,
+your entry route from memory perfectly: no Navigation check required,
 even in complex structures. Locked doors you already picked remain
 open.
 

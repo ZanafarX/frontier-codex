@@ -38,4 +38,4 @@ notes:
 
 Quality is the most common Roll Bonus a mundane character will encounter.
 A Masterwork firearm in the hands of an Expert (Specialization +1) gives
-+3 to every shot — enough to make impossible TNs achievable.
++3 to every shot: enough to make impossible TNs achievable.

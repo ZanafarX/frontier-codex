@@ -8,7 +8,7 @@ category: "resource"
 tags: ["psionic", "permanent", "cost", "core-mechanic"]
 ---
 
-Erosion is the long-term cost of Psionic power — the *permanent*
+Erosion is the long-term cost of Psionic power: the *permanent*
 damage that accumulates with every Rank 3-4 Talent cast, every
 Backlash that lands two 1s, every hour spent in a Thin Place without
 protection. Unlike Strain, Erosion does **not** heal from rest.
@@ -21,7 +21,7 @@ protection. Unlike Strain, Erosion does **not** heal from rest.
 | 4 | 9 |
 | 5 | 10 |
 
-The Erosion track produces **Veil Bleed** — physical and psychological
+The Erosion track produces **Veil Bleed**: physical and psychological
 symptoms that worsen as Erosion accumulates (see the **Veil Bleed**
 keyword). At the four stages, Erosion imposes increasing penalties to
 Awareness and social checks.
@@ -42,5 +42,5 @@ Recovery methods (all during Downtime):
 | Circle Sanctuary | 3 (rare access) |
 
 Non-Psionic characters can still accumulate Erosion from Backlash, Thin
-Place exposure, or witnessing supernatural horror — they don't channel,
+Place exposure, or witnessing supernatural horror; they don't channel,
 but the Current can still reach them.

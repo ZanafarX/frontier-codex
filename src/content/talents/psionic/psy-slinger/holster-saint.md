@@ -20,7 +20,7 @@ For the rest of the scene, your Bonded Focus firearm cannot be disarmed,
 stolen, or knocked from your grip. If separated from you, it returns to
 your hand at the start of your next turn (no action required, any range up
 to Far). Additionally, while Holster Saint is active, your **Draw Weapon**
-action (normally Tempo 2) is reduced to **Tempo 0** — you can draw and act
+action (normally Tempo 2) is reduced to **Tempo 0**: you can draw and act
 in the same Tick.
 
 ## Steps

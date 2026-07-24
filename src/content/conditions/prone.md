@@ -22,6 +22,6 @@ viable tactic for snipers and entrenched riflemen, while involuntary
 Prone (from Knockdown attacks) is uniformly bad for melee-focused
 characters.
 
-Standing back up costs **Tempo 3** and triggers **Exposed** — you're
+Standing back up costs **Tempo 3** and triggers **Exposed**: you're
 upright and visible before your defenses are back. The interplay
 between Prone and Exposed creates real cost for the standing-up turn.

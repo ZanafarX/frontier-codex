@@ -18,7 +18,7 @@ has_resist: false
 
 For the rest of the scene, your ranged attacks ignore all Range Band
 penalties and all Cover modifiers. You fire from the hip, from behind your
-back, around corners — the bullets find their targets through paths that
+back, around corners: the bullets find their targets through paths that
 defy geometry. Additionally, your attacks do not reveal your position to
 enemies who cannot see you directly.
 
@@ -28,5 +28,5 @@ Per Step, your attacks also ignore the Engaged condition's Pool Penalty.
 
 ## Special
 
-This does not grant auto-hits or ignore Defense — the target can still
+This does not grant auto-hits or ignore Defense: the target can still
 dodge. It removes environmental obstacles between you and the target.

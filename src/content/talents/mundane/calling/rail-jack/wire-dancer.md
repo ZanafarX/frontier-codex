@@ -24,5 +24,5 @@ half. Falls you *do* take deal **half damage** (you know how to roll).
 ## Special
 
 You can move across **rooftops, scaffolding, and rail infrastructure**
-at full Speed without Stealth penalties — you know where the quiet
+at full Speed without Stealth penalties: you know where the quiet
 footholds are.

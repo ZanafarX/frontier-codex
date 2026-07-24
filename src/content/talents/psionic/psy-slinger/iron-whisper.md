@@ -18,7 +18,7 @@ has_resist: false
 
 For the next minute, you gain **+2 Roll Bonus** to Awareness checks to
 detect hidden or concealed creatures within your weapon's effective range.
-Your gun subtly pulls toward threats — a faint tug in the wrist.
+Your gun subtly pulls toward threats: a faint tug in the wrist.
 
 ## Steps
 

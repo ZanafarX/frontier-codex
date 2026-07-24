@@ -11,11 +11,12 @@ stats:
   pool: 7
   mettle: 2
   armor_rating: 2
+  speed: 6
   notes: "Wears a partial Hardsuit (AR 2) at all times. The brand on his forearm and the armor on his body are calling cards. Runs Greystone like a military base. The Ironbrand affiliation is canonical: the Anvil Brand cannot be removed without taking the arm."
 ---
 
 Mayor Krell is a retired Ironbrand who runs Greystone like a military
-base. He wears a partial Hardsuit at all times — the brand on his
+base. He wears a partial Hardsuit at all times: the brand on his
 forearm and the iron plates on his shoulders are simultaneously a
 calling card and an enforcement mechanism. Greystone's defenses
 follow Ironbrand doctrine; the guard rotations are scheduled in
@@ -37,7 +38,7 @@ the drills.
 ## Plot Anchor
 
 The "Sabotage" plot hook (winch cable snaps, sandstorm and Ashborn
-army approaching) lands on Krell. His response defines the encounter
-— and his decision-making under that pressure is the GM's window into
+army approaching) lands on Krell. His response defines the encounter,
+and his decision-making under that pressure is the GM's window into
 whether he's still the soldier he was or has softened into the mayor
 he plays at.

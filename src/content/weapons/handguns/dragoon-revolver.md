@@ -10,7 +10,7 @@ qualities: ["breaker"]
 flavor: "A heavy cavalry pistol designed to drop horses and armored targets."
 ---
 
-The Dragoon is a monster — a massive revolver originally designed for
+The Dragoon is a monster, a massive revolver originally designed for
 mounted troops who needed to punch through enemy cavalry. It kicks like a
 mule and requires significant strength to control.
 

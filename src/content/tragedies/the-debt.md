@@ -7,6 +7,6 @@ scar_memory_examples:
   - "My father's hands shaking as he handed over the deed."
 ---
 
-Your family owed more than they could pay. The Consortium took everything —
+Your family owed more than they could pay. The Consortium took everything:
 your home, your future, maybe your kin themselves. You learned young that
 in this world, everything has a price, and someone is always collecting.

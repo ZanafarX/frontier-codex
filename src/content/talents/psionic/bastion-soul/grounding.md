@@ -32,5 +32,5 @@ and your cost is still spent.
 ## Special
 
 Automatically succeeds against effects with no caster (environmental magic,
-ancient wards with no living creator). **Cannot affect Rank 3+ effects** —
+ancient wards with no living creator). **Cannot affect Rank 3+ effects**:
 see the Tier-Removal Hierarchy in the discipline overview.

@@ -19,7 +19,7 @@ has_resist: false
 
 You can throw explosives at **Far range** instead of Near (normal
 thrown weapon maximum). When you throw an explosive, you may **delay
-the detonation by up to 3 Ticks** — the charge lands and detonates
+the detonation by up to 3 Ticks**: the charge lands and detonates
 later, allowing you to bounce it around corners or time it with ally
 movements.
 

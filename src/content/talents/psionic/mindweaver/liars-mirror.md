@@ -24,7 +24,7 @@ The illusion is **visual only** and doesn't hold up to physical
 inspection.
 
 At your option, you may instead appear as a **specific person the
-observer has met** (behavior differences may reveal the deception —
+observer has met** (behavior differences may reveal the deception;
 Insight vs. your Channeling Sum to notice).
 
 **Duration:** Until you end it or take damage.

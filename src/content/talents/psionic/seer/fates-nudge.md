@@ -18,7 +18,7 @@ has_resist: false
 
 **Trigger:** You or an adjacent ally would be hit by an attack.
 
-A tiny, improbable coincidence occurs — the target stumbles, a gust of
+A tiny, improbable coincidence occurs: the target stumbles, a gust of
 wind shifts the bullet, a loose board breaks underfoot. The attack's
 **Margin is reduced by 2** (potentially turning a hit into a miss, or
 reducing Steps dealt).
@@ -29,7 +29,7 @@ reducing Steps dealt).
 
 ## Special
 
-This does not change the attacker's roll — it changes circumstance. The
+This does not change the attacker's roll; it changes circumstance. The
 GM should describe the coincidence. **Overuse attracts attention from the
-Current** — the Tension Pool gains +1 die if Fate's Nudge is used more
+Current**: the Tension Pool gains +1 die if Fate's Nudge is used more
 than twice in a scene. Subject to the Seer Reaction Convention.

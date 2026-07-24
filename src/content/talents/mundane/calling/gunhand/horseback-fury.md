@@ -26,5 +26,5 @@ unmounted targets (per Ch.5 §XIII) and additionally:
 
 ## Special
 
-When your mount is killed or panics, you may dismount cleanly — no
+When your mount is killed or panics, you may dismount cleanly: no
 QUICK + Ride check required, no falling damage.

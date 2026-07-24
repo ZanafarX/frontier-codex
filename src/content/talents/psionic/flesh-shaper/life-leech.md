@@ -25,12 +25,12 @@ of half.
 
 ## Steps
 
-+1 damage per Step (maximum **9 damage** at full Steps — R4
++1 damage per Step (maximum **9 damage** at full Steps: R4
 single-target ceiling).
 
 ## Special
 
 Only works on **living creatures**. Doesn't work on undead, constructs,
-or spirits. Veil-Born vary — those with biological forms (Skin-Changers,
+or spirits. Veil-Born vary: those with biological forms (Skin-Changers,
 Threadrippers in material state) are valid targets; Ethereal Veil-Born
 are not.

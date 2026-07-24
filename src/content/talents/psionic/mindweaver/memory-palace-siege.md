@@ -18,7 +18,7 @@ has_resist: true
 
 Target one creature within Near range. You assault their Memory Palace
 directly. The target experiences all five of their Core Memories
-simultaneously — distorted, corrupted, and screaming.
+simultaneously: distorted, corrupted, and screaming.
 
 ## Resist
 
@@ -40,7 +40,7 @@ exceed the target's total Memory count).
 
 This does **NOT burn Memories permanently** (that's Memory Hole's
 territory at Rank 5). It overwhelms them. The target's sense of self is
-intact but shaken — like a house that survived an earthquake but has
+intact but shaken, like a house that survived an earthquake but has
 cracked foundations.
 
 Bulwark of Memory (BS R3) protects a single Core Memory from this

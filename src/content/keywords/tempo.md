@@ -9,8 +9,8 @@ tags: ["combat", "the-count", "core-mechanic"]
 ---
 
 Tempo is the tactical currency of *The Veil & Lead* combat. Every
-action — drawing a weapon, firing a shot, casting a Talent, taking
-cover — has a Tempo value that determines how far it pushes you down
+action (drawing a weapon, firing a shot, casting a Talent, taking
+cover) has a Tempo value that determines how far it pushes you down
 the timeline.
 
 **After acting: Current Tick + Tempo = Your new position on The Count.**
@@ -34,7 +34,7 @@ Common Tempo values:
 The Tempo tradeoff is the heart of combat design: a fast revolver
 shooter can fire three times in the same window a heavy-weapons
 specialist needs to fire once. Most **Fast Actions** (Tempo 2-3) also
-trigger the **Exposed** condition — speed has a defensive cost.
+trigger the **Exposed** condition: speed has a defensive cost.
 
 Tempo can be a number or a string in stat blocks: numbers for fixed
 Tempos, strings for special cases like `"1 minute (ritual)"`,

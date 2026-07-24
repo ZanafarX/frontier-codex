@@ -21,7 +21,7 @@ capability. For the rest of the scene, you are no longer human:
 
 - All physical Attributes (**IRON, GRIT, QUICK**) become **6** (one
   beyond human maximum)
-- **AR 5** (natural armor — biological plating, reinforced skeleton)
+- **AR 5** (natural armor, biological plating, reinforced skeleton)
 - **Regenerate 3 HP** per turn
 - **Immune** to Grievous Wounds, Fear, Suppressed, Blinded, Prone
 - Your senses extend to **Extreme range** (tremorsense, thermal vision,
@@ -40,11 +40,11 @@ are **Downed automatically**. An ally must stabilize you with
 
 You are a biological weapon. You stand 9 feet tall, your skin is
 armored chitin, your hands are scalpels. You cannot speak human
-language (your vocal cords have restructured — you communicate through
+language (your vocal cords have restructured; you communicate through
 subsonic vibrations that other Flesh Shapers can interpret). When the
 transformation ends and you return to human form, you don't quite fit
 in your own skin for days. You forget the Memory, but your body
-remembers what it was — and it wants to go back.
+remembers what it was, and it wants to go back.
 
 Active form can be ended by Reality Anchor (BS R4) or The Citadel
 (BS R5).

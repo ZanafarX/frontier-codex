@@ -9,6 +9,7 @@ vitals:
   defense: 8
   armor_rating: 2
   mettle: 0
+  speed: 9
 attacks:
   - name: "Iron Jaws"
     pool: 5
@@ -47,7 +48,7 @@ cannot be reasoned with, bribed, or intimidated. They are machines,
 and machines do not get tired, do not get distracted, and do not feel
 sympathy.
 
-The whirring of their clockwork motors is audible from a block away —
+The whirring of their clockwork motors is audible from a block away:
 a rhythmic clicking that Consortium citizens learn to dread. The
 Hounds are manufactured in Factory 7 in Orvain's Smog-Bottoms.
 **Rumors persist that some Hounds have begun operating without
@@ -58,12 +59,12 @@ assigned. The Consortium denies this. Speed 9.
 
 Patrol assigned route. On detecting a target, sound Alarm, then
 Tackle to Knockdown, then Iron Jaws to restrain. Hold until Enforcers
-arrive. If multiple Hounds are deployed, they flank — one drives the
+arrive. If multiple Hounds are deployed, they flank: one drives the
 target toward the other.
 
 ## Encounter Design
 
 Clockwork Hounds are *pursuit* encounters. The party has done
 something the Consortium disapproves of, and the Hounds are on their
-trail. The clicking grows louder. The whistle sounds. Now run — or
+trail. The clicking grows louder. The whistle sounds. Now run, or
 find a river.

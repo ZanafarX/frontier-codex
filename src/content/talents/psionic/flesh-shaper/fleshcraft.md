@@ -28,7 +28,7 @@ The change is **permanent until reshaped again**.
 
 ## Steps
 
-+1 additional alteration per Step (in the same session — voice change,
++1 additional alteration per Step (in the same session: voice change,
 apparent age, sex characteristics, etc.).
 
 ## Requirement
@@ -38,6 +38,6 @@ or Organ Forge territory).
 
 ## Special
 
-Fleshcraft is also the only Talent that can defeat Vital Read — a Flesh
+Fleshcraft is also the only Talent that can defeat Vital Read: a Flesh
 Shaper who has Fleshcrafted their autonomic responses can lie without
 their body betraying them.

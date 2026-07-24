@@ -28,5 +28,5 @@ further action).
 
 ## Special
 
-Does not deal damage. Area denial through psychic terror — the targets
+Does not deal damage. Area denial through psychic terror: the targets
 *feel* the bullets tracking them. Uses standard Suppression rules.

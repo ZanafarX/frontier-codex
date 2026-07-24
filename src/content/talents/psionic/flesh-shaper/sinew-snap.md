@@ -17,7 +17,7 @@ has_resist: true
 ## Effect
 
 Target one creature within Near range. They must roll Resist (see below)
-or **drop what they're holding**. The dropped item lands at their feet —
+or **drop what they're holding**. The dropped item lands at their feet,
 not thrown, not destroyed, just released as the hand spasms involuntarily.
 
 Targets who fail also suffer **−2 dice** (Pool Penalty) to their next
@@ -33,6 +33,6 @@ GRIT + Resilience vs. your Channeling Sum.
 
 ## Special
 
-This is a targeted **Disarm that bypasses grip strength** — you're not
+This is a targeted **Disarm that bypasses grip strength**: you're not
 overpowering their hand, you're twitching the tendons. Creatures without
 tendons (Veil-Born, constructs, Ethereal entities) are **immune**.

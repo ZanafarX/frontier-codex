@@ -10,7 +10,7 @@ tags: ["cosmology", "psionic", "veil", "core-lore"]
 ---
 
 The Current is the source. It is the raw, chaotic energy of whatever
-dimension lies beyond the Veil — and it existed before the Rupture
+dimension lies beyond the Veil, and it existed before the Rupture
 tore holes in the barrier that once contained it. Now it leaks into
 our world constantly, pooling in **Thin Places**, corrupting the land,
 warping the fauna, and offering power to those desperate or foolish
@@ -18,19 +18,19 @@ enough to reach for it.
 
 The Current is **responsive to thought and emotion**, but it has **no
 morality.** It creates Fen-Wraiths as easily as it heals a wound. It
-doesn't care about your intentions — only about the opening you
+doesn't care about your intentions, only about the opening you
 provide.
 
 **Practical effects:**
 
 - **Psionics** channel the Current through a Focus to produce
   supernatural effects (see the five Disciplines).
-- **Veil-Born** creatures are spawned by Current-saturated reality —
+- **Veil-Born** creatures are spawned by Current-saturated reality:
   Hollow Men, Fen-Wraiths, Stormcallers, all the things that crawl
   through the wound.
 - **Erosion** is the Current's tax on those who touch it; touching it
   is touching radiation that hates you.
-- **Thin Places** are where the Current pools — Ojo del Diablo, the
+- **Thin Places** are where the Current pools: Ojo del Diablo, the
   Fen of the Fallen, the Red Mother's Maw, the cracked landmarks
   scattered across the Killing Grounds.
 - **Salt** disrupts the Current. **Iron** grounds it. These are the

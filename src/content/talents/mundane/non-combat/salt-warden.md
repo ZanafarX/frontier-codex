@@ -26,4 +26,4 @@ beyond the normal effect (preventing spirit intrusion):
 - Without a salt circle, Strain does not recover during rest. Your
   enhanced circle additionally allows **1 point of Erosion recovery**
   during a Long Rest inside it (normally Erosion does not recover from
-  rest at all — this is the only mundane method).
+  rest at all; this is the only mundane method).

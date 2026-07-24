@@ -27,7 +27,7 @@ drive_examples:
 ---
 
 You touch minds, plant suggestions, and weave illusions. You are
-feared more than any gunfighter — because bullets can be dodged, but
+feared more than any gunfighter, because bullets can be dodged, but
 how do you dodge a thought?
 
 ## Starting Choices
@@ -37,7 +37,7 @@ how do you dodge a thought?
   Skills (maximum starting Rank 2).
 - **Starting Talents:** You start with **The Nudge (Rank 1 Cantrip)**
   automatically. Choose **one general Mundane Talent** (Combat or
-  Non-Combat list — player's choice).
+  Non-Combat list, player's choice).
 - **Starting Erosion:** 1 (the cost of the gift).
 - **Note on starting gear:** The Concealed Knife mechanically matches
   the Bowie Knife stat block (WR 2, Tempo 3) but is carried hidden

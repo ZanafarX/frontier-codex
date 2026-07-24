@@ -7,7 +7,7 @@ is_combatant: false
 ---
 
 Ruler of Orvain. **Hasn't been seen in a year.** Orders arrive via
-pneumatic tube — signed in his hand, sealed with his ring, but
+pneumatic tube, signed in his hand, sealed with his ring, but
 witnessed by no one.
 
 The prevailing rumor, quietly circulating in the Dregs and loudly
@@ -35,5 +35,5 @@ and Thorne's condition is left to the GM.
 ## Plot Hook Anchor
 
 The "Defector" plot hook (engineer fleeing with Ghost-Engine
-blueprints) is the canonical way into the Tower. Whoever — or whatever
-— Thorne is now waits at the top of the stairs.
+blueprints) is the canonical way into the Tower. Whoever, or whatever,
+Thorne is now waits at the top of the stairs.

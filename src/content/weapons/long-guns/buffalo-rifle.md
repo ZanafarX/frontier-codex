@@ -11,5 +11,5 @@ flavor: "A single-shot breech-loader designed to kill the largest game on the co
 ---
 
 The buffalo rifle fires a massive cartridge capable of dropping a bull at
-extreme range — or punching through cover that would stop lesser rounds.
+extreme range, or punching through cover that would stop lesser rounds.
 It's slow to reload and punishing to fire, but nothing else hits as hard.

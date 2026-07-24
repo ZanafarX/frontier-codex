@@ -9,6 +9,7 @@ vitals:
   defense: 9
   armor_rating: 1
   mettle: 1
+  speed: 7
 attacks:
   - name: "Glaive"
     pool: 5
@@ -36,10 +37,10 @@ Warrior-monks sworn to protect the Lodges, the Archivists, and the
 secrets the Circle guards. Guardians are recruited from former
 soldiers, reformed bandits, and anyone else with combat experience
 and a reason to believe in the Circle's mission. They undergo a
-ritual that grants them **limited psionic resistance** — a useful
+ritual that grants them **limited psionic resistance**, a useful
 trait when your charges regularly lose control of their experiments.
 
-Guardians carry glaives — long-hafted weapons that let them keep
+Guardians carry glaives: long-hafted weapons that let them keep
 threats at arm's length. The reach is tactical: protect the scholars,
 maintain distance, control the space.
 
@@ -51,7 +52,7 @@ pouch. Speed 7.
 Form a defensive line between threats and scholars. Use glaive Reach
 to keep enemies from closing. Throwing Crystals are used against
 enemy Psionics to disrupt concentration. They fight in disciplined
-silence — no war cries, no threats. It's unsettling.
+silence: no war cries, no threats. It's unsettling.
 
 ## Morale
 

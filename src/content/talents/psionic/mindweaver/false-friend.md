@@ -16,7 +16,7 @@ has_resist: true
 
 ## Effect
 
-One target within Near range perceives you as a **trusted ally** — a
+One target within Near range perceives you as a **trusted ally**, a
 friend, colleague, or authority figure. They will not attack you, will
 share casual information, and will allow you to accompany them.
 
@@ -36,7 +36,7 @@ but can't explain why.
 
 ## Special
 
-Pairs naturally with Liar's Mirror (R1) or mundane disguise — False
+Pairs naturally with Liar's Mirror (R1) or mundane disguise: False
 Friend handles the trust dimension; visual disguise handles the
 identity. Combined, they let a Mindweaver walk into a fortified
 compound as a "delivery rider" the guards swear they recognize.

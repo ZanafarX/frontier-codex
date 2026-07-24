@@ -14,13 +14,13 @@ cleared_by:
 severity: "moderate"
 ---
 
-Encumbered represents the moment when load becomes a liability — when
+Encumbered represents the moment when load becomes a liability: when
 the weight on your back interferes with your ability to fight, run, or
 sneak. The exact threshold for what counts as "encumbered" is loose by
 design; the GM is the final arbiter of when a load crosses into
 penalty territory. Carrying a wounded ally, hauling a footlocker out of
 a burning building, wearing the Ironbrand Hardsuit (which has its own
-Bulky property) — all of these are clearly Encumbered.
+Bulky property), all of these are clearly Encumbered.
 
 The Muck-Raker talent **Mule's Back** specifically lifts this
 threshold (carry 2× normal load before Encumbered triggers, plus
