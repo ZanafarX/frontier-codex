@@ -157,6 +157,9 @@ const pageDescription =
           <div class="creature-stats__cell">
             <dt>Mettle</dt><dd>{entry.data.vitals.mettle}</dd>
           </div>
+		  <div class="creature-stats__cell">
+            <dt>Speed</dt><dd>{entry.data.vitals.speed}</dd>
+          </div>
           {typeof entry.data.vitals.strain_cap === 'number' && (
             <div class="creature-stats__cell">
               <dt>Strain Cap</dt><dd>{entry.data.vitals.strain_cap}</dd>
