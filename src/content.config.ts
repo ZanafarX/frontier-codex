@@ -417,6 +417,7 @@ const creatures = defineCollection({
       armor_rating: z.number().int().default(0),
       mettle: z.number().int().default(0),
       strain_cap: z.number().int().optional(),
+      speed: z.number().int().optional(),
     }),
     attributes: z.object({
       iron: z.number().int().optional(),
@@ -455,6 +456,7 @@ const npcs = defineCollection({
       pool: z.number().int(),
       mettle: z.number().int().default(0),
       armor_rating: z.number().int().default(0),
+      speed: z.number().int().optional(),
       notes: z.string().optional(),
     }).optional(),
   }),

@@ -8,7 +8,7 @@
 //   1. Back-link "← Bestiary"
 //   2. Header: name (h1), type + tier + faction + habitat badges
 //   3. Custom creature stat block:
-//        Row 1: HP · Defense · AR · Mettle · (Strain Cap when present)
+//        Row 1: HP · Defense · AR · Mettle · (Speed when present) · (Strain Cap when present)
 //        Row 2: only the deviating attributes (IRON/GRIT/QUICK/SAVVY/SWAY/ECHO)
 //   4. Attacks (when any): table in the listing-table chrome
 //   5. Traits (when any): bold-prefix-parsed list
@@ -157,9 +157,11 @@ const pageDescription =
           <div class="creature-stats__cell">
             <dt>Mettle</dt><dd>{entry.data.vitals.mettle}</dd>
           </div>
-		  <div class="creature-stats__cell">
-            <dt>Speed</dt><dd>{entry.data.vitals.speed}</dd>
-          </div>
+          {typeof entry.data.vitals.speed === 'number' && (
+            <div class="creature-stats__cell">
+              <dt>Speed</dt><dd>{entry.data.vitals.speed}</dd>
+            </div>
+          )}
           {typeof entry.data.vitals.strain_cap === 'number' && (
             <div class="creature-stats__cell">
               <dt>Strain Cap</dt><dd>{entry.data.vitals.strain_cap}</dd>
