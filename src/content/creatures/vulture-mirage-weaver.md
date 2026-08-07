@@ -42,7 +42,7 @@ do, people listen, because a Mirage-Weaver who talks to *you* is a
 Mirage-Weaver who isn't inside your head.
 
 Gear: Crystal prism (Focus), layered robes, waterskin, pouch of
-hallucinogenic dust. Speed 6.
+hallucinogenic dust.
 
 ## Tactics
 

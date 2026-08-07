@@ -50,8 +50,6 @@ operating on the Frontier at any time. Each one is a slow-motion
 catastrophe: by the time you realize someone in your settlement has
 been replaced, the Skin-Changer has already chosen its next victim.
 
-Speed 8.
-
 ## Tactics
 
 **Infiltrate. Isolate. Replace.** A Skin-Changer never fights openly

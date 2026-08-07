@@ -46,8 +46,6 @@ Erosion) and their skin is cool to the touch. They are
 simultaneously the Circle's greatest asset and its greatest
 vulnerability.
 
-Speed 5.
-
 ## Tactics
 
 The Archivist never engages in melee. They use Thread-Walker to

@@ -42,7 +42,7 @@ through fire and been found worthy. The scars are sometimes
 self-inflicted during initiation.
 
 Gear: Boiler Plate (AR 1, Hardened), holy symbol (iron, +1 Mental
-Defense), flask of oil, 10 salt shells, fire-starter kit. Speed 6.
+Defense), flask of oil, 10 salt shells, fire-starter kit.
 
 ## Tactics
 

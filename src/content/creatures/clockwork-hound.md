@@ -53,7 +53,7 @@ a rhythmic clicking that Consortium citizens learn to dread. The
 Hounds are manufactured in Factory 7 in Orvain's Smog-Bottoms.
 **Rumors persist that some Hounds have begun operating without
 instructions**, running on empty cylinders, patrolling routes no one
-assigned. The Consortium denies this. Speed 9.
+assigned. The Consortium denies this.
 
 ## Tactics
 

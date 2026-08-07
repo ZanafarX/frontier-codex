@@ -55,7 +55,7 @@ Bone Sentinels stand motionless among the bone-hills, indistinguishable
 from the landscape until they move. The first warning is a sound like
 an avalanche of skulls.
 
-Speed 5. Note: `creature_type` is "construct" rather than "veil-born"
+Note: `creature_type` is "construct" rather than "veil-born"
 per the Ancient trait: the Sentinels predate the Veil.
 
 ## Tactics

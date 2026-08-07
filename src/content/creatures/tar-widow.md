@@ -47,8 +47,6 @@ smell that is slightly stronger than the ambient Ash Belt stink.
 Miners and travelers learn to prod pools with sticks before crossing.
 *The Widows have learned to wait for the second footstep.*
 
-Speed 8.
-
 ## Tactics
 
 Wait submerged until prey steps into or near the pool. Tar Spit to

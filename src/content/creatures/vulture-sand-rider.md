@@ -43,7 +43,7 @@ scavenged parts and decorated with clan totems. **Damaging one is an
 insult worse than murder.**
 
 Gear: Sand-Skiff (Speed: Very Fast, Defense 8, HP 6), goggles (immune
-to Blinding from sand/light), rope, grappling hook. Speed 8.
+to Blinding from sand/light), rope, grappling hook.
 
 ## Tactics
 

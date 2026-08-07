@@ -39,7 +39,7 @@ them first. **Water is their great weakness.** A full canteen thrown
 at an Ashborn collapses it instantly, but on the Scorchveil, water
 is life, and spending it on a dust-ghost is a terrible trade.
 
-Speed 10. Classified as Minion (Swarm); see Swarm trait.
+Classified as Minion (Swarm); see Swarm trait.
 
 ## Tactics
 

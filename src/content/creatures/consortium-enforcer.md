@@ -35,7 +35,7 @@ here with a pistol and a contract they can't read. They fight for
 pay, not loyalty, and the pay isn't good enough to die for.
 
 Gear: Duster (AR 1), 12 rounds standard, billy club, tin badge, flask
-of rotgut. Speed 6.
+of rotgut.
 
 ## Tactics
 

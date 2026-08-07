@@ -60,8 +60,6 @@ terrible: blue lightning dancing in the shape of a rider, and your
 last thought before the lance hits is how gorgeous the storm looks
 from below.
 
-Speed 16.
-
 ## Tactics
 
 Hunt from above. The Stormcaller circles at Far range, firing

@@ -41,7 +41,7 @@ This is what makes them dangerous and what makes killing them haunt
 you.
 
 Gear: Torch, 3 salt pouches, holy symbol (wooden), threadbare robes,
-letter from home. Speed 7.
+letter from home.
 
 ## Tactics
 

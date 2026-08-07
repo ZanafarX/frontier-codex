@@ -45,7 +45,6 @@ duty," because every burning needs witnesses to spread the word.
 
 Gear: Boiler Plate (AR 1, Hardened), Holy Vestments (+2 Mental
 Defense), Salt Grenades ×2, journal of confessions, iron manacles.
-Speed 7.
 
 ## Tactics
 

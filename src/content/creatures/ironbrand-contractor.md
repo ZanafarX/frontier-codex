@@ -40,7 +40,7 @@ their oath ceremony. It cannot be forged. It cannot be removed
 without taking the arm.
 
 Gear: Boiler Plate (AR 1, Hardened), binoculars, signal flares ×2,
-ration pack, contract badge. Speed 7.
+ration pack, contract badge.
 
 ## Tactics
 

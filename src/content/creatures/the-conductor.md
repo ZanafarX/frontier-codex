@@ -42,7 +42,7 @@ this means varies: some are found outside the train, miles from the
 track, with no memory of leaving. Some are found in the cargo hold,
 aged years in minutes. Some are not found at all.
 
-Speed 7. The Conductor makes no conventional attacks: the
+The Conductor makes no conventional attacks: the
 `attacks[]` array is intentionally empty.
 
 ## Tactics

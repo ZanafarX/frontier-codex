@@ -50,8 +50,6 @@ The worst encounters are the ones where the Dead are recognizable:
 the drowned child from Bellhaven, the ferryman who capsized last
 month, the mother who walked into the swamp and didn't come back.
 
-Speed 4 (on land); full Speed in water.
-
 ## Tactics
 
 Emerge from water in groups of 3–8. Shamble toward the nearest living

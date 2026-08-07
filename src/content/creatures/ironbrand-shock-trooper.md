@@ -45,7 +45,7 @@ investment.
 
 Gear: Ironbrand Hardsuit (AR 3, Bulky: −1 Defense, −1 QUICK for
 Tempo purposes), integrated ammunition feed (200 rounds), emergency
-release bolts. Speed 5.
+release bolts.
 
 ## Tactics
 

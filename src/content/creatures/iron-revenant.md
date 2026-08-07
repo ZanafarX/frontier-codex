@@ -58,8 +58,6 @@ lost three repair crews to a single Revenant near the Kessick
 junction. They now route trains around the haunted stretch, a
 detour that adds two days and considerable cost.
 
-Speed 6.
-
 ## Tactics
 
 The Revenant uses Magnetic Pull to drag metal-wielding enemies toward

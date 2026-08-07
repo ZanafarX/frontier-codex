@@ -37,7 +37,7 @@ with one hand on their repeater and wake at the sound of anything
 heavier than a rat.
 
 Gear: Boiler Plate (AR 1, Hardened), 30 rounds standard, 2 flares,
-signal whistle, ration tin. Speed 7.
+signal whistle, ration tin.
 
 ## Tactics
 

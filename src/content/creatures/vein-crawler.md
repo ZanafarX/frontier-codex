@@ -48,7 +48,7 @@ The Consortium considers infested miners "compromised assets" and
 quarantines them in sealed wards that the Redeemers would very much
 like to burn.
 
-Speed 3. Classified as Minion (Parasite).
+Classified as Minion (Parasite).
 
 ## Tactics
 

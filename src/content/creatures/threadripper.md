@@ -23,7 +23,7 @@ attacks:
     qualities: []
     notes: "Target takes 2 Erosion; Threadripper heals 4 HP."
 traits:
-  - "**Phase-Shift:** The Threadripper exists partially outside reality. Mundane physical attacks have a 50% chance of passing through harmlessly (roll 1d8; on 1–4, the attack misses regardless of the roll). Salt, iron, Ghost-Rock, and Psionic attacks always connect normally."
+  - "**Phase-Shift:** The Threadripper exists partially outside reality. Mundane physical attacks have a 50% chance of passing through harmlessly (roll 1d8; on 1–4, the attack misses regardless of the roll). Salt, Ghost-Rock, and Psionic attacks always connect normally."
   - "**Current Scent:** Detects Channeling within Extreme range. Detects Psionics with Erosion 3+ within Far range. Arrives at the source within 1d6 minutes."
   - "**Feeding Frenzy:** When a Threadripper successfully uses Current Drain, it becomes fully material for 1d6 minutes (Phase-Shift temporarily deactivates). It is vulnerable but also more aggressive — +1 die to all attacks while material."
   - "**Pack Hunter:** Threadrippers are rarely alone. Where one feeds, others follow. If a Channeling event of Rank 3+ occurs, 1d3 additional Threadrippers arrive over the following hour."
@@ -49,8 +49,6 @@ Psionics on the Frontier must be careful about where and when they
 Channel. They are the **ecological consequence of magic**: the tax
 collector of the Current, ensuring that no one uses power without
 paying a price beyond Strain and Erosion.
-
-Speed 12.
 
 ## Tactics
 

@@ -50,8 +50,6 @@ The Redeemers say Fen-Wraiths are demons. The Circle says they are
 echoes. The Dust Vultures say they are the land's way of crying.
 None of these explanations make them less dangerous.
 
-Speed 7.
-
 ## Tactics
 
 Lurk in reflections and dark water. Wait for prey to approach the

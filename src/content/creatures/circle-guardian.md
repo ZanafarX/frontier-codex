@@ -45,7 +45,7 @@ threats at arm's length. The reach is tactical: protect the scholars,
 maintain distance, control the space.
 
 Gear: Ritual Robes (AR 1 vs. Psionics only), Focus Amulet, ration
-pouch. Speed 7.
+pouch.
 
 ## Tactics
 

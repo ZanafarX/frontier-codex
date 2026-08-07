@@ -41,7 +41,7 @@ A Raider's most prized possession is their water skin. Take it and
 they'll follow you to the edge of the world.
 
 Gear: Rags (no AR), goggles, waterskin (1 day), 8 rounds scavenged
-ammunition, bone charm. Speed 7.
+ammunition, bone charm.
 
 ## Tactics
 

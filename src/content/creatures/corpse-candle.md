@@ -48,7 +48,7 @@ because psionic defenses do not help.
 Locals know to never follow the lights. Travelers rarely get the
 warning in time.
 
-Speed 8. Classified as Minion (Hazard); see Swarm Colony trait.
+Classified as Minion (Hazard); see Swarm Colony trait.
 
 ## Tactics
 

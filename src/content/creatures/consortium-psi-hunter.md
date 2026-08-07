@@ -51,7 +51,7 @@ taste metallic and wrong.
 
 Gear: Consortium Vest (AR 2), Null-Iron Bracers (+2 Defense vs.
 Psionics), Salt Rounds ×10, Manacles (Current-dampening), Signal
-Crystal. Speed 7.
+Crystal.
 
 ## Tactics
 

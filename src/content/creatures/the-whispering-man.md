@@ -47,7 +47,7 @@ then people. The Circle has documented three cases of individuals who
 became Hollow after sustained contact, though the Whispering Man was
 never seen to lay a hand on them.
 
-Speed 10. The Whispering Man does not make physical attacks: the
+The Whispering Man does not make physical attacks: the
 `attacks[]` array is intentionally empty.
 
 ## Tactics

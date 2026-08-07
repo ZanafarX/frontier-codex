@@ -41,7 +41,7 @@ ritual knives they have never used on anything more threatening than
 a candle wick.
 
 Gear: Grey robes, ritual knife, leather satchel of notes, ink and
-quill, candle. Speed 6.
+quill, candle.
 
 ## Tactics
 

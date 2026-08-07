@@ -47,8 +47,6 @@ the smog, even this warning vanishes. Miners in the Ash Belt learn to
 listen for the faint **chiming sound** Glass-Walkers make when they
 move: a sound like wind through broken bottles.
 
-Speed 10.
-
 ## Tactics
 
 Stalk prey in reduced visibility, using Transparent to close
